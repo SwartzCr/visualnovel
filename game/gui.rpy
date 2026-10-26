@@ -189,8 +189,8 @@ define gui.confirm_button_text_xalign = 0.5
 
 define gui.page_button_borders = Borders(gui.scale(10), gui.scale(4), gui.scale(10), gui.scale(4))
 
-define gui.quick_button_borders = Borders(gui.scale(10), gui.scale(4), gui.scale(10), gui.scale(0))
-define gui.quick_button_text_size = gui.scale(14)
+define gui.quick_button_borders = Borders(gui.scale(13), gui.scale(5), gui.scale(13), gui.scale(4))
+define gui.quick_button_text_size = gui.scale(18)
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 

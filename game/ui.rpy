@@ -61,3 +61,6 @@ style say_label:
 
 style choice_button_text:
     outlines [ (2, "#0a041488", 0, 1) ]
+
+style quick_button_text:
+    outlines [ (2, "#0a0414cc", 0, 0) ]
