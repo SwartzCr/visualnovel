@@ -100,6 +100,9 @@ init python:
         store.time_label = ""
         for flag in STORY_FLAGS:
             setattr(store, flag, False)
+        store.encounters_seen = []
+        store.note_for = None
+        store.note_name = ""
         for g, v in case.get("rapport", {}).items():
             store.rapport[g] = v
             store.met.add(g)
@@ -148,6 +151,11 @@ init python:
             else:
                 # Otherwise pick the first guest on offer (not wandering, not alone).
                 idx = next((i for i, t in enumerate(tags) if t not in ("wander", "alone")), 0)
+        elif where[0].endswith("encounters.rpy"):
+            # Random encounters: rotate through the options each time a menu comes up.
+            counts = vn.__dict__.setdefault("enc_menu_counts", {})
+            idx = counts.get(where, 0) % len(choices)
+            counts[where] = counts.get(where, 0) + 1
         else:
             idx = min(vn.case.get("option", 0), len(choices) - 1)
 
@@ -164,6 +172,15 @@ init python:
         if rv != want:
             vn.fail("menu at %s:%d returned %r instead of the chosen option" % (where[0], where[1], rv))
         return rv
+
+    def vn_next_encounter(left):
+        """Cycle through random encounters in order across all test runs."""
+        vn.enc_index = getattr(vn, "enc_index", -1) + 1
+        for i in range(len(ENCOUNTERS)):
+            e = ENCOUNTERS[(vn.enc_index + i) % len(ENCOUNTERS)]
+            if e in left:
+                return e
+        return left[0]
 
     def vn_label_callback(name, abnormal):
         vn.labels_seen.add(name)

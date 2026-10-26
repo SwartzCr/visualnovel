@@ -166,6 +166,7 @@ label night_time:
         "Sunday night. The last night. The tickers in the stairwell all read the same thing: 11:11."
         "People are hugging in doorways for no reason. You catch yourself doing it too."
 
+    call random_encounter
     call hallway_encounter
     scene bg hallway with dissolve
     if day == 3:

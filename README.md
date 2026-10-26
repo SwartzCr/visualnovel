@@ -44,7 +44,8 @@ VN_TEST=1 RENPY_PERFORMANCE_TEST=0 /path/to/renpy-sdk/renpy.sh /path/to/visualno
 
 | | |
 |---|---|
-| **Length** | 3 days. Each day: 1 conversation at the pool. Each night: 2 hallway encounters (or wander alone). |
+| **Length** | 3 days. Each day: 1 conversation at the pool. Each night: 1 random encounter, then 2 hallway encounters (or wander alone). |
+| **Random encounters** | 8 short run-ins with the party (a clown wedding, a vampire in a coffin, emotional flu shots, a cardboard heist…), one per night, never repeating within a playthrough. Defined in `game/encounters.rpy`; add one by writing a label and listing it in `ENCOUNTERS`. |
 | **Guests** | 5, each with 2 pool chapters and 3 night chapters. Chapters always play in order, so you can follow anyone from start to finish no matter which day you pick them. |
 | **Rapport** | Every conversation has 2 choices worth 0–2 points (one bad choice is −1). Pushy or dismissive answers score 0; kind, curious, consent-forward answers score 2. |
 | **Romance** | 10+ rapport with a guest unlocks their sunrise scene after the ceremony. That takes at least 3 good chapters with them; picking middle-of-the-road answers in all 5 also gets you there. If several qualify, you choose. |
@@ -73,6 +74,7 @@ game/
   solstice.rpy     |  romance ending (<name>_romance), friendship ending (<name>_friend)
   wren.rpy         |
   zyx.rpy         /
+  encounters.rpy  random nightly encounters
   finale.rpy      choosing who to find, the other endings, the ending card
   options.rpy, gui.rpy, screens.rpy, guisupport.rpy   Ren'Py's standard template (lightly themed)
   images/bg/      backgrounds, 1280x720
