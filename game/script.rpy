@@ -143,29 +143,29 @@ label pool_time:
     menu:
         "Who do you spend the afternoon with?"
 
-        "A pink axolotl kigurumi, sitting fully dressed at the pool's edge, looking very hot." if pool_seen["juni"] == 0:
+        "A pink axolotl kigurumi, sitting fully dressed at the pool's edge, looking very hot." (guest="juni") if pool_seen["juni"] == 0:
             $ who = "juni"
-        "Juni the axolotl, floating face-up on a pizza-shaped inflatable." if pool_seen["juni"] == 1:
+        "Juni the axolotl, floating face-up on a pizza-shaped inflatable." (guest="juni") if pool_seen["juni"] == 1:
             $ who = "juni"
 
-        "A Sasquatch in an innertube in the shallow end, holding a teacup above the water." if pool_seen["gerald"] == 0:
+        "A Sasquatch in an innertube in the shallow end, holding a teacup above the water." (guest="gerald") if pool_seen["gerald"] == 0:
             $ who = "gerald"
-        "Gerald, leading a very slow 'forest bathing' session on the pool deck." if pool_seen["gerald"] == 1:
+        "Gerald, leading a very slow 'forest bathing' session on the pool deck." (guest="gerald") if pool_seen["gerald"] == 1:
             $ who = "gerald"
 
-        "A raver in fur leg warmers, handing out glitter like communion." if pool_seen["solstice"] == 0:
+        "A raver in fur leg warmers, handing out glitter like communion." (guest="solstice") if pool_seen["solstice"] == 0:
             $ who = "solstice"
-        "Solstice, asleep on a lounger in the full sun, LED top switched off." if pool_seen["solstice"] == 1:
+        "Solstice, asleep on a lounger in the full sun, LED top switched off." (guest="solstice") if pool_seen["solstice"] == 1:
             $ who = "solstice"
 
-        "A person in black fishing a disco ball out of the deep end with a net." if pool_seen["wren"] == 0:
+        "A person in black fishing a disco ball out of the deep end with a net." (guest="wren") if pool_seen["wren"] == 0:
             $ who = "wren"
-        "Wren, eating a sad sandwich behind the towel hut." if pool_seen["wren"] == 1:
+        "Wren, eating a sad sandwich behind the towel hut." (guest="wren") if pool_seen["wren"] == 1:
             $ who = "wren"
 
-        "A silver alien under a giant umbrella, studying the pool with great suspicion." if pool_seen["zyx"] == 0:
+        "A silver alien under a giant umbrella, studying the pool with great suspicion." (guest="zyx") if pool_seen["zyx"] == 0:
             $ who = "zyx"
-        "Zyx, collecting lost flip-flops in a bag labeled EARTH ARTIFACTS." if pool_seen["zyx"] == 1:
+        "Zyx, collecting lost flip-flops in a bag labeled EARTH ARTIFACTS." (guest="zyx") if pool_seen["zyx"] == 1:
             $ who = "zyx"
 
     $ pool_seen[who] += 1
@@ -212,42 +212,42 @@ label hallway_encounter:
     menu:
         "Which way do you wander?"
 
-        "A pink glowing tail disappears into a room with no number." if night_seen["juni"] == 0 and "juni" not in met_tonight:
+        "A pink glowing tail disappears into a room with no number." (guest="juni") if night_seen["juni"] == 0 and "juni" not in met_tonight:
             $ who = "juni"
-        "Juni is standing very still in front of a door labeled LOST & FOUND." if night_seen["juni"] == 1 and "juni" not in met_tonight:
+        "Juni is standing very still in front of a door labeled LOST & FOUND." (guest="juni") if night_seen["juni"] == 1 and "juni" not in met_tonight:
             $ who = "juni"
-        "Blue light pours out of a room that sounds like the bottom of a lake. An axolotl hood bobs in the doorway." if night_seen["juni"] == 2 and "juni" not in met_tonight:
+        "Blue light pours out of a room that sounds like the bottom of a lake. An axolotl hood bobs in the doorway." (guest="juni") if night_seen["juni"] == 2 and "juni" not in met_tonight:
             $ who = "juni"
 
-        "A very tall shape is being dragged down the hall by two rival breakfast cults." if night_seen["gerald"] == 0 and "gerald" not in met_tonight:
+        "A very tall shape is being dragged down the hall by two rival breakfast cults." (guest="gerald") if night_seen["gerald"] == 0 and "gerald" not in met_tonight:
             $ who = "gerald"
-        "Room 312 smells like rain and cedar. A Sasquatch is standing in the doorway, not going in." if night_seen["gerald"] == 1 and "gerald" not in met_tonight:
+        "Room 312 smells like rain and cedar. A Sasquatch is standing in the doorway, not going in." (guest="gerald") if night_seen["gerald"] == 1 and "gerald" not in met_tonight:
             $ who = "gerald"
-        "Through a door marked SUPPORT GROUP, you see Gerald in a folding chair that is much too small." if night_seen["gerald"] == 2 and "gerald" not in met_tonight:
+        "Through a door marked SUPPORT GROUP, you see Gerald in a folding chair that is much too small." (guest="gerald") if night_seen["gerald"] == 2 and "gerald" not in met_tonight:
             $ who = "gerald"
 
-        "LED lights and a cheering crowd: someone is buying and selling people on the stock exchange." if night_seen["solstice"] == 0 and "solstice" not in met_tonight:
+        "LED lights and a cheering crowd: someone is buying and selling people on the stock exchange." (guest="solstice") if night_seen["solstice"] == 0 and "solstice" not in met_tonight:
             $ who = "solstice"
-        "From a curtained booth, Solstice's voice, singing a confession very badly and very sincerely." if night_seen["solstice"] == 1 and "solstice" not in met_tonight:
+        "From a curtained booth, Solstice's voice, singing a confession very badly and very sincerely." (guest="solstice") if night_seen["solstice"] == 1 and "solstice" not in met_tonight:
             $ who = "solstice"
-        "The ballroom. Lasers. In the middle of the floor, Solstice, dancing like it's the last song on Earth." if night_seen["solstice"] == 2 and "solstice" not in met_tonight:
+        "The ballroom. Lasers. In the middle of the floor, Solstice, dancing like it's the last song on Earth." (guest="solstice") if night_seen["solstice"] == 2 and "solstice" not in met_tonight:
             $ who = "solstice"
 
-        "Wren is half-carrying a man in pajamas toward the smell of cardamom." if night_seen["wren"] == 0 and "wren" not in met_tonight:
+        "Wren is half-carrying a man in pajamas toward the smell of cardamom." (guest="wren") if night_seen["wren"] == 0 and "wren" not in met_tonight:
             $ who = "wren"
-        "A door marked STAFF ONLY is open a crack. Inside, someone in a headset says your name." if night_seen["wren"] == 1 and "wren" not in met_tonight:
+        "A door marked STAFF ONLY is open a crack. Inside, someone in a headset says your name." (guest="wren") if night_seen["wren"] == 1 and "wren" not in met_tonight:
             $ who = "wren"
-        "The stairwell to the roof is propped open. Wren's walkie is chirping somewhere above." if night_seen["wren"] == 2 and "wren" not in met_tonight:
+        "The stairwell to the roof is propped open. Wren's walkie is chirping somewhere above." (guest="wren") if night_seen["wren"] == 2 and "wren" not in met_tonight:
             $ who = "wren"
 
-        "A silver figure is feeding ping-pong balls into a robot and taking notes." if night_seen["zyx"] == 0 and "zyx" not in met_tonight:
+        "A silver figure is feeding ping-pong balls into a robot and taking notes." (guest="zyx") if night_seen["zyx"] == 0 and "zyx" not in met_tonight:
             $ who = "zyx"
-        "Two nurses are wheeling a protesting alien into the Clinic of Unnecessary Procedures." if night_seen["zyx"] == 1 and "zyx" not in met_tonight:
+        "Two nurses are wheeling a protesting alien into the Clinic of Unnecessary Procedures." (guest="zyx") if night_seen["zyx"] == 1 and "zyx" not in met_tonight:
             $ who = "zyx"
-        "The ice machine alcove is glowing. Zyx's antennae are silhouetted against a field of stars." if night_seen["zyx"] == 2 and "zyx" not in met_tonight:
+        "The ice machine alcove is glowing. Zyx's antennae are silhouetted against a field of stars." (guest="zyx") if night_seen["zyx"] == 2 and "zyx" not in met_tonight:
             $ who = "zyx"
 
-        "Don't follow anyone. Just wander.":
+        "Don't follow anyone. Just wander." (guest="wander"):
             $ who = None
 
     if who is None:

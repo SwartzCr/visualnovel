@@ -28,6 +28,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # to publish test reports to the ci-reports branch
     steps:
       - name: Check out the game
         uses: actions/checkout@v4
@@ -81,6 +83,57 @@ jobs:
           ~/renpy-sdk/renpy.sh "$GITHUB_WORKSPACE" lint "$RUNNER_TEMP/lint.txt" || true
           cat "$RUNNER_TEMP/lint.txt"
           { echo '## Ren'"'"'Py lint report'; echo '```'; cat "$RUNNER_TEMP/lint.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Install a virtual display for the tests
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq xvfb libgl1 libegl1 libgl1-mesa-dri > /dev/null
+
+      - name: Play through the game automatically (game/tests.rpy)
+        env:
+          VN_TEST: "1"
+          VN_TEST_REPORT: ${{ runner.temp }}/test-report.txt
+          RENPY_PERFORMANCE_TEST: "0"
+          SDL_AUDIODRIVER: dummy
+          LIBGL_ALWAYS_SOFTWARE: "1"
+        run: |
+          set +e
+          timeout 1500 xvfb-run -a -s "-screen 0 1280x720x24" ~/renpy-sdk/renpy.sh "$GITHUB_WORKSPACE"
+          code=$?
+          set -e
+          if [ ! -f "$VN_TEST_REPORT" ]; then
+            echo "Do Not Disturb — automated playthrough report: FAIL" > "$VN_TEST_REPORT"
+            echo "The game exited (status $code) before writing a report." >> "$VN_TEST_REPORT"
+            code=1
+          fi
+          for f in traceback.txt errors.txt; do
+            if [ -f "$GITHUB_WORKSPACE/$f" ]; then
+              { echo; echo "===== $f ====="; cat "$GITHUB_WORKSPACE/$f"; } >> "$VN_TEST_REPORT"
+              code=1
+            fi
+          done
+          cat "$VN_TEST_REPORT"
+          { echo '## Automated playthrough'; echo '```'; cat "$VN_TEST_REPORT"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          # Surface each failure as an annotation on the run.
+          grep -E '^  \[' "$VN_TEST_REPORT" | head -40 | while IFS= read -r line; do
+            echo "::error title=Playthrough failure::${line#  }"
+          done || true
+          exit $code
+
+      - name: Publish lint and test reports to the ci-reports branch
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/reports"
+          cd "$RUNNER_TEMP/reports"
+          for f in "$RUNNER_TEMP/lint.txt" "$RUNNER_TEMP/test-report.txt" "$GITHUB_WORKSPACE/log.txt" "$GITHUB_WORKSPACE/traceback.txt" "$GITHUB_WORKSPACE/errors.txt"; do
+            [ -f "$f" ] && cp "$f" .
+          done
+          echo "Reports for commit $GITHUB_SHA (run $GITHUB_RUN_ID)" > README.md
+          git init -q
+          git checkout -q -b ci-reports
+          git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -qm "Reports for $GITHUB_SHA"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-reports
 
       - name: Build the web version
         env:

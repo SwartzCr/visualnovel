@@ -26,17 +26,17 @@ label finale:
         menu:
             "Where do you go?"
 
-            "Look for Juni. You have a feeling they'll be down by the pool." if "juni" in candidates:
+            "Look for Juni. You have a feeling they'll be down by the pool." (guest="juni") if "juni" in candidates:
                 $ who = "juni"
-            "Climb to the roof. Gerald likes to be somewhere high when the sun comes up." if "gerald" in candidates:
+            "Climb to the roof. Gerald likes to be somewhere high when the sun comes up." (guest="gerald") if "gerald" in candidates:
                 $ who = "gerald"
-            "Find Solstice before the sun comes up." if "solstice" in candidates:
+            "Find Solstice before the sun comes up." (guest="solstice") if "solstice" in candidates:
                 $ who = "solstice"
-            "Wait for Wren to get off shift." if "wren" in candidates:
+            "Wait for Wren to get off shift." (guest="wren") if "wren" in candidates:
                 $ who = "wren"
-            "Go find Zyx. The mission's almost over." if "zyx" in candidates:
+            "Go find Zyx. The mission's almost over." (guest="zyx") if "zyx" in candidates:
                 $ who = "zyx"
-            "Don't go to anyone. Some weekends are just yours.":
+            "Don't go to anyone. Some weekends are just yours." (guest="alone"):
                 $ who = None
 
         if who is not None:

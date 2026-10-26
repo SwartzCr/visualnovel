@@ -191,6 +191,10 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
 
+    ## The automated test player is for CI only; leave it out of released builds.
+    build.classify('game/tests.rpy', None)
+    build.classify('game/tests.rpyc', None)
+
     ## To archive files, classify them as 'archive'.
 
     # build.classify('game/**.png', 'archive')

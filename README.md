@@ -20,6 +20,26 @@ One-time setup: in the repo on GitHub, go to **Settings → Pages** and set **So
 
 Each run downloads the Ren'Py SDK and its web support (the first version in `RENPY_VERSIONS` that's available), lints the game, builds it with `renpy.sh launcher web_build`, and deploys the result. To build a web version locally instead, use **Web → Build Web Application** in the Ren'Py launcher.
 
+## Automated tests
+
+`game/tests.rpy` is a test player that runs through the whole game by itself. It's switched off in normal play and left out of released builds. It plays:
+
+- the full game 15 times, following each guest in every pool and hallway menu and picking option 1, 2 or 3 in every conversation menu
+- a run that wanders alone every night
+- the finale set up for every ending: each romance, each friendship, several guests qualifying, and nobody
+- the Guest Book screen with and without guests met
+
+It fast-skips dialogue, catches every error instead of stopping, and checks that each run reaches the ending it should. The report lists failures, any labels never reached, and any menu options never chosen.
+
+GitHub Actions runs it on every push, after lint and before the web build. If it fails, the site isn't redeployed and the previous version stays up. The reports are pushed to the `ci-reports` branch (`test-report.txt`, `lint.txt`, plus Ren'Py's `traceback.txt` and `log.txt` when they exist) and shown on each run's summary page.
+
+To run it locally with the Ren'Py SDK installed:
+
+```sh
+VN_TEST=1 RENPY_PERFORMANCE_TEST=0 /path/to/renpy-sdk/renpy.sh /path/to/visualnovel
+# report written to vn_test_report.txt in the project folder
+```
+
 ## How the game works
 
 | | |
