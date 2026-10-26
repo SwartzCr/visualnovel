@@ -67,7 +67,7 @@ init python:
             renpy.image((_who, _expr), "images/sprites/%s_%s.png" % (_who, _expr))
 
 image ctc_heart:
-    Text("♥", size=22, color="#ff5fb8", xoffset=8, yoffset=2)
+    Text("♥", font="DejaVuSans.ttf", size=22, color="#ff5fb8", xoffset=8, yoffset=2)
     alpha 1.0
     linear 0.6 alpha 0.25
     linear 0.6 alpha 1.0

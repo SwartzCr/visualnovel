@@ -1,0 +1,8 @@
+M PLUS Rounded 1c — Copyright 2016 The Rounded M+ Project Authors.
+Designer: Coji Morishita, M+ Fonts Project.
+
+Licensed under the SIL Open Font License, Version 1.1. The full license text is
+identical to Righteous-OFL.txt in this folder (apart from the copyright line).
+
+The copies in this folder are subsets (Latin characters only) of the original
+fonts from https://github.com/google/fonts/tree/main/ofl/mplusrounded1c

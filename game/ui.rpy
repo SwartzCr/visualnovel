@@ -28,7 +28,7 @@ screen guest_book():
 
         vbox:
             spacing 18
-            text "GUEST BOOK" size 34 color gui.accent_color xalign 0.5
+            text "GUEST BOOK" font gui.name_text_font size 38 color gui.accent_color xalign 0.5
             text "Hotel Marisol — please do not photograph this page." size 14 color "#a99cc8" xalign 0.5
 
             for gid in GUESTS:
@@ -36,14 +36,14 @@ screen guest_book():
                     $ nm, colr, blurb = GUEST_INFO[gid]
                     hbox:
                         spacing 20
-                        text nm size 26 color colr min_width 160
-                        text hearts(gid) size 26 color "#ff5fb8" min_width 180
+                        text nm font gui.name_text_font size 26 color colr min_width 160
+                        text hearts(gid) font "DejaVuSans.ttf" size 26 color "#ff5fb8" min_width 180
                         text blurb size 16 color "#e8e0ff" yalign 0.5 xmaximum 420
                 else:
                     hbox:
                         spacing 20
-                        text "???" size 26 color "#5a4a78" min_width 160
-                        text "♡♡♡♡♡" size 26 color "#3a2a50" min_width 180
+                        text "???" font gui.name_text_font size 26 color "#5a4a78" min_width 160
+                        text "♡♡♡♡♡" font "DejaVuSans.ttf" size 26 color "#3a2a50" min_width 180
                         text "You haven't met this guest yet." size 16 color "#6f6488" yalign 0.5
 
             null height 6
@@ -64,3 +64,9 @@ style choice_button_text:
 
 style quick_button_text:
     outlines [ (2, "#0a0414cc", 0, 0) ]
+
+
+## The rounded font has a true bold weight; use it for {b} and bold text.
+init python:
+    config.font_replacement_map["fonts/MPLUSRounded1c-Medium.ttf", True, False] = ("fonts/MPLUSRounded1c-Bold.ttf", False, False)
+    config.font_replacement_map["fonts/MPLUSRounded1c-Medium.ttf", True, True] = ("fonts/MPLUSRounded1c-Bold.ttf", False, True)
