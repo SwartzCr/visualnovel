@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -248,6 +248,7 @@ screen quick_menu():
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
+            textbutton _("Guests") action ShowMenu('guest_book')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
@@ -1531,6 +1532,7 @@ screen quick_menu():
             style_prefix "quick"
 
             textbutton _("Back") action Rollback()
+            textbutton _("Guests") action ShowMenu('guest_book')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
