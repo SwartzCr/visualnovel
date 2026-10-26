@@ -15,7 +15,9 @@
 ##   wanderer           The whole game, wandering alone every night.
 ##   ending-*           Straight to the finale with rapport set up to reach
 ##                      every ending, including several guests qualifying.
-##   screens            Opens the Guest Book with and without guests met.
+##   screens            Opens the Guest Book (with and without guests met)
+##                      and the Save, Load, Preferences, History, About and
+##                      Help screens, before playing and again afterwards.
 ##
 ## Every exception is caught and recorded instead of stopping the game.
 ## At the end it writes a report (VN_TEST_REPORT, default vn_test_report.txt
@@ -41,10 +43,16 @@ init python:
                 cases.append({"name": "full-%s-%d" % (g, k), "kind": "full", "target": g, "option": k})
         cases.append({"name": "wanderer", "kind": "full", "target": "wander", "option": 0})
         for g in GUESTS:
-            cases.append({"name": "ending-romance-" + g, "kind": "finale", "rapport": {g: ROMANCE_THRESHOLD},
-                          "target": g, "expect": VN_EXPECTED_ROMANCE[g]})
+            for k in (0, 1):
+                cases.append({"name": "ending-romance-%s-%d" % (g, k), "kind": "finale",
+                              "rapport": {g: ROMANCE_THRESHOLD}, "target": g, "option": k,
+                              "expect": VN_EXPECTED_ROMANCE[g]})
             cases.append({"name": "ending-friend-" + g, "kind": "finale", "rapport": {g: FRIEND_THRESHOLD},
                           "target": g, "expect": "Good Company", "expect_friend": g})
+        for g in GUESTS:
+            cases.append({"name": "ending-several-qualify-choose-" + g, "kind": "finale",
+                          "rapport": {x: ROMANCE_THRESHOLD for x in GUESTS}, "target": g,
+                          "expect": VN_EXPECTED_ROMANCE[g]})
         cases.append({"name": "ending-several-qualify-choose-alone", "kind": "finale",
                       "rapport": {g: ROMANCE_THRESHOLD for g in GUESTS}, "target": "alone",
                       "expect": "Good Company"})
@@ -65,6 +73,7 @@ init python:
             self.results = []           # (case, ending, seconds)
             self.interactions = 0
             self.no_skip = False
+            self.errors = {}            # (where, error) -> [case names]
 
         def fail(self, msg):
             name = self.case["name"] if self.case else "setup"
@@ -124,8 +133,8 @@ init python:
         """Replaces the normal choice menu while testing."""
         choices = [(label, value) for (label, value) in items if value is not None]
         where = renpy.get_filename_line()
-        rec = vn.menus.setdefault(where, [len(choices), set(), choices[0][0] if choices else ""])
-        rec[0] = max(rec[0], len(choices))
+        rec = vn.menus.setdefault(where, [set(), set(), choices[0][0] if choices else ""])
+        rec[0].update(label for (label, value) in choices)
 
         tags = [(getattr(v, "kwargs", None) or {}).get("guest") for (l, v) in choices]
         target = vn.case["target"]
@@ -140,9 +149,19 @@ init python:
         else:
             idx = min(vn.case.get("option", 0), len(choices) - 1)
 
-        rec[1].add(idx)
+        rec[1].add(choices[idx][0])
         value = choices[idx][1]
-        return value.value if hasattr(value, "value") else value
+        want = value.value if hasattr(value, "value") else value
+        # Show the real choice screen and "click" the option a moment later,
+        # so the menu is displayed exactly as a player would see it.
+        renpy.show_screen("vn_pick", value=want)
+        try:
+            rv = renpy.display_menu(items)
+        finally:
+            renpy.hide_screen("vn_pick")
+        if rv != want:
+            vn.fail("menu at %s:%d returned %r instead of the chosen option" % (where[0], where[1], rv))
+        return rv
 
     def vn_label_callback(name, abnormal):
         vn.labels_seen.add(name)
@@ -154,7 +173,7 @@ init python:
             vn.write_report()
             renpy.quit(status=1)
         if not vn.no_skip:
-            renpy.config.skipping = "fast"
+            renpy.config.skipping = "slow"
 
     def vn_exception(*args):
         # Ren'Py passes either (short, full, traceback_fn) or one TracebackException.
@@ -163,8 +182,20 @@ init python:
             text = "".join(getattr(te, "format", lambda: [str(te)])())
         else:
             text = args[1] if len(args) > 1 else str(args)
-        lines = [l for l in text.strip().splitlines() if l.strip()]
-        vn.fail("EXCEPTION: " + "\n      ".join(lines[-12:]))
+        # Keep the story-file frames and the final error line; drop engine internals.
+        lines = [l.rstrip() for l in text.strip().splitlines() if l.strip()]
+        if "Full traceback:" in lines:
+            lines = lines[:lines.index("Full traceback:")]
+        where = [l.strip() for l in lines if l.strip().startswith('File "game/') and "tests.rpy" not in l]
+        error = next((l.strip() for l in reversed(lines)
+                      if l and not l.startswith(" ") and ":" in l and not l.startswith(("File", "--", "While", "I'm sorry"))), lines[-1] if lines else "?")
+        key = (tuple(where[-2:]), error)
+        name = vn.case["name"] if vn.case else "setup"
+        if key in vn.errors:
+            vn.errors[key].append(name)
+        else:
+            vn.errors[key] = [name]
+            vn.fail("EXCEPTION: %s\n      at %s" % (error, "\n         ".join(where[-2:]) or "(engine)"))
         return True  # handled: carry on with the next statement
 
     def vn_check_screens():
@@ -175,10 +206,18 @@ init python:
             for met_set in (set(), set(GUESTS)):
                 store.met = met_set
                 renpy.show_screen("guest_book")
-                renpy.pause(0.2, hard=True)
+                # The Guest Book is modal, so a plain pause beneath it would never
+                # end. Close it with a timer on a screen layered above it.
+                renpy.call_screen("vn_close_after", 0.3)
                 renpy.hide_screen("guest_book")
             store.time_label = "Test — Time Tag"
-            renpy.pause(0.1, hard=True)
+            renpy.call_screen("vn_close_after", 0.1)
+            # The standard menus reachable from the quick menu and main menu.
+            for scr in ("save", "load", "preferences", "history", "about", "help"):
+                if renpy.has_screen(scr):
+                    renpy.show_screen(scr)
+                    renpy.call_screen("vn_close_after", 0.2)
+                    renpy.hide_screen(scr)
         finally:
             vn.no_skip = False
             store.met = set()
@@ -187,13 +226,15 @@ init python:
         out = os.environ.get("VN_TEST_REPORT") or os.path.join(config.basedir, "vn_test_report.txt")
         all_labels = sorted(l for l in renpy.get_all_labels()
                             if isinstance(l, str) and not l.startswith("_") and "." not in l
+                            and not l.endswith("_screen")
                             and l not in ("splashscreen", "main_menu", "after_load", "quit", "vn_test_main"))
         unreached = [l for l in all_labels if l not in vn.labels_seen]
         partial = []
-        for (fn, line), (n, chosen, caption) in sorted(vn.menus.items()):
-            if len(chosen) < n:
-                partial.append("%s:%d  took %s of %d options  (first option: %s)"
-                               % (fn, line, sorted(chosen), n, caption[:60]))
+        for (fn, line), (offered, chosen, caption) in sorted(vn.menus.items()):
+            missing = sorted(offered - chosen)
+            if missing:
+                partial.append("%s:%d  never chose: %s"
+                               % (fn, line, " | ".join(m[:50] for m in missing)))
 
         lines = []
         status = "FAIL" if (vn.failures or unreached) else "PASS"
@@ -204,6 +245,11 @@ init python:
         lines.append("FAILURES")
         for case, msg in vn.failures:
             lines.append("  [%s] %s" % (case, msg))
+            if msg.startswith("EXCEPTION"):
+                for key, cases in vn.errors.items():
+                    if msg.startswith("EXCEPTION: " + key[1]) and len(cases) > 1:
+                        lines.append("      (happened %d times, in: %s)" % (len(cases), ", ".join(sorted(set(cases)))))
+                        break
         if not vn.failures:
             lines.append("  none")
         lines.append("")
@@ -236,6 +282,18 @@ init python:
         menu = vn_menu
 
 
+## Used by the test player to click a menu option, the way a player would.
+screen vn_pick(value):
+    zorder 500
+    timer 0.05 action Return(value)
+
+## Used by the test player to dismiss screens after a moment.
+screen vn_close_after(t):
+    zorder 500
+    modal True
+    timer t action Return()
+
+
 ## In test mode, skip the main menu and run the suite.
 label splashscreen:
     if vn_testing:
@@ -255,6 +313,11 @@ label vn_test_main:
         else:
             call finale
         $ vn_end_case()
+
+    # Open the menus again now that History and the save slots have content.
+    $ vn.case = {"name": "screens-after-play", "kind": "screens", "target": None}
+    $ renpy.save("1-1", "test save")
+    $ vn_check_screens()
 
     python:
         _vn_status = write_report()
