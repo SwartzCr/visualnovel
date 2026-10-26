@@ -218,6 +218,190 @@ def icon():
     save(ic, "window_icon")
 
 
+# ---------------------------------------------------------------- stylized pieces
+SSX = 3  # supersampling for the fancy pieces
+
+VIOLET = (155, 107, 255)
+NAME_COLORS = {
+    "default": "#ff5fb8",
+    "juni": "#ff9ccc", "gerald": "#e0a878", "solstice": "#ffd36b",
+    "wren": "#c8b8ff", "zyx": "#7affd0",
+}
+
+
+def _hex(h):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def _hgrad(w, h, stops):
+    """Horizontal gradient image through (t, rgb) stops."""
+    img = Image.new("RGBA", (w, h))
+    px = img.load()
+    for x in range(w):
+        t = x / max(1, w - 1)
+        for (t0, c0), (t1, c1) in zip(stops, stops[1:]):
+            if t0 <= t <= t1:
+                k = (t - t0) / max(1e-6, t1 - t0)
+                c = tuple(int(c0[i] + (c1[i] - c0[i]) * k) for i in range(3))
+                break
+        for y in range(h):
+            px[x, y] = c + (255,)
+    return img
+
+
+def _vgrad(w, h, top, bottom):
+    img = Image.new("RGBA", (w, h))
+    d = ImageDraw.Draw(img)
+    for y in range(h):
+        k = y / max(1, h - 1)
+        d.line([(0, y), (w, y)], fill=tuple(int(top[i] + (bottom[i] - top[i]) * k) for i in range(4)))
+    return img
+
+
+def _rr_mask(size, box, r, width=None):
+    m = Image.new("L", size, 0)
+    d = ImageDraw.Draw(m)
+    if width:
+        d.rounded_rectangle(box, radius=r, outline=255, width=width)
+    else:
+        d.rounded_rectangle(box, radius=r, fill=255)
+    return m
+
+
+def _paint(base, src, mask, alpha=1.0):
+    if alpha < 1:
+        mask = mask.point(lambda v: int(v * alpha))
+    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    layer.paste(src, (0, 0), mask)
+    base.alpha_composite(layer)
+
+
+def _sparkle(d, cx, cy, r, color):
+    """Four-pointed star."""
+    pts = [(cx, cy - r), (cx + r * 0.22, cy - r * 0.22), (cx + r, cy), (cx + r * 0.22, cy + r * 0.22),
+           (cx, cy + r), (cx - r * 0.22, cy + r * 0.22), (cx - r, cy), (cx - r * 0.22, cy - r * 0.22)]
+    d.polygon(pts, fill=color)
+
+
+def _neon_panel(w, h, box, r, fill_top, fill_bottom, stops, border=3, glow=10, glow_alpha=0.75,
+                sheen=True, inner_line=True):
+    """A rounded panel with gradient fill, gradient neon border and outer glow (at SSX scale)."""
+    S = SSX
+    W_, H_ = w * S, h * S
+    b = [v * S for v in box]
+    img = Image.new("RGBA", (W_, H_), (0, 0, 0, 0))
+    grad = _hgrad(W_, H_, stops)
+
+    # outer glow
+    gm = _rr_mask((W_, H_), b, r * S, width=border * S * 3).filter(ImageFilter.GaussianBlur(glow * S))
+    _paint(img, grad, gm, glow_alpha)
+
+    # body
+    body = _rr_mask((W_, H_), b, r * S)
+    _paint(img, _vgrad(W_, H_, fill_top, fill_bottom), body)
+    if sheen:
+        sh = _vgrad(W_, H_, (255, 255, 255, 34), (255, 255, 255, 0))
+        cut = Image.new("L", (W_, H_), 0)
+        ImageDraw.Draw(cut).rectangle([b[0], b[1], b[2], b[1] + (b[3] - b[1]) * 0.45], fill=255)
+        _paint(img, sh, _min(body, cut))
+    if inner_line:
+        inset = 6 * S
+        il = _rr_mask((W_, H_), [b[0] + inset, b[1] + inset, b[2] - inset, b[3] - inset],
+                      max(1, (r - 5) * S), width=max(1, S))
+        _paint(img, Image.new("RGBA", (W_, H_), (255, 255, 255, 255)), il, 0.10)
+
+    # crisp gradient border
+    _paint(img, grad, _rr_mask((W_, H_), b, r * S, width=border * S))
+    return img
+
+
+def _min(a, b):
+    from PIL import ImageChops
+    return ImageChops.darker(a, b)
+
+
+def _down(img, w, h):
+    return img.resize((w, h), Image.LANCZOS)
+
+
+def fancy_textbox():
+    # The panel floats above a 34px strip at the bottom reserved for the quick menu.
+    w, h = W, 226
+    box = (36, 32, 1244, 190)
+    stops = [(0.0, ACCENT), (0.5, VIOLET), (1.0, CYAN)]
+    img = _neon_panel(w, h, box, 26, (30, 14, 54, 244), (14, 7, 28, 250), stops, border=3, glow=9)
+    d = ImageDraw.Draw(img)
+    S = SSX
+    # sparkles: top-right cluster and bottom-left
+    for (x, y, r, c) in [(1196, 58, 9, CYAN), (1216, 80, 5, ACCENT), (1178, 82, 4, (255, 255, 255)),
+                         (64, 168, 6, ACCENT), (82, 158, 3.5, CYAN)]:
+        _sparkle(d, x * S, y * S, r * S, c + (235,))
+    # a row of tiny dots along the bottom inner edge, fading toward the middle
+    for i in range(60):
+        x = 120 + i * 17
+        k = abs(i - 30) / 30
+        if 0.25 < k:
+            d.ellipse([(x - 1.4) * S, 178 * S, (x + 1.4) * S, 180.8 * S], fill=(255, 255, 255, int(70 * k)))
+    _down(img, w, h).save(path("textbox"))
+
+    # phone version: full width, taller
+    ph = _neon_panel(W, 250, (14, 24, 1266, 246), 22, (30, 14, 54, 245), (14, 7, 28, 250), stops, border=3, glow=8)
+    _down(ph, W, 250).save(path("phone/textbox"))
+
+
+def fancy_nameboxes():
+    for who, colr in NAME_COLORS.items():
+        c = _hex(colr)
+        w, h = 300, 50
+        stops = [(0.0, c), (1.0, tuple(int(v * 0.75 + 255 * 0.25) for v in c))]
+        img = _neon_panel(w, h, (6, 6, 294, 44), 19, (26, 12, 46, 245), (18, 8, 34, 250), stops,
+                          border=2, glow=5, glow_alpha=0.9, inner_line=False)
+        d = ImageDraw.Draw(img)
+        S = SSX
+        # little diamond on the left
+        cx, cy, rr = 24, 25, 6
+        d.polygon([(cx * S, (cy - rr) * S), ((cx + rr) * S, cy * S), (cx * S, (cy + rr) * S), ((cx - rr) * S, cy * S)],
+                  fill=c + (255,))
+        name = "namebox" if who == "default" else "namebox_" + who
+        _down(img, w, h).save(path(name))
+
+
+def fancy_choices():
+    w, h = 820, 52
+    box = (8, 6, 812, 46)
+    idle = _neon_panel(w, h, box, 20, (34, 16, 60, 228), (20, 9, 38, 236),
+                       [(0, CYAN), (0.5, VIOLET), (1, CYAN)], border=2, glow=5, glow_alpha=0.45, inner_line=False)
+    hover = _neon_panel(w, h, box, 20, ACCENT + (240,), VIOLET + (240,),
+                        [(0, (255, 210, 235)), (1, (210, 240, 255))], border=2, glow=9, glow_alpha=0.95, inner_line=False)
+    # hover: horizontal pink -> violet fill instead of vertical
+    S = SSX
+    body = _rr_mask((w * S, h * S), [v * S for v in box], 20 * S)
+    fill = _hgrad(w * S, h * S, [(0, (255, 95, 184)), (1, (130, 90, 240))])
+    _paint(hover, fill, body, 0.92)
+    _paint(hover, _hgrad(w * S, h * S, [(0, (255, 220, 240)), (1, (200, 240, 255))]),
+           _rr_mask((w * S, h * S), [v * S for v in box], 20 * S, width=2 * S))
+    insensitive = _neon_panel(w, h, box, 20, (26, 14, 40, 170), (18, 9, 30, 170),
+                              [(0, MUTED), (1, MUTED)], border=2, glow=2, glow_alpha=0.2, inner_line=False)
+    for img in (idle, hover):
+        d = ImageDraw.Draw(img)
+        for x in (30, w - 30):
+            _sparkle(d, x * S, 26 * S, 7 * S, (255, 255, 255, 220))
+    for state, img in (("idle", idle), ("hover", hover), ("insensitive", insensitive)):
+        out = _down(img, w, h)
+        for prefix in ("", "phone/"):
+            out.save(path(prefix + "button/choice_%s_background" % state))
+    _down(idle, w, h).save(path("button/choice_background"))
+
+
+def fancy_pills():
+    """Notify, skip indicator and the time tag."""
+    for name, w, h in (("notify", 420, 46), ("skip", 240, 46), ("tag", 300, 40)):
+        img = _neon_panel(w, h, (5, 5, w - 5, h - 5), (h - 10) // 2, (26, 12, 46, 238), (18, 8, 34, 244),
+                          [(0, ACCENT), (1, VIOLET)], border=2, glow=4, glow_alpha=0.7, inner_line=False)
+        _down(img, w, h).save(path(name))
+
+
 if __name__ == "__main__":
     textbox()
     nvl()
@@ -227,4 +411,9 @@ if __name__ == "__main__":
     misc_buttons()
     bars()
     icon()
+    # Stylized versions override the plain ones above.
+    fancy_textbox()
+    fancy_nameboxes()
+    fancy_choices()
+    fancy_pills()
     print("GUI images written to", os.path.abspath(OUT))

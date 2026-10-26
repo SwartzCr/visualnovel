@@ -4,26 +4,34 @@
 ## Characters
 ################################################################################
 
-define narrator = Character(None, what_italic=False)
+## Every speaker shares the blinking-heart "click to continue" marker.
+define base = Character(None, ctc="ctc_heart", ctc_position="nestled")
 
-define j = Character("Juni", image="juni", color="#ff9ccc")
-define g = Character("Gerald", image="gerald", color="#e0a878")
-define s = Character("Solstice", image="solstice", color="#ffd36b")
-define w = Character("Wren", image="wren", color="#c8b8ff")
-define z = Character("Zyx", image="zyx", color="#7affd0")
+define narrator = Character(None, kind=base, what_italic=False)
 
-define oz = Character("Grandma Ozone", color="#ffb07a")
-define tam = Character("Tamsin (text)", color="#9fe6ff", what_italic=True)
-define herald = Character("The Herald", color="#ffe14d")
-define clown = Character("A Mute Clown", color="#ff7a7a")
-define nurse = Character("Nurse Ratchet-and-Clank", color="#7ad8a8")
-define robot = Character("THE ORACLE", color="#c8a0ff", what_font="fonts/DejaVuSansMono.ttf")
-define beige = Character("Man in a Beige Suit", color="#d8c8a8")
-define priest = Character("Deacon of Cast Iron", color="#b0b0b0")
-define priestess = Character("High Priestess of Teflon", color="#ff8080")
-define moth = Character("Mothman", color="#ff6060")
-define walkie = Character("Walkie-talkie", color="#a0a0a0", what_italic=True)
-define pj = Character("Man in Pajamas", color="#a8c8ff")
+define j = Character("Juni", image="juni", color="#ff9ccc", kind=base,
+    namebox_background=Frame("gui/namebox_juni.png", gui.namebox_borders, tile=False))
+define g = Character("Gerald", image="gerald", color="#e0a878", kind=base,
+    namebox_background=Frame("gui/namebox_gerald.png", gui.namebox_borders, tile=False))
+define s = Character("Solstice", image="solstice", color="#ffd36b", kind=base,
+    namebox_background=Frame("gui/namebox_solstice.png", gui.namebox_borders, tile=False))
+define w = Character("Wren", image="wren", color="#c8b8ff", kind=base,
+    namebox_background=Frame("gui/namebox_wren.png", gui.namebox_borders, tile=False))
+define z = Character("Zyx", image="zyx", color="#7affd0", kind=base,
+    namebox_background=Frame("gui/namebox_zyx.png", gui.namebox_borders, tile=False))
+
+define oz = Character(kind=base, name="Grandma Ozone", color="#ffb07a")
+define tam = Character(kind=base, name="Tamsin (text)", color="#9fe6ff", what_italic=True)
+define herald = Character(kind=base, name="The Herald", color="#ffe14d")
+define clown = Character(kind=base, name="A Mute Clown", color="#ff7a7a")
+define nurse = Character(kind=base, name="Nurse Ratchet-and-Clank", color="#7ad8a8")
+define robot = Character(kind=base, name="THE ORACLE", color="#c8a0ff", what_font="fonts/DejaVuSansMono.ttf")
+define beige = Character(kind=base, name="Man in a Beige Suit", color="#d8c8a8")
+define priest = Character(kind=base, name="Deacon of Cast Iron", color="#b0b0b0")
+define priestess = Character(kind=base, name="High Priestess of Teflon", color="#ff8080")
+define moth = Character(kind=base, name="Mothman", color="#ff6060")
+define walkie = Character(kind=base, name="Walkie-talkie", color="#a0a0a0", what_italic=True)
+define pj = Character(kind=base, name="Man in Pajamas", color="#a8c8ff")
 
 ################################################################################
 ## Images
@@ -57,6 +65,13 @@ init python:
     for _who in ("juni", "gerald", "solstice", "wren", "zyx"):
         for _expr in ("neutral", "happy", "surprised", "blush"):
             renpy.image((_who, _expr), "images/sprites/%s_%s.png" % (_who, _expr))
+
+image ctc_heart:
+    Text("♥", size=22, color="#ff5fb8", xoffset=8, yoffset=2)
+    alpha 1.0
+    linear 0.6 alpha 0.25
+    linear 0.6 alpha 1.0
+    repeat
 
 image black = Solid("#000000")
 image white = Solid("#ffffff")

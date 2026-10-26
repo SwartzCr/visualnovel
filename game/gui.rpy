@@ -61,7 +61,7 @@ define gui.interface_text_color = "#ffffff"
 define gui.text_font = "DejaVuSans.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "DejaVuSans-Bold.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "DejaVuSans.ttf"
@@ -70,7 +70,7 @@ define gui.interface_text_font = "DejaVuSans.ttf"
 define gui.text_size = gui.scale(22)
 
 ## The size of character names.
-define gui.name_text_size = gui.scale(30)
+define gui.name_text_size = gui.scale(24)
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = gui.scale(22)
@@ -98,7 +98,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## at a time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = gui.scale(185)
+define gui.textbox_height = gui.scale(226)
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -107,8 +107,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = gui.scale(240)
-define gui.name_ypos = gui.scale(0)
+define gui.name_xpos = gui.scale(62)
+define gui.name_ypos = gui.scale(8)
 
 ## The horizontal alignment of the character's name. This can be 0.0 for
 ## left-aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -121,7 +121,7 @@ define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top,
 ## right, bottom order.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(40, 10, 26, 10)
 
 ## If True, the background of the namebox will be tiled, if False, the background
 ## of the namebox will be scaled.
@@ -131,11 +131,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5
 ## to center.
-define gui.dialogue_xpos = gui.scale(268)
-define gui.dialogue_ypos = gui.scale(50)
+define gui.dialogue_xpos = gui.scale(98)
+define gui.dialogue_ypos = gui.scale(72)
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = gui.scale(744)
+define gui.dialogue_width = gui.scale(1060)
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for
 ## left-aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -205,10 +205,10 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## Choice buttons are used in the in-game menus.
 
-define gui.choice_button_width = gui.scale(790)
+define gui.choice_button_width = gui.scale(820)
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(gui.scale(100), gui.scale(5), gui.scale(100), gui.scale(5))
+define gui.choice_button_borders = Borders(gui.scale(70), gui.scale(13), gui.scale(70), gui.scale(13))
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
@@ -291,10 +291,10 @@ define gui.frame_borders = Borders(gui.scale(4), gui.scale(4), gui.scale(4), gui
 define gui.confirm_frame_borders = Borders(gui.scale(40), gui.scale(40), gui.scale(40), gui.scale(40))
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(gui.scale(16), gui.scale(5), gui.scale(50), gui.scale(5))
+define gui.skip_frame_borders = Borders(gui.scale(22), gui.scale(11), gui.scale(22), gui.scale(11))
 
 ## The frame that is used as part of the notify screen.
-define gui.notify_frame_borders = Borders(gui.scale(16), gui.scale(5), gui.scale(40), gui.scale(5))
+define gui.notify_frame_borders = Borders(gui.scale(22), gui.scale(11), gui.scale(22), gui.scale(11))
 
 ## Should frame backgrounds be tiled?
 define gui.frame_tile = False
