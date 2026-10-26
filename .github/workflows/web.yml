@@ -1,0 +1,107 @@
+# Builds the web (HTML5) version of the game with Ren'Py and publishes it to
+# GitHub Pages on every push to main. You can also run it by hand from the
+# Actions tab ("Run workflow").
+#
+# The game ends up at https://<user>.github.io/<repo>/
+# One-time setup: Settings -> Pages -> Source: "GitHub Actions".
+
+name: Build web version and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  # Ren'Py versions to try, newest first. The first one that downloads is used.
+  RENPY_VERSIONS: "8.3.7 8.3.4"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the game
+        uses: actions/checkout@v4
+
+      - name: Pick a Ren'Py version
+        id: version
+        run: |
+          for v in $RENPY_VERSIONS; do
+            if curl -sfI "https://www.renpy.org/dl/$v/renpy-$v-web.zip" > /dev/null; then
+              echo "Using Ren'Py $v"
+              echo "renpy=$v" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "None of these Ren'Py versions could be downloaded: $RENPY_VERSIONS" >&2
+          echo "Edit RENPY_VERSIONS in .github/workflows/web.yml (see https://www.renpy.org/release_list.html)." >&2
+          exit 1
+
+      - name: Cache the Ren'Py SDK
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/renpy-sdk
+          key: renpy-sdk-web-${{ steps.version.outputs.renpy }}
+
+      - name: Download the Ren'Py SDK and web support
+        if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          V: ${{ steps.version.outputs.renpy }}
+        working-directory: ${{ runner.temp }}
+        run: |
+          set -euo pipefail
+          curl -sfL "https://www.renpy.org/dl/$V/renpy-$V-sdk.tar.bz2" -o sdk.tar.bz2
+          tar -xjf sdk.tar.bz2
+          mv "renpy-$V-sdk" ~/renpy-sdk
+
+          curl -sfL "https://www.renpy.org/dl/$V/renpy-$V-web.zip" -o web.zip
+          mkdir web-unzip
+          unzip -q web.zip -d web-unzip
+          # The zip may or may not wrap the web/ folder in an SDK-named folder.
+          webdir=$(find web-unzip -maxdepth 3 -type d -name web | head -n 1)
+          if [ -z "$webdir" ]; then echo "No web/ folder in web.zip" >&2; exit 1; fi
+          mv "$webdir" ~/renpy-sdk/web
+          ls ~/renpy-sdk/web | head
+
+      - name: Lint the game
+        env:
+          SDL_AUDIODRIVER: dummy
+          SDL_VIDEODRIVER: dummy
+        run: ~/renpy-sdk/renpy.sh "$GITHUB_WORKSPACE" lint
+
+      - name: Build the web version
+        env:
+          SDL_AUDIODRIVER: dummy
+          SDL_VIDEODRIVER: dummy
+        run: |
+          ~/renpy-sdk/renpy.sh ~/renpy-sdk/launcher web_build "$GITHUB_WORKSPACE" --destination "$RUNNER_TEMP/site"
+          ls -la "$RUNNER_TEMP/site"
+          test -f "$RUNNER_TEMP/site/index.html"
+          # GitHub Pages: serve files as-is (no Jekyll processing).
+          touch "$RUNNER_TEMP/site/.nojekyll"
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

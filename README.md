@@ -12,6 +12,14 @@ A Ren'Py visual novel set at a secret, invite-only party in a run-down motor lod
 
 Useful launcher actions: **Check Script (Lint)** validates the script, and **Build Distributions** packages it for Windows/Mac/Linux.
 
+## Playing in the browser (GitHub Pages)
+
+Every push to `main` builds a web version of the game with Ren'Py and publishes it to GitHub Pages via `.github/workflows/web.yml`. Once it's set up, the game is playable at **https://swartzcr.github.io/visualnovel/**.
+
+One-time setup: in the repo on GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**. Then re-run the latest workflow from the **Actions** tab (or push any commit).
+
+Each run downloads the Ren'Py SDK and its web support (the first version in `RENPY_VERSIONS` that's available), lints the game, builds it with `renpy.sh launcher web_build`, and deploys the result. To build a web version locally instead, use **Web → Build Web Application** in the Ren'Py launcher.
+
 ## How the game works
 
 | | |
