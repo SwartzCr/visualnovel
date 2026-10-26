@@ -1,0 +1,51 @@
+# Manual helper: downloads the Ren'Py SDK (Linux parts only) and pushes it to
+# a temporary branch, so a development environment that can reach GitHub but
+# not renpy.org can run the game and its tests locally.
+# Run it from the Actions tab; delete the tmp-renpy-sdk branch when done.
+
+name: Fetch Ren'Py SDK to a temporary branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Ren'Py version"
+        default: "8.3.7"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and slim the SDK
+        env:
+          V: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl -sfL "https://www.renpy.org/dl/$V/renpy-$V-sdk.tar.bz2" -o sdk.tar.bz2
+          tar -xjf sdk.tar.bz2
+          cd "renpy-$V-sdk"
+          du -sh . lib/* | sort -h | tail -20
+          # Keep only what's needed to run and lint a game on x86_64 Linux.
+          rm -rf doc tutorial the_question web rapt renios
+          find lib -mindepth 1 -maxdepth 1 -name 'py*-*' ! -name '*linux-x86_64' -exec rm -rf {} +
+          du -sh .
+          cd ..
+          mkdir out
+          tar -cf - "renpy-$V-sdk" | xz -6 -T0 > out/renpy-sdk.tar.xz
+          split -b 45m -d out/renpy-sdk.tar.xz out/renpy-sdk.tar.xz.part-
+          rm out/renpy-sdk.tar.xz
+          ls -la out
+
+      - name: Push to the tmp-renpy-sdk branch
+        run: |
+          cd "$RUNNER_TEMP/out"
+          echo "Temporary: Ren'Py ${{ inputs.version }} SDK (Linux x86_64). Reassemble with: cat renpy-sdk.tar.xz.part-* | tar -xJf -" > README.md
+          git init -q
+          git checkout -q -b tmp-renpy-sdk
+          git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -qm "Ren'Py SDK ${{ inputs.version }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" tmp-renpy-sdk

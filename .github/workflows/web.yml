@@ -10,6 +10,8 @@ name: Build web version and deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - ".github/workflows/fetch-renpy-sdk.yml"
   workflow_dispatch:
 
 permissions:
