@@ -304,6 +304,9 @@ label splashscreen:
 
 
 label vn_test_main:
+    # Ren'Py hides overlays (quick menu, time tag) during the splash screen;
+    # show them as in a normal game so they get tested too.
+    $ suppress_overlay = False
     $ vn_check_screens()
 
     while vn.index < len(vn.cases):
