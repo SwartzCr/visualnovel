@@ -77,7 +77,10 @@ jobs:
         env:
           SDL_AUDIODRIVER: dummy
           SDL_VIDEODRIVER: dummy
-        run: ~/renpy-sdk/renpy.sh "$GITHUB_WORKSPACE" lint
+        run: |
+          ~/renpy-sdk/renpy.sh "$GITHUB_WORKSPACE" lint "$RUNNER_TEMP/lint.txt" || true
+          cat "$RUNNER_TEMP/lint.txt"
+          { echo '## Ren'"'"'Py lint report'; echo '```'; cat "$RUNNER_TEMP/lint.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Build the web version
         env:
@@ -89,6 +92,8 @@ jobs:
           test -f "$RUNNER_TEMP/site/index.html"
           # GitHub Pages: serve files as-is (no Jekyll processing).
           touch "$RUNNER_TEMP/site/.nojekyll"
+          # Publish the lint report alongside the game (…/visualnovel/lint.txt).
+          cp "$RUNNER_TEMP/lint.txt" "$RUNNER_TEMP/site/lint.txt"
 
       - name: Upload the site
         uses: actions/upload-pages-artifact@v3
