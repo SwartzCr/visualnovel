@@ -14,6 +14,7 @@ label solstice_pool_1:
 
         "\"Wait, I want to give you something too.\"":
             $ gain("solstice", 2)
+            $ gave_mint = True
             "You dig in your pockets. All you have is a hotel mint, slightly warm."
             s surprised "For me?"
             s blush "Oh my god. No one ever gifts back. Everyone just takes the glitter and runs."
@@ -177,6 +178,7 @@ label solstice_night_2:
 
         "Sing the slow one with her.":
             $ gain("solstice", 2)
+            $ sang_slow_song = True
             "The two of you squeeze into the booth. The song is about a truck and a dog and a long road home. You don't know the words. She does."
             "Halfway through, her voice cracks and she laughs and keeps going, and you sing the harmony that doesn't exist."
             s blush "Okay. That's... okay. I'm going to remember that one."
@@ -226,11 +228,13 @@ label solstice_night_3:
 
         "\"I'd love that.\"":
             $ gain("solstice", 2)
+            $ knows_dana = True
             s blush "It's Dana. Dana. It's so boring. It's a dentist's name."
             s "Nobody here knows it. Now you do."
 
         "\"Only if you want to. I like Solstice too.\"":
             $ gain("solstice", 2)
+            $ knows_dana = True
             s blush "I want to. It's Dana."
             s "And you like Solstice too. Huh. Then maybe you'd like both."
 
@@ -248,22 +252,58 @@ label solstice_night_3:
 
 label solstice_romance:
     scene bg roof_dawn with slowfade
-    $ time_label = "Monday — 6:01 AM"
-    "Solstice is on the roof in a borrowed hoodie, leg warmers still on, her LED top dead and dark underneath. She's sitting on the bench with two cups of tea."
+    $ time_label = "Monday — 5:48 AM"
+    "The ballroom lets out around five. Seven hundred people spill into the hallways sticky with confetti, hugging strangers, trading kandi, crying a little."
+    "You find Solstice exactly where she said she'd be: on the roof, in a borrowed hoodie three sizes too big, leg warmers still on, LED top dead and dark underneath."
+    "She's sitting on the bench with two cups of tea, and she's not dancing. You're not sure you've ever seen her sit still."
     show solstice blush with dissolve
-    s "Hi. I got you tea. It's the cardamom one. I didn't know if you were coming, so I've been drinking both of them in turns."
-    "You sit. The sky is going pink and gold over the hills."
+    s "Hi. I got you tea. It's the cardamom one. I didn't know if you were coming, so I've been drinking both of them in turns, which means you get half."
+    s "That's a gift. Gifts don't do math."
+    "You sit. The bench is cold. She shifts over until her shoulder is against yours, and the hoodie smells like the ballroom: fog machine, sunscreen, glitter, if glitter has a smell."
+
+    menu:
+        s "Okay. Real question. Did you have fun? Like, actually?"
+
+        "\"The most fun I've had in years. Mostly because of you.\"":
+            s blush "Stop. Stop it. You can't just... okay, keep going, actually."
+        "\"Ask me again after I sleep for two days.\"":
+            s happy "Ha! Fair. I'm going to sleep until Thursday. Then I have a night shift. Then I'm going to sleep until next Thursday."
+
+    show solstice neutral
+    "Below you, the parking lot is starting to empty. Someone is carrying a six-foot inflatable flamingo to a hatchback and losing."
+    if gave_mint:
+        s "I still have your mint, by the way. The hotel mint. I didn't eat it."
+        "She digs in the pocket of her leg warmer and holds it up: a slightly squashed white disc in cellophane, now covered in glitter."
+        s "I'm going to keep it in my locker at work. Next to my badge. So I see it every shift."
+    if sang_slow_song:
+        s "And I keep thinking about the slow song. The truck song. You didn't know any of the words."
+        s happy "You sang anyway. Nobody sings anyway."
     s neutral "I've been to twenty festivals. I've never once watched the sunrise. I'm always inside, dancing, so I don't have to think."
     s "Tomorrow I go back to the ICU. Night shift Tuesday. Somebody's going to have the worst night of their life and I'm going to be there."
-    s blush "But I think I'll be a little less tired. Because I'll know there's a sunrise. And I saw it. With you."
+    s "Usually I come back from these things and I'm emptier than when I left. Like I spent it all. Like I'm on battery."
+    s blush "But I don't feel like that right now. I feel... charged. Is that stupid? That's stupid."
+
+    menu:
+        "\"It's not stupid. I feel it too.\"":
+            s blush "Okay. Okay, good. Because I was going to be so embarrassed."
+        "\"You don't have to be on all the time. Not with me.\"":
+            s blush "..."
+            s "Nobody's ever said that to me. People usually want me brighter. Not less bright. Just... less on."
+
+    show solstice neutral
+    if knows_dana:
+        s "You know my real name. Nobody here knows it. That's not nothing."
+    else:
+        s "Hey. Can I tell you something? My real name. Nobody here knows it."
+        s blush "It's Dana. Dana. It's a dentist's name. Don't laugh."
+    "The sun is just coming over the hills now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it."
 
     menu:
         "\"Hi, Dana.\"":
             s blush "Oh, that's unfair. That's so unfair. Say it again."
-            "You do. She covers her face with her hands."
-
+            "You do. She covers her face with her hands, and laughs, and doesn't take them away for a while."
         "Take her hand.":
-            "Her fingers are cold from the morning and covered in glitter. She squeezes back hard."
+            "Her fingers are cold from the morning and covered in glitter. She squeezes back hard, like she's checking you're real."
 
     s blush "Can I kiss you? Or is that too much? I'm really bad at doing things without lights on. I'm figuring it out."
 
@@ -271,17 +311,23 @@ label solstice_romance:
         "\"Yes. Lights off. Just us.\"":
             "She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend."
             "It's a slow kiss. A slow-song kiss. Somewhere a bird sings the harmony that doesn't exist."
-
         "Kiss her first, gently.":
             s surprised "Oh!"
             s blush "Oh. Okay. Yeah. Yes. Again, please."
+            "So you do it again, slower. She's smiling so hard it barely counts."
+
+    show solstice happy
+    s "Okay. The sun's up. I've officially seen one. I'm going to be insufferable about it."
 
     scene bg roof_dawn with slowfade
-    "The sun comes up. The longest day of the year was months ago. This feels longer."
+    "The longest day of the year was months ago. This one feels longer, in the best way."
     "Below, someone in the parking lot starts playing a slow country song about a truck from their car speakers. Solstice laughs so hard she spills both teas."
+    "She pulls you up off the bench and you dance, badly, slowly, with no lights at all, until the song ends and the car drives away."
     scene black with slowfade
     "{i}Wednesday, 4:12 AM. A text.{/i}"
-    s "on break. someone made it through the night. it's sunrise in like an hour. thinking about you. it's dana btw. obviously."
+    s "on break. someone made it through the night. the family brought donuts for the whole floor"
+    s "it's sunrise in like an hour. I'm going to go watch it from the parking garage roof. first one I've watched on purpose that wasn't with you"
+    s "thinking about you. it's dana btw. obviously. come to the next one with me? I'll bring the tea. you bring a mint"
     $ chosen = "solstice"
     $ ending_name = "The Longest Day"
     jump ending_card
@@ -289,7 +335,15 @@ label solstice_romance:
 
 label solstice_friend:
     scene bg exterior with slowfade
+    $ time_label = "Monday — Checkout"
     show solstice happy with dissolve
-    "Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter."
-    s "You're stuck with me now. Friendship bracelet is legally binding. Next festival, you're on my camp. No excuses!"
+    "Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price."
+    s "THERE you are! I was going to leave a note on your windshield made of glitter. A glitter note. A glote."
+    s neutral "Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes."
+    s "Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts."
+    "She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}."
+    s happy "You're stuck with me now. Friendship bracelet is legally binding. Next festival, you're on my camp. No excuses!"
+    s "And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert."
     return
+
+

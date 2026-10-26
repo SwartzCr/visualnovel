@@ -180,6 +180,7 @@ label gerald_night_2:
     menu:
         "Sit beside him in silence.":
             $ gain("gerald", 2)
+            $ sat_with_gerald = True
             "You sit. The creek sounds go on. A firefly lands on Gerald's arm and stays there."
             "..."
             "..."
@@ -236,6 +237,7 @@ label gerald_night_3:
     menu:
         "\"I'm not blurry about Gerald. He's the realest person I've met all weekend.\"":
             $ gain("gerald", 2)
+            $ vouched_for_gerald = True
             g blush "..."
             "Gerald doesn't say anything. But he sits back down, carefully, very close to you."
 
@@ -258,41 +260,89 @@ label gerald_night_3:
 
 label gerald_romance:
     scene bg roof_dawn with slowfade
-    $ time_label = "Monday — 6:04 AM"
-    "Gerald is on the roof, as promised, sitting on the edge by the water tank. Below, the last people are drifting out of the ballroom. Above, the sky is going pink over the hills."
+    $ time_label = "Monday — 5:52 AM"
+    "The stairwell to the roof is propped open with a waffle iron. Someone from the Breakfast Schism has left it there, as a blessing or a warning."
+    "At the top, the air is cold and smells like eucalyptus. The string lights have mostly burned out. The rigging that held the ark hangs slack."
+    "Gerald is sitting on the edge by the water tank, enormous against the pink sky, holding two teacups. One of them is for you. It's still warm."
     show gerald happy with dissolve
-    g "You came. I had a whole speech prepared in case you didn't. It was very dignified. Lots of nature metaphors."
-    g neutral "I'm glad I don't need it."
-    "You sit beside him. For a while you just watch the light come up. Somewhere a bird starts, then another one."
-    g "I go home tomorrow. Back to the creek. Margaret will ask where I've been and I'll say {i}nowhere{/i}, which is what we always say."
+    g "You came. I had a speech prepared in case you didn't. It was very dignified. Lots of nature metaphors. A bit about a fallen log."
+    g neutral "I'm glad I don't need it. It was mostly about the log."
+    "You sit beside him. The bench creaks under his weight and then, with a kind of resignation, holds."
+    g "Lapsang souchong. I brought my own leaves. The tea bar means well, but they keep putting cardamom in everything."
+
+    menu:
+        g "Did you enjoy the ark? I confess I wept. A great deal. I had to borrow a towel from Wren."
+
+        "\"I cried too. Over a rubber duck.\"":
+            g happy "Over a rubber duck. Yes. Seven hundred people. One duck. It was the most profound thing I've seen in decades."
+        "\"I mostly watched you crying.\"":
+            g blush "Oh dear. Was it very loud? I'm told I sound like a foghorn when I'm moved."
+            g happy "...It was a beautiful duck, though."
+
+    show gerald neutral
+    "For a while you just watch the light come up. A bird starts somewhere down in the eucalyptus, then another one."
+    if sat_with_gerald:
+        g "When we were in the forest room, you sat with me without saying anything. Do you remember? For a long time."
+        g "I haven't done that with anyone since I was young. Just sat. It's the hardest thing to find, a person who'll just sit."
+    else:
+        g "Do you know what I'll remember from this weekend? Not the rooms. Not even the ark. The quiet bits in between, with you."
+        g "It's the hardest thing to find, a person who'll just sit."
+    if vouched_for_gerald:
+        g "And at the meeting. When the Mothman asked. What you said about me."
+        g blush "I've thought of very little else, if I'm honest."
+
+    show gerald neutral
+    g "I go home tomorrow. Back to the creek. My sister Margaret will ask where I've been and I'll say {i}nowhere{/i}, which is what we always say."
+    g "That's how it is with my kind. We are always coming from nowhere and going nowhere, so nobody can follow us there."
     g blush "But I'd like to say {i}somewhere{/i} this time. I'd like there to be a somewhere. And a someone in it."
 
     menu:
         "\"There is. I'm right here.\"":
             g blush "Yes. You are. You're entirely in focus."
-
         "Lean against his side.":
             "Gerald goes very still, the way you'd go still if a deer walked up to you. Then, slowly, an arm the size of a tree branch settles around your shoulders."
+            g blush "Oh. Oh, that's... yes. That's very good. Let's stay exactly like this."
 
-    g blush "May I ask you something very forward? I've been thinking about it since the moss."
+    show gerald neutral
+    "The sun touches the top of the hills. Everything turns gold: the gravel, the water tank, the fur on Gerald's arm."
+    g "May I tell you something about the famous film? Not Bernard's. Mine."
+    g "There's a hiker in Oregon, 1994, who got a picture of me by a river. Blurry, naturally. She sold it to a magazine. It's still in a museum somewhere, labeled HOAX."
+    g "I was crying in that picture. I'd just lost someone. And for thirty years I've been a hoax who was crying."
+    g happy "This weekend I've just been Gerald. Nobody wanted proof. You least of all."
+
+    menu:
+        "\"You were never a hoax.\"":
+            g blush "...Thank you. I may need to hear that several more times. Over a number of years."
+        "\"I'd still like to know you better than any photo.\"":
+            g blush "Then you'll have to come to the creek. The salmon come back in September. It's very loud and very smelly and I think you'd love it."
+
+    if pool_seen["gerald"] >= 2:
+        g blush "May I ask you something very forward? I've been thinking about it since the moss."
+    else:
+        g blush "May I ask you something very forward? I've been thinking about it all weekend."
     g "May I kiss you? I'll understand completely if the logistics seem... daunting."
 
     menu:
         "\"Yes. I'll meet you halfway.\"":
-            "He bends down. You stretch up. It takes some engineering."
-            "It's worth it. His fur smells like cedar smoke and pool water. He kisses like he's afraid you're a mirage."
-
+            "He bends down. You stretch up. It takes some engineering, and at one point a teacup goes over the edge of the roof."
+            "It's worth it. His fur smells like cedar smoke and pool water. He kisses like he's afraid you're a mirage, very gently, ready to stop."
+            "You don't let him stop."
         "Stand up on the bench so you're eye to eye.":
             g happy "Oh, that's clever. That's very clever."
             "Eye to eye, he's suddenly shy. You close the distance. He kisses you so gently you could almost think you imagined it, except you know you didn't."
 
+    show gerald happy
+    g "Well. I'm going to have to tell Margaret {i}something{/i} now."
+
     scene bg roof_dawn with slowfade
     "The sun clears the hills. Down in the parking lot, somebody with a camera looks up at the roof, squints, and sees only a blur."
-    "Gerald laughs so hard the water tank rings."
+    "Gerald laughs so hard the water tank rings like a bell."
+    "You stay up there until the last cars leave, until the Pool People fold their banner, until Wren comes up to tell you the hotel is technically closed and has been since 1987."
     scene black with slowfade
-    "{i}Three weeks later, a package arrives with no return address. Inside: a tin of lapsang souchong, a pressed fern, and a postcard of a creek in the Klamath.{/i}"
+    "{i}Three weeks later, a package arrives with no return address. Inside: a tin of lapsang souchong, a pressed fern, a smooth gray stone from a creek, and a postcard of the Klamath.{/i}"
     "{i}On the back, in very careful handwriting:{/i}"
-    g "The salmon are back. Margaret says to bring a raincoat. I said you would. — G."
+    g "The salmon are back. Margaret says to bring a raincoat and that she doesn't care either way if you come. She has cleaned the whole cabin twice. — G."
+    g "P.S. The stone is for your pocket. Ours are full of them. It's how we remember where we've been."
     $ chosen = "gerald"
     $ ending_name = "Not Blurry"
     jump ending_card
@@ -300,7 +350,16 @@ label gerald_romance:
 
 label gerald_friend:
     scene bg exterior with slowfade
+    $ time_label = "Monday — Checkout"
     show gerald happy with dissolve
-    "As the cars pull out on Monday morning, you see Gerald walking up the road toward the hills, a teacup in one hand. He turns and waves at you, once, over his shoulder."
+    "As the cars pull out on Monday morning, you find Gerald at the edge of the parking lot, packing an absurdly small suitcase."
+    g "Ah. My friend. I hoped I'd see you before the road."
+    g neutral "I've been coming to these for years and I usually leave the way I came. Quietly. From nowhere, to nowhere."
+    g happy "This time I'm leaving with a friend. It's a very strange feeling. Like having a pocket full of warm stones."
+    "He presses a teabag into your hand. Lapsang souchong. It smells like a campfire in the rain."
+    g "If you're ever up north, follow the creek. Don't bring a camera. Just call my name. I'll hear."
+    "He walks up the road toward the hills, a teacup in one hand. At the top he turns and waves, once, over his shoulder."
     "It looks exactly like the famous film. Except it isn't blurry at all."
     return
+
+

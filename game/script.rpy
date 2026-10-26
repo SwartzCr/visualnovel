@@ -22,64 +22,36 @@ label start:
     scene bg exterior with slowfade
     $ time_label = "Friday — Arrival"
 
-    "The invitation came as a paper card with no return address. One side said FRIDAY, 3PM. The other side said {i}You were never here.{/i}"
-    "Your friend Tamsin vouched for you. That's how it works. Somebody who's been coming for years puts their name next to yours, and if you can't hang, neither can they."
-    "No photos. No posting. No saying the name of the thing out loud. Nobody seems sure it has a name."
-    "The Hotel Marisol is a two-story motor lodge in the hills that has been closing down since 1987. Somebody has rented every room for the weekend."
-    "The neon sign has lost its I. It now reads HOTEL MAR SOL, which several people in the parking lot are already treating as a prophecy."
+    "The invitation was a paper card with no return address. One side said FRIDAY, 3PM. The other said {i}You were never here.{/i}"
+    "The Hotel Marisol has been closing down since 1987. This weekend, somebody has rented every room. The neon sign has lost its I: HOTEL MAR SOL."
 
-    tam "omg you're here?? ok I'm already in a room full of balloons and I can't find the door"
-    tam "go check in. find the person in black with the clipboard. ask before touching. drink tea. let it get weird"
-    tam "I'll find you!!!"
-
-    "You will not see Tamsin again until Sunday."
+    tam "omg you're here!! go check in. find the person in black. ask before touching. let it get weird"
 
     scene bg lobby with dissolve
     $ time_label = "Friday — The Lobby"
-
-    "The lobby smells like incense, chlorine, and something baking. A brass bell sits on the desk next to a hand-lettered sign: NO PHOTOS."
-    "Behind the desk, a person in head-to-toe black is talking into a headset while writing on a clipboard while handing someone a key."
-
     show wren neutral with dissolve
 
-    w "—no, the fog machine in 312 is {i}supposed{/i} to be in the forest. Yes. The whole forest. Copy."
-    w "Sorry. Hi. Welcome to the Marisol. You're not checking in, because everyone who enters is already checked in. It's on the sign."
-    w "I'm Wren. Crew. Care team, logistics, lost keys, lost people. If anything goes sideways this weekend, find someone dressed like me."
+    w "Hi. Welcome to the Marisol. I'm Wren, crew. Lost keys, lost people, anything that goes sideways: find someone dressed like me."
 
     menu:
-        w "Any questions before I hand you the rules? I have to say them out loud. Legally. Spiritually."
+        w "Any questions before the rules?"
 
         "\"Is there anything you need help with right now?\"":
             $ gain("wren", 1)
-            show wren surprised
-            w "Huh. Nobody asks crew that."
-            show wren neutral
-            w "I'm fine. But thank you. Hold that thought. I might cash it in at 3 AM."
+            w surprised "Huh. Nobody asks crew that."
+            w neutral "I'm fine. But hold that thought. I might cash it in at 3 AM."
 
         "\"What happens if I break a rule?\"":
-            w "Depends on the rule. Most of them are about being kind, so mostly you'll have to sit with having been unkind, which is worse than being kicked out."
-            w "The few that get you kicked out, you'll know."
+            w "Most of them are about being kind. Mostly you'll just have to live with having been unkind, which is worse."
 
         "\"So what {i}is{/i} this, exactly?\"":
-            w "That's the one question nobody here can answer. I've been crewing for six years and I'm not allowed to say."
-            w "Not because it's a secret. Because the second anyone says it out loud, it turns into a brochure."
+            w "Nobody's allowed to say. The second anyone says it out loud, it turns into a brochure."
 
-    show wren neutral
-    w "Okay. The rules."
-    w "One: no photos, no posting. Your phone is a flashlight and an alarm clock this weekend."
-    w "Two: ask before you touch anyone. Ask before you touch their costume. Some of these costumes took four hundred hours."
-    w "Three: there's no bar. There's a tea bar. Alcohol is where most of the bad nights in the world start."
-    w "Four: there are no spectators here. If you walk into a room, you're part of the room."
-    w "Five: if you're having a hard time, find someone in black, or find Grandma Ozone's living room. Second floor. Follow the smell of cardamom."
-    w "This weekend, the Pool People and the Order of the Ice Machine are at war over the true nature of water. That will be resolved Sunday at 11:11 PM. Probably."
-    w "Pool's open in the afternoons. Hallways are open all night. Welcome."
-
-    walkie "Wren, the axolotl is stuck in the revolving door again."
-    show wren happy
-    w "Copy. On my way. That one's a regular."
+    w neutral "No photos. Ask before you touch anyone, or their costume. No bar, just a tea bar. No spectators: walk into a room and you're part of it."
+    w "And if you're having a hard time, find someone in black, or Grandma Ozone's living room. Follow the smell of cardamom."
+    w "Pool's open in the afternoons. Hallways all night. Welcome."
     hide wren with dissolve
 
-    "And just like that, you're in."
     "Tip: open the {color=#ff5fb8}Guests{/color} menu at the bottom of the screen to see everyone you've met."
 
     jump the_weekend
@@ -131,6 +103,7 @@ label pool_time:
 
     if day == 1:
         "The pool is the bright, ordinary half of the party. Sunscreen, towels, the Pool People's banner flapping over the deep end: WATER IS WARM. WATER IS LOVE."
+        "The Pool People, you gather, are at war with the Order of the Ice Machine over the true nature of water. It's supposed to be settled Sunday at 11:11 PM."
         "Most of the costumes have been swapped for swimsuits. Some have not. Some never will be."
     elif day == 2:
         "The pool on Saturday afternoon is full of people recovering from Friday night. Someone is teaching a slow-motion water aerobics class to no music at all."

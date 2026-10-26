@@ -59,6 +59,7 @@ label wren_pool_2:
     menu:
         "Offer her half of the fancy pastry you grabbed from the tea bar.":
             $ gain("wren", 2)
+            $ shared_bun = True
             w surprised "Is that the cardamom bun? There are only twelve of those. I've never gotten one. Not in six years."
             w happy "Oh my god. Oh my god, it's so good. I'm going to cry. I'm not going to cry. I'm crew."
 
@@ -167,6 +168,7 @@ label wren_night_2:
     menu:
         "Press FOG exactly on one.":
             $ gain("wren", 2)
+            $ called_fog_cue = True
             "You hit it exactly on the beat. On the monitor, a soft wave of fog rolls across the forest room. Someone in there gasps, delighted."
             w happy "Perfect. That was {i}perfect.{/i} You have no idea how rare that is. You'd make good crew."
 
@@ -259,45 +261,82 @@ label wren_night_3:
 label wren_romance:
     scene bg ballroom with slowfade
     $ time_label = "Sunday — 11:12 PM"
-    "At 11:12, while the ballroom is still screaming, someone taps you on the shoulder."
+    "At 11:12, while the ballroom is still screaming and the confetti is still falling, someone taps you on the shoulder."
     show wren happy with dissolve
-    "Wren. No clipboard. The headset's around her neck instead of on her head."
-    w "I handed the board to Pilar. Pilar's been begging for it for two years. I just... walked out."
-    w "I watched the duck come out of the ark from the back of the room. In person. With my eyes. It was so stupid. I cried so much."
+    "Wren. No clipboard. The headset is around her neck instead of on her head, and she looks like someone who has just jumped off a high diving board."
+    w "I handed the board to Pilar. Pilar's been begging for it for two years. I just... walked out. In the middle of a cue."
+    w "I watched the duck come out of the ark from the back of the room. In person. With my actual eyes. It was so stupid. I cried so much."
+    w surprised "I don't know what to do with my hands. They keep reaching for a radio."
+    menu:
+        w "What do guests do now? After the big moment? I've genuinely never known."
+
+        "\"They dance. Badly. Come on.\"":
+            "You pull her into the crowd. She dances like someone who has seen a thousand people dance and never once done it herself, stiff, then less stiff, then laughing."
+        "\"They go find a quiet corner and talk until the sun comes up.\"":
+            w happy "That sounds... incredible, honestly. I know every quiet corner in this building. Professionally."
+
     scene bg roof_dawn with slowfade
     $ time_label = "Monday — 6:07 AM"
     show wren neutral with dissolve
-    "Hours later, you're both on the roof again, where you were before the cue. The rigging's slack. The sky's going gold over the hills."
+    "Hours later, you're both back on the roof, where you were before the cue. The rigging hangs slack. The sky is going gold over the hills."
+    "Wren is sitting on the gravel with her back against the water tank, boots off, a stolen cardamom bun in each hand. She gives you one."
+    if shared_bun:
+        w "You gave me half of one on Saturday. I've been waiting all weekend to pay you back. With interest."
+    else:
+        w "There were twelve of these. Now there are zero. I have abused my position. I regret nothing."
     w "This is the first sunrise in six years I've watched without a radio on."
-    "She takes the headset off her neck and sets it on the bench between you. It crackles once. She doesn't touch it."
+    "She takes the headset off her neck and sets it on the gravel between you. It crackles once. She doesn't touch it."
 
     menu:
         "\"How does it feel?\"":
             w blush "Terrifying. Amazing. Like I left the stove on, except the stove is seven hundred people."
-            w "...But they're fine. They're fine without me for one hour. Huh."
-
+            w "...But they're fine. They're fine without me for one morning. Huh."
         "Lean your shoulder against hers.":
             "She leans back. All of her, for once. You can feel how tired she is, and how much lighter."
 
-    w blush "I've been wanting to ask you something since the disco ball. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now."
+    show wren neutral
+    w "Can I tell you what this weekend was supposed to be? For me? Clipboard, radio, eleven hours of sleep across three days, someone throws up in the forest room, the fog machine catches fire."
+    if called_fog_cue:
+        w happy "And instead some guest walks into my linen closet and nails a fog cue on the first try. Do you know how annoying that is? I trained Pilar for a year."
+    w "I keep thinking about my first year. The stairwell. The person in black who sat with me for four hours."
+    w "I've spent six years trying to be that person for everyone else. I never thought about who'd sit with me."
+    w blush "And then you just... did. Over and over. Without me asking. You kept asking if I needed anything."
+
+    menu:
+        "\"You always needed something. You just never got to ask.\"":
+            w blush "..."
+            w "Okay. That's... you can't just say that at sunrise. I'm going to think about that for a year."
+        "\"I liked being near you. That's all it was.\"":
+            w blush "That's all? That's everything. That's the whole job, actually. Being near people."
+
+    "The sun clears the hills. Down in the parking lot, a crew member is coiling cables and singing to themselves. It isn't Wren's problem. For once, nothing is."
+    if pool_seen["wren"] >= 1:
+        w blush "I've been wanting to ask you something since the disco ball. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now."
+    else:
+        w blush "I've been wanting to ask you something all weekend. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now."
     w "Is it okay if I kiss you?"
 
     menu:
         "\"Yes. Very much yes.\"":
             "She kisses you like she's been planning it for three days, which it turns out she has. She's precise about it. Perfect timing. Right on the count."
             w happy "Cue."
-
         "\"Only if I get to call it. Three, two—\"":
             w happy "Oh, you're—"
             "On one, she does."
+            w happy "Perfect timing. You really would make good crew."
+
+    show wren happy
+    w "I have to go help strike the set in about an hour. That's the deal. Everyone helps strike."
+    w blush "But this hour's mine. I'm not giving it to anyone."
 
     scene bg roof_dawn with slowfade
-    "The sun comes up. On the bench between you, the walkie crackles: {i}Wren? Wren, where are the extra towels?{/i}"
-    "She reaches over, very calmly, and turns it off."
+    "On the gravel between you, the walkie crackles: {i}Wren? Wren, where are the extra towels? Wren, the flamingo is back in the ice machine.{/i}"
+    "She reaches over, very calmly, and turns it off. Then she lies back on the gravel next to you and watches the whole sky go from pink to blue."
     scene black with slowfade
     "{i}A week later, an envelope arrives. Inside: a crew badge, laminated. It doesn't say CREW. It says GUEST.{/i}"
     "{i}On the back, in neat clipboard handwriting:{/i}"
-    w "Next year we both come as guests. I already asked. Pilar is calling the ark. I'm watching it with you. That's the whole plan. — W"
+    w "Next year we both come as guests. I already asked. Pilar is calling the ark. I'm watching it with you, from the front, with my eyes. That's the whole plan."
+    w "Also I'm free Saturday. Not a cue, not a shift. Just free. I had to look up what people do. Apparently it's brunch. — W"
     $ chosen = "wren"
     $ ending_name = "Off Duty"
     jump ending_card
@@ -305,7 +344,15 @@ label wren_romance:
 
 label wren_friend:
     scene bg exterior with slowfade
+    $ time_label = "Monday — Checkout"
     show wren happy with dissolve
-    "Wren is coiling cables in the parking lot on Monday morning. She sees you and lifts one hand."
-    w "Hey. Thanks for this weekend. Seriously. You're on the list now. If you ever want to crew, I'll train you myself."
+    "Wren is coiling cables in the parking lot on Monday morning, headset back on, already somewhere in the middle of tomorrow. She sees you and lifts one hand."
+    w "Hey. You survived. Most people look worse than you on Monday. You look about forty percent worse. That's good."
+    w neutral "Thanks for this weekend. Seriously. You kept checking on me. Crew doesn't get checked on. It's... it was nice."
+    walkie "Wren, there's a man in pajamas asleep in the forest room. He says he lives there now."
+    w "Copy. Give me five."
+    w happy "You're on the list now. If you ever want to crew, I'll train you myself. You'd be good at it. You notice people."
+    "She hands you a spare walkie-talkie, switched off, as a souvenir. It still has a strip of tape on the back that says CARE."
     return
+
+

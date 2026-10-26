@@ -111,6 +111,22 @@ default met_tonight = []
 default wanders = 0
 default chosen = None
 
+## Story flags for callbacks in the endings.
+default gave_mint = False
+default sang_slow_song = False
+default knows_dana = False
+default juni_has_courage = False
+default sat_with_gerald = False
+default vouched_for_gerald = False
+default shared_bun = False
+default called_fog_cue = False
+default gave_rock = False
+default hugged_zyx = False
+default zyx_emergency_contact = False
+
+define STORY_FLAGS = ["gave_mint", "sang_slow_song", "knows_dana", "juni_has_courage", "sat_with_gerald",
+    "vouched_for_gerald", "shared_bun", "called_fog_cue", "gave_rock", "hugged_zyx", "zyx_emergency_contact"]
+
 init python:
 
     def gain(who, n=1):

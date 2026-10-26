@@ -197,12 +197,14 @@ label juni_night_2:
 
         "Take it, and hand it straight to Juni.":
             $ gain("juni", 2)
+            $ juni_has_courage = True
             j blush "Oh."
             "Juni holds the card in both sleeves like it's warm. The hood dips down so you can't see their face."
             j "Nobody's ever... okay. Okay. I'm going to use this. I don't know on what yet. But I'm going to."
 
         "\"Let's tear it in half. Half each.\"":
             $ gain("juni", 1)
+            $ juni_has_courage = True
             j happy "Half a courage each. That's probably the right dose for a weekend."
             "You tear it carefully down the middle. Juni tucks their half into the hood."
 
@@ -271,44 +273,93 @@ label juni_night_3:
 
 label juni_romance:
     scene bg pool with slowfade
-    $ time_label = "Monday — 5:58 AM"
-    "You find Juni at the pool, an hour before dawn. Everyone else has gone to bed or to the ballroom. The water is perfectly still. The sky over the hills is just starting to turn gray."
+    $ time_label = "Monday — 5:41 AM"
+    "The ballroom is still going when you slip out. The hallways are full of people sitting against the walls in pairs, talking quietly, capes folded into pillows."
+    "You take the back stairs down. The pool deck is empty. The Pool People's banner is lying in a heap by the towel hut, and somebody has tucked it in like a blanket."
+    "The water is perfectly still. The sky over the hills is just starting to turn gray."
+    "And at the edge of the pool, exactly where you first saw them, there's a pink shape with its onesie feet in the water."
     show juni neutral with dissolve
-    j "You came. I had a whole plan if you didn't come. It involved crying into the pool. Very damp."
-    "They're sitting at the edge where you first met them, onesie feet in the water. They're holding the half of a card that says COURAGE."
-    j "I'm going to use it now. Is that okay? You can look away if you want. Actually, don't look away. Don't look away."
-    "Juni reaches up with both sleeves and pulls the hood strings loose. Then, slowly, they push the hood back."
-    "Lotl falls down their back, gills and all. Underneath is short dark hair stuck flat with sweat, and ears you've never seen, and a face that's all the way there for the first time all weekend."
+    j "You came."
+    j "I had a whole plan if you didn't come. It involved crying into the pool. Very damp. Very on-theme."
+    "You sit down next to them and put your feet in. The water is cold enough to make you gasp. Juni laughs at you, a little, which seems fair."
+    j "Cold-water creature. Told you."
+
+    menu:
+        j "So. How was your first time? Honestly."
+
+        "\"I came here not knowing who I'd meet. Now I know a salamander.\"":
+            j happy "A full salamander. You were promoted. It's on your permanent record."
+        "\"Honestly? The best part was the pizza slices.\"" if pool_seen["juni"] >= 2:
+            j happy "The crust one. I knew you'd appreciate the crust one. Nobody appreciates the crust one."
+
+    show juni neutral
+    if night_seen["juni"] >= 1:
+        "For a while you just talk. About Room 404, and the man in beige who might still be in there, insisting he doesn't exist."
+    else:
+        "For a while you just talk. About the weekend, the rooms, the people in capes, the herald who lost his voice."
+    if juni_has_courage:
+        j "I keep thinking about the courage card from the Lost & Found. I carried it around all weekend in the hood. It's soggy now. I went in the pool twice with it."
+        "They hold it up. The card is warped and soft now, the word COURAGE bleeding blue at the edges."
+        j "I'm going to use it now. Is that okay?"
+    else:
+        j "There's a Lost & Found upstairs where you can take a card that says COURAGE. I never got one. I kept chickening out."
+        j "So I'm going to try it without the card. Is that okay?"
+    j "You can look away if you want. Actually, don't look away. Please don't look away."
+    "Juni reaches up with both sleeves and pulls the hood strings loose. Their hands shake a little. They take a breath like they're about to go underwater."
+    "Then, slowly, they push the hood back."
+    "Lotl falls down their back, gills and all, and lands in the pool with a soft pink splash."
+    "Underneath is short dark hair stuck flat with sweat, and ears you've never seen, and a jaw, and a neck, and a face that's all the way there for the first time all weekend."
     show juni blush
     j "Hi. This is... the rest of me."
-    j "It's really cold out here without it. Huh. I forgot what air felt like."
+    j "It's really cold out here without it. Huh. I forgot what air felt like. On the ears. Ears are so weird."
 
     menu:
         "\"Hi, Juniper.\"":
             j happy "Oh no. Oh, that's so much worse than I thought. In a good way. In a terrible, good way."
-
+            j blush "Nobody's said it like that before. Like it wasn't a punishment."
         "\"Hi, Juni. It's nice to meet all of you.\"":
             j happy "All of me. Yeah. That's everyone. That's the whole cast."
+            j blush "It's a small cast. But everyone showed up."
 
     show juni blush
-    j "Can I... I want to ask you something and I've already used up my courage card, so I'm just going to do it raw."
+    "The sky behind the motel goes from gray to pale pink. Somewhere upstairs, a single kazoo is playing something slow."
+    j "Three years I've been coming here. Three years I've been standing outside doors, waiting for someone to pull me in."
+    j "And this year I spent the whole time hoping it'd be you. And it was. Every time. Even when I didn't wait."
+    j "I don't know what happens Monday. I'll go back to fixing the thing. My manager will call me Junebug. My phone is still in the ice bucket, by the way."
+    j "But I think I want there to be a you on Monday. If that's... if you want that too."
+
+    menu:
+        "\"I want that too.\"":
+            j blush "Okay. Okay. Good. Great. I'm going to be so normal about this."
+        "Take their hand, sleeve and all.":
+            "You find their hand inside the sleeve. It's warm and a little damp and holding on very tightly."
+            j blush "...Yeah. That's an answer."
+
+    j blush "Can I ask you something? I'm out of courage, so I'm just going to do it raw."
     j "Can I kiss you?"
 
     menu:
         "\"Yes.\"":
             "Juni leans over the water. They smell like chlorine and laundry and the tea bar's cardamom."
             "It's a small kiss, a careful one. The kind that asks again halfway through. You answer."
-
+            "When you pull apart, Juni has their eyes shut tight, like they're making a wish."
         "\"Can I hold your hand first?\"":
             j happy "Yes. Yes, please. Sleeve's empty, it's just a hand in there."
-            "Their hand finds yours inside the sleeve. Warm and a little damp. After a while it's the most natural thing in the world to lean in, and so you both do."
+            "Their fingers lace through yours. After a while it's the most natural thing in the world to lean in, so you both do."
+            "It's a small kiss, a careful one. Juni laughs into it, just once, from pure surprise."
+
+    show juni happy
+    j "Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back."
 
     scene bg pool with slowfade
-    "The sun comes up over the Hotel Mar Sol. Juni's hood floats behind them in the pool, gills spread out on the water, smiling up at the sky."
-    "Neither of you goes to fish it out."
+    "The sun comes up over the Hotel Mar Sol. The missing I in the sign catches the light, as if it might come back."
+    "Juni's hood floats behind you in the pool, gills spread out on the water, smiling up at the sky."
+    "Neither of you goes to fish it out. Eventually a Pool Person in a gold cape wades in, rescues it with great ceremony, and hangs it on the lifeguard chair to dry, like a flag."
     scene black with slowfade
     "{i}Monday, 9:14 AM. A text from an unknown number.{/i}"
-    j "hi it's juni. juniper. it's me. I sang in the car the whole way home. windows down. it was so bad. are you free thursday"
+    j "hi it's juni. juniper. it's me. I sang in the car the whole way home. windows down. it was so bad. a man at a stoplight clapped"
+    j "I took the phone out of the ice bucket. 41 messages from work. I answered none of them. I answered this one"
+    j "are you free thursday. I know a place with a very good crust"
     $ chosen = "juni"
     $ ending_name = "Regeneration"
     jump ending_card
@@ -316,8 +367,15 @@ label juni_romance:
 
 label juni_friend:
     scene bg exterior with slowfade
+    $ time_label = "Monday — Checkout"
     show juni happy with dissolve
-    "In the parking lot on Monday morning, a pink kigurumi waves at you from a dented hatchback."
-    j "Hey! Probationary salamander! You passed. You're a full salamander now."
-    j "Same time next year? I'll stand outside a room and you can pull me in."
+    "In the parking lot on Monday morning, a pink kigurumi waves at you from a dented hatchback. The hood is still up. Lotl looks a little sunburned."
+    j "Hey! Probationary salamander! You passed. You're a full salamander now. It's binding. There's paperwork."
+    j neutral "I wanted to say... thanks. For finding me. Every time. I talked to eleven people this year. Eleven. You were most of them."
+    j "Next year I'm going to try going into a room by myself. Just one. A small one. Maybe the one with the moss."
+    j happy "And if I chicken out, you're responsible for me. That's the rule. You know my secret."
+    "They hug you through the onesie, which is like being hugged by a very determined pillow."
+    j "Same time next year? I'll stand outside a door and you can pull me in."
     return
+
+

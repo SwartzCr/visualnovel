@@ -62,6 +62,7 @@ label zyx_pool_2:
 
         "Find a perfect smooth pebble by the planters, and explain that it's a 'nice rock.'":
             $ gain("zyx", 2)
+            $ gave_rock = True
             z surprised "A nice rock."
             "They hold it up to the sun with all three eyes."
             z happy "On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This changes everything. This is the centerpiece."
@@ -85,6 +86,7 @@ label zyx_pool_2:
 
         "\"Yes. Come here.\"":
             $ gain("zyx", 2)
+            $ hugged_zyx = True
             "You hug. Zyx is very stiff at first, like a coat hanger. Then, slowly, their arms come up around you. Their antennae droop down over your shoulder."
             z blush "Oh."
             z "Data confirmed. Data... very confirmed."
@@ -160,6 +162,7 @@ label zyx_night_2:
     menu:
         "\"Yes. I'm their emergency contact.\"":
             $ gain("zyx", 2)
+            $ zyx_emergency_contact = True
             z blush "You are?"
             z "...You are. Yes. Correct. This one's emergency contact. Please inform them of everything."
 
@@ -252,44 +255,82 @@ label zyx_night_3:
 
 label zyx_romance:
     scene bg roof_dawn with slowfade
-    $ time_label = "Monday — 6:09 AM"
-    "Zyx is on the roof as the sun comes up, sash off, sitting on the bench with the nice rock in their lap. Their antennae glow softly against the pink sky."
+    $ time_label = "Monday — 5:55 AM"
+    "After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the duck and the confetti."
+    "You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink."
+    "They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn."
     show zyx neutral with dissolve
-    z "The ark has landed. The report is filed. The mission is complete."
-    z "This one wrote the conclusion last night. Do you want to hear it?"
-    "You nod."
-    z "{i}Earth is not ready for contact. But one Earthling is. Recommend further study. Recommend this one stays.{/i}"
+    z "Earthling. You found this one. This one was hoping you would. This one did not leave a map. That was a test."
+    z happy "You passed. Obviously. Sit."
+    if gave_rock:
+        "They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin."
+    z neutral "The ark has landed. The duck has been revealed. The war over the nature of water has ended in a hug. The report is filed."
+    z "The mission is complete."
+
+    menu:
+        z "Do you want to hear the conclusion? This one wrote it during the ark. While crying. Which was not in the mission plan."
+
+        "\"Read it to me.\"":
+            z neutral "Ahem."
+        "\"Only if it says nice things about me.\"":
+            z happy "It says extremely specific things about you. You will be studied for generations."
+
+    z neutral "{i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}"
+    z "{i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium.{/i}"
+    z "{i}But one Earthling is ready. Recommend further study. Recommend this one stays.{/i}"
     show zyx blush
     z "It was approved. By this one. This one is in charge of approvals."
 
     menu:
         "\"So you're staying?\"":
             z blush "For a while. On Earth, there is a thing called 'a while.' It is very elastic. We intend to stretch it."
-
         "Sit down next to them and take their gloved hand.":
             "Three fingers fold around yours. Their antennae go from pink to a deep, warm red."
+
+    show zyx neutral
+    z "Can this one confess something? For the report. The unofficial report."
+    z "On the Outer Drift, we communicate by changing color. Slowly. A conversation can take a year. There are thirty-one of us and we are very, very far apart."
+    if hugged_zyx:
+        z "When you hugged this one by the pool, this one's antennae went a color that does not have a name at home. This one has been trying to name it since Saturday."
+    if zyx_emergency_contact:
+        z "And in the clinic, when you said you were this one's emergency contact. Nobody has ever been this one's anything."
+    z blush "This one would like to keep finding new colors. With you. If that is permitted under Earth law."
+
+    menu:
+        "\"It's permitted. It's encouraged.\"":
+            z happy "Excellent. This one will update the legal section of the report."
+        "\"What's the color now?\"":
+            "Zyx's antennae are glowing a soft, warm gold, the exact color of the sun coming over the hills."
+            z blush "This one is calling it... Monday."
 
     z blush "There is one final experiment. On the Outer Drift, when two beings wish to be close, they touch foreheads. Third eye to third eye."
     z "You have only two eyes. This is a known limitation. We will adapt."
     menu:
         "Lean in and touch foreheads.":
             "Their forehead is cool and smooth and smells faintly of sunscreen. The third eye closes."
-            "For a long moment you just breathe like that, foreheads together, while the birds start up."
+            "For a long moment you just breathe like that, foreheads together, while the birds start up in the eucalyptus."
 
     z blush "And now, for comparison. The Earth version. Consent is requested."
 
     menu:
         "\"Granted. For science.\"":
             "You kiss the Ambassador of the Outer Drift on the roof of the Hotel Mar Sol at sunrise."
-            "Their antennae spark. Actually spark. You're almost sure."
+            "Their antennae spark. Actually spark. You're almost sure. It might have been the sun."
             z happy "Data... very, very confirmed. Further study required. Extensive further study."
+            z "This one will need to repeat the experiment. For reproducibility. Science is very strict about this."
 
     scene bg roof_dawn with slowfade
-    "The sun clears the hills. Down below, a car starts in the parking lot. You don't move, and neither does Zyx."
+    "The sun clears the hills. Down below, cars are starting in the parking lot. Neither of you moves."
+    "At some point Zyx takes off one glove and holds your hand properly. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either."
     scene black with slowfade
     "{i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}"
     "{i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}"
-    z "Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it. Bring the nice rock. — Z."
+    z "Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it."
+    if gave_rock:
+        z "Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends."
+    else:
+        z "This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you."
+    z "— Z. (The report now has a section about you. It is forty pages long and still in progress.)"
     $ chosen = "zyx"
     $ ending_name = "First Contact"
     jump ending_card
@@ -297,7 +338,15 @@ label zyx_romance:
 
 label zyx_friend:
     scene bg exterior with slowfade
+    $ time_label = "Monday — Checkout"
     show zyx happy with dissolve
-    "On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers as cars pull out."
+    "On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out."
+    z "Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing."
+    z neutral "The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them."
+    z "On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver."
+    "Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly."
+    z happy "This is the highest honor of our people. Do not lose it. We already lost the other one."
     z "Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!"
     return
+
+

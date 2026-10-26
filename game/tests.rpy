@@ -98,6 +98,8 @@ init python:
         store.candidates = []
         store.friend = None
         store.time_label = ""
+        for flag in STORY_FLAGS:
+            setattr(store, flag, False)
         for g, v in case.get("rapport", {}).items():
             store.rapport[g] = v
             store.met.add(g)
