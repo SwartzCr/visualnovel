@@ -1,0 +1,94 @@
+2026-10-29 08:20:31 UTC
+Linux-7.0.0-1017-azure-x86_64-with-glibc2.43
+Ren'Py 8.3.7.25031702
+
+Early init took 0.05s
+Loading error handling took 0.03s
+Loading script took 0.10s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.93s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1280, 720)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Mesa'"
+Renderer: b'llvmpipe (LLVM 21.1.8, 256 bits)'
+Version: b'4.5 (Compatibility Profile) Mesa 26.0.8-1ubuntu0.3'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1099, 618) drawable=(1099, 618)
+Could not open 'cache/shaders.txt':
+Maximum texture size: 4096x4096
+Do Not Disturb — automated playthrough report: PASS
+Cases run: 38   Failures: 0   Labels unreached: 0   Menus not fully covered: 0   Time: 138.2s
+
+FAILURES
+  none
+
+LABELS NEVER REACHED
+  none
+
+MENUS WHERE SOME OPTIONS WERE NEVER CHOSEN (informational)
+  none
+
+CASES
+  full-juni-0                              ending=Regeneration       8.3s
+  full-juni-1                              ending=Regeneration       7.6s
+  full-juni-2                              ending=Good Company       6.6s
+  full-gerald-0                            ending=Not Blurry         7.9s
+  full-gerald-1                            ending=Not Blurry         7.5s
+  full-gerald-2                            ending=Checkout           6.5s
+  full-solstice-0                          ending=The Longest Day    7.0s
+  full-solstice-1                          ending=The Longest Day    6.9s
+  full-solstice-2                          ending=Checkout           5.7s
+  full-wren-0                              ending=Off Duty           7.6s
+  full-wren-1                              ending=Regeneration       7.4s
+  full-wren-2                              ending=Checkout           6.2s
+  full-zyx-0                               ending=First Contact      7.5s
+  full-zyx-1                               ending=First Contact      6.7s
+  full-zyx-2                               ending=Checkout           5.7s
+  wanderer                                 ending=Checkout           4.1s
+  ending-romance-juni-0                    ending=Regeneration       1.4s
+  ending-romance-juni-1                    ending=Regeneration       1.4s
+  ending-friend-juni                       ending=Good Company       0.4s
+  ending-romance-gerald-0                  ending=Not Blurry         1.3s
+  ending-romance-gerald-1                  ending=Not Blurry         1.3s
+  ending-friend-gerald                     ending=Good Company       0.5s
+  ending-romance-solstice-0                ending=The Longest Day    1.2s
+  ending-romance-solstice-1                ending=The Longest Day    1.2s
+  ending-friend-solstice                   ending=Good Company       0.4s
+  ending-romance-wren-0                    ending=Off Duty           1.2s
+  ending-romance-wren-1                    ending=Off Duty           1.2s
+  ending-friend-wren                       ending=Good Company       0.4s
+  ending-romance-zyx-0                     ending=First Contact      1.3s
+  ending-romance-zyx-1                     ending=First Contact      1.3s
+  ending-friend-zyx                        ending=Good Company       0.5s
+  ending-several-qualify-choose-juni       ending=Regeneration       1.4s
+  ending-several-qualify-choose-gerald     ending=Not Blurry         1.3s
+  ending-several-qualify-choose-solstice   ending=The Longest Day    1.2s
+  ending-several-qualify-choose-wren       ending=Off Duty           1.2s
+  ending-several-qualify-choose-zyx        ending=First Contact      1.3s
+  ending-several-qualify-choose-alone      ending=Good Company       0.6s
+  ending-checkout                          ending=Checkout           0.5s
