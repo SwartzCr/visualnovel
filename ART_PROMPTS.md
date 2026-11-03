@@ -23,7 +23,7 @@ ART STYLE (applies to every image in this conversation)
 - Coloring: cel shading. Flat base colors, one crisp shadow tone per material, and small sharp highlights. Soft airbrushed gradients only for glows, cheek blush, hair shine and skies.
 - Palette: saturated and warm, never muddy or grey. Signature accent colors: hot pink #FF5FB8, violet #9B6BFF, cyan #5AE6FF, warm gold #FFC65A. Night scenes sit in deep midnight purple and indigo (#160C28) lit by those neon accents. Day scenes are warm peach, turquoise and gold under clear light.
 - Lighting: clear and readable. Colored light from the environment, gentle bloom around lamps, neon and screens, and colored rim light at night (pink from one side, cyan from the other).
-- World and mood: a secret, kind, absurd art party inside the Hotel Marisol, an aging 1970s hotel-casino tower on the Nevada shore of Lake Tahoe, showing its age (swirly casino carpet, brass, mirrored ceilings, dark slot machines), where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
+- World and mood: a secret, kind, absurd art party inside the Hotel Paradiso, an aging 1970s hotel-casino tower on the Nevada shore of Lake Tahoe, showing its age (swirly casino carpet, brass, mirrored ceilings, dark slot machines), where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
 - Text: only the exact words given in quotation marks, spelled exactly, in clean bold sans-serif lettering. No other writing, captions, signatures, watermarks, logos, borders, speech bubbles or UI.
 
 BACKGROUND RULES
@@ -45,7 +45,7 @@ ART STYLE (applies to every image in this conversation)
 - Coloring: cel shading. Flat base colors, one crisp shadow tone per material, and small sharp highlights. Soft airbrushed gradients only for glows, cheek blush, hair shine and skies.
 - Palette: saturated and warm, never muddy or grey. Signature accent colors: hot pink #FF5FB8, violet #9B6BFF, cyan #5AE6FF, warm gold #FFC65A. Night scenes sit in deep midnight purple and indigo (#160C28) lit by those neon accents. Day scenes are warm peach, turquoise and gold under clear light.
 - Lighting: clear and readable. Colored light from the environment, gentle bloom around lamps, neon and screens, and colored rim light at night (pink from one side, cyan from the other).
-- World and mood: a secret, kind, absurd art party inside the Hotel Marisol, an aging 1970s hotel-casino tower on the Nevada shore of Lake Tahoe, showing its age (swirly casino carpet, brass, mirrored ceilings, dark slot machines), where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
+- World and mood: a secret, kind, absurd art party inside the Hotel Paradiso, an aging 1970s hotel-casino tower on the Nevada shore of Lake Tahoe, showing its age (swirly casino carpet, brass, mirrored ceilings, dark slot machines), where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
 - Text: only the exact words given in quotation marks, spelled exactly, in clean bold sans-serif lettering. No other writing, captions, signatures, watermarks, logos, borders, speech bubbles or UI.
 
 CHARACTER SPRITE RULES
@@ -102,7 +102,7 @@ Two things about how the game shows backgrounds, which every prompt already acco
 > Generate this one first, then use it for the night version below so the building matches.
 
 ```text
-An aging 1970s hotel-casino on the Nevada shore of Lake Tahoe at sunset. A sixteen-story beige concrete tower with horizontal bands of windows and terracotta trim, a low casino wing in front, and a porte-cochere entrance edged with a row of round marquee bulbs. On the right, a huge vintage roadside casino sign on a pylon reads "HOTEL MAR SOL" (the I of MARISOL has burned out and left a gap), with "CASINO" below it. Snow-capped mountains and tall pine trees behind, a sky fading from violet to hot pink to tangerine. An empty parking lot in the foreground. Faded glamour, a little tired, still proud.
+An aging 1970s hotel-casino on the Nevada shore of Lake Tahoe at sunset. A sixteen-story beige concrete tower with horizontal bands of windows and terracotta trim, a low casino wing in front, and a porte-cochere entrance edged with a row of round marquee bulbs. On the right, a huge vintage roadside casino sign on a pylon reads "HOTEL PARADIS" (the final O of PARADISO has burned out and left a dark gap), with "CASINO" below it. Snow-capped mountains and tall pine trees behind, a sky fading from violet to hot pink to tangerine. An empty parking lot in the foreground. Faded glamour, a little tired, still proud.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```

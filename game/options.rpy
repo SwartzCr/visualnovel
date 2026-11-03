@@ -32,7 +32,7 @@ define config.version = "1.0"
 ## the triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-Three nights at the Hotel Marisol. A visual novel about a secret party, five strange guests, and whoever you turn out to be by Sunday.
+Three nights at the Hotel Paradiso. A visual novel about a secret party, five strange guests, and whoever you turn out to be by Sunday.
 
 No photos. Ask before touching. Tea, not booze. If you're having a hard time, find Auntie Acid in The Cozy.
 """)

@@ -14,7 +14,7 @@ label start:
     $ quick_menu = False
     scene black
     pause 0.6
-    show text "{size=48}{color=#ff5fb8}DO NOT DISTURB{/color}{/size}\n\n{size=22}{color=#c8b8ff}three nights at the Hotel Marisol{/color}{/size}" at truecenter as title with dissolve
+    show text "{size=48}{color=#ff5fb8}DO NOT DISTURB{/color}{/size}\n\n{size=22}{color=#c8b8ff}three nights at the Hotel Paradiso{/color}{/size}" at truecenter as title with dissolve
     pause 2.5
     hide title with dissolve
     $ quick_menu = True
@@ -23,8 +23,8 @@ label start:
     $ time_label = "Friday — Arrival"
 
     "The invitation was a paper card with no return address. One side said FRIDAY, 3PM. The other said {i}You were never here.{/i}"
-    "The Hotel Marisol is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The casino closed in 1987. The hotel never quite noticed."
-    "This weekend, somebody has rented every room. The big neon sign out front has lost its I: HOTEL MAR SOL."
+    "The Hotel Paradiso is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The casino closed in 1987. The hotel never quite noticed."
+    "This weekend, somebody has rented every room. The big neon sign out front has lost its final O. It now reads HOTEL PARADIS, which half the people in the parking lot insist is French and the other half insist is a prophecy."
 
     tam "omg you're here!! go check in. find the person in black. ask before touching. let it get weird"
 
@@ -33,7 +33,7 @@ label start:
     "The lobby still has its 1970s carpet, a migraine of orange and purple swirls. Past the front desk, the old casino floor is dark, the slot machines draped in fairy lights and feather boas."
     show wren neutral with dissolve
 
-    w "Hi. Welcome to the Marisol. I'm Wren, crew. You won't see much of me. If I'm doing my job, nothing breaks and you never know I was here."
+    w "Hi. Welcome to the Paradiso. I'm Wren, crew. You won't see much of me. If I'm doing my job, nothing breaks and you never know I was here."
 
     menu:
         w "Any questions before I let you loose?"
@@ -160,7 +160,7 @@ label night_time:
     scene bg hallway with slowfade
 
     if day == 1:
-        "Night falls and the Marisol turns inside out. Every door is open. Every room is something else now."
+        "Night falls and the Paradiso turns inside out. Every door is open. Every room is something else now."
         "Bass comes up through the carpet from the ballroom. Someone in a cape runs past you holding a lit candle and a stapler, apologizing."
     elif day == 2:
         "Saturday night. The hallways are louder and stranger. A troupe of mute clowns in fishnets moves through the crowd selling shares in people."

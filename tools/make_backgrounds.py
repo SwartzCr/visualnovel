@@ -936,7 +936,7 @@ def bg_letitgo():
     c.save(os.path.join(OUT, "letitgo.png"))
 
 
-# ---------------------------------------------------------------- the Hotel Marisol (Tahoe hotel-casino)
+# ---------------------------------------------------------------- the Hotel Paradiso (Tahoe hotel-casino)
 def mountains(c, y, color_far, color_near, seed=3):
     R = rng(seed)
     for layer, (base, amp, colr) in enumerate([(y, 150, color_far), (y + 30, 100, color_near)]):
@@ -1009,14 +1009,14 @@ def casino_tower(c, night):
     if night:
         c.rect((sx - 136, 114, sx + 136, 336), outline=col(PINK, 220), width=4, r=16)
         c.neon_text((sx, 160), "HOTEL", 30, CYAN)
-        c.neon_text((sx, 212), "MAR SOL", 42, PINK)
+        c.neon_text((sx, 212), "PARADIS", 42, PINK)
         c.neon_text((sx, 258), "CASINO", 24, GOLD)
         c.rect((sx - 110, 282, sx + 110, 316), fill="#0c0814")
         c.text((sx, 299), "WELCOME HOME", 16, "#ffcf5a", font="mono", glow="#ff9a2a")
     else:
         c.rect((sx - 136, 114, sx + 136, 336), outline="#c84a7a", width=4, r=16)
         c.text((sx, 160), "HOTEL", 30, "#3cc0e0")
-        c.text((sx, 212), "MAR SOL", 42, "#f05a9a")
+        c.text((sx, 212), "PARADIS", 42, "#f05a9a")
         c.text((sx, 258), "CASINO", 24, "#d8a030")
         c.rect((sx - 110, 282, sx + 110, 316), fill="#0c0814")
         c.text((sx, 299), "WELCOME HOME", 16, "#d8a040", font="mono")

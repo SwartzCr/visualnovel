@@ -314,7 +314,7 @@ label zyx_romance:
 
     menu:
         "\"Granted. For science.\"":
-            "You kiss the Ambassador of the Outer Drift on the roof of the Hotel Mar Sol at sunrise."
+            "You kiss the Ambassador of the Outer Drift on the roof of the Hotel Paradiso at sunrise."
             "Their antennae spark. Actually spark. You're almost sure. It might have been the sun."
             z happy "Data... very, very confirmed. Further study required. Extensive further study."
             z "This one will need to repeat the experiment. For reproducibility. Science is very strict about this."

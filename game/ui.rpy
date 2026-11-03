@@ -29,7 +29,7 @@ screen guest_book():
         vbox:
             spacing 18
             text "GUEST BOOK" font gui.name_text_font size 38 color gui.accent_color xalign 0.5
-            text "Hotel Marisol — please do not photograph this page." size 14 color "#a99cc8" xalign 0.5
+            text "Hotel Paradiso — please do not photograph this page." size 14 color "#a99cc8" xalign 0.5
 
             for gid in GUESTS:
                 if gid in met:

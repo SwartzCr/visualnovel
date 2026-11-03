@@ -1,6 +1,6 @@
 # Do Not Disturb
 
-*Three nights at the Hotel Marisol.*
+*Three nights at the Hotel Paradiso.*
 
 A Ren'Py visual novel set at a secret, invite-only party in an aging 1970s hotel-casino on the shore of Lake Tahoe, where every hotel room has been turned into an interactive art piece. You (off-screen, never named) spend three days and nights meeting the guests: by the pool in the afternoons, and wandering the hallways at night, where people pull you into the art rooms. Build enough rapport with someone and, after the 11:11 ceremony on the last night, you can find them for a final scene at sunrise.
 
