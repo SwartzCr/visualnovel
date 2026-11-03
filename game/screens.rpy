@@ -207,9 +207,18 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
+    ## Long menus get tighter spacing and slightly smaller text, so every
+    ## option fits in the space above the text box.
+    $ crowded = len(items) >= 5
+
     vbox:
+        if crowded:
+            spacing gui.scale(8)
         for i in items:
-            textbutton i.caption action i.action
+            textbutton i.caption action i.action:
+                if crowded:
+                    padding (gui.scale(60), gui.scale(9))
+                    text_size gui.scale(20)
 
 
 style choice_vbox is vbox
@@ -218,7 +227,8 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos gui.scale(270)
+    ## Centered in the space above the text box (which starts at y=494).
+    ypos gui.scale(262)
     yanchor 0.5
 
     spacing gui.choice_spacing

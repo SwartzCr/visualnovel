@@ -53,6 +53,9 @@ screen guest_book():
 
 ## Soft shadows so dialogue and names stay readable over the glow.
 style say_dialogue:
+    ## Vertically centered in the visible box, however many lines there are.
+    ypos 113
+    yanchor 0.5
     outlines [ (2, "#0a041466", 0, 1) ]
     line_spacing 4
 
