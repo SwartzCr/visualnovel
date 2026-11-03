@@ -2,8 +2,10 @@
 ##
 ## Each night, before you choose where to wander, one random encounter plays.
 ## Encounters never repeat within a playthrough. Most are pure flavor with a
-## quick choice; the note, Penguin Post and Platonic Speed Dating can earn a
-## little rapport with someone you've met.
+## quick choice. The six art-room encounters each have a guest version that plays
+## if you've met that guest (Penguin Post: Juni, Fanny Bar: Gerald, Tentacletopia:
+## Solstice, Zany Optical: Zyx, Let It Go: Wren, Platonic Speed Dating: everyone
+## you've met); those can earn +1 rapport, as can the note.
 ##
 ## To add one: write a label named enc_<something> that ends in `return`, and
 ## add its name to ENCOUNTERS below.
@@ -197,6 +199,8 @@ init python:
 
 
 label enc_penguin_post:
+    if "juni" in met:
+        jump enc_penguin_post_juni
     scene bg penguinpost with dissolve
     "A line snakes out of a doorway and halfway down the hall. At the front, a sign glows in pink and blue neon: PENGUIN POST. PLEASE TAKE A NUMBER."
     "You take a number. It's 4,812. The display above the counter reads NOW SERVING: 3."
@@ -226,6 +230,8 @@ label enc_penguin_post:
 
 
 label enc_fanny_bar:
+    if "gerald" in met:
+        jump enc_fanny_bar_gerald
     scene bg ballroom with dissolve
     "The heat on the dance floor is unbearable. Somebody's glitter is melting. The bass is coming up through the carpet like it's trying to escape."
     "Then a cool breeze hits you. A woman in a blue hard hat and a hi-vis vest has set up an enormous box fan at the edge of the dance floor and is aiming it at the crowd like a firefighter."
@@ -260,6 +266,8 @@ label enc_fanny_bar:
 
 
 label enc_tentacletopia:
+    if "solstice" in met:
+        jump enc_tentacletopia_solstice
     scene bg tentacletopia with dissolve
     "A round hatch in the wall is marked AIRLOCK. A person in a full shrimp costume pokes their head out and beckons you in with a feeler."
     "\"Adventurer! Thank the tides. The world is searching for the tech that'll save us all, and our sources say the answer lies in the Lost City of Miami.\""
@@ -286,6 +294,8 @@ label enc_tentacletopia:
 
 
 label enc_zany_optical:
+    if "zyx" in met:
+        jump enc_zany_optical_zyx
     scene bg optical with dissolve
     "A door is propped open by a giant inflatable eyeball. Inside, it's an optometrist's office from a strip mall, run through a vaporwave blender: neon pink and teal, palm-tree wallpaper, synth music that sounds like the 1980s imagining the future."
     "The receptionist is an iPad on a stand, with a cheerful AI face. Behind it, an enormous motorized googly eye rolls slowly around in its socket."
@@ -317,6 +327,10 @@ label enc_zany_optical:
 
 
 label enc_speed_dating:
+    if speed_cast():
+        $ speed_sides = {}
+        $ speed_cast_names = ", ".join(GUEST_INFO[g][0] for g in speed_cast())
+        jump enc_speed_dating_cast
     scene bg speeddating with dissolve
     "A sign on a door reads PLATONIC SPEED DATING: FIND YOUR SURVIVAL BUDDY. Inside, a crowd is standing in the middle of a ballroom side-room. Two volunteers stand at opposite walls holding small whiteboards."
     "The host, in a sequined blazer and a headset microphone, spots you. \"A newcomer! Perfect. In you come. Every round, I ask a question. You pick a side. Everyone quietly judges each other. Then I loudly judge everyone. Ready?\""
@@ -355,6 +369,8 @@ label enc_speed_dating:
 
 
 label enc_let_it_go:
+    if "wren" in met:
+        jump enc_let_it_go_wren
     scene bg letitgo with dissolve
     "Outside a door, a person with a clipboard and a calm, professional smile stops you. A sign beside them reads LET IT GO: A WORKSHOP."
     "\"Before we begin, a few intake questions. On a typical day, how often do you look at your phone?\""
@@ -377,4 +393,321 @@ label enc_let_it_go:
         "Leave with nothing. You're ready.":
             "The presenter places a hand over their heart. \"That,\" they say quietly, \"is the most advanced thing I have ever seen.\""
             "The room gives you a standing ovation as you leave. You feel incredibly, absurdly free."
+    return
+
+
+################################################################################
+## Guest versions of the art-room encounters.
+## If you've met the guest, the room plays as a scene with them instead.
+################################################################################
+
+label enc_penguin_post_juni:
+    scene bg penguinpost with dissolve
+    "A line snakes out of a doorway and halfway down the hall. At the front, a sign glows in pink and blue neon: PENGUIN POST. PLEASE TAKE A NUMBER."
+    "You take a number: 4,812. Directly in front of you, holding ticket 4,811 in both sleeves like a prize, is a pink axolotl."
+    show juni happy with dissolve
+    j "Oh! Hi! You're in the line! Isn't the line great?"
+    j neutral "I've been here forty minutes. I love it. A line is a room you're allowed to stand outside of. Nobody expects you to go in yet."
+    "A penguin with a clipboard waddles past, running Line Activities. Line trivia. Line stretches. A game of telephone that starts as {i}I love you{/i} and reaches you as {i}iceberg lettuce{/i}."
+    j happy "Iceberg lettuce. Pass it on."
+    "Eventually a penguin waves you both to the counter together. It slides two postcards across, with prompts printed on them."
+    "Juni's says: {i}Write to the person standing behind you in line.{/i} Yours says: {i}Tell them one thing you noticed about them that they think nobody noticed.{/i}"
+    j surprised "Oh no. Oh, that's... okay. Okay. Don't look."
+    menu:
+        "What do you write?"
+
+        "\"You laugh like it surprises you every time.\"":
+            $ gain("juni", 1)
+            "You hand it over. Juni reads it, and goes quiet, and then the hood goes very pink."
+            j blush "...Nobody's ever noticed that. I didn't know I did that."
+        "\"You hold your sleeves when you're nervous. It's very cute.\"":
+            $ gain("juni", 1)
+            j blush "I'm not nervous. I'm... okay, I'm holding my sleeves right now."
+            "They don't let go of them. They hold the postcard against their chest instead."
+        "\"See you at the ark!\"":
+            j neutral "Oh. Ha. Yeah! See you at the ark."
+            "They look at the card a beat longer than a card that says {i}see you at the ark{/i} needs."
+    "A penguin stamps Juni's postcard with a fish and tosses it into a mailbag."
+    j neutral "You'll get it within the hour. Or your money back. You paid no money."
+    "Forty minutes later, a penguin finds you in the hallway, salutes, and hands you a postcard. It's covered in tiny drawn axolotls. In the middle, in careful handwriting:"
+    "{i}You're the first person I didn't wait outside a door for. — J.{/i}"
+    hide juni with dissolve
+    return
+
+
+label enc_fanny_bar_gerald:
+    scene bg ballroom with dissolve
+    "The heat on the dance floor is unbearable. A Fan Technician in a blue hard hat hands you a business card:"
+    "{i}FEELING HOTT? Come to Room 313 for a Blow Job at the OnlyFans Fanny Bar!!{/i}"
+    scene bg fanbar with dissolve
+    "Room 313 is an oasis of fans: box fans, desk fans, a ceiling fan spinning so hard it might take off. Signs beg PLEASE SUBSCRIBE!!"
+    "Directly in front of the biggest box fan, eyes closed, fur streaming backward like a flag in a gale, sits a Sasquatch."
+    show gerald happy with dissolve
+    g "Oh. Oh, hello. Forgive me. I've been sitting here for half an hour. I may never move again."
+    g neutral "I have been wearing this coat since 1961. It does not come off. The dance floor was, if I may say, an ordeal."
+    g "They tell me I must subscribe to stay. I tried. The clipboard wanted a name. I'm afraid I signed it with a footprint, out of habit. They seem unsure whether it counts."
+    menu:
+        "What do you do?"
+
+        "Drag a second fan over and aim it at him.":
+            $ gain("gerald", 1)
+            "You drag a pedestal fan across the room and point it at his other side. His fur now blows in two directions at once, like a dandelion."
+            g happy "Oh. Oh, that's... yes. Stereo. You've given me stereo."
+        "Sign the clipboard for both of you.":
+            $ gain("gerald", 1)
+            "You write your name, and next to it: {i}+1 (Sasquatch).{/i} A bell rings. A volunteer throws confetti at you both and then, apologetically, fans it away."
+            g happy "Subscribed. How modern. I feel tremendously current."
+        "Ask what he thinks of the Nutbuster booth.":
+            g surprised "Ah. I... yes. I did investigate the booth. For research."
+            g blush "It's only fans. All of the tapes. Just people with fans. I watched {i}Hotties Cool Off{/i} three times. It was the most relaxing hour of my weekend. Please don't tell Margaret."
+    "Then the power cuts out."
+    "Every fan in the room winds down at once with a long, sad, descending whine. The heat rushes back in. People cry out. Someone shouts about palm fronds, for subscribers only."
+    "Gerald doesn't move. He just sighs contentedly, reaches into his fur and produces a full-sized fern."
+    g happy "I'm from the woods. We've never had electricity. Allow me."
+    "He stands up, all seven feet of him, and begins to fan the entire room with one slow, enormous sweep after another. The crowd turns toward him like sunflowers."
+    "When the power comes back, the room gives him a standing ovation. The Fan Technician gives him an honorary blue hard hat. It's much too small. He wears it anyway."
+    hide gerald with dissolve
+    return
+
+
+label enc_tentacletopia_solstice:
+    scene bg tentacletopia with dissolve
+    "A round hatch in the wall is marked AIRLOCK. Inside, a person in a full shrimp costume is briefing a raver who has put a snorkel on over her goggles."
+    show solstice happy with dissolve
+    s "Oh my god, hi! Get in here! We're going to the bottom of the sea! The shrimp say the world needs saving and the answer's in the Lost City of Miami!"
+    "The shrimp guide nods gravely. \"The jellyfish run it now. They have evolved. They have opinions. We ask only one thing in return: an extended broadcast of {i}Shrimp Justice: A Crustacean Courtroom Show{/i}.\""
+    s "I already said yes. I've seen four episodes. The hermit crab one is devastating."
+    "Beyond the airlock: kelp swaying under blue light, sunken art-deco towers, neon signs still faintly glowing in the gloom. Giant jellyfish drift overhead. Solstice's LED top lights up the water around her like a little submarine."
+    s neutral "Okay. Savior tech. Where do we look?"
+    "You dig together through the coral dioramas: a shrimp wedding, a shrimp tax office, a shrimp on a tiny therapist's couch. Then Solstice shrieks and holds something up."
+    "It's a disco ball."
+    show solstice surprised
+    s "DISCO. It's DISCO. The savior tech is DISCO. I KNEW it! I've been saying this for YEARS!"
+    "A speaker kicks on. A 1977 disco track fills the sea. The shrimp weep with joy. The jellyfish, very slowly, begin to dance."
+    menu:
+        s happy "Come on! The jellyfish are dancing! We have to dance with the jellyfish! It's literally the end of the world!"
+
+        "Dance with her and the jellyfish.":
+            $ gain("solstice", 1)
+            "You dance at the bottom of the sea with a raver and a swarm of evolved jellyfish. Solstice is laughing so hard her snorkel fills with air."
+            s blush "This is the best rave I've ever been to. And it's in a hotel room. And it's underwater. And it's with you."
+        "Hold up the disco ball so it catches her lights.":
+            $ gain("solstice", 1)
+            "You hold the disco ball up over her head. Her LED top throws a thousand tiny colored lights across the whole ocean floor, the towers, the kelp, the jellyfish."
+            s blush "Oh. Oh wow. Look what we made."
+        "Sit on the coral and watch.":
+            "You sit down on the reef. Solstice stops dancing and points at you, scandalized."
+            s neutral "Hey! No spectators! It's the rule! Even at the bottom of the sea!"
+            "She drags you up by both hands anyway. The jellyfish make room."
+    "As you leave, the shrimp crown Solstice Disco Queen of the Lost City of Miami with a crown made of bottle caps. She wears it for the rest of the night."
+    hide solstice with dissolve
+    return
+
+
+label enc_zany_optical_zyx:
+    scene bg optical with dissolve
+    "Through a door propped open by a giant inflatable eyeball: a vaporwave optometrist's office, pink and teal neon, synth music, an enormous googly eye rolling slowly on the wall."
+    "At the reception desk, a silver alien is deep in an argument with an iPad."
+    show zyx neutral with dissolve
+    z "This one's insurance is from the Outer Drift. It is very comprehensive. It covers meteors."
+    "\"I'm sorry,\" chirps the iPad, \"we don't accept Outer Drift. Have you considered paying with a compliment?\""
+    z happy "Earthling! You are here. Good. This one requires an emergency contact for an eye exam. You have experience in this field."
+    "A doctor in glasses with tiny windshield wipers leads you both into the exam room, sits Zyx in the chair, looks into their face, and drops the clipboard."
+    "\"That's three eyes,\" the doctor whispers. \"I've only ever examined two at a time. This is the greatest day of my career.\""
+    "The diagnosis comes quickly: third-eye astigmatism, mild. Then the doctor floods the room with a strange yellow light that drains all color away, and holds up a flag."
+    "\"Ambassador. What color is this flag?\""
+    z neutral "Magenta."
+    "\"There's no magenta flag,\" says the doctor. \"There's red, and there's green.\""
+    z "There is magenta. It means: proceed, but with feelings. We use it constantly at home."
+    "The doctor writes it down, reverently. Then they bring out a tray of frames, each with three lenses."
+    menu:
+        z "Earthling. You will choose this one's glasses. This one trusts your Earth taste."
+
+        "The sparkly cat-eye ones.":
+            $ gain("zyx", 1)
+            z blush "Fabulous. This one is fabulous. Write that down for the report."
+        "The ones with tiny windshield wipers, like the doctor's.":
+            $ gain("zyx", 1)
+            "The wipers go back and forth across all three lenses. Zyx is delighted beyond words, which for Zyx is a lot of words."
+            z happy "For meteors. Practical. The insurance company will be thrilled."
+        "\"Honestly? You look perfect without them.\"":
+            $ gain("zyx", 1)
+            "Zyx goes very still. Their antennae glow, slowly, pink."
+            z blush "...Then this one will wear them only for science."
+    "On the way out, the iPad flips around: HOW MUCH WOULD YOU LIKE TO TIP YOUR PROVIDER TODAY? Zyx chooses A Compliment, leans in close to the giant googly eye and says, very formally:"
+    z neutral "Your eye is extremely round. On behalf of the Outer Drift, well done."
+    "The googly eye rolls with what can only be described as joy."
+    hide zyx with dissolve
+    return
+
+
+label enc_let_it_go_wren:
+    scene bg letitgo with dissolve
+    "Outside a door, a sign reads LET IT GO: A WORKSHOP. Beside it, looking like someone who has been sentenced, stands Wren."
+    show wren neutral with dissolve
+    w "Don't. Don't say anything. Pilar signed me up. She called it a {i}wellness intervention{/i}. In front of the whole crew."
+    w "It's about saying goodbye to your phone. I don't even have my phone on me. I have this."
+    "She holds up her walkie-talkie like you've asked to see her ID."
+    "Inside, folding chairs face a small stage. The presenter, in a turtleneck and headset mic, asks everyone to place their device in a wicker basket at the front. One by one, people do. Some of them are crying."
+    "Wren doesn't move. Her hand is wrapped around the walkie so tightly her knuckles are white."
+    menu:
+        "What do you do?"
+
+        "\"I'll keep an ear on it. If anything comes through, I'll get you.\"":
+            $ gain("wren", 1)
+            "You hold out your hand. She looks at it for a long time, then puts the walkie in it, like she's handing over something alive."
+            w blush "Okay. Okay. If it says {i}fire{/i}, you come get me. If it says anything about a flamingo, ignore it."
+        "Put your own phone in the basket, then look at her.":
+            $ gain("wren", 1)
+            "You walk to the front and drop your phone into the basket. Then you turn around and look at her."
+            w surprised "Oh, that's... that's peer pressure. That's really effective peer pressure."
+            "She walks up and lays the walkie gently on top of your phone, like tucking it into bed."
+        "\"You don't have to. It's okay.\"":
+            w neutral "...Thanks. Yeah. I'll just... turn it down a little."
+            "She turns the volume down one notch. It's something."
+    "The presenter clicks to the first slide. Four slides in, the projector dies, and the talk continues on hand-drawn posterboard."
+    "Wren lasts four minutes and thirty seconds before her hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, she stops reaching altogether, sits back, and actually listens."
+    "At the end, there's a crafting table: blank wooden phones, googly eyes, glitter. Everyone gets to make an Emotional Support Phone."
+    "Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of tape on the back that says CARE. It doesn't do anything."
+    w happy "It's perfect. Nobody can reach me on it. Not a single person."
+    "When you walk out, the real walkie is back on her belt. But the wooden one is in her hand."
+    hide wren with dissolve
+    return
+
+
+label enc_speed_dating_cast:
+    scene bg speeddating with dissolve
+    "A sign on a door reads PLATONIC SPEED DATING: FIND YOUR SURVIVAL BUDDY. Inside, a crowd is milling around a side-room of the ballroom, with a strip of yellow tape down the middle of the floor."
+    "And it's not just strangers. You spot familiar faces in the crowd: [speed_cast_names]."
+    "The host, in a sequined blazer and a headset microphone, claps. \"Every round, I ask a question. You pick a side. Everyone quietly judges each other. Then I loudly judge everyone.\""
+    "Round one. The host holds up a whiteboard paddle: ONLY ONE CAN EXIST."
+    menu:
+        "Electric guitar, or electric synths?"
+
+        "Electric guitar." (side="a"):
+            $ speed_pick(1, "a")
+        "Electric synths." (side="b"):
+            $ speed_pick(1, "b")
+        "Stand exactly in the middle." (side="c"):
+            $ speed_pick(1, "c")
+    $ speed_react(1)
+    "Round two. WOULD YOU RATHER."
+    menu:
+        "Know every language, or be able to talk to animals?"
+
+        "Every language." (side="a"):
+            $ speed_pick(2, "a")
+        "Talk to animals." (side="b"):
+            $ speed_pick(2, "b")
+        "Talk to animals, but only pigeons." (side="c"):
+            $ speed_pick(2, "c")
+    $ speed_react(2)
+    "Round three. THIS OR THAT."
+    menu:
+        "Sunrise, or sunset?"
+
+        "Sunrise." (side="a"):
+            $ speed_pick(3, "a")
+        "Sunset." (side="b"):
+            $ speed_pick(3, "b")
+        "\"I've never stayed up to see either.\"" (side="c"):
+            $ speed_pick(3, "c")
+    $ speed_react(3)
+    $ dating_match, dating_match_name = speed_match()
+    "The host walks the room, matching people who kept ending up on the same side."
+    "\"You!\" They point at you, then at [dating_match_name]. \"Survival buddies. I've been watching. Draw a mission.\""
+    $ gain(dating_match, 1)
+    "You pull a handwritten tag from the grab bag: {i}Go somewhere neither of you has been yet this weekend. Report back.{/i}"
+    call expression "speed_mission_" + dating_match
+    return
+
+
+init python:
+
+    # Each guest's answers: round -> side.
+    SPEED_ANSWERS = {
+        "juni":     {1: "b", 2: "b", 3: "c"},
+        "gerald":   {1: "a", 2: "b", 3: "a"},
+        "solstice": {1: "b", 2: "a", 3: "c"},
+        "wren":     {1: "a", 2: "a", 3: "a"},
+        "zyx":      {1: "c", 2: "c", 3: "b"},
+    }
+
+    # What each guest does when you end up on the same side.
+    SPEED_LINES = {
+        ("juni", 1): ("j", "happy", "Synths! Synths are like... music that doesn't need you to be cool about it."),
+        ("gerald", 1): ("g", "happy", "Guitar. My cousin Bernard played. Badly. Movingly."),
+        ("solstice", 1): ("s", "happy", "SYNTHS. I'm going to hug everyone on this side. Brace."),
+        ("wren", 1): ("w", "neutral", "Guitar. You can fix a guitar with tape. You can't fix a synth with tape. I've tried."),
+        ("zyx", 1): ("z", "neutral", "The middle. This one is gathering data from both sides. Also, this one is a fence."),
+        ("juni", 2): ("j", "happy", "Animals. They don't need you to make small talk. Lotl agrees."),
+        ("gerald", 2): ("g", "neutral", "I already talk to animals. I thought everyone did. This is very upsetting news."),
+        ("solstice", 2): ("s", "happy", "Every language! Imagine telling people they're doing great in like four hundred languages."),
+        ("wren", 2): ("w", "neutral", "Every language. Do you know how many people get lost here and can't explain where?"),
+        ("zyx", 2): ("z", "happy", "Pigeons. Yes. This one already speaks pigeon. They are excellent diplomats."),
+        ("juni", 3): ("j", "blush", "Neither. I've never stayed up. Maybe this weekend. If I'm with someone."),
+        ("gerald", 3): ("g", "happy", "Sunrise. Always sunrise. It's the only time the forest is completely honest."),
+        ("solstice", 3): ("s", "blush", "Neither! I'm always inside, dancing. That's... wow, that sounded sadder out loud."),
+        ("wren", 3): ("w", "neutral", "Sunrise. I usually see it on a monitor, from the board. But still. Sunrise."),
+        ("zyx", 3): ("z", "neutral", "Sunset. At home, sunset lasts four years. This one finds yours very brisk."),
+    }
+
+    def speed_cast():
+        return [g for g in GUESTS if g in store.met]
+
+    def speed_pick(rnd, side):
+        store.speed_sides[rnd] = side
+
+    def speed_react(rnd):
+        side = store.speed_sides.get(rnd)
+        same = [g for g in speed_cast() if SPEED_ANSWERS[g][rnd] == side]
+        if not same:
+            renpy.say(None, "You look around. Nobody you know is on your side this time. The host notices and nods at you, impressed: \"A lone wolf.\"")
+            return
+        for g in same:
+            who, expr, line = SPEED_LINES[(g, rnd)]
+            renpy.show((g, expr))
+            renpy.say(getattr(store, who), line)
+            renpy.hide(g)
+
+    def speed_match():
+        cast = speed_cast()
+        def score(g):
+            return (sum(1 for r in (1, 2, 3) if SPEED_ANSWERS[g][r] == store.speed_sides.get(r)), store.rapport[g])
+        best = max(cast, key=score)
+        return best, GUEST_INFO[best][0]
+
+default speed_sides = {}
+default speed_cast_names = ""
+
+
+label speed_mission_juni:
+    show juni happy with dissolve
+    "You and Juni wander the halls looking for a room neither of you has been in. Juni stops at every door. Then, at a door marked SUPPLY, they take a breath and walk in first."
+    j blush "I went in first. Did you see that? I went in first."
+    hide juni with dissolve
+    return
+
+label speed_mission_gerald:
+    show gerald happy with dissolve
+    "You and Gerald find a room neither of you has been in: the hotel's old boiler room, warm and humming. Gerald declares it the coziest cave he's been in since 1974. You report back: ten out of ten, would hibernate."
+    hide gerald with dissolve
+    return
+
+label speed_mission_solstice:
+    show solstice happy with dissolve
+    "You and Solstice find a room neither of you has been in: a tiny closet with one disco light and nobody in it. She turns off her LED top. You stand there in the slow-turning light, not dancing, just talking. It's her favorite room of the weekend."
+    hide solstice with dissolve
+    return
+
+label speed_mission_wren:
+    show wren happy with dissolve
+    "You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally she leads you to a broom closet she's never opened, because it's labeled FOR WREN ONLY and she didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} She does, for a full minute."
+    hide wren with dissolve
+    return
+
+label speed_mission_zyx:
+    show zyx happy with dissolve
+    "You and Zyx find a room neither of you has been in: the hotel laundry. Zyx stands in front of the dryers for a long time, watching the clothes go round. \"Small planets,\" they whisper. \"Warm, tumbling planets.\" They take extensive notes."
+    hide zyx with dissolve
     return

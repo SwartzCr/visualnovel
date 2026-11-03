@@ -58,6 +58,19 @@ init python:
                       "expect": "Good Company"})
         cases.append({"name": "ending-checkout", "kind": "finale", "rapport": {}, "target": "alone",
                       "expect": "Checkout"})
+        # Every random encounter directly: three times with nobody met, three times with everyone met
+        # (so guest versions run and their menus get every option).
+        for e in ENCOUNTERS:
+            for k in range(3):
+                cases.append({"name": "%s-met-nobody-%d" % (e, k), "kind": "encounter", "enc": e, "met": [],
+                              "target": None})
+            for k in range(3):
+                cases.append({"name": "%s-met-everyone-%d" % (e, k), "kind": "encounter", "enc": e,
+                              "met": list(GUESTS), "target": None})
+        # Speed dating with each guest alone, so every survival-buddy mission plays.
+        for g in GUESTS:
+            cases.append({"name": "enc_speed_dating-met-" + g, "kind": "encounter", "enc": "enc_speed_dating",
+                          "met": [g], "target": None})
         return cases
 
     class VNTest(object):
@@ -107,6 +120,10 @@ init python:
         store.postcard_name = ""
         store.dating_match = None
         store.dating_match_name = ""
+        store.speed_sides = {}
+        store.speed_cast_names = ""
+        if "met" in case:
+            store.met = set(case["met"])
         for g, v in case.get("rapport", {}).items():
             store.rapport[g] = v
             store.met.add(g)
@@ -123,6 +140,9 @@ init python:
         case = vn.case
         ending = store.ending_name
         vn.results.append((case["name"], ending, time.time() - vn.case_started))
+        if case["kind"] == "encounter":
+            vn.index += 1
+            return
         if not ending:
             vn.fail("never reached an ending card")
         if case.get("expect") and ending != case["expect"]:
@@ -336,6 +356,8 @@ label vn_test_main:
         $ vn_begin_case()
         if vn.case["kind"] == "full":
             call start
+        elif vn.case["kind"] == "encounter":
+            call expression vn.case["enc"]
         else:
             call finale
         $ vn_end_case()
