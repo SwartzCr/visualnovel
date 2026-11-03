@@ -339,3 +339,44 @@ hand-painted anime background art, 2D anime key visual, flat cel shading with tw
 ```
 
 *Text to add afterwards:* screen: LET IT GO / life after the phone; posterboard: STEP 1: BREATHE
+
+## Character sprites
+
+Each prompt makes an **expression sheet**: the same character drawn four times in one row, in a fixed order: **neutral, happy, surprised, blush**. Because all four come from one image, they share the same outfit, colors and line weight. Keep that order so each panel can be cut out and saved as the right file (`<name>_neutral.png`, `_happy`, `_surprised`, `_blush`).
+
+- **Aspect ratio:** `--ar 3:1` gives four panels that each match the in-game sprite shape (560×720). Gerald uses `--ar 4:1`, because his sprite is wider.
+- **Background:** flat chroma-key green, so it can be removed cleanly afterwards. Zyx uses blue, because green would eat into their mint skin.
+- **Text:** Midjourney garbles words, so Wren's badge and Zyx's sash are left blank. They can be lettered in afterwards if you want.
+- **Fixing one panel:** if three faces are right and one is off, use **Vary (Region)** on just that face and repeat its expression from the list. That's quicker than re-rolling the whole sheet.
+- **Matching the backgrounds:** `--sref` with the lobby link at a low weight (`--sw 50`) borrows its colors and line art. Higher weights tend to paint scenery in behind the character.
+- **Re-rolling a character:** once you have a sheet you like, paste its image link at the start of the prompt to keep the design consistent.
+
+### Juni
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times side by side in one evenly spaced row, waist-up, facing the viewer, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, Juni, an androgynous adult in their late twenties wearing a fluffy pastel-pink axolotl kigurumi onesie with the hood up framing their face, the hood has a cute axolotl face with two small black eyes and rosy cheeks, six feathery hot-pink gill fronds fanning out from the sides of the hood, pale pink belly panel and front zipper, sleeves too long so the hands are hidden, held together shyly at the chest, warm light tan skin, short messy dark brown hair with soft bangs, big warm amber-brown eyes, from left to right: calm gentle closed-mouth smile, joyful open grin with eyes closed in happy upward crescents, surprised with wide eyes raised eyebrows and a small round open mouth, flustered shy smile with eyes glancing aside and a strong pink blush, flat solid chroma-key green background --ar 3:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
+```
+
+### Gerald
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times side by side in one evenly spaced row, chest-up, facing the viewer, identical pose, size and framing in every panel, only the facial expression changes, Gerald, a gentle friendly Sasquatch, a huge shaggy creature covered in long chestnut-brown fur with lighter highlights and a tufted crest on top of his head, a soft tan face framed by fur, heavy furry brow, kind warm brown eyes, broad dark nose, massive shoulders filling the panel, big gentle hands cradling a tiny white porcelain teacup with a small pink heart and a wisp of steam, cozy dignified shy-grandfather energy, a real creature drawn in anime style not a person in a costume, from left to right: calm kind closed-mouth expression, joyful open smile with eyes closed in happy upward crescents, surprised with wide eyes raised brow and a small round open mouth, flustered bashful smile with eyes glancing aside and a pink blush showing through the fur, flat solid chroma-key green background --ar 4:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, chibi, 3d render, photorealistic, human
+```
+
+### Solstice
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times side by side in one evenly spaced row, waist-up, facing the viewer, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, Solstice, a radiant adult woman in her early thirties and a festival raver, warm brown skin, long voluminous wavy hair fading from bubblegum pink at the top to pale blonde at the ends, bright teal eyes, glitter on her cheekbones and a small gold star sticker under her left eye, chunky goggles with round cyan lenses pushed up on her forehead, gold hoop earrings, black crop top studded with tiny glowing multicolored LED lights, high-waisted holographic shorts, stacks of colorful beaded kandi bracelets on both wrists, from left to right: friendly confident smile, joyful open grin with eyes closed in happy upward crescents, surprised with wide eyes raised eyebrows and a small round open mouth, flustered shy smile with eyes glancing aside and a strong pink blush, flat solid chroma-key green background --ar 3:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
+```
+
+### Wren
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times side by side in one evenly spaced row, waist-up, facing the viewer, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, Wren, an adult woman in her early thirties on the event crew, pale skin, sleek black asymmetric bob with a long side-swept fringe on one side and a short shaved undercut on the other, tired but kind violet eyes with faint dark circles, black over-ear headset with a small boom microphone, plain black hoodie, bright pink lanyard with a blank white badge, a brown clipboard hugged to her chest with one arm, a roll of silver gaffer tape clipped to her belt, a black walkie-talkie with a green light at her hip, competent dry and secretly soft, from left to right: calm dry half-smile, joyful open grin with eyes closed in happy upward crescents, surprised with wide eyes raised eyebrows and a small round open mouth, flustered shy smile with eyes glancing aside and a strong pink blush, flat solid chroma-key green background --ar 3:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
+```
+
+### Zyx
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times side by side in one evenly spaced row, waist-up, facing the viewer, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, Zyx, an androgynous adult alien ambassador, smooth pale mint-green skin, three large anime eyes with glossy magenta irises, two in the usual place and a smaller third eye in the center of the forehead, small pointed ears, sleek shiny chrome-silver bob with perfectly straight bangs, two thin antennae each ending in a softly glowing pink bulb, silver metallic bodysuit with a high collar of spiky teal points, a plain gold diagonal sash across the chest, one hand raised in a friendly wave in a teal three-fingered glove, formal earnest and a little awkward, from left to right: polite small neutral smile, joyful open grin with all three eyes closed in happy upward crescents, surprised with all three eyes wide and a small round open mouth, flustered shy smile with all three eyes glancing aside and a strong pink blush, flat solid chroma-key blue background --ar 3:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
+```
