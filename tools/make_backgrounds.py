@@ -902,6 +902,240 @@ def bg_main_menu():
     im.save(os.path.join(gui, "game_menu.png"))
 
 
+# ---------------------------------------------------------------- art-room encounters
+def bg_penguinpost():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), "#0b1440", "#1c2f6b")
+    # icy back wall with neon
+    for i in range(14):
+        x = i * 100 - 20
+        c.poly([(x, 0), (x + 120, 0), (x + 90, 420), (x + 10, 420)], fill=col(["#9fd8ff", "#c8ecff", "#7fb8f0"][i % 3], 70))
+    c.rect((0, 400, W, 430), fill="#d8f0ff")
+    for x in range(0, W, 60):  # icicles along the top
+        c.poly([(x, 0), (x + 30, 0), (x + 15, 40 + (x // 60 % 3) * 18)], fill="#e8f8ff")
+    c.neon_text((640, 90), "PENGUIN POST", 52, PINK)
+    c.neon_text((640, 150), "PLEASE TAKE A NUMBER", 20, CYAN)
+    # NOW SERVING display
+    c.rect((960, 190, 1180, 270), fill="#05060c", r=8)
+    c.text((1070, 212), "NOW SERVING", 14, "#ffcf5a", font="mono")
+    c.text((1070, 246), "3", 34, "#ff5a5a", font="mono", glow="#ff2a2a")
+    # counter
+    c.rect((300, 330, 980, 470), fill="#e8f4ff")
+    c.rect((290, 318, 990, 336), fill="#ffffff")
+    c.rect((300, 470, 980, 478), fill=col(CYAN, 160), blur=3)
+    for k, x in enumerate((420, 640, 860)):  # penguins behind the counter
+        c.ell((x - 46, 220, x + 46, 336), fill="#14141c")
+        c.ell((x - 30, 250, x + 30, 336), fill="#f4f4f8")
+        c.circle(x - 13, 248, 5, fill="#ffffff"); c.circle(x + 13, 248, 5, fill="#ffffff")
+        c.circle(x - 13, 249, 2.5, fill="#111111"); c.circle(x + 13, 249, 2.5, fill="#111111")
+        c.poly([(x - 8, 262), (x + 8, 262), (x, 274)], fill="#ffb02a")
+        c.rect((x - 26, 204, x + 26, 222), fill="#1d3a8a", r=4)
+        c.rect((x - 30, 218, x + 30, 224), fill="#1d3a8a")
+    # mailboxes left, parcels right
+    for r in range(3):
+        for k in range(3):
+            c.rect((60 + k * 62, 200 + r * 62, 112 + k * 62, 252 + r * 62), fill="#3a5ab0", outline="#9fd8ff", width=2)
+            c.circle(100 + k * 62, 226 + r * 62, 4, fill="#ffcf5a")
+    for (x, y, w, h, cc) in [(1040, 330, 90, 70, "#c89a5a"), (1120, 350, 70, 50, "#d8aa6a"), (1060, 290, 60, 42, "#b88a4a")]:
+        c.rect((x, y, x + w, y + h), fill=cc)
+        c.line([(x + w / 2, y), (x + w / 2, y + h)], "#8a5a2a", 3)
+    # snowy floor
+    c.vgrad((0, 478, W, H), "#cfe8ff", "#9cc8f0")
+    R = rng(31)
+    for _ in range(160):
+        c.circle(R.uniform(0, W), R.uniform(0, H), R.uniform(1, 2.6), fill=col("#ffffff", R.randint(120, 230)))
+    c.vignette(120)
+    c.save(os.path.join(OUT, "penguinpost.png"))
+
+
+def fan(c, x, y, r, blade="#d8e0ec", hub="#5a6a80", spin=0):
+    c.circle(x, y, r + 6, outline="#8a9ab0", width=3)
+    for k in range(4):
+        a = math.radians(spin + k * 90)
+        c.ell((x + math.cos(a) * r * 0.55 - r * 0.32, y + math.sin(a) * r * 0.55 - r * 0.32,
+               x + math.cos(a) * r * 0.55 + r * 0.32, y + math.sin(a) * r * 0.55 + r * 0.32), fill=blade)
+    c.circle(x, y, r * 0.2, fill=hub)
+    for k in range(-r, r + 1, 9):
+        c.line([(x + k, y - math.sqrt(max(0, r * r - k * k))), (x + k, y + math.sqrt(max(0, r * r - k * k)))], col("#8a9ab0", 90), 1)
+
+
+def bg_fanbar():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), "#bfe8f4", "#7fc4dc")
+    for x in range(0, W, 90):
+        c.rect((x, 0, x + 45, 520), fill=col("#ffffff", 40))
+    # breeze lines
+    R = rng(7)
+    for _ in range(30):
+        y = R.uniform(40, 500); x = R.uniform(0, W - 200)
+        c.arc((x, y, x + R.uniform(120, 260), y + 30), 200, 340, col("#ffffff", 150), 2)
+    c.rect((300, 40, 980, 110), fill="#ffffff", r=10)
+    c.text((640, 75), "PLEASE SUBSCRIBE!!", 40, PINK, font="bold")
+    c.rect((40, 150, 260, 230), fill="#fff4b0", r=6)
+    c.text((150, 190), "FOR SUBSCRIBERS\nONLY!", 18, "#c03060", font="bold", spacing=4)
+    # wall of fans
+    for (x, y, r, s) in [(120, 330, 70, 0), (1150, 300, 80, 20), (1000, 170, 50, 45), (300, 200, 45, 10),
+                         (980, 360, 60, 30), (210, 470, 55, 15)]:
+        fan(c, x, y, r, spin=s)
+    # Fanny Bar counter
+    c.rect((430, 380, 850, 500), fill="#ff8fc0", r=8)
+    c.rect((420, 366, 860, 386), fill="#ffd0e6", r=6)
+    c.neon_text((640, 270), "FANNY BAR", 32, PINK)
+    for x in (480, 560, 720, 800):
+        c.rect((x - 12, 330, x + 12, 366), fill=col("#ffffff", 200), r=6)
+        c.rect((x - 6, 320, x + 6, 332), fill="#c0c8d8")
+    # Nutbuster booth
+    c.rect((1110, 420, 1270, 620), fill="#1a3a8a")
+    c.rect((1110, 400, 1270, 440), fill="#ffd21a")
+    c.text((1190, 420), "NUTBUSTER", 18, "#1a3a8a", font="bold")
+    c.rect((1130, 460, 1250, 620), fill="#0a1a4a")
+    c.rect((0, 520, W, H), fill="#e8dcc8")
+    c.vignette(90)
+    c.save(os.path.join(OUT, "fanbar.png"))
+
+
+def bg_tentacletopia():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), "#063a5a", "#021428")
+    # light rays
+    for i in range(6):
+        x = 120 + i * 220
+        c.poly([(x, 0), (x + 60, 0), (x + 220, 720), (x + 80, 720)], fill=col("#9fe8ff", 22), blur=12)
+    # sunken art-deco towers
+    for (x, w, h, sign, cc) in [(140, 180, 380, "OCEAN", PINK), (900, 220, 430, "HOTEL", CYAN), (1150, 120, 300, None, None)]:
+        top = 560 - h
+        c.rect((x, top, x + w, 560), fill="#0c4a5a")
+        c.rect((x + w * 0.2, top - 40, x + w * 0.8, top), fill="#0c4a5a")
+        c.rect((x + w * 0.4, top - 80, x + w * 0.6, top - 40), fill="#0c4a5a")
+        for k in range(int(h / 50)):
+            for j in range(3):
+                c.rect((x + 20 + j * (w - 40) / 3, top + 20 + k * 50, x + 10 + (j + 1) * (w - 40) / 3, top + 44 + k * 50), fill="#08303c")
+        if sign:
+            c.neon_text((x + w / 2, top + 40), sign, 22, cc)
+    # kelp
+    R = rng(41)
+    for x in list(range(10, 260, 26)) + list(range(1000, 1280, 30)):
+        pts = [(x + math.sin(t / 2.2 + x) * 16, 720 - t * 22) for t in range(int(R.uniform(10, 22)))]
+        c.line(pts, R.choice(["#2f8f4e", "#3fa65b", "#58b86a"]), 8)
+    # jellyfish
+    for (x, y, r, cc) in [(420, 150, 60, "#ff8fe0"), (760, 230, 46, "#b08fff"), (600, 90, 34, "#8fe8ff"), (330, 320, 30, "#ffb0f0")]:
+        c.circle(x, y, r * 1.6, fill=col(cc, 50), blur=12)
+        c.pieslice((x - r, y - r, x + r, y + r), 180, 360, col(cc, 210))
+        for k in range(6):
+            tx = x - r * 0.8 + k * r * 0.32
+            c.line([(tx + math.sin(j / 1.6 + k) * 6, y + j * 12) for j in range(9)], col(cc, 170), 3)
+    # coral wall + sand
+    c.vgrad((0, 560, W, H), "#c8a86a", "#8a6a3a")
+    for _ in range(26):
+        x = R.uniform(300, 980)
+        c.circle(x, R.uniform(560, 600), R.uniform(10, 26), fill=R.choice(["#ff7f6a", "#ffb05a", "#e05a8a", "#ff9fb0"]))
+    for _ in range(60):
+        x, y = R.uniform(0, W), R.uniform(0, 560)
+        c.circle(x, y, R.uniform(2, 6), outline=col("#d8f8ff", 140), width=1)
+    c.vignette(150)
+    c.save(os.path.join(OUT, "tentacletopia.png"))
+
+
+def bg_optical():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, 520), "#ffb8e0", "#8ae0e8")
+    for x in range(0, W, 140):  # palm wallpaper
+        for y in (60, 260):
+            c.line([(x + 40, y + 120), (x + 50, y)], "#5ac8b0", 4)
+            for a in (-60, -20, 20, 60, 100):
+                aa = math.radians(a - 90)
+                c.line([(x + 50, y), (x + 50 + math.cos(aa) * 40, y + math.sin(aa) * 40 + 10)], "#5ac8b0", 4)
+    c.rect((360, 30, 920, 110), fill="#140a28", r=12)
+    c.neon_text((640, 70), "ZANY OPTICAL", 44, PINK)
+    # giant googly eye
+    c.circle(1060, 230, 140, fill="#ffffff", outline="#2a1a3a", width=6)
+    c.circle(1090, 270, 70, fill="#111111")
+    c.circle(1070, 248, 18, fill="#ffffff")
+    # reception iPad
+    c.rect((160, 260, 300, 360), fill="#1a1a2a", r=10)
+    c.rect((170, 270, 290, 350), fill="#5ae6ff", r=6)
+    c.text((230, 300), "◕‿◕", 26, "#141428", font="sans")
+    c.rect((222, 360, 238, 430), fill="#8a8aa0")
+    # eye chart
+    c.rect((440, 150, 580, 360), fill="#ffffff", outline="#2a1a3a", width=3)
+    for i, (t, sz) in enumerate([("E", 46), ("F P", 30), ("T O Z", 22), ("L P E D", 16), ("P E C F D", 12)]):
+        c.text((510, 186 + i * 36), t, sz, "#141428", font="bold")
+    # A/B machine
+    c.rect((650, 220, 860, 380), fill="#c8c8d8", r=16)
+    c.circle(710, 290, 34, fill="#2a1a3a"); c.circle(800, 290, 34, fill="#2a1a3a")
+    c.circle(710, 290, 24, fill="#8ae0ff"); c.circle(800, 290, 24, fill="#ff8fd0")
+    c.text((710, 350), "A", 20, "#2a1a3a", font="bold"); c.text((800, 350), "B", 20, "#2a1a3a", font="bold")
+    # floor grid
+    c.rect((0, 520, W, H), fill="#1a0a2a")
+    for x in range(-600, 1900, 90):
+        c.line([(640, 520), (x, H)], col(PINK, 140), 2)
+    y = 530; step = 6
+    while y < H:
+        c.line([(0, y), (W, y)], col(CYAN, 140), 2); step *= 1.4; y += step
+    c.save(os.path.join(OUT, "optical.png"))
+
+
+def bg_speeddating():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), "#3a1640", "#1c0a24")
+    for x in range(60, W, 170):
+        c.rect((x, 40, x + 24, 520), fill="#4a2050")
+    # chandelier
+    c.line([(640, 0), (640, 60)], GOLD, 3)
+    for i in range(9):
+        x = 560 + i * 20
+        c.circle(x, 76 + (i % 2) * 8, 6, fill="#fff0b0")
+        c.circle(x, 76, 26, fill=col("#ffe08a", 50), blur=10)
+    # banner
+    c.rect((290, 120, 990, 200), fill="#ff5fb8", r=10)
+    c.text((640, 160), "PLATONIC SPEED DATING", 36, "#ffffff", font="bold")
+    # two paddles on the side walls
+    for (x, label, cc) in [(170, "THIS", CYAN), (1110, "THAT", GOLD)]:
+        c.rect((x - 6, 300, x + 6, 470), fill="#c8a070")
+        c.rect((x - 80, 240, x + 80, 330), fill="#ffffff", outline=cc, width=6, r=10)
+        c.text((x, 285), label, 34, "#2a1a3a", font="bold")
+    # tape line down the middle of the floor
+    c.vgrad((0, 520, W, H), "#6a3a2a", "#4a2418")
+    c.poly([(632, 520), (648, 520), (690, H), (590, H)], fill="#ffe14d")
+    # grab bag
+    c.ell((1180, 560, 1260, 640), fill="#c84a4a")
+    c.text((1220, 600), "MISSIONS", 9, "#ffffff", font="cond")
+    c.vignette(140)
+    c.save(os.path.join(OUT, "speeddating.png"))
+
+
+def bg_letitgo():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), "#2a2238", "#141020")
+    # stage + projector screen
+    c.rect((300, 70, 980, 400), fill="#f4f0e8")
+    c.rect((290, 60, 990, 76), fill="#3a3448")
+    c.text((640, 160), "LET IT GO", 64, "#2a2238", font="bold")
+    c.text((640, 240), "life after the phone", 26, "#7a6a90", font="sans")
+    c.rect((560, 290, 720, 370), outline="#2a2238", width=4, r=14)
+    c.line([(560, 290), (720, 370)], "#ff5a5a", 6)
+    c.rect((220, 420, 1060, 470), fill="#4a3a5a")
+    # posterboard slides on an easel
+    c.line([(1110, 300), (1080, 520)], "#8a6a40", 6); c.line([(1170, 300), (1200, 520)], "#8a6a40", 6)
+    c.rect((1060, 220, 1220, 340), fill="#fffbe8")
+    c.text((1140, 280), "STEP 1:\nBREATHE", 18, "#2a2238", font="bold", spacing=4)
+    # craft table with emotional support phones
+    c.rect((40, 400, 230, 430), fill="#a8784a")
+    R = rng(9)
+    for k in range(5):
+        x = 60 + k * 34
+        c.rect((x, 360, x + 24, 400), fill=R.choice([PINK, CYAN, GOLD, VIOLET, LIME]), r=4)
+        c.circle(x + 8, 372, 3, fill="#ffffff"); c.circle(x + 16, 372, 3, fill="#ffffff")
+    # rows of folding chairs, backs to us
+    c.rect((0, 470, W, H), fill="#241c30")
+    for row, (y, s) in enumerate([(540, 0.8), (620, 1.0)]):
+        for k in range(8):
+            x = 120 + k * 150 + (row * 70)
+            c.rect((x - 34 * s, y - 60 * s, x + 34 * s, y), fill="#5a5470", r=4)
+    c.vignette(140)
+    c.save(os.path.join(OUT, "letitgo.png"))
+
+
 SCENES = {
     "exterior": bg_exterior, "exterior_night": bg_exterior_night, "lobby": bg_lobby, "pool": bg_pool,
     "hallway": bg_hallway, "room404": bg_room404, "lostfound": bg_lostfound, "regen": bg_regen,
@@ -911,6 +1145,8 @@ SCENES = {
     "livingroom": bg_livingroom, "mission": bg_mission, "roof": bg_roof,
     "roof_dawn": lambda: bg_roof("roof_dawn.png", dawn=True),
     "main_menu": bg_main_menu, "fortune": bg_fortune, "clinic": bg_clinic, "planetarium": bg_planetarium, "bedroom": bg_bedroom,
+    "penguinpost": bg_penguinpost, "fanbar": bg_fanbar, "tentacletopia": bg_tentacletopia,
+    "optical": bg_optical, "speeddating": bg_speeddating, "letitgo": bg_letitgo,
 }
 
 if __name__ == "__main__":

@@ -60,6 +60,12 @@ image bg roof_dawn = "images/bg/roof_dawn.png"
 image bg fortune = "images/bg/fortune.png"
 image bg clinic = "images/bg/clinic.png"
 image bg planetarium = "images/bg/planetarium.png"
+image bg penguinpost = "images/bg/penguinpost.png"
+image bg fanbar = "images/bg/fanbar.png"
+image bg tentacletopia = "images/bg/tentacletopia.png"
+image bg optical = "images/bg/optical.png"
+image bg speeddating = "images/bg/speeddating.png"
+image bg letitgo = "images/bg/letitgo.png"
 
 init python:
     for _who in ("juni", "gerald", "solstice", "wren", "zyx"):

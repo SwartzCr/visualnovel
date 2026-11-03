@@ -103,6 +103,10 @@ init python:
         store.encounters_seen = []
         store.note_for = None
         store.note_name = ""
+        store.postcard_for = None
+        store.postcard_name = ""
+        store.dating_match = None
+        store.dating_match_name = ""
         for g, v in case.get("rapport", {}).items():
             store.rapport[g] = v
             store.met.add(g)

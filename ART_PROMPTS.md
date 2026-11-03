@@ -313,9 +313,73 @@ A hotel linen closet secretly turned into a party's mission control. Shelves sta
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
+### Random-encounter art rooms
+
+#### 21. `penguinpost.png`
+
+*Used for:* random encounter: Penguin Post.
+
+> The penguins are the room's staff (people in penguin costumes, or real cartoon penguins); either works.
+
+```text
+A hotel room turned into a post office at the South Pole in the year 3000, run by penguins. Sparkly, shiny, cold-looking ice and snow decor everywhere, lit by blue and pink neon, with icicles along the ceiling. A long white service counter across the middle with three penguins behind it wearing tiny navy postal caps. A wall of blue post-office boxes on the left, a stack of brown parcels on the right, and a digital "NOW SERVING" display showing the number 3. A pink neon sign at the top reads "PENGUIN POST". Whimsical, festive and frosty.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
+#### 22. `fanbar.png`
+
+*Used for:* random encounter: the OnlyFans Fanny Bar.
+
+```text
+A hotel room turned into a cool, breezy oasis filled with every kind of electric fan: box fans, desk fans, pedestal fans and ceiling fans, with faint white breeze lines in the air. Pale aqua walls. In the center, a small pink bar counter lined with spray-mister bottles, under a pink neon sign reading "FANNY BAR". A big banner at the top reads "PLEASE SUBSCRIBE!!". A basket of folding hand fans by the door. In the corner, a retro blue-and-yellow video rental booth with a sign reading "NUTBUSTER". Playful, satirical, bright and airy.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
+#### 23. `tentacletopia.png`
+
+*Used for:* random encounter: Tentacletopia.
+
+```text
+A hotel room transformed into the bottom of the sea around the sunken Lost City of Miami. Leaning art-deco towers on the left and right with faintly glowing pink and cyan neon signs reading "OCEAN" and "HOTEL", swaying green kelp at the edges, shafts of blue light from above, drifting bubbles, and large glowing jellyfish in pink, violet and pale blue floating overhead with long trailing tentacles. A sandy floor with a low wall of colorful coral. Mysterious, beautiful, a little silly.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
+#### 24. `optical.png`
+
+*Used for:* random encounter: Zany Optical.
+
+```text
+A strip-mall optometrist's office remixed into vaporwave: pink-to-teal gradient walls with a palm-tree pattern, and a magenta and cyan neon grid floor in perspective. A dark sign with pink neon letters at the top reads "ZANY OPTICAL". On the left, a cheerful tablet on a stand acting as the receptionist, showing a smiley face. In the middle, a classic eye chart and an exam machine with two big round lenses labeled "A" and "B". On the right, an enormous googly eye mounted on the wall. 1980s retro-future, goofy and bright.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
+#### 25. `speeddating.png`
+
+*Used for:* random encounter: Platonic Speed Dating.
+
+```text
+A plum-colored side room of an old hotel ballroom set up for a party game. A small gold chandelier, a hot-pink banner reading "PLATONIC SPEED DATING", and on opposite walls two big handheld whiteboard paddles on poles, the left one reading "THIS" and the right one "THAT". A strip of yellow tape runs down the middle of the wooden floor, dividing the room in two. A red drawstring grab bag sits in the corner. Warm, playful, game-show energy.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
+#### 26. `letitgo.png`
+
+*Used for:* random encounter: the Let It Go workshop.
+
+```text
+A dim hotel conference room set up for a self-help workshop. A small low stage with a big projector screen reading "LET IT GO" with smaller text below, "life after the phone", and a simple drawing of a phone crossed out in red. An easel with a hand-lettered posterboard slide reading "STEP 1: BREATHE". A craft table on the left with a row of small colorful wooden phone-shaped blocks decorated with googly eyes. Rows of empty grey folding chairs face the stage. Calm, earnest and gently funny.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
 ### Zyx's art rooms
 
-#### 21. `fortune.png`
+#### 27. `fortune.png`
 
 *Used for:* Zyx night 1: the Oracle of Ping Pong.
 
@@ -325,7 +389,7 @@ A hotel room bathed in deep purple light, turned into a retro-futurist fortune-t
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 22. `clinic.png`
+#### 28. `clinic.png`
 
 *Used for:* Zyx night 2: the Clinic of Unnecessary Procedures.
 
@@ -337,7 +401,7 @@ A hotel room made into a whimsical retro medical clinic. Mint-green tiled walls,
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 23. `planetarium.png`
+#### 29. `planetarium.png`
 
 *Used for:* Zyx night 3: the Ice Machine Planetarium.
 
