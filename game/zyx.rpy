@@ -2,9 +2,9 @@
 ## Never breaks character. Whether there's a person under the suit is not the point.
 
 label zyx_pool_1:
-    "Under a giant striped umbrella sits a silver alien with three eyes, two antennae and a sash that reads AMBASSADOR. They are wearing at least an inch of sunscreen and taking notes on a clipboard."
+    "Under a giant striped beach umbrella, set up indoors for reasons nobody has asked about, sits a silver alien with three eyes, two antennae and a sash that reads AMBASSADOR. They are wearing at least an inch of sunscreen anyway, and taking notes on a clipboard."
     show zyx neutral with dissolve
-    z "Greetings, Earthling. This one is Zyx, Ambassador of the Outer Drift. You may approach. Slowly. The sun is very aggressive on this planet."
+    z "Greetings, Earthling. This one is Zyx, Ambassador of the Outer Drift. You may approach. Slowly. The sun is very aggressive on this planet. Even through glass."
     z "Please explain the following ritual."
     "They point at the pool, where a dozen adults have their eyes closed, splashing around and screaming the same two words at each other."
     z "Why do humans close their eyes and shout the name of a dead Venetian explorer?"
@@ -64,7 +64,7 @@ label zyx_pool_2:
             $ gain("zyx", 2)
             $ gave_rock = True
             z surprised "A nice rock."
-            "They hold it up to the sun with all three eyes."
+            "They hold it up to the light from the atrium roof with all three eyes."
             z happy "On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This changes everything. This is the centerpiece."
 
         "Your hotel key card.":
@@ -300,7 +300,7 @@ label zyx_romance:
         "\"It's permitted. It's encouraged.\"":
             z happy "Excellent. This one will update the legal section of the report."
         "\"What's the color now?\"":
-            "Zyx's antennae are glowing a soft, warm gold, the exact color of the sun coming over the hills."
+            "Zyx's antennae are glowing a soft, warm gold, the exact color of the sun coming over the mountains."
             z blush "This one is calling it... Monday."
 
     z blush "There is one final experiment. On the Outer Drift, when two beings wish to be close, they touch foreheads. Third eye to third eye."
@@ -308,7 +308,7 @@ label zyx_romance:
     menu:
         "Lean in and touch foreheads.":
             "Their forehead is cool and smooth and smells faintly of sunscreen. The third eye closes."
-            "For a long moment you just breathe like that, foreheads together, while the birds start up in the eucalyptus."
+            "For a long moment you just breathe like that, foreheads together, while the birds start up in the pines."
 
     z blush "And now, for comparison. The Earth version. Consent is requested."
 
@@ -320,7 +320,7 @@ label zyx_romance:
             z "This one will need to repeat the experiment. For reproducibility. Science is very strict about this."
 
     scene bg roof_dawn with slowfade
-    "The sun clears the hills. Down below, cars are starting in the parking lot. Neither of you moves."
+    "The sun clears the mountains and lights up the lake. Down below, cars are starting in the parking lot. Neither of you moves."
     "At some point Zyx takes off one glove and holds your hand properly. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either."
     scene black with slowfade
     "{i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}"

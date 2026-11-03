@@ -125,174 +125,9 @@ def framed(c, box, inner="#d8a35a", frame="#6b4520"):
 
 
 # ---------------------------------------------------------------- scenes
-def motel(c, night=True):
-    # building
-    base_y = 470
-    c.rect((140, 250, 1180, base_y + 120), fill="#e9b98c" if not night else "#3b2a48")
-    c.rect((140, 235, 1180, 255), fill="#c56b4a" if not night else "#5a2a4a")
-    c.rect((140, 395, 1180, 410), fill="#c56b4a" if not night else "#5a2a4a")
-    # walkway railing upper floor
-    for x in range(150, 1180, 22):
-        c.line([(x, 360), (x, 395)], "#2b1d33" if night else "#7a4a35", 2)
-    c.line([(140, 360), (1180, 360)], "#2b1d33" if night else "#7a4a35", 3)
-    R = rng(11)
-    lights = [PINK, GOLD, CYAN, VIOLET, LIME, "#ff8f4a"]
-    for row, y in enumerate((280, 430)):
-        for i, x in enumerate(range(175, 1150, 95)):
-            lit = night and R.random() < 0.8
-            dc = "#7a3a5a" if not night else "#2a1830"
-            c.rect((x, y, x + 34, y + 78 - row * 6), fill=dc)
-            wc = R.choice(lights) if lit else ("#9ec7d9" if not night else "#1a1222")
-            c.rect((x + 44, y + 8, x + 80, y + 40), fill=wc)
-            if lit:
-                c.rect((x + 38, y + 2, x + 86, y + 46), fill=col(wc, 90), blur=8)
-            c.text((x + 17, y - 9), str(100 * (2 - row) + i + 1), 9, "#f3dcb0" if not night else "#c9a0d0", font="cond")
-    # sign
-    sx = 1080
-    c.rect((sx - 8, 120, sx + 8, 600), fill="#2a2a32")
-    c.rect((sx - 120, 60, sx + 120, 210), fill="#1c1426", r=12)
-    if night:
-        c.neon_text((sx, 105), "HOTEL", 34, PINK)
-        c.neon_text((sx, 150), "MAR SOL", 34, CYAN)
-        c.neon_text((sx, 190), "NO VACANCY", 16, "#ff4040")
-    else:
-        c.text((sx, 105), "HOTEL", 34, "#f05a9a")
-        c.text((sx, 150), "MAR SOL", 34, "#3cc0e0")
-        c.text((sx, 190), "NO VACANCY", 16, "#aa3333")
-    string_lights(c, 140, 245, 660, 245, sag=40, seed=4) if night else None
-    string_lights(c, 660, 245, 1180, 245, sag=40, seed=5) if night else None
 
 
-def bg_exterior():
-    c = Canvas(W, H)
-    c.vgrad((0, 0, W, H), None, None, stops=[(0, "#2b1650"), (0.45, "#c2477a"), (0.7, "#ff9a5a"), (1, "#ffd39a")])
-    c.circle(300, 470, 110, fill=col("#ffd56b", 200), blur=30)
-    c.circle(300, 470, 60, fill="#ffe7a0")
-    c.poly(blob(200, 640, 520, 160, seed=1, amp=0.03), fill="#5a2a4e")
-    c.poly(blob(1100, 660, 640, 190, seed=2, amp=0.03), fill="#4a2244")
-    motel(c, night=False)
-    c.rect((0, 590, W, H), fill="#2d2030")
-    for x in range(0, W, 120):
-        c.rect((x + 20, 650, x + 80, 656), fill="#e8d26a")
-    c.save(os.path.join(OUT, "exterior.png"))
 
-
-def bg_exterior_night(name="exterior_night.png"):
-    c = Canvas(W, H)
-    c.vgrad((0, 0, W, H), None, None, stops=[(0, "#05030f"), (0.55, "#1b0f38"), (1, "#3b1d4a")])
-    star_field(c, 220, (0, 0, W, 330), seed=7)
-    c.circle(220, 110, 46, fill=col("#fff3d0", 90), blur=20)
-    c.circle(220, 110, 34, fill="#fff3d0")
-    c.circle(234, 102, 30, fill="#120a26")
-    c.poly(blob(200, 640, 520, 160, seed=1, amp=0.03), fill="#120a1e")
-    c.poly(blob(1100, 660, 640, 190, seed=2, amp=0.03), fill="#0e0818")
-    motel(c, night=True)
-    c.rect((0, 590, W, H), fill="#120c18")
-    for x in range(0, W, 120):
-        c.rect((x + 20, 650, x + 80, 656), fill="#5a5030")
-    c.rect((0, 560, W, 600), fill=col(PINK, 40), blur=20)
-    c.vignette()
-    c.save(os.path.join(OUT, name))
-
-
-def bg_lobby():
-    c = Canvas(W, H)
-    wallpaper_stripes(c, (0, 0, W, 520), "#2f6b5e", "#2a5f54", 30)
-    c.rect((0, 0, W, 60), fill="#1c3a33")
-    for x in range(0, W, 60):
-        c.poly([(x, 60), (x + 30, 80), (x + 60, 60)], fill="#c9a24a")
-    # chandelier
-    c.line([(640, 0), (640, 90)], "#c9a24a", 3)
-    for i in range(7):
-        x = 560 + i * 27
-        c.line([(640, 90), (x, 130)], "#c9a24a", 2)
-        c.circle(x, 135, 6, fill="#fff2b0")
-        c.circle(x, 135, 22, fill=col("#ffe08a", 70), blur=10)
-    # key cubbies
-    c.rect((780, 140, 1160, 400), fill="#4a2a1a")
-    R = rng(3)
-    for r in range(5):
-        for k in range(8):
-            x, y = 795 + k * 45, 155 + r * 48
-            c.rect((x, y, x + 38, y + 40), fill="#2e180e")
-            if R.random() < 0.55:
-                c.line([(x + 19, y + 6), (x + 19, y + 26)], GOLD, 2)
-                c.circle(x + 19, y + 30, 5, fill="#d84a6a")
-    c.rect((780, 100, 1160, 135), fill="#1c3a33")
-    c.text((970, 118), "ALL WHO ENTER ARE ALREADY CHECKED IN", 13, "#f0d690", font="cond")
-    # desk
-    c.rect((0, 520, W, H), fill="#3a1f2a")
-    for x in range(0, W, 80):
-        c.line([(x, 520), (x - 40, H)], col("#000000", 50), 2)
-    c.rect((230, 440, 1050, 600), fill="#6b2f2f")
-    c.rect((220, 430, 1060, 452), fill="#a8553f")
-    c.rect((230, 600, 1050, 615), fill="#2a1414")
-    for x in range(270, 1040, 110):
-        c.rect((x, 470, x + 80, 580), outline="#4e1f1f", width=3)
-    c.ell((600, 410, 650, 432), fill=GOLD)
-    c.rect((622, 400, 628, 412), fill=GOLD)
-    c.rect((300, 405, 380, 430), fill="#f2ead8")
-    c.text((340, 418), "NO PHOTOS", 9, "#7a2222", font="cond")
-    plant(c, 110, 450, 1.2, seed=4)
-    plant(c, 1180, 450, 1.1, seed=8)
-    c.rect((60, 120, 220, 300), fill="#e8dcc0")
-    framed(c, (60, 120, 220, 300), inner="#e8dcc0")
-    c.text((140, 210), "TEA BAR\n→\nNO BOOZE\nALL\nFEELINGS", 15, "#3a1f2a", font="cond", spacing=6)
-    c.vignette(110)
-    c.save(os.path.join(OUT, "lobby.png"))
-
-
-def bg_pool():
-    c = Canvas(W, H)
-    c.vgrad((0, 0, W, 330), "#4fb6ff", "#bfe9ff")
-    c.circle(1080, 90, 80, fill=col("#fff6c0", 140), blur=30)
-    c.circle(1080, 90, 46, fill="#fff8d8")
-    for i, (x, y) in enumerate([(200, 80), (520, 130), (760, 60)]):
-        for dx, r in ((0, 30), (30, 40), (70, 30)):
-            c.circle(x + dx, y, r, fill=col("#ffffff", 230))
-    # hills + palms
-    c.poly(blob(300, 340, 500, 70, seed=4, amp=0.02, start=math.pi, end=2 * math.pi) + [(800, 340), (-200, 340)], fill="#7fb07a")
-    # motel behind
-    c.rect((0, 220, W, 340), fill="#f1c59a")
-    c.rect((0, 210, W, 228), fill="#e0705a")
-    R = rng(2)
-    for x in range(30, W, 110):
-        c.rect((x, 250, x + 32, 330), fill="#e0705a")
-        c.rect((x + 45, 258, x + 85, 292), fill="#9ad4ea")
-    # deck
-    c.rect((0, 340, W, H), fill="#f2e2c4")
-    for y in range(350, H, 26):
-        c.line([(0, y), (W, y)], "#e0cba6", 1.5)
-    # pool
-    pool = blob(640, 520, 470, 150, n=60, seed=1, amp=0.0)
-    c.poly(blob(640, 520, 490, 166, n=60), fill="#f8f8f8")
-    c.poly(pool, fill="#29b8d8")
-    c.poly(blob(640, 545, 430, 120, n=60), fill="#1fa2c6")
-    for i in range(26):
-        x, y = R.uniform(220, 1060), R.uniform(410, 640)
-        if ((x - 640) / 470) ** 2 + ((y - 520) / 150) ** 2 < 0.8:
-            c.arc((x - 40, y - 6, x + 40, y + 6), 200, 340, col("#e9fbff", 200), 2)
-    # inflatable flamingo
-    fx, fy = 820, 520
-    c.ell((fx - 60, fy - 20, fx + 60, fy + 26), fill="#ff7fb0")
-    c.line([(fx + 40, fy - 5), (fx + 55, fy - 70), (fx + 75, fy - 80)], "#ff7fb0", 16)
-    c.poly([(fx + 75, fy - 88), (fx + 98, fy - 78), (fx + 76, fy - 70)], fill="#222222")
-    c.circle(fx + 66, fy - 82, 3, fill="#111111")
-    # loungers
-    for x in (60, 1110):
-        c.poly([(x, 600), (x + 120, 600), (x + 140, 650), (x - 10, 650)], fill="#ffffff")
-        for k in range(6):
-            c.line([(x + k * 24, 600), (x + k * 26 - 4, 650)], "#5ac0d8", 6)
-    # umbrella
-    c.line([(150, 330), (150, 600)], "#7a5a3a", 5)
-    for i in range(8):
-        a0, a1 = 180 + i * 22.5, 180 + (i + 1) * 22.5
-        c.pieslice((20, 280, 280, 400), a0, a1, fill=["#ff5f7a", "#fff1d0"][i % 2])
-    # sign
-    c.rect((1180, 360, 1186, 470), fill="#555555")
-    c.rect((1130, 350, 1240, 410), fill="#ffffff", outline="#cc2222", width=3)
-    c.text((1185, 380), "NO DIVING\nNO PHOTOS\nNO PANIC", 10, "#cc2222", font="cond", spacing=2)
-    c.save(os.path.join(OUT, "pool.png"))
 
 
 def bg_hallway(name="hallway.png", seed=1):
@@ -647,6 +482,8 @@ def bg_livingroom():
     framed(c, (680, 70, 830, 190), inner="#c88aa0")
     framed(c, (870, 110, 960, 220), inner="#a0c88a")
     c.text((750, 230), "BLESS THIS MESS", 16, "#7a3a1a", font="serif")
+    c.rect((540, 20, 760, 66), fill="#f4e4c8", outline="#7a3a1a", width=3, r=10)
+    c.text((650, 43), "THE COZY", 24, "#7a3a1a", font="serif")
     # lamp
     c.rect((290, 250, 298, 470), fill="#7a5a30")
     c.poly([(240, 200), (350, 200), (330, 260), (260, 260)], fill="#f2e4b0")
@@ -720,43 +557,6 @@ def bg_mission():
     c.vignette(150)
     c.save(os.path.join(OUT, "mission.png"))
 
-
-def bg_roof(name="roof.png", dawn=False):
-    c = Canvas(W, H)
-    if dawn:
-        c.vgrad((0, 0, W, H), None, None, stops=[(0, "#3a3a8a"), (0.4, "#c87ab0"), (0.62, "#ffb08a"), (0.75, "#ffe0a0"), (1, "#ffe0a0")])
-        c.circle(900, 470, 140, fill=col("#fff0b0", 160), blur=40)
-        c.circle(900, 480, 60, fill="#fff4c8")
-        star_field(c, 20, (0, 0, W, 160), seed=3, maxr=1.0)
-    else:
-        c.vgrad((0, 0, W, H), "#03020c", "#1e1040")
-        star_field(c, 320, (0, 0, W, 460), seed=9)
-        c.circle(1000, 130, 40, fill=col("#fff6d8", 90), blur=20)
-        c.circle(1000, 130, 30, fill="#fff6d8")
-    # distant hills + town lights
-    c.poly(blob(400, 520, 700, 90, seed=3, amp=0.04, start=math.pi, end=2 * math.pi) + [(1100, 520), (-300, 520)], fill="#2a1a40" if not dawn else "#7a5a8a")
-    c.rect((0, 500, W, 540), fill="#1a1028" if not dawn else "#6a4a7a")
-    R = rng(5)
-    for _ in range(140):
-        x, y = R.uniform(0, W), R.uniform(500, 535)
-        c.circle(x, y, 1.6, fill=col(R.choice([GOLD, "#ffffff", PINK]), 200 if not dawn else 90))
-    # water tank
-    c.rect((80, 260, 300, 470), fill="#3a2a2a" if not dawn else "#7a5a5a")
-    c.poly([(70, 260), (310, 260), (190, 200)], fill="#2a1a1a" if not dawn else "#6a4a4a")
-    for x in (100, 180, 280):
-        c.line([(x, 470), (x - 10, 560)], "#2a1a1a", 8)
-    # roof floor + parapet
-    c.rect((0, 540, W, H), fill="#3a2e3a" if not dawn else "#8a7080")
-    c.rect((0, 530, W, 556), fill="#4a3a4a" if not dawn else "#9a8090")
-    string_lights(c, 330, 330, 1280, 360, sag=60, seed=8)
-    # rigging for the ark
-    c.line([(700, 0), (760, 540)], "#8a8a9a", 3)
-    c.line([(1260, 0), (1120, 540)], "#8a8a9a", 3)
-    c.rect((740, 520, 1150, 560), fill="#555060")
-    c.rect((560, 590, 760, 640), fill="#6a4a3a")  # bench
-    c.rect((570, 640, 584, 680), fill="#4a3a2a")
-    c.rect((736, 640, 750, 680), fill="#4a3a2a")
-    c.save(os.path.join(OUT, name))
 
 
 def bg_fortune():
@@ -1136,6 +936,346 @@ def bg_letitgo():
     c.save(os.path.join(OUT, "letitgo.png"))
 
 
+# ---------------------------------------------------------------- the Hotel Marisol (Tahoe hotel-casino)
+def mountains(c, y, color_far, color_near, seed=3):
+    R = rng(seed)
+    for layer, (base, amp, colr) in enumerate([(y, 150, color_far), (y + 30, 100, color_near)]):
+        pts = [(-20, base)]
+        x = -20
+        while x < W + 40:
+            x += R.uniform(60, 140)
+            pts.append((x, base - R.uniform(0.3, 1.0) * amp))
+        pts += [(W + 40, base + 400), (-20, base + 400)]
+        c.poly(pts, fill=colr)
+        if layer == 0:  # snow caps
+            for i in range(1, len(pts) - 2):
+                px, py = pts[i]
+                if py < base - amp * 0.75:
+                    c.poly([(px, py), (px - 26, py + 30), (px + 26, py + 30)], fill=col("#f4f0ff", 200))
+
+
+def pines(c, y, n, color, seed=1, hmin=60, hmax=140):
+    R = rng(seed)
+    for _ in range(n):
+        x = R.uniform(-20, W + 20)
+        h = R.uniform(hmin, hmax)
+        for k in range(4):
+            w = h * (0.42 - k * 0.08)
+            top = y - h + k * h * 0.2
+            c.poly([(x, top), (x - w, top + h * 0.45), (x + w, top + h * 0.45)], fill=color)
+        c.rect((x - 3, y - 10, x + 3, y + 4), fill="#2a1a14")
+
+
+def casino_tower(c, night):
+    """A 1970s hotel-casino tower with a porte-cochere and a big marquee."""
+    wall = "#d8c8b0" if not night else "#2c2440"
+    wall_d = "#b8a890" if not night else "#221a34"
+    trim = "#c86a3a" if not night else "#4a2a50"
+    x0, x1, top, base = 360, 920, 70, 520
+    # tower
+    c.rect((x0, top, x1, base), fill=wall)
+    c.rect((x0 + (x1 - x0) * 0.62, top, x1, base), fill=wall_d)
+    c.rect((x0 - 10, top - 18, x1 + 10, top + 6), fill=trim)
+    # window grid: 14 floors x 12 columns, horizontal bands like a 70s tower
+    R = rng(17)
+    lights = [PINK, GOLD, CYAN, VIOLET, LIME, "#ff8f4a"]
+    for f in range(14):
+        y = top + 20 + f * 30
+        c.rect((x0, y + 20, x1, y + 24), fill=trim)
+        for k in range(12):
+            x = x0 + 14 + k * 45
+            lit = night and R.random() < 0.72
+            wc = R.choice(lights) if lit else ("#8ab8d0" if not night else "#151022")
+            c.rect((x, y, x + 34, y + 18), fill=wc)
+            if lit:
+                c.rect((x - 6, y - 6, x + 40, y + 24), fill=col(wc, 70), blur=6)
+    # low casino wing
+    c.rect((120, 400, 1160, 560), fill=wall_d)
+    c.rect((110, 388, 1170, 404), fill=trim)
+    # porte-cochere with a band of bulbs
+    c.rect((480, 450, 800, 478), fill="#e8d8b8" if not night else "#3a2a48")
+    for x in range(486, 800, 14):
+        c.circle(x, 482, 3.5, fill="#ffe8a0" if night else "#fff4c8")
+        if night:
+            c.circle(x, 482, 9, fill=col("#ffd070", 80), blur=4)
+    for x in (500, 780):
+        c.rect((x - 6, 478, x + 6, 560), fill=trim)
+    # entrance glow
+    c.rect((560, 500, 720, 560), fill="#ffd890" if night else "#5a4a40")
+    # big marquee sign on a pylon
+    sx = 1060
+    c.rect((sx - 10, 160, sx + 10, 560), fill="#3a3040")
+    c.rect((sx - 130, 120, sx + 130, 330), fill="#1c1426", r=14)
+    if night:
+        c.rect((sx - 136, 114, sx + 136, 336), outline=col(PINK, 220), width=4, r=16)
+        c.neon_text((sx, 160), "HOTEL", 30, CYAN)
+        c.neon_text((sx, 212), "MAR SOL", 42, PINK)
+        c.neon_text((sx, 258), "CASINO", 24, GOLD)
+        c.rect((sx - 110, 282, sx + 110, 316), fill="#0c0814")
+        c.text((sx, 299), "WELCOME HOME", 16, "#ffcf5a", font="mono", glow="#ff9a2a")
+    else:
+        c.rect((sx - 136, 114, sx + 136, 336), outline="#c84a7a", width=4, r=16)
+        c.text((sx, 160), "HOTEL", 30, "#3cc0e0")
+        c.text((sx, 212), "MAR SOL", 42, "#f05a9a")
+        c.text((sx, 258), "CASINO", 24, "#d8a030")
+        c.rect((sx - 110, 282, sx + 110, 316), fill="#0c0814")
+        c.text((sx, 299), "WELCOME HOME", 16, "#d8a040", font="mono")
+
+
+def bg_exterior():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), None, None, stops=[(0, "#3a2a6a"), (0.35, "#c2578a"), (0.6, "#ff9a5a"), (1, "#ffd39a")])
+    c.circle(220, 300, 90, fill=col("#ffd56b", 180), blur=30)
+    c.circle(220, 300, 46, fill="#ffe7a0")
+    mountains(c, 420, "#6a4a7a", "#4a3a5a", seed=3)
+    pines(c, 560, 40, "#2a3a2a", seed=2, hmin=80, hmax=170)
+    casino_tower(c, night=False)
+    c.rect((0, 560, W, H), fill="#3a3038")
+    for x in range(0, W, 120):
+        c.rect((x + 20, 640, x + 80, 646), fill="#e8d26a")
+    c.save(os.path.join(OUT, "exterior.png"))
+
+
+def bg_exterior_night(name="exterior_night.png"):
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), None, None, stops=[(0, "#05030f"), (0.55, "#1b0f38"), (1, "#3b1d4a")])
+    star_field(c, 220, (0, 0, W, 300), seed=7)
+    c.circle(200, 100, 46, fill=col("#fff3d0", 90), blur=20)
+    c.circle(200, 100, 34, fill="#fff3d0")
+    c.circle(214, 92, 30, fill="#120a26")
+    mountains(c, 420, "#1c1430", "#140e24", seed=3)
+    pines(c, 560, 40, "#0a0e12", seed=2, hmin=80, hmax=170)
+    casino_tower(c, night=True)
+    c.rect((0, 560, W, H), fill="#120c18")
+    for x in range(0, W, 120):
+        c.rect((x + 20, 640, x + 80, 646), fill="#5a5030")
+    c.rect((0, 548, W, 600), fill=col(PINK, 40), blur=20)
+    c.vignette()
+    c.save(os.path.join(OUT, name))
+
+
+def casino_carpet(c, y0, seed=5):
+    """The famous migraine carpet: orange and purple swirls on maroon."""
+    c.rect((0, y0, W, H), fill="#5a1a3a")
+    R = rng(seed)
+    for _ in range(90):
+        x, y = R.uniform(-40, W + 40), R.uniform(y0, H + 20)
+        r = R.uniform(14, 40) * (0.5 + (y - y0) / (H - y0))
+        c.arc((x - r, y - r * 0.4, x + r, y + r * 0.4), R.uniform(0, 180), R.uniform(200, 360),
+              R.choice(["#ff8a3a", "#b04aff", "#ffd05a", "#2ac0b0"]), 4)
+        c.circle(x, y, 3, fill=R.choice(["#ffd05a", "#ff5fb8"]))
+
+
+def slot_machine(c, x, y, s=1.0, lit="#ff5fb8"):
+    w, h = 70 * s, 130 * s
+    c.rect((x - w / 2, y - h, x + w / 2, y), fill="#8a1a2a", r=8 * s)
+    c.rect((x - w / 2 + 8 * s, y - h + 14 * s, x + w / 2 - 8 * s, y - h + 50 * s), fill="#1a0a14")
+    for k in range(3):
+        c.rect((x - w / 2 + 12 * s + k * 16 * s, y - h + 20 * s, x - w / 2 + 24 * s + k * 16 * s, y - h + 44 * s), fill="#fff4d8")
+    c.rect((x - w / 2 - 4 * s, y - h - 16 * s, x + w / 2 + 4 * s, y - h), fill=lit, r=6 * s)
+    c.rect((x - w / 2, y - h - 22 * s, x + w / 2, y - h - 4 * s), fill=col(lit, 90), blur=6)
+    c.line([(x + w / 2, y - h + 40 * s), (x + w / 2 + 14 * s, y - h + 20 * s)], "#c0c0c8", 3 * s)
+    c.circle(x + w / 2 + 14 * s, y - h + 18 * s, 6 * s, fill="#e04a4a")
+
+
+def bg_lobby():
+    c = Canvas(W, H)
+    # mirrored ceiling and dark wood
+    c.rect((0, 0, W, H), fill="#2a1a24")
+    c.rect((0, 0, W, 70), fill="#3a2a30")
+    for x in range(0, W, 80):
+        c.rect((x, 0, x + 78, 68), fill="#4a3a44")
+    # chandelier
+    c.line([(640, 0), (640, 70)], GOLD, 3)
+    for ring, r in enumerate((90, 60, 30)):
+        for i in range(14 - ring * 4):
+            a = 2 * math.pi * i / (14 - ring * 4)
+            x, y = 640 + math.cos(a) * r, 100 + ring * 14 + math.sin(a) * r * 0.25
+            c.circle(x, y, 4, fill="#fff2b0")
+    c.circle(640, 110, 130, fill=col("#ffe08a", 60), blur=30)
+    # back: the old casino floor through an archway, dark, slots in fairy lights
+    c.rect((700, 150, 1240, 470), fill="#140a18")
+    c.rect((690, 140, 1250, 160), fill=GOLD)
+    for k, x in enumerate(range(760, 1220, 90)):
+        slot_machine(c, x, 450, 0.9, lit=[PINK, CYAN, GOLD, VIOLET, LIME, PINK][k % 6])
+    R = rng(4)
+    pts = [(700 + i * 18, 190 + math.sin(i / 2) * 14) for i in range(31)]
+    c.line(pts, "#1b1b1b", 1.5)
+    for i, (x, y) in enumerate(pts[::2]):
+        cc = [PINK, GOLD, CYAN, LIME][i % 4]
+        c.circle(x, y + 5, 8, fill=col(cc, 120), blur=4)
+        c.circle(x, y + 5, 3, fill=mix(cc, "#ffffff", 0.5))
+    c.text((970, 168), "CASINO", 14, "#2a1a24", font="bold")
+    # front desk
+    c.rect((60, 360, 640, 500), fill="#6a2f2f")
+    c.rect((50, 348, 650, 370), fill="#c89a5a")
+    for x in range(90, 620, 110):
+        c.rect((x, 390, x + 80, 480), outline="#4e1f1f", width=3)
+    c.ell((330, 330, 380, 352), fill=GOLD)
+    c.rect((352, 320, 358, 332), fill=GOLD)
+    c.rect((120, 324, 210, 350), fill="#f2ead8")
+    c.text((165, 337), "NO PHOTOS", 9, "#7a2222", font="cond")
+    # sign over the desk
+    c.rect((90, 200, 610, 280), fill="#1c1426", r=10)
+    c.neon_text((350, 240), "REGISTRATION", 30, PINK)
+    plant(c, 30, 420, 1.1, seed=4)
+    casino_carpet(c, 500)
+    c.vignette(110)
+    c.save(os.path.join(OUT, "lobby.png"))
+
+
+def bg_pool():
+    c = Canvas(W, H)
+    # glass atrium roof, panes gone green at the seams
+    c.vgrad((0, 0, W, 300), "#8ad0f0", "#d8f0ff")
+    for x in range(-200, W + 200, 120):
+        c.line([(640, -400), (x, 300)], "#4a7a6a", 5)
+    for y in (60, 140, 220, 290):
+        c.line([(0, y), (W, y)], "#4a7a6a", 5)
+    c.rect((0, 0, W, 300), fill=col("#ffffff", 30))
+    c.poly([(380, 0), (560, 0), (760, 700), (420, 700)], fill=col("#fff8d8", 45), blur=20)
+    # tiled back wall with big arched windows onto pines and the lake
+    c.rect((0, 290, W, 470), fill="#e8f4f0")
+    for x in range(0, W, 24):
+        c.line([(x, 290), (x, 470)], "#cfe4e0", 1)
+    for k, x in enumerate((80, 380, 680, 980)):
+        c.rect((x, 310, x + 220, 450), fill="#7ac0e0")
+        c.rect((x, 400, x + 220, 450), fill="#3a8ab0")
+        for j in range(4):
+            px = x + 30 + j * 55
+            c.poly([(px, 340), (px - 18, 410), (px + 18, 410)], fill="#2f6a4a")
+        c.rect((x, 310, x + 220, 450), outline="#b8d8d0", width=6)
+        c.line([(x + 110, 310), (x + 110, 450)], "#b8d8d0", 4)
+    # banner
+    c.line([(160, 300), (1120, 300)], "#555555", 2)
+    c.poly([(380, 300), (900, 300), (880, 352), (400, 352)], fill="#fff4dc")
+    c.text((640, 326), "WATER IS LOVE", 26, "#2a8ab0", font="bold")
+    # deck tiles
+    c.rect((0, 470, W, H), fill="#f2ead8")
+    for y in range(480, H, 26):
+        c.line([(0, y), (W, y)], "#e0d4b8", 1.5)
+    # pool
+    R = rng(2)
+    c.poly(blob(640, 600, 490, 116, n=60), fill="#f8f8f8")
+    c.poly(blob(640, 600, 470, 102, n=60), fill="#29b8d8")
+    c.poly(blob(640, 618, 420, 78, n=60), fill="#1fa2c6")
+    for i in range(22):
+        x, y = R.uniform(240, 1040), R.uniform(520, 680)
+        if ((x - 640) / 470) ** 2 + ((y - 600) / 102) ** 2 < 0.8:
+            c.arc((x - 40, y - 6, x + 40, y + 6), 200, 340, col("#e9fbff", 200), 2)
+    # flamingo
+    fx, fy = 860, 600
+    c.ell((fx - 60, fy - 20, fx + 60, fy + 26), fill="#ff7fb0")
+    c.line([(fx + 40, fy - 5), (fx + 55, fy - 70), (fx + 75, fy - 80)], "#ff7fb0", 16)
+    c.poly([(fx + 75, fy - 88), (fx + 98, fy - 78), (fx + 76, fy - 70)], fill="#222222")
+    # heat lamps
+    for x in (90, 1190):
+        c.rect((x - 4, 380, x + 4, 560), fill="#555560")
+        c.poly([(x - 34, 380), (x + 34, 380), (x + 22, 350), (x - 22, 350)], fill="#3a3a44")
+        c.ell((x - 30, 372, x + 30, 392), fill="#ff9a3a")
+        c.circle(x, 400, 70, fill=col("#ff8a3a", 60), blur=20)
+    # potted palms
+    for x in (230, 1050):
+        plant(c, x, 440, 1.0, seed=x)
+    # indoor beach umbrella (Zyx's)
+    c.line([(1010, 390), (1010, 520)], "#7a5a3a", 4)
+    for i in range(8):
+        c.pieslice((920, 360, 1100, 440), 180 + i * 22.5, 180 + (i + 1) * 22.5, ["#ff5f7a", "#fff1d0"][i % 2])
+    c.save(os.path.join(OUT, "pool.png"))
+
+
+def bg_roof(name="roof.png", dawn=False):
+    c = Canvas(W, H)
+    if dawn:
+        c.vgrad((0, 0, W, H), None, None, stops=[(0, "#3a3a8a"), (0.35, "#c87ab0"), (0.55, "#ffb08a"), (0.68, "#ffe0a0"), (1, "#ffe0a0")])
+        c.circle(880, 380, 140, fill=col("#fff0b0", 160), blur=40)
+        c.circle(880, 392, 56, fill="#fff4c8")
+        star_field(c, 20, (0, 0, W, 140), seed=3, maxr=1.0)
+    else:
+        c.vgrad((0, 0, W, H), "#03020c", "#1e1040")
+        star_field(c, 320, (0, 0, W, 380), seed=9)
+        c.circle(1000, 120, 40, fill=col("#fff6d8", 90), blur=20)
+        c.circle(1000, 120, 30, fill="#fff6d8")
+    # mountains across the lake
+    mountains(c, 420, "#2a1a40" if not dawn else "#8a6a9a", "#1c1230" if not dawn else "#6a5080", seed=11)
+    # the lake
+    c.vgrad((0, 420, W, 520), "#0c1430" if not dawn else "#c8a0b8", "#141c40" if not dawn else "#f0c8a0")
+    if dawn:
+        c.poly([(840, 420), (920, 420), (980, 520), (780, 520)], fill=col("#fff0c0", 140), blur=8)
+    else:
+        c.poly([(980, 420), (1020, 420), (1060, 520), (940, 520)], fill=col("#fff6d8", 60), blur=8)
+    # other casinos' lights along the shore
+    R = rng(5)
+    for _ in range(120):
+        x, y = R.uniform(0, W), R.uniform(470, 515)
+        c.circle(x, y, 1.6, fill=col(R.choice([GOLD, "#ffffff", PINK, CYAN]), 220 if not dawn else 90))
+    # water tank + HVAC
+    c.rect((80, 260, 300, 470), fill="#3a2a2a" if not dawn else "#7a5a5a")
+    c.poly([(70, 260), (310, 260), (190, 200)], fill="#2a1a1a" if not dawn else "#6a4a4a")
+    for x in (100, 180, 280):
+        c.line([(x, 470), (x - 10, 560)], "#2a1a1a", 8)
+    c.rect((330, 470, 470, 540), fill="#4a4a58" if not dawn else "#9a90a0")
+    c.circle(400, 490, 18, outline="#2a2a34", width=3)
+    # roof floor + parapet
+    c.rect((0, 540, W, H), fill="#3a2e3a" if not dawn else "#8a7080")
+    c.rect((0, 520, W, 556), fill="#4a3a4a" if not dawn else "#9a8090")
+    string_lights(c, 330, 330, 1280, 360, sag=60, seed=8)
+    # rigging for the ark, down into the skylight
+    c.line([(700, 0), (760, 540)], "#8a8a9a", 3)
+    c.line([(1260, 0), (1120, 540)], "#8a8a9a", 3)
+    c.rect((740, 520, 1150, 560), fill="#555060")
+    c.rect((560, 590, 760, 640), fill="#6a4a3a")  # bench
+    c.rect((570, 640, 584, 680), fill="#4a3a2a")
+    c.rect((736, 640, 750, 680), fill="#4a3a2a")
+    c.save(os.path.join(OUT, name))
+
+
+def bg_backstage():
+    c = Canvas(W, H)
+    c.vgrad((0, 0, W, H), "#120a1a", "#08040e")
+    # scaffolding
+    for x in (80, 300, 980, 1200):
+        c.rect((x, 0, x + 10, 560), fill="#4a4a58")
+    for y in (120, 300, 480):
+        c.rect((80, y, 310, y + 8), fill="#4a4a58")
+        c.rect((980, y, 1210, y + 8), fill="#4a4a58")
+    for (x0, y0, x1, y1) in [(80, 120, 300, 300), (300, 300, 80, 480), (980, 120, 1200, 300), (1200, 300, 980, 480)]:
+        c.line([(x0 + 5, y0), (x1 + 5, y1)], "#3a3a48", 5)
+    # the curtain gap onto the ballroom
+    c.rect((420, 60, 860, 560), fill="#3a0a2a")
+    for k in range(9):
+        x = 420 + k * 50
+        c.rect((x, 60, x + 24, 560), fill="#5a1440")
+    c.rect((600, 60, 680, 560), fill="#1a0626")
+    for (a, cc) in [(70, PINK), (95, CYAN), (115, LIME)]:
+        light_beam(c, 640, 60, a, 520, 2, cc, 90)
+    c.rect((600, 60, 680, 560), fill=col("#ffffff", 20))
+    # cables
+    R = rng(3)
+    for k in range(7):
+        y = 520 + k * 14
+        pts = [(x, y + math.sin(x / 70 + k) * 10) for x in range(0, W + 20, 20)]
+        c.line(pts, R.choice(["#1a1a1a", "#2a2a2a", "#3a2a2a"]), 7)
+    # road cases
+    for (x, y, w, h, label) in [(40, 470, 210, 110, "PARTY HARDER"), (1010, 460, 240, 120, "FRAGILE: FEELINGS"), (170, 400, 150, 80, "LASERS")]:
+        c.rect((x, y, x + w, y + h), fill="#1c1c24", outline="#8a8a98", width=3)
+        for cx in (x, x + w - 14):
+            c.rect((cx, y, cx + 14, y + 14), fill="#8a8a98")
+        c.text((x + w / 2, y + h / 2), label, 14, "#e8e0d0", font="mono")
+    # ladder
+    c.line([(880, 560), (930, 120)], "#c0a040", 8)
+    c.line([(940, 560), (990, 120)], "#c0a040", 8)
+    for k in range(9):
+        t = k / 8
+        c.line([(880 + 50 * t, 560 - 440 * t), (940 + 50 * t, 560 - 440 * t)], "#c0a040", 6)
+    # work light
+    c.circle(300, 100, 20, fill="#fff4c8")
+    c.circle(300, 100, 120, fill=col("#ffe8a0", 50), blur=30)
+    c.rect((0, 560, W, H), fill="#0e0a14")
+    c.vignette(150)
+    c.save(os.path.join(OUT, "backstage.png"))
+
+
 SCENES = {
     "exterior": bg_exterior, "exterior_night": bg_exterior_night, "lobby": bg_lobby, "pool": bg_pool,
     "hallway": bg_hallway, "room404": bg_room404, "lostfound": bg_lostfound, "regen": bg_regen,
@@ -1147,6 +1287,7 @@ SCENES = {
     "main_menu": bg_main_menu, "fortune": bg_fortune, "clinic": bg_clinic, "planetarium": bg_planetarium, "bedroom": bg_bedroom,
     "penguinpost": bg_penguinpost, "fanbar": bg_fanbar, "tentacletopia": bg_tentacletopia,
     "optical": bg_optical, "speeddating": bg_speeddating, "letitgo": bg_letitgo,
+    "backstage": bg_backstage,
 }
 
 if __name__ == "__main__":

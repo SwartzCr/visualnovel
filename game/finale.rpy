@@ -67,7 +67,7 @@ label solo_ending:
     "You didn't find your person this weekend. Maybe you weren't looking. Maybe you were looking at everything else."
     "And there was a lot of everything else. A hotel room that wasn't there. Mute clowns selling shares in people. A war over water, settled by a duck in a golden box."
     "Seven hundred people in costumes being kind to each other on purpose, for three days, for no reason anyone could name."
-    "You sit on the bench and watch the light come over the hills. It's quiet up here. Somewhere below, a single kazoo plays one long note and stops."
+    "You sit on the bench and watch the light come over the mountains and across the lake. It's quiet up here. Somewhere below, a single kazoo plays one long note and stops."
     "Down in the parking lot, Tamsin is waving both arms at you, covered in balloons, shouting something you can't hear."
     tam "THERE you are!!! I looked for you for THREE DAYS. where WERE you"
     "Everywhere, you think. You were everywhere."
@@ -93,5 +93,5 @@ label ending_card:
     if endings_found < endings_total:
         "{i}Thanks for checking in. Everyone who enters is already checked in. Come back anytime. The guests will remember you, even if the game doesn't.{/i}"
     else:
-        "{i}You've found every ending. Grandma Ozone is very proud of you. Have a strawberry candy.{/i}"
+        "{i}You've found every ending. Auntie Acid is very proud of you. Have a strawberry candy.{/i}"
     return

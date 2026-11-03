@@ -23,33 +23,36 @@ label start:
     $ time_label = "Friday — Arrival"
 
     "The invitation was a paper card with no return address. One side said FRIDAY, 3PM. The other said {i}You were never here.{/i}"
-    "The Hotel Marisol has been closing down since 1987. This weekend, somebody has rented every room. The neon sign has lost its I: HOTEL MAR SOL."
+    "The Hotel Marisol is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The casino closed in 1987. The hotel never quite noticed."
+    "This weekend, somebody has rented every room. The big neon sign out front has lost its I: HOTEL MAR SOL."
 
     tam "omg you're here!! go check in. find the person in black. ask before touching. let it get weird"
 
     scene bg lobby with dissolve
     $ time_label = "Friday — The Lobby"
+    "The lobby still has its 1970s carpet, a migraine of orange and purple swirls. Past the front desk, the old casino floor is dark, the slot machines draped in fairy lights and feather boas."
     show wren neutral with dissolve
 
-    w "Hi. Welcome to the Marisol. I'm Wren, crew. Lost keys, lost people, anything that goes sideways: find someone dressed like me."
+    w "Hi. Welcome to the Marisol. I'm Wren, crew. You won't see much of me. If I'm doing my job, nothing breaks and you never know I was here."
 
     menu:
-        w "Any questions before the rules?"
+        w "Any questions before I let you loose?"
 
         "\"Is there anything you need help with right now?\"":
             $ gain("wren", 1)
             w surprised "Huh. Nobody asks crew that."
-            w neutral "I'm fine. But hold that thought. I might cash it in at 3 AM."
+            w neutral "I'm fine. But hold that thought. I might cash it in at 3 AM when the fog machine catches fire."
 
-        "\"What happens if I break a rule?\"":
-            w "Most of them are about being kind. Mostly you'll just have to live with having been unkind, which is worse."
+        "\"Are there rules?\"":
+            w "Two that matter. No photos, and ask before you touch anyone. Everything else is a suggestion."
 
         "\"So what {i}is{/i} this, exactly?\"":
             w "Nobody's allowed to say. The second anyone says it out loud, it turns into a brochure."
 
-    w neutral "No photos. Ask before you touch anyone, or their costume. No bar, just a tea bar. No spectators: walk into a room and you're part of it."
-    w "And if you're having a hard time, find someone in black, or Grandma Ozone's living room. Follow the smell of cardamom."
-    w "Pool's open in the afternoons. Hallways all night. Welcome."
+    w neutral "Here's the only advice I give first-timers. Don't watch. Nobody here is an audience."
+    w "Walk into the room you'd normally walk past. Say the thing you'd normally keep to yourself. Be whoever you actually are. This is the one weekend nobody's going to laugh at you for it."
+    w happy "And somebody's probably going to catch your eye this weekend. It happens to everyone their first time. Let it."
+    w neutral "Pool's on the ground floor in the afternoons. Hallways all night. Go find out who you are here."
     hide wren with dissolve
 
     "Tip: open the {color=#ff5fb8}Guests{/color} menu at the bottom of the screen to see everyone you've met."
@@ -102,7 +105,7 @@ label pool_time:
     $ time_label = ("", "Friday", "Saturday", "Sunday")[day] + " — The Pool"
 
     if day == 1:
-        "The pool is the bright, ordinary half of the party. Sunscreen, towels, the Pool People's banner flapping over the deep end: WATER IS WARM. WATER IS LOVE."
+        "The pool is the bright, ordinary half of the party: an indoor pool hall on the ground floor, under a big old glass atrium roof gone green at the seams. Towels, chlorine, potted palms, and the Pool People's banner strung over the deep end: WATER IS WARM. WATER IS LOVE."
         "The Pool People, you gather, are at war with the Order of the Ice Machine over the true nature of water. It's supposed to be settled Sunday at 11:11 PM."
         "Most of the costumes have been swapped for swimsuits. Some have not. Some never will be."
     elif day == 2:
@@ -128,7 +131,7 @@ label pool_time:
 
         "A raver in fur leg warmers, handing out glitter like communion." (guest="solstice") if pool_seen["solstice"] == 0:
             $ who = "solstice"
-        "Solstice, asleep on a lounger in the full sun, LED top switched off." (guest="solstice") if pool_seen["solstice"] == 1:
+        "Solstice, asleep on a lounger right under one of the big heat lamps, LED top switched off." (guest="solstice") if pool_seen["solstice"] == 1:
             $ who = "solstice"
 
         "A person in black fishing a disco ball out of the deep end with a net." (guest="wren") if pool_seen["wren"] == 0:
@@ -136,7 +139,7 @@ label pool_time:
         "Wren, eating a sad sandwich behind the towel hut." (guest="wren") if pool_seen["wren"] == 1:
             $ who = "wren"
 
-        "A silver alien under a giant umbrella, studying the pool with great suspicion." (guest="zyx") if pool_seen["zyx"] == 0:
+        "A silver alien under a beach umbrella, indoors, studying the pool with great suspicion." (guest="zyx") if pool_seen["zyx"] == 0:
             $ who = "zyx"
         "Zyx, collecting lost flip-flops in a bag labeled EARTH ARTIFACTS." (guest="zyx") if pool_seen["zyx"] == 1:
             $ who = "zyx"
@@ -207,7 +210,7 @@ label hallway_encounter:
         "The ballroom. Lasers. In the middle of the floor, Solstice, dancing like it's the last song on Earth." (guest="solstice") if night_seen["solstice"] == 2 and "solstice" not in met_tonight:
             $ who = "solstice"
 
-        "Wren is half-carrying a man in pajamas toward the smell of cardamom." (guest="wren") if night_seen["wren"] == 0 and "wren" not in met_tonight:
+        "Behind a door marked BACKSTAGE, something is sparking. A voice says: \"No no no no no.\"" (guest="wren") if night_seen["wren"] == 0 and "wren" not in met_tonight:
             $ who = "wren"
         "A door marked STAFF ONLY is open a crack. Inside, someone in a headset says your name." (guest="wren") if night_seen["wren"] == 1 and "wren" not in met_tonight:
             $ who = "wren"
@@ -238,9 +241,9 @@ label wander:
     $ wanders += 1
     if wanders == 1:
         scene bg livingroom with dissolve
-        "You follow the smell of cardamom into a living room someone has rebuilt inside a hotel suite, down to the doilies."
+        "You follow the smell of cardamom to a suite with a hand-painted sign on the door: THE COZY. Inside, someone has rebuilt a whole living room, down to the doilies."
         oz "Sit, sit. Have a candy. They're strawberry. Everything here is strawberry, that's the rule."
-        "Grandma Ozone is maybe seventy, in a cardigan covered in hand-sewn mirrors. She rocks. She hums. She has, you'd bet, seen some things."
+        "Auntie Acid is maybe sixty-five, in a kaftan covered in hand-sewn mirrors. She rocks. She hums. She has, you'd bet, seen some things."
         oz "First time? You've got first-time eyes. That's all right. Everyone here was new once. Even the Sasquatch."
         oz "Here's the only advice I give, sweetheart. Don't come to watch. Come to be watched by something bigger than you. Then go be kind to somebody."
         "You eat the candy. It's very strawberry. You leave feeling oddly blessed."

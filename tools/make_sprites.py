@@ -474,6 +474,10 @@ def wren(expr):
         c.line([(x, 370), (x + (x - 280) * 0.1, 470)], "#c8c8d0", 3)
     c.line([(214, 360), (262, 520)], "#ff5fb8", 6)
     c.line([(346, 360), (298, 520)], "#ff5fb8", 6)
+    # roll of gaffer tape clipped to the belt
+    ink_ell(c, (350, 600, 398, 648), "#b8bcc8")
+    ink_ell(c, (362, 612, 386, 636), "#1c1a22", lw=2)
+    c.arc((352, 602, 396, 646), 200, 260, col("#ffffff", 180), 3)
     # walkie on the right hip
     ink(c, [(392, 560), (440, 560), (440, 680), (392, 680)], "#3a3e46", sm=0)
     c.line([(430, 560), (430, 500)], LINE, 7)
@@ -489,12 +493,12 @@ def wren(expr):
         y0 = 500 + k * 20
         c.line([(204, y0 + 2), (322, y0 - 20)], "#9aa0c0", 2)
         c.rect((198, y0 - 8, 208, y0 + 2), outline="#9aa0c0", width=2)
-    c.text((262, 482), "RUN OF SHOW", 10, "#ff4a6a", font="cond")
+    c.text((262, 482), "FIX LIST", 11, "#ff4a6a", font="cond")
     ink_ell(c, (304, 590, 348, 640), skin)
     # badge on the lanyard
     ink(c, [(244, 516), (316, 516), (316, 580), (244, 580)], "#ffffff", sm=0)
     c.text((280, 538), "CREW", 15, black, font="bold")
-    c.text((280, 562), "care team", 10, "#ff5fb8", font="sans")
+    c.text((280, 562), "fix-it", 11, "#ff5fb8", font="sans")
     f.neck(c)
     f.base(c)
     f.bang_shadow(c, depth=0.05)

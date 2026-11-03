@@ -556,7 +556,7 @@ label enc_let_it_go_wren:
         "\"I'll keep an ear on it. If anything comes through, I'll get you.\"":
             $ gain("wren", 1)
             "You hold out your hand. She looks at it for a long time, then puts the walkie in it, like she's handing over something alive."
-            w blush "Okay. Okay. If it says {i}fire{/i}, you come get me. If it says anything about a flamingo, ignore it."
+            w blush "Okay. Okay. If it says {i}fire{/i}, you come get me. It will say fire. If it says anything about a flamingo, ignore it."
         "Put your own phone in the basket, then look at her.":
             $ gain("wren", 1)
             "You walk to the front and drop your phone into the basket. Then you turn around and look at her."
@@ -568,7 +568,7 @@ label enc_let_it_go_wren:
     "The presenter clicks to the first slide. Four slides in, the projector dies, and the talk continues on hand-drawn posterboard."
     "Wren lasts four minutes and thirty seconds before her hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, she stops reaching altogether, sits back, and actually listens."
     "At the end, there's a crafting table: blank wooden phones, googly eyes, glitter. Everyone gets to make an Emotional Support Phone."
-    "Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of tape on the back that says CARE. It doesn't do anything."
+    "Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of gaffer tape on the back that says OFF DUTY. It doesn't do anything."
     w happy "It's perfect. Nobody can reach me on it. Not a single person."
     "When you walk out, the real walkie is back on her belt. But the wooden one is in her hand."
     hide wren with dissolve
@@ -643,12 +643,12 @@ init python:
         ("juni", 2): ("j", "happy", "Animals. They don't need you to make small talk. Lotl agrees."),
         ("gerald", 2): ("g", "neutral", "I already talk to animals. I thought everyone did. This is very upsetting news."),
         ("solstice", 2): ("s", "happy", "Every language! Imagine telling people they're doing great in like four hundred languages."),
-        ("wren", 2): ("w", "neutral", "Every language. Do you know how many people get lost here and can't explain where?"),
+        ("wren", 2): ("w", "neutral", "Every language. Then I could finally read the manuals for every fog machine. They're never in English."),
         ("zyx", 2): ("z", "happy", "Pigeons. Yes. This one already speaks pigeon. They are excellent diplomats."),
         ("juni", 3): ("j", "blush", "Neither. I've never stayed up. Maybe this weekend. If I'm with someone."),
         ("gerald", 3): ("g", "happy", "Sunrise. Always sunrise. It's the only time the forest is completely honest."),
         ("solstice", 3): ("s", "blush", "Neither! I'm always inside, dancing. That's... wow, that sounded sadder out loud."),
-        ("wren", 3): ("w", "neutral", "Sunrise. I usually see it on a monitor, from the board. But still. Sunrise."),
+        ("wren", 3): ("w", "neutral", "Sunrise. Usually through a crack in a loading dock door, holding a toolbox. But still. Sunrise."),
         ("zyx", 3): ("z", "neutral", "Sunset. At home, sunset lasts four years. This one finds yours very brisk."),
     }
 

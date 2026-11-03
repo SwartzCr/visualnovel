@@ -262,7 +262,7 @@ label gerald_romance:
     scene bg roof_dawn with slowfade
     $ time_label = "Monday — 5:52 AM"
     "The stairwell to the roof is propped open with a waffle iron. Someone from the Breakfast Schism has left it there, as a blessing or a warning."
-    "At the top, the air is cold and smells like eucalyptus. The string lights have mostly burned out. The rigging that held the ark hangs slack."
+    "At the top, the air is cold and smells like pine and lake water. The string lights have mostly burned out. The rigging that held the ark hangs slack."
     "Gerald is sitting on the edge by the water tank, enormous against the pink sky, holding two teacups. One of them is for you. It's still warm."
     show gerald happy with dissolve
     g "You came. I had a speech prepared in case you didn't. It was very dignified. Lots of nature metaphors. A bit about a fallen log."
@@ -280,7 +280,7 @@ label gerald_romance:
             g happy "...It was a beautiful duck, though."
 
     show gerald neutral
-    "For a while you just watch the light come up. A bird starts somewhere down in the eucalyptus, then another one."
+    "For a while you just watch the light come up. A bird starts somewhere down in the pines, then another one."
     if sat_with_gerald:
         g "When we were in the forest room, you sat with me without saying anything. Do you remember? For a long time."
         g "I haven't done that with anyone since I was young. Just sat. It's the hardest thing to find, a person who'll just sit."
@@ -304,7 +304,7 @@ label gerald_romance:
             g blush "Oh. Oh, that's... yes. That's very good. Let's stay exactly like this."
 
     show gerald neutral
-    "The sun touches the top of the hills. Everything turns gold: the gravel, the water tank, the fur on Gerald's arm."
+    "The sun touches the top of the mountains across the lake. Everything turns gold: the gravel, the water tank, the fur on Gerald's arm."
     g "May I tell you something about the famous film? Not Bernard's. Mine."
     g "There's a hiker in Oregon, 1994, who got a picture of me by a river. Blurry, naturally. She sold it to a magazine. It's still in a museum somewhere, labeled HOAX."
     g "I was crying in that picture. I'd just lost someone. And for thirty years I've been a hoax who was crying."
@@ -335,9 +335,9 @@ label gerald_romance:
     g "Well. I'm going to have to tell Margaret {i}something{/i} now."
 
     scene bg roof_dawn with slowfade
-    "The sun clears the hills. Down in the parking lot, somebody with a camera looks up at the roof, squints, and sees only a blur."
+    "The sun clears the mountains. Down in the parking lot, somebody with a camera looks up at the roof, squints, and sees only a blur."
     "Gerald laughs so hard the water tank rings like a bell."
-    "You stay up there until the last cars leave, until the Pool People fold their banner, until Wren comes up to tell you the hotel is technically closed and has been since 1987."
+    "You stay up there until the last cars leave, until the Pool People fold their banner, until Wren comes up to tell you the casino has been closed since 1987 and the hotel is only now finding out."
     scene black with slowfade
     "{i}Three weeks later, a package arrives with no return address. Inside: a tin of lapsang souchong, a pressed fern, a smooth gray stone from a creek, and a postcard of the Klamath.{/i}"
     "{i}On the back, in very careful handwriting:{/i}"
@@ -358,7 +358,7 @@ label gerald_friend:
     g happy "This time I'm leaving with a friend. It's a very strange feeling. Like having a pocket full of warm stones."
     "He presses a teabag into your hand. Lapsang souchong. It smells like a campfire in the rain."
     g "If you're ever up north, follow the creek. Don't bring a camera. Just call my name. I'll hear."
-    "He walks up the road toward the hills, a teacup in one hand. At the top he turns and waves, once, over his shoulder."
+    "He walks up the road toward the pines, a teacup in one hand. At the top he turns and waves, once, over his shoulder."
     "It looks exactly like the famous film. Except it isn't blurry at all."
     return
 

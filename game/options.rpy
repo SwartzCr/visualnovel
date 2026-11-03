@@ -34,7 +34,7 @@ define config.version = "1.0"
 define gui.about = _p("""
 Three nights at the Hotel Marisol. A visual novel about a secret party, five strange guests, and whoever you turn out to be by Sunday.
 
-No photos. Ask before touching. Tea, not booze. If you're having a hard time, find someone in black.
+No photos. Ask before touching. Tea, not booze. If you're having a hard time, find Auntie Acid in The Cozy.
 """)
 
 

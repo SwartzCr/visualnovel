@@ -275,8 +275,8 @@ label juni_romance:
     scene bg pool with slowfade
     $ time_label = "Monday — 5:41 AM"
     "The ballroom is still going when you slip out. The hallways are full of people sitting against the walls in pairs, talking quietly, capes folded into pillows."
-    "You take the back stairs down. The pool deck is empty. The Pool People's banner is lying in a heap by the towel hut, and somebody has tucked it in like a blanket."
-    "The water is perfectly still. The sky over the hills is just starting to turn gray."
+    "You take the back stairs down to the ground floor. The pool hall is empty. The Pool People's banner is lying in a heap by the towel hut, and somebody has tucked it in like a blanket."
+    "The water is perfectly still. Through the old glass roof, the sky over the mountains is just starting to turn gray."
     "And at the edge of the pool, exactly where you first saw them, there's a pink shape with its onesie feet in the water."
     show juni neutral with dissolve
     j "You came."
@@ -322,7 +322,7 @@ label juni_romance:
             j blush "It's a small cast. But everyone showed up."
 
     show juni blush
-    "The sky behind the motel goes from gray to pale pink. Somewhere upstairs, a single kazoo is playing something slow."
+    "The sky above the glass roof goes from gray to pale pink. Somewhere upstairs, a single kazoo is playing something slow."
     j "Three years I've been coming here. Three years I've been standing outside doors, waiting for someone to pull me in."
     j "And this year I spent the whole time hoping it'd be you. And it was. Every time. Even when I didn't wait."
     j "I don't know what happens Monday. I'll go back to fixing the thing. My manager will call me Junebug. My phone is still in the ice bucket, by the way."
@@ -352,7 +352,7 @@ label juni_romance:
     j "Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back."
 
     scene bg pool with slowfade
-    "The sun comes up over the Hotel Mar Sol. The missing I in the sign catches the light, as if it might come back."
+    "The sun comes up over the mountains and pours down through the old glass roof, across the water, gold on every ripple."
     "Juni's hood floats behind you in the pool, gills spread out on the water, smiling up at the sky."
     "Neither of you goes to fish it out. Eventually a Pool Person in a gold cape wades in, rescues it with great ceremony, and hangs it on the lifeguard chair to dry, like a flag."
     scene black with slowfade

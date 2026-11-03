@@ -20,7 +20,7 @@ define w = Character("Wren", image="wren", color="#c8b8ff", kind=base,
 define z = Character("Zyx", image="zyx", color="#7affd0", kind=base,
     namebox_background=Frame("gui/namebox_zyx.png", gui.namebox_borders, tile=False))
 
-define oz = Character(kind=base, name="Grandma Ozone", color="#ffb07a")
+define oz = Character(kind=base, name="Auntie Acid", color="#ffb07a")
 define tam = Character(kind=base, name="Tamsin (text)", color="#9fe6ff", what_italic=True)
 define herald = Character(kind=base, name="The Herald", color="#ffe14d")
 define clown = Character(kind=base, name="A Mute Clown", color="#ff7a7a")
@@ -66,6 +66,7 @@ image bg tentacletopia = "images/bg/tentacletopia.png"
 image bg optical = "images/bg/optical.png"
 image bg speeddating = "images/bg/speeddating.png"
 image bg letitgo = "images/bg/letitgo.png"
+image bg backstage = "images/bg/backstage.png"
 
 init python:
     for _who in ("juni", "gerald", "solstice", "wren", "zyx"):

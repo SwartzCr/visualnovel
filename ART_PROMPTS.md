@@ -23,7 +23,7 @@ ART STYLE (applies to every image in this conversation)
 - Coloring: cel shading. Flat base colors, one crisp shadow tone per material, and small sharp highlights. Soft airbrushed gradients only for glows, cheek blush, hair shine and skies.
 - Palette: saturated and warm, never muddy or grey. Signature accent colors: hot pink #FF5FB8, violet #9B6BFF, cyan #5AE6FF, warm gold #FFC65A. Night scenes sit in deep midnight purple and indigo (#160C28) lit by those neon accents. Day scenes are warm peach, turquoise and gold under clear light.
 - Lighting: clear and readable. Colored light from the environment, gentle bloom around lamps, neon and screens, and colored rim light at night (pink from one side, cyan from the other).
-- World and mood: a secret, kind, absurd art party inside a run-down 1960s California motel called the Hotel Marisol, where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
+- World and mood: a secret, kind, absurd art party inside the Hotel Marisol, an aging 1970s hotel-casino tower on the Nevada shore of Lake Tahoe, showing its age (swirly casino carpet, brass, mirrored ceilings, dark slot machines), where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
 - Text: only the exact words given in quotation marks, spelled exactly, in clean bold sans-serif lettering. No other writing, captions, signatures, watermarks, logos, borders, speech bubbles or UI.
 
 BACKGROUND RULES
@@ -45,7 +45,7 @@ ART STYLE (applies to every image in this conversation)
 - Coloring: cel shading. Flat base colors, one crisp shadow tone per material, and small sharp highlights. Soft airbrushed gradients only for glows, cheek blush, hair shine and skies.
 - Palette: saturated and warm, never muddy or grey. Signature accent colors: hot pink #FF5FB8, violet #9B6BFF, cyan #5AE6FF, warm gold #FFC65A. Night scenes sit in deep midnight purple and indigo (#160C28) lit by those neon accents. Day scenes are warm peach, turquoise and gold under clear light.
 - Lighting: clear and readable. Colored light from the environment, gentle bloom around lamps, neon and screens, and colored rim light at night (pink from one side, cyan from the other).
-- World and mood: a secret, kind, absurd art party inside a run-down 1960s California motel called the Hotel Marisol, where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
+- World and mood: a secret, kind, absurd art party inside the Hotel Marisol, an aging 1970s hotel-casino tower on the Nevada shore of Lake Tahoe, showing its age (swirly casino carpet, brass, mirrored ceilings, dark slot machines), where every room has been turned into an art installation. Playful, warm, a little surreal and magical. Never grimy, gory, horror-dark, sexy or edgy.
 - Text: only the exact words given in quotation marks, spelled exactly, in clean bold sans-serif lettering. No other writing, captions, signatures, watermarks, logos, borders, speech bubbles or UI.
 
 CHARACTER SPRITE RULES
@@ -97,12 +97,12 @@ Two things about how the game shows backgrounds, which every prompt already acco
 
 #### 1. `exterior.png`
 
-*Used for:* Friday arrival; Monday-morning goodbyes in the parking lot.
+*Used for:* Friday arrival; Monday-morning goodbyes.
 
 > Generate this one first, then use it for the night version below so the building matches.
 
 ```text
-A faded two-story 1960s roadside motor lodge in the dry golden hills of Northern California at sunset. Peach stucco walls, terracotta trim, a row of turquoise doors on each floor and an upper walkway with a simple railing. On the right, a tall vertical vintage neon sign reads "HOTEL MAR SOL", where the I of MARISOL has burned out and left a dark gap; under it, a smaller sign reads "NO VACANCY". The sky fades from deep violet to hot pink to tangerine, with the sun low behind the hills. An empty asphalt parking lot with faded yellow lines fills the foreground.
+An aging 1970s hotel-casino on the Nevada shore of Lake Tahoe at sunset. A sixteen-story beige concrete tower with horizontal bands of windows and terracotta trim, a low casino wing in front, and a porte-cochere entrance edged with a row of round marquee bulbs. On the right, a huge vintage roadside casino sign on a pylon reads "HOTEL MAR SOL" (the I of MARISOL has burned out and left a gap), with "CASINO" below it. Snow-capped mountains and tall pine trees behind, a sky fading from violet to hot pink to tangerine. An empty parking lot in the foreground. Faded glamour, a little tired, still proud.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -114,7 +114,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 > Paste this as an edit on your exterior.png result. If you're starting fresh instead, describe the building first.
 
 ```text
-Edit this image: keep the same motor lodge, camera angle and composition, and turn it into a clear night. A starry indigo sky with a thin crescent moon. The neon sign glows hot pink and cyan, with "NO VACANCY" in red. Most motel windows are lit, each a different glowing color (pink, gold, cyan, violet, lime) as if every room hides a party. Strings of colorful bulb lights sag along the roofline. A soft pink glow spills across the dark parking lot.
+Edit this image: keep the same hotel-casino, camera angle and composition, and turn it into a clear night. A starry indigo sky with a thin crescent moon over dark mountains and pines. The casino sign blazes in hot pink and cyan neon. Most of the tower's windows are lit, each a different glowing color (pink, gold, cyan, violet, lime) as if every room hides a party. The marquee bulbs glow warm gold, and a soft pink glow spills across the dark parking lot.
 ```
 
 ### Daytime
@@ -126,7 +126,7 @@ Edit this image: keep the same motor lodge, camera angle and composition, and tu
 > Optional extra sign above the cubbies: "ALL WHO ENTER ARE ALREADY CHECKED IN". It's long, so drop it if the lettering garbles.
 
 ```text
-The lobby of a retro 1960s motel, turned into the entrance of a secret party. Deep green striped wallpaper, a brass chandelier with warm bulbs, and a long wooden reception desk with paneled front, a brass service bell and a small card reading "NO PHOTOS". Behind the desk, a wall of wooden key cubbies with brass keys on red fobs. A framed hand-painted sign on the left reads "TEA BAR" with an arrow. Potted palms in terracotta pots at both ends. Warm, welcoming, slightly mysterious light, a faint haze of incense.
+The lobby of an aging 1970s Lake Tahoe hotel-casino, taken over for a secret party. A dark wood registration desk with a brass service bell and a small card reading "NO PHOTOS", under a pink neon sign reading "REGISTRATION". A big brass chandelier and a mirrored ceiling. Through a wide gold-trimmed archway on the right, the old casino floor lies dark, with rows of vintage slot machines draped in fairy lights. The floor is the classic garish casino carpet: orange, purple and teal swirls on maroon. Warm, glamorous, slightly faded, mysterious.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -136,7 +136,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 *Used for:* every pool scene; Juni's sunrise ending.
 
 ```text
-A sunny afternoon at a retro motel swimming pool. A turquoise kidney-shaped pool with sparkling ripples, a white concrete deck, white lounge chairs with turquoise straps, a red-and-cream striped umbrella, and a big pink inflatable flamingo floating in the water. Behind the pool, a peach two-story motel facade with turquoise doors. A homemade cloth banner strung over the deep end reads "WATER IS LOVE". A small pool rules sign reads "NO DIVING". Bright blue sky with puffy clouds, golden hills beyond. Cheerful, hazy summer light.
+An indoor hotel pool hall on the ground floor of an aging 1970s Lake Tahoe hotel-casino, in the afternoon. A turquoise kidney-shaped pool with sparkling ripples and a big pink inflatable flamingo, under a huge old glass atrium roof with green-tinged metal framing that lets sunlight pour in. Pale tiled walls with tall windows looking out onto pine trees. Potted palms, white lounge chairs, two tall orange patio heat lamps, and a red-and-cream striped beach umbrella set up indoors for no good reason. A homemade cloth banner over the pool reads "WATER IS LOVE". Bright, humid, cheerful, a little retro.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -146,7 +146,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 *Used for:* the morning scenes (with the newspaper).
 
 ```text
-A small, cozy retro motel room in early morning light. A rumpled double bed with a lavender bedspread on the left, a window on the right with red curtains half open onto a pale sunrise sky, sunlight slanting across the room. Wood-paneled nightstand with a vintage lamp, and a folded newspaper on it with the masthead "THE DAILY DISTURBANCE". A framed seascape print on the cream wall. Quiet, sleepy, slightly hungover morning feeling.
+A slightly dated 1970s hotel room in a Lake Tahoe hotel-casino, in early morning light. A rumpled double bed with a lavender bedspread on the left, a window on the right with red curtains half open onto pine trees and a pale sunrise sky, sunlight slanting across the room. A wood-veneer nightstand with a brass lamp and a folded newspaper with the masthead "THE DAILY DISTURBANCE". A framed print of a lake on the cream wall. Quiet, sleepy, slightly hungover morning feeling.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -158,7 +158,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 *Used for:* every night in the hallways.
 
 ```text
-A long retro motel corridor at night, seen in one-point perspective straight down the middle. Dark plum walls, a deep red patterned carpet, a row of doors on each side with brass room numbers, and colored light (pink, cyan, gold, violet) spilling out from under and around the half-open doors, as if every room is a different art installation. A pink neon arrow on the left wall reads "ART THIS WAY". At the far end, a glowing red "EXIT" sign. Ceiling lights glow in a row. Mysterious, inviting, electric party atmosphere.
+A long hotel corridor in an aging 1970s hotel-casino at night, seen in one-point perspective straight down the middle. Dark plum walls, a garish swirly casino carpet in maroon, orange and purple, a row of doors on each side with brass room numbers, and colored light (pink, cyan, gold, violet) spilling out around the half-open doors, as if every room is a different art installation. A pink neon arrow on the left wall reads "ART THIS WAY". At the far end, a glowing red "EXIT" sign. Brass sconces glow in a row. Mysterious, inviting, electric party atmosphere.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -185,10 +185,10 @@ Edit this image: keep the same ballroom, lights and crowd. Add a procession carr
 
 #### 9. `livingroom.png`
 
-*Used for:* Wren's first night; wandering (Grandma Ozone's living room).
+*Used for:* wandering (Auntie Acid's room, The Cozy).
 
 ```text
-A cozy grandmother's living room recreated inside a hotel suite, as a calm refuge at a wild party. Warm patterned wallpaper with small flowers, a glowing floor lamp with a fringed shade, framed family photos, a cross-stitch sampler reading "BLESS THIS MESS". A wooden rocking chair with a pink cushion on the right, a big round braided rug with floor cushions in jewel tones, and a glass candy bowl full of strawberry candies on a small table. Golden, gentle, safe lighting.
+A cozy auntie's living room recreated inside a hotel suite, as a calm refuge at a wild party. A painted wooden sign on the wall reads "THE COZY". Warm patterned wallpaper with small flowers, a glowing floor lamp with a fringed shade, framed photos, a cross-stitch sampler reading "BLESS THIS MESS". A wooden rocking chair with a pink cushion on the right, a big round braided rug with floor cushions in jewel tones, and a glass candy bowl full of strawberry candies on a small table. Golden, gentle, safe lighting.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -200,7 +200,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 > Generate this first, then use it for the sunrise version below.
 
 ```text
-A flat gravel rooftop of an old two-story motel at night under a sky full of stars and a bright moon. An old wooden water tank on stilts on the left, strings of colorful bulb lights sagging across the roof, steel cables and a rigging frame rising on the right (used to lower something through a skylight), and a weathered wooden bench. Beyond the low parapet, dark hills and a scatter of small town lights. Quiet, intimate, a pause from the party below.
+The flat gravel rooftop of a sixteen-story hotel-casino tower at night, high above Lake Tahoe. A sky full of stars and a bright moon over dark snow-capped mountains; below, the black lake and a glittering line of other casinos' lights along the shore. An old wooden water tank on stilts on the left, a rooftop air conditioning unit, strings of colorful bulb lights, steel cables and a rigging frame rising on the right (used to lower something through a skylight), and a weathered wooden bench. Quiet, intimate, a pause from the party below.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -210,7 +210,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 *Used for:* the sunrise endings (Gerald, Solstice, Wren, Zyx) and Checkout.
 
 ```text
-Edit this image: keep the same rooftop, water tank, bench, rigging and string lights, and change the time to sunrise. A sky graded from soft blue at the top through lavender and pink to warm gold at the horizon, with the sun just clearing the hills and a warm glow over everything. A few last stars fade at the top. Most of the string lights have burned out. Tender, hopeful, end-of-the-night mood.
+Edit this image: keep the same rooftop, water tank, bench, rigging and string lights, and change the time to sunrise. A sky graded from soft blue through lavender and pink to warm gold, the sun just clearing the mountains across Lake Tahoe, and a path of golden light across the lake. A few last stars fade at the top. Most of the string lights have burned out. Tender, hopeful, end-of-the-night mood.
 ```
 
 ### Juni's art rooms
@@ -264,7 +264,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 *Used for:* Gerald night 2: Room 312, turned into a forest.
 
 ```text
-A motel room completely transformed into an ancient misty redwood forest at night. Tall dark tree trunks, a floor covered in thick green moss, low fog drifting across the ground, and dozens of glowing fireflies. On the right, a hotel bed entirely overgrown with moss and ferns, beside a vintage hotel floor lamp casting a warm golden pool of light. A small brass room number "312" is still fixed to a tree trunk. Magical, hushed, homesick.
+A hotel room completely transformed into an ancient misty pine forest at night. Tall dark tree trunks, a floor covered in thick green moss, low fog drifting across the ground, and dozens of glowing fireflies. On the right, a hotel bed entirely overgrown with moss and ferns, beside a vintage hotel floor lamp casting a warm golden pool of light. A small brass room number "312" is still fixed to a tree trunk. Magical, hushed, homesick.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
@@ -303,7 +303,17 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 
 ### Wren's art rooms
 
-#### 20. `mission.png`
+#### 20. `backstage.png`
+
+*Used for:* Wren night 1: backstage at the ballroom.
+
+```text
+Backstage behind the ballroom of an old hotel-casino during a party. Dark, with metal scaffolding towers on both sides, thick black cables snaking across the floor, and scuffed black road cases stenciled with "PARTY HARDER" and "FRAGILE: FEELINGS". In the middle, a gap in heavy red-and-magenta stage curtains lets through beams of pink, cyan and green laser light from the dance floor beyond. A tall yellow ladder leans on the right, and a single bare work light hangs at the upper left. Behind-the-scenes, busy, secretly magical.
+
+Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
+```
+
+#### 21. `mission.png`
 
 *Used for:* Wren night 2: Mission Control (a linen closet).
 
@@ -315,7 +325,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 
 ### Random-encounter art rooms
 
-#### 21. `penguinpost.png`
+#### 22. `penguinpost.png`
 
 *Used for:* random encounter: Penguin Post.
 
@@ -327,7 +337,7 @@ A hotel room turned into a post office at the South Pole in the year 3000, run b
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 22. `fanbar.png`
+#### 23. `fanbar.png`
 
 *Used for:* random encounter: the OnlyFans Fanny Bar.
 
@@ -337,7 +347,7 @@ A hotel room turned into a cool, breezy oasis filled with every kind of electric
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 23. `tentacletopia.png`
+#### 24. `tentacletopia.png`
 
 *Used for:* random encounter: Tentacletopia.
 
@@ -347,7 +357,7 @@ A hotel room transformed into the bottom of the sea around the sunken Lost City 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 24. `optical.png`
+#### 25. `optical.png`
 
 *Used for:* random encounter: Zany Optical.
 
@@ -357,7 +367,7 @@ A strip-mall optometrist's office remixed into vaporwave: pink-to-teal gradient 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 25. `speeddating.png`
+#### 26. `speeddating.png`
 
 *Used for:* random encounter: Platonic Speed Dating.
 
@@ -367,7 +377,7 @@ A plum-colored side room of an old hotel ballroom set up for a party game. A sma
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 26. `letitgo.png`
+#### 27. `letitgo.png`
 
 *Used for:* random encounter: the Let It Go workshop.
 
@@ -379,7 +389,7 @@ Follow the style guide from the start of this conversation: a 2D anime visual-no
 
 ### Zyx's art rooms
 
-#### 27. `fortune.png`
+#### 28. `fortune.png`
 
 *Used for:* Zyx night 1: the Oracle of Ping Pong.
 
@@ -389,7 +399,7 @@ A hotel room bathed in deep purple light, turned into a retro-futurist fortune-t
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 28. `clinic.png`
+#### 29. `clinic.png`
 
 *Used for:* Zyx night 2: the Clinic of Unnecessary Procedures.
 
@@ -401,7 +411,7 @@ A hotel room made into a whimsical retro medical clinic. Mint-green tiled walls,
 Follow the style guide from the start of this conversation: a 2D anime visual-novel background, cel-shaded, 16:9, empty of people, with the center open and the bottom third simple.
 ```
 
-#### 29. `planetarium.png`
+#### 30. `planetarium.png`
 
 *Used for:* Zyx night 3: the Ice Machine Planetarium.
 
@@ -520,7 +530,7 @@ Edit this image: keep the exact same character, outfit, pose, framing, art style
 **`wren_neutral.png`**: generate this first.
 
 ```text
-Wren, an adult woman in her early thirties who works on the event crew. Pale skin, sleek black hair cut in an asymmetric bob, with a long side-swept fringe on one side and a short shaved undercut on the other. Tired but kind violet eyes with faint dark circles. A black over-ear headset with a small boom microphone. A plain black hoodie, a bright pink lanyard around her neck holding a white badge that reads "CREW", and a brown clipboard full of checklists hugged against her chest with one arm. A black walkie-talkie with a green light clipped at her hip. Competent, dry, a little exhausted and secretly soft, with a calm half-smile.
+Wren, an adult woman in her early thirties who works on the event crew. Pale skin, sleek black hair cut in an asymmetric bob, with a long side-swept fringe on one side and a short shaved undercut on the other. Tired but kind violet eyes with faint dark circles. A black over-ear headset with a small boom microphone. A plain black hoodie, a bright pink lanyard around her neck holding a white badge that reads "CREW", a brown clipboard with a fix-it list hugged against her chest with one arm, and a roll of silver gaffer tape clipped to her belt. A black walkie-talkie with a green light clipped at her hip. The behind-the-scenes fixer who keeps the whole party running: competent, dry, a little exhausted and secretly soft, with a calm half-smile.
 
 Follow the style guide from the start of this conversation: a 2D anime visual-novel sprite of one adult, waist-up, facing the viewer, on a perfectly flat pure chroma-key green (#00FF00) background.
 ```

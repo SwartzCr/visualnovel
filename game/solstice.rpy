@@ -18,7 +18,7 @@ label solstice_pool_1:
             "You dig in your pockets. All you have is a hotel mint, slightly warm."
             s surprised "For me?"
             s blush "Oh my god. No one ever gifts back. Everyone just takes the glitter and runs."
-            "She holds the mint up to the sun like a jewel, then puts it very carefully into a pocket on her leg warmer."
+            "She holds the mint up to the light like a jewel, then puts it very carefully into a pocket on her leg warmer."
             s happy "I'm going to keep this forever. Or eat it at three in the morning. One of the two."
 
         "\"Oh, I didn't bring anything to trade.\"":
@@ -51,13 +51,13 @@ label solstice_pool_1:
 
 
 label solstice_pool_2:
-    "Solstice is asleep on a lounger in the full afternoon sun. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink."
+    "Solstice is asleep on a lounger right under one of the pool hall's big orange heat lamps. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink."
     "Without the lights and the noise, she looks younger. And very tired."
     menu:
-        "Quietly move the umbrella so she's in the shade.":
+        "Quietly swing the heat lamp away from her.":
             $ gain("solstice", 2)
-            "You drag the big striped umbrella over, slowly, so it doesn't scrape. The shadow slides over her face."
-            "A few minutes later she stirs, pushes up her goggles and looks at the umbrella, then at you."
+            "You swivel the heat lamp away, slowly, so it doesn't squeak. The orange glow slides off her face."
+            "A few minutes later she stirs, pushes up her goggles and looks at the heat lamp, then at you."
             show solstice blush with dissolve
             s "Did you... do that? For me?"
             s "Huh. Nobody does stuff for me. I'm usually the one doing stuff."
@@ -296,7 +296,7 @@ label solstice_romance:
     else:
         s "Hey. Can I tell you something? My real name. Nobody here knows it."
         s blush "It's Dana. Dana. It's a dentist's name. Don't laugh."
-    "The sun is just coming over the hills now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it."
+    "The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it."
 
     menu:
         "\"Hi, Dana.\"":
