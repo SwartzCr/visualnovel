@@ -62,6 +62,10 @@ VN_TEST=1 RENPY_PERFORMANCE_TEST=0 /path/to/renpy-sdk/renpy.sh /path/to/visualno
 
 Running through the weekend: the Pool People and the Order of the Ice Machine are at war over the true nature of water, to be resolved when the aliens' ark arrives at 11:11 on Sunday night.
 
+## Editing the dialogue
+
+**[DIALOGUE.md](DIALOGUE.md)** has every line of dialogue and every choice in the game, in play order, with notes on scene changes and how much each choice is worth in rapport. Edit it in any text editor, then apply the changes with `python3 tools/dialogue.py import`. The instructions are at the top of the file. Run `python3 tools/dialogue.py export` to regenerate it after the scripts change.
+
 ## Project layout
 
 ```
