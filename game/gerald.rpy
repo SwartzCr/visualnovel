@@ -251,9 +251,9 @@ label gerald_night_3:
             g happy "The coffee is genuinely excellent here. You're not wrong."
 
     if rapport["gerald"] >= ROMANCE_THRESHOLD:
-        g blush "After the ark, I'll be on the roof. It's the only place tall enough for me to see the sunrise properly. If you'd like to see it too."
+        g blush "After the big event, I'll be on the roof. It's the only place tall enough for me to see the sunrise properly. If you'd like to see it too."
     else:
-        g neutral "Enjoy the ark. Don't let them get you in the eye with the confetti. It's biodegradable but it is relentless."
+        g neutral "Enjoy the big event. Don't let them get you in the eye with the confetti. It's biodegradable but it is relentless."
     hide gerald with dissolve
     return
 
@@ -273,11 +273,11 @@ label gerald_romance:
     menu:
         g "Did you enjoy the ark? I confess I wept. A great deal. I had to borrow a towel from Wren."
 
-        "\"I cried too. Over a rubber duck.\"":
-            g happy "Over a rubber duck. Yes. Seven hundred people. One duck. It was the most profound thing I've seen in decades."
+        "\"I cried too. Over an empty box.\"":
+            g happy "Over an empty box. Yes. Seven hundred people. Nothing inside. It was the most profound thing I've seen in decades."
         "\"I mostly watched you crying.\"":
             g blush "Oh dear. Was it very loud? I'm told I sound like a foghorn when I'm moved."
-            g happy "...It was a beautiful duck, though."
+            g happy "...It was a beautiful empty box, though."
 
     show gerald neutral
     "For a while you just watch the light come up. A bird starts somewhere down in the pines, then another one."
@@ -337,7 +337,7 @@ label gerald_romance:
     scene bg roof_dawn with slowfade
     "The sun clears the mountains. Down in the parking lot, somebody with a camera looks up at the roof, squints, and sees only a blur."
     "Gerald laughs so hard the water tank rings like a bell."
-    "You stay up there until the last cars leave, until the Pool People fold their banner, until Wren comes up to tell you the casino has been closed since 1987 and the hotel is only now finding out."
+    "You stay up there until the last cars leave, until the last towels are folded, until Wren comes up to tell you the casino has been closed since 1987 and the hotel is only now finding out."
     scene black with slowfade
     "{i}Three weeks later, a package arrives with no return address. Inside: a tin of lapsang souchong, a pressed fern, a smooth gray stone from a creek, and a postcard of the Klamath.{/i}"
     "{i}On the back, in very careful handwriting:{/i}"

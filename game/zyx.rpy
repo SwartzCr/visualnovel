@@ -226,7 +226,7 @@ label zyx_night_3:
             z neutral "Is anything? Is the ice machine? It makes ice. That seems real enough."
 
     show zyx neutral
-    z "After the ark, the mission ends. The Ambassadors carry the ark into the ballroom at 11:11. Then the report is complete. And then..."
+    z "After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then..."
     z "Then this one is just Zyx. With no mission. On a strange planet. That is the part this one is afraid of."
     menu:
         z "Most Earthlings ask what is under the suit. Would you like to know?"
@@ -246,7 +246,7 @@ label zyx_night_3:
             "The ice machine hums. It's a cold sound."
 
     if rapport["zyx"] >= ROMANCE_THRESHOLD:
-        z blush "After the ark. When the mission is complete. Come to the roof. There is one more piece of research this one wishes to do. With you. Only with you."
+        z blush "After the big event. When the mission is complete. Come to the roof. There is one more piece of research this one wishes to do. With you. Only with you."
     else:
         z happy "Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic."
     hide zyx with dissolve
@@ -256,7 +256,7 @@ label zyx_night_3:
 label zyx_romance:
     scene bg roof_dawn with slowfade
     $ time_label = "Monday — 5:55 AM"
-    "After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the duck and the confetti."
+    "After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the empty ark and the confetti."
     "You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink."
     "They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn."
     show zyx neutral with dissolve
@@ -264,7 +264,7 @@ label zyx_romance:
     z happy "You passed. Obviously. Sit."
     if gave_rock:
         "They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin."
-    z neutral "The ark has landed. The duck has been revealed. The war over the nature of water has ended in a hug. The report is filed."
+    z neutral "The ark has landed. The ark has been opened. It was empty, and everyone filled it anyway. The report is filed."
     z "The mission is complete."
 
     menu:

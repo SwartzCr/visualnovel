@@ -47,20 +47,20 @@ VN_TEST=1 RENPY_PERFORMANCE_TEST=0 /path/to/renpy-sdk/renpy.sh /path/to/visualno
 | **Length** | 3 days. Each day: 1 conversation at the pool. Each night: 1 random encounter, then 2 hallway encounters (or wander alone). |
 | **Random encounters** | 14 short run-ins with the party (a clown wedding, a vampire in a coffin, Penguin Post, the OnlyFans Fanny Bar, Tentacletopia, Zany Optical, Platonic Speed Dating, the Let It Go workshop…), one per night, never repeating within a playthrough. The six art-room encounters have guest versions that play if you've met that guest: Penguin Post with Juni, the Fanny Bar with Gerald, Tentacletopia with Solstice, Zany Optical with Zyx, Let It Go with Wren, and Platonic Speed Dating with everyone you've met (+1 rapport for a good answer). Defined in `game/encounters.rpy`; add one by writing a label and listing it in `ENCOUNTERS`. |
 | **Guests** | 5, each with 2 pool chapters and 3 night chapters. Chapters always play in order, so you can follow anyone from start to finish no matter which day you pick them. |
-| **Rapport** | Every conversation has 2 choices worth 0–2 points (one bad choice is −1). Pushy or dismissive answers score 0; kind, curious, consent-forward answers score 2. |
+| **Rapport** | Every conversation has 2 choices worth 0–2 points (a few bad choices are −1). Pushy or dismissive answers score 0; kind, curious, consent-forward answers score 2. |
 | **Romance** | 10+ rapport with a guest unlocks their sunrise scene after the ceremony. That takes at least 3 good chapters with them; picking middle-of-the-road answers in all 5 also gets you there. If several qualify, you choose. |
 | **Other endings** | 5+ rapport with your closest guest → *Good Company*. Otherwise → *Checkout*. 7 endings total, tracked across playthroughs. |
 | **Guest Book** | The **Guests** button in the quick menu shows everyone you've met and your rapport as hearts (5 hearts = romance-ready). |
 
 ### The guests
 
-- **Juni** (they/them): a database engineer in a pink axolotl kigurumi. The hood stays up. Rooms: *Room 404: Room Not Found*, *The Lost & Found*, *The Regeneration Tank*.
+- **Juni** (they/them): a database engineer in a pink axolotl kigurumi. The hood stays up. Rooms: *The Heavy Petting Zoo*, *The Lost & Found*, *The Regeneration Tank*.
 - **Gerald** (he/him): a Sasquatch from the Klamath. Drinks lapsang souchong. Possibly not a costume. Rooms: *The Breakfast Schism* (Church of Cast Iron vs. Temple of Teflon), *Room 312: The Forest*, *Cryptids Anonymous*.
-- **Solstice** (she/her): a raver in fur leg warmers and an LED crop top who's an ICU night nurse the rest of the week. Rooms: *The Human Stock Exchange*, *Confession Booth Karaoke*, *The Ballroom*.
-- **Wren** (she/her): crew, dressed in black, the party's behind-the-scenes fixer. She found herself at a party like this years ago, and now spends the weekend putting out fires so the magic holds for everyone else, and never gets to be at it. Rooms: *Backstage* (the laser rig dies mid-set), *Mission Control* (a linen closet), *The Roof*.
+- **Solstice** (she/her): a raver in fur leg warmers and an LED top who hands out kandi and light shows. She's also an undercover cop, which comes out in her sunrise scene. Rooms: *The Human Stock Exchange*, *Confession Booth Karaoke*, *The Ballroom*.
+- **Wren** (they/them): crew, dressed in black, the party's behind-the-scenes fixer. They found themself at a party like this years ago, and now spend the weekend putting out fires so the magic holds for everyone else, and never gets to be at it. Rooms: *Backstage* (the laser rig dies mid-set), *Mission Control* (a linen closet), *The Roof*.
 - **Zyx** (they/them): Ambassador of the Outer Drift, here to determine whether Earth is ready for contact. Never breaks character. Rooms: *The Oracle of Ping Pong*, *The Clinic of Unnecessary Procedures*, *The Ice Machine Planetarium*.
 
-Running through the weekend: the Pool People and the Order of the Ice Machine are at war over the true nature of water, to be resolved when the aliens' ark arrives at 11:11 on Sunday night.
+Everything builds to the big event at 11:11 on Sunday night, when the aliens carry a golden ark into the ballroom.
 
 ## Editing the dialogue
 
@@ -105,7 +105,7 @@ All 30 backgrounds and the 20 character sprites are finished Midjourney art. Onl
 | `pool.png` | Every pool scene (an indoor pool under a glass atrium); Juni's ending |
 | `hallway.png` | Night hallways |
 | `bedroom.png` | Mornings (newspaper under the door) |
-| `room404.png` | Juni night 1 |
+| `pettingzoo.png` | Juni night 1 (still the old Room 404 art; prompt in MIDJOURNEY_PROMPTS.md) |
 | `lostfound.png` | Juni night 2 |
 | `regen.png` | Juni night 3 |
 | `breakfast.png` | Gerald night 1 |
@@ -153,4 +153,4 @@ To regenerate the UI: `python3 tools/make_gui.py` (requires Pillow). **Don't run
 
 ## Tone notes
 
-The party is inspired by Bay Area immersive "secret parties": no photos, ask before touching, a tea bar instead of a bar, a volunteer care crew, an elder's living room (here, Auntie Acid's The Cozy) for anyone having a hard time, absurdist running mythology, and no spectators. Substances are never shown. Romance scenes are tender, explicitly consensual, and end at a kiss.
+The party is inspired by Bay Area immersive "secret parties": no photos, ask before touching, a tea bar instead of a bar, a volunteer care crew, an elder's living room (here, Auntie Acid's The Cozy) for anyone having a hard time, absurdist running mythology, and no spectators. The game is for adults: some romance scenes go past a kiss (Juni's, Solstice's), and Solstice's route involves drugs, handcuffs and an undercover cop. None of it is graphic.

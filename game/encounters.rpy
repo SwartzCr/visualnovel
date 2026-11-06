@@ -73,7 +73,7 @@ label enc_vampire:
         "\"It's night. Rise.\"":
             "He sits up in one smooth, theatrical motion, cape flaring. \"At last.\" Then he notices his leg is asleep and has to lie back down."
         "\"It's actually morning. Go back to sleep.\"":
-            "\"Oh no,\" he whispers, and pulls the lid closed. From inside: \"Wake me at the ark. Thank you, mortal.\""
+            "\"Oh no,\" he whispers, and pulls the lid closed. From inside: \"Wake me at the big event. Thank you, mortal.\""
         "\"Is there room in there for two?\"":
             "He considers this seriously. \"Ask before you touch,\" he says. \"But yes. It's a double. The party thought of everything.\""
             "You lie in a vampire's coffin for exactly one minute. It's surprisingly comfortable. He smells like cloves."
@@ -424,9 +424,9 @@ label enc_penguin_post_juni:
             $ gain("juni", 1)
             j blush "I'm not nervous. I'm... okay, I'm holding my sleeves right now."
             "They don't let go of them. They hold the postcard against their chest instead."
-        "\"See you at the ark!\"":
-            j neutral "Oh. Ha. Yeah! See you at the ark."
-            "They look at the card a beat longer than a card that says {i}see you at the ark{/i} needs."
+        "\"See you at the big event!\"":
+            j neutral "Oh. Ha. Yeah! See you at the big event."
+            "They look at the card a beat longer than a card that says {i}see you at the big event{/i} needs."
     "A penguin stamps Juni's postcard with a fish and tosses it into a mailbag."
     j neutral "You'll get it within the hour. Or your money back. You paid no money."
     "Forty minutes later, a penguin finds you in the hallway, salutes, and hands you a postcard. It's covered in tiny drawn axolotls. In the middle, in careful handwriting:"
@@ -547,30 +547,30 @@ label enc_let_it_go_wren:
     show wren neutral with dissolve
     w "Don't. Don't say anything. Pilar signed me up. She called it a {i}wellness intervention{/i}. In front of the whole crew."
     w "It's about saying goodbye to your phone. I don't even have my phone on me. I have this."
-    "She holds up her walkie-talkie like you've asked to see her ID."
+    "They hold up their walkie-talkie like you've asked to see their ID."
     "Inside, folding chairs face a small stage. The presenter, in a turtleneck and headset mic, asks everyone to place their device in a wicker basket at the front. One by one, people do. Some of them are crying."
-    "Wren doesn't move. Her hand is wrapped around the walkie so tightly her knuckles are white."
+    "Wren doesn't move. Their hand is wrapped around the walkie so tightly their knuckles are white."
     menu:
         "What do you do?"
 
         "\"I'll keep an ear on it. If anything comes through, I'll get you.\"":
             $ gain("wren", 1)
-            "You hold out your hand. She looks at it for a long time, then puts the walkie in it, like she's handing over something alive."
+            "You hold out your hand. They look at it for a long time, then put the walkie in it, like they're handing over something alive."
             w blush "Okay. Okay. If it says {i}fire{/i}, you come get me. It will say fire. If it says anything about a flamingo, ignore it."
-        "Put your own phone in the basket, then look at her.":
+        "Put your own phone in the basket, then look at them.":
             $ gain("wren", 1)
-            "You walk to the front and drop your phone into the basket. Then you turn around and look at her."
+            "You walk to the front and drop your phone into the basket. Then you turn around and look at them."
             w surprised "Oh, that's... that's peer pressure. That's really effective peer pressure."
-            "She walks up and lays the walkie gently on top of your phone, like tucking it into bed."
+            "They walk up and lay the walkie gently on top of your phone, like tucking it into bed."
         "\"You don't have to. It's okay.\"":
             w neutral "...Thanks. Yeah. I'll just... turn it down a little."
-            "She turns the volume down one notch. It's something."
+            "They turn the volume down one notch. It's something."
     "The presenter clicks to the first slide. Four slides in, the projector dies, and the talk continues on hand-drawn posterboard."
-    "Wren lasts four minutes and thirty seconds before her hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, she stops reaching altogether, sits back, and actually listens."
+    "Wren lasts four minutes and thirty seconds before their hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, they stop reaching altogether, sit back, and actually listen."
     "At the end, there's a crafting table: blank wooden phones, googly eyes, glitter. Everyone gets to make an Emotional Support Phone."
     "Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of gaffer tape on the back that says OFF DUTY. It doesn't do anything."
     w happy "It's perfect. Nobody can reach me on it. Not a single person."
-    "When you walk out, the real walkie is back on her belt. But the wooden one is in her hand."
+    "When you walk out, the real walkie is back on their belt. But the wooden one is in their hand."
     hide wren with dissolve
     return
 
@@ -702,7 +702,7 @@ label speed_mission_solstice:
 
 label speed_mission_wren:
     show wren happy with dissolve
-    "You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally she leads you to a broom closet she's never opened, because it's labeled FOR WREN ONLY and she didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} She does, for a full minute."
+    "You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally they lead you to a broom closet they've never opened, because it's labeled FOR WREN ONLY and they didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} They do, for a full minute."
     hide wren with dissolve
     return
 

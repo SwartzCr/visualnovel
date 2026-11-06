@@ -136,15 +136,15 @@ hand-painted anime background art, 2D anime key visual, flat cel shading with tw
 
 ## Juni's art rooms
 
-### `room404.png`
+### `pettingzoo.png`
 
-*Used for:* Juni night 1: Room 404, Room Not Found.
+*Used for:* Juni night 1: the Heavy Petting Zoo.
 
 ```text
-hand-painted anime background art, 2D anime key visual, flat cel shading with two-tone shadows, bold clean line art, simplified shapes, a hotel room turned into an art installation about a missing web page, everything glossy white and pale grey and lit like a computer screen, giant navy numbers on the back wall, retro computer error dialog boxes made of cardboard hanging from the ceiling on fishing line, oversized white mouse cursors stuck to the walls, thin cyan and magenta glitch stripes of light across the room, funny and uncanny, empty open space in the center, vibrant saturated colors, soft bloom --ar 16:9 --niji 7 --s 400 --no people, text, watermark, photorealistic, 3d render, photo, realistic
+hand-painted anime background art, 2D anime key visual, flat cel shading with two-tone shadows, bold clean line art, simplified shapes, an old hotel suite turned into a cozy art installation called a petting zoo, the floor buried in huge soft heaps of stuffed animals, plush sharks, bears, frogs, octopuses and unicorns piled up to the windowsills like hay, a plush-covered bed in the middle, little wooden zoo enclosure signs and a low painted picket fence, warm pink and amber lamplight, string lights, playful and a little cheeky, empty open space in the center, vibrant saturated colors, soft bloom --ar 16:9 --niji 7 --s 400 --no people, text, watermark, photorealistic, 3d render, photo, realistic
 ```
 
-*Text to add afterwards:* the wall: 404 / ROOM NOT FOUND
+*Text to add afterwards:* a sign over the door: HEAVY PETTING ZOO
 
 ### `lostfound.png`
 

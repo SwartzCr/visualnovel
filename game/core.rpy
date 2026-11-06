@@ -43,7 +43,7 @@ image bg lobby = "images/bg/lobby.png"
 image bg pool = "images/bg/pool.png"
 image bg hallway = "images/bg/hallway.png"
 image bg bedroom = "images/bg/bedroom.png"
-image bg room404 = "images/bg/room404.png"
+image bg pettingzoo = "images/bg/pettingzoo.png"
 image bg lostfound = "images/bg/lostfound.png"
 image bg regen = "images/bg/regen.png"
 image bg breakfast = "images/bg/breakfast.png"
@@ -119,10 +119,8 @@ default wanders = 0
 default chosen = None
 
 ## Story flags for callbacks in the endings.
-default gave_mint = False
-default sang_slow_song = False
-default knows_dana = False
 default juni_has_courage = False
+default knows_juicero = False
 default sat_with_gerald = False
 default vouched_for_gerald = False
 default shared_bun = False
@@ -131,7 +129,7 @@ default gave_rock = False
 default hugged_zyx = False
 default zyx_emergency_contact = False
 
-define STORY_FLAGS = ["gave_mint", "sang_slow_song", "knows_dana", "juni_has_courage", "sat_with_gerald",
+define STORY_FLAGS = ["juni_has_courage", "knows_juicero", "sat_with_gerald",
     "vouched_for_gerald", "shared_bun", "called_fog_cue", "gave_rock", "hugged_zyx", "zyx_emergency_contact"]
 
 init python:

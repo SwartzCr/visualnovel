@@ -22,18 +22,17 @@ label start:
     scene bg exterior with slowfade
     $ time_label = "Friday — Arrival"
 
-    "The invitation was a paper card with no return address. One side said FRIDAY, 3PM. The other said {i}You were never here.{/i}"
-    "The Hotel Paradiso is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The casino closed in 1987. The hotel never quite noticed."
-    "This weekend, somebody has rented every room. The big neon sign out front has lost its final O. It now reads HOTEL PARADIS, which half the people in the parking lot insist is French and the other half insist is a prophecy."
+    "It was a long drive, but you're finally there - your friend said to come, but was light on details. Your plan is to just see where it goes. Maybe you'll spend the weekend hiding in your room or maybe you'll find your soulmate - who knows!"
+    "The Hotel Paradiso is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The people on the casino floor pumping quarters into slot machines are too hypnotized to notice the parade of weirdly dressed people streaming in. You take a deep breath and walk on through, keeping your eyes down."
 
-    tam "omg you're here!! go check in. find the person in black. ask before touching. let it get weird"
 
     scene bg lobby with dissolve
     $ time_label = "Friday — The Lobby"
-    "The lobby still has its 1970s carpet, a migraine of orange and purple swirls. Past the front desk, the old casino floor is dark, the slot machines draped in fairy lights and feather boas."
+    "The lobby still has its 1970s carpet, a migraine of orange and purple swirls. You shuffle towards the front desk only raising your eyes when you hear a voice."
     show wren neutral with dissolve
 
-    w "Hi. Welcome to the Paradiso. I'm Wren, crew. You won't see much of me. If I'm doing my job, nothing breaks and you never know I was here."
+    w "Hi. Welcome to the Paradiso. I'm Wren, crew. Usually I'm working behind the scenes with Black Ops, but I'm filling in here for now. I'd say 'Welcome Home' but this isn't {i}that{/i} party."
+    w "Is this your first time? Don't worry, everything's going to go great - I'll see to that. We don't bite ... mostly ;)"
 
     menu:
         w "Any questions before I let you loose?"
@@ -41,18 +40,17 @@ label start:
         "\"Is there anything you need help with right now?\"":
             $ gain("wren", 1)
             w surprised "Huh. Nobody asks crew that."
-            w neutral "I'm fine. But hold that thought. I might cash it in at 3 AM when the fog machine catches fire."
+            w neutral "I'm all set here, you're one of the last people to arrive. But hold that thought. I might cash it in at 3 AM when the Carpet Master catches fire."
 
-        "\"Are there rules?\"":
-            w "Two that matter. No photos, and ask before you touch anyone. Everything else is a suggestion."
+        "\"What if I can't handle it?\"":
+            w "Find your way to The Cozy and Auntie Acid will fix you right up. If things get really bad come find me."
 
         "\"So what {i}is{/i} this, exactly?\"":
-            w "Nobody's allowed to say. The second anyone says it out loud, it turns into a brochure."
+            w "A safe container for you to express yourself. It'll get weird, but just maybe you will too."
 
-    w neutral "Here's the only advice I give first-timers. Don't watch. Nobody here is an audience."
-    w "Walk into the room you'd normally walk past. Say the thing you'd normally keep to yourself. Be whoever you actually are. This is the one weekend nobody's going to laugh at you for it."
-    w happy "And somebody's probably going to catch your eye this weekend. It happens to everyone their first time. Let it."
-    w neutral "Pool's on the ground floor in the afternoons. Hallways all night. Go find out who you are here."
+    w neutral "Here's the only advice I give first-timers. Don't watch, participate. We are all the actors and the whole hotel is a stage."
+    w "Push your boundaries. Walk into the room you'd normally walk past. Say the thing you'd normally keep to yourself. Be whoever you actually are. This is the one weekend nobody's going to laugh at you for it."
+    w neutral "Oh right, the pool's on the ground floor. You can hang out there in the afternoons. The hallways will be popping all night. Now get out there and be yourself. Welcome to the party!"
     hide wren with dissolve
 
     "Tip: open the {color=#ff5fb8}Guests{/color} menu at the bottom of the screen to see everyone you've met."
@@ -82,16 +80,16 @@ label morning:
     if day == 2:
         "You wake up on top of the covers in your shoes, in a room you're fairly sure is yours. Someone has drawn a small, friendly eye on the bathroom mirror in lipstick."
         "A newspaper has been slid under the door."
-        "{b}THE DAILY DISTURBANCE{/b} — Saturday Edition"
-        "{i}HEADLINE: POOL PEOPLE ACCUSE ICE MACHINE OF 'COLDNESS.' ICE MACHINE: 'WE ARE THE SAME WATER.'{/i}"
-        "{i}HOROSCOPE (all signs): Today someone will tell you a secret about themselves. Do not make it about you. Do not make it a podcast.{/i}"
-        "{i}LOST AND FOUND: One (1) Sasquatch footprint, left foot. Please return to the tea bar.{/i}"
+        "{b}THE DAILY STICK{/b} — Saturday Edition"
+        "{i}HEADLINE: The body accuses the mind of having \"Lost The Thread\" while new guests complain about the amount of in jokes. More on page 3.{/i}"
+        "{i}HOROSCOPE (all signs): Today someone will tell you a secret about themselves. Try to listen, do not make it about you.{/i}"
+        "{i}IN: Metafiction, callbacks, romantasy. OUT: Veiled metaphors, doomerism, clown car-culture.{/i}"
     else:
-        "Sunday. The light through the window is the color of weak tea. Somewhere below, a single kazoo is playing what might be the national anthem of a country that doesn't exist yet."
-        "{b}THE DAILY DISTURBANCE{/b} — Sunday (Final) Edition"
-        "{i}HEADLINE: SOURCES CONFIRM SOMETHING ARRIVES AT 11:11. SOURCES DECLINE TO SAY WHAT. SOURCES ARE ALIENS.{/i}"
-        "{i}HOROSCOPE (all signs): The last night of anything is the one you'll remember. Say the thing. Ask first. Then say the thing.{/i}"
-        "{i}CLASSIFIEDS: Have you seen my friend? Answers to Tamsin. Last seen inside a balloon. — Tamsin{/i}"
+        "Sunday. The light through the window is the color of weak tea. Somewhere below you can hear the faint pounding of bass from a renegade sound system."
+        "{b}THE DAILY STICK{/b} — Sunday (Final) Edition"
+        "{i}HEADLINE: SOURCES CONFIRM SOMETHING ARRIVES AT 11:11. BEST TO MAKE YOUR WISHES NOW.{/i}"
+        "{i}HOROSCOPE (all signs): The last night of anything is the one you'll remember. Try to stay sober enough to follow through.{/i}"
+        "{i}MARKET REPORT: The Free Hugs booth has capitulated to market forces, hugs will now be available only for those with a monthly subscription. Shrugs will remain free. {/i}"
 
     return
 
@@ -105,16 +103,12 @@ label pool_time:
     $ time_label = ("", "Friday", "Saturday", "Sunday")[day] + " — The Pool"
 
     if day == 1:
-        "The pool is the bright, ordinary half of the party: an indoor pool hall on the ground floor, under a big old glass atrium roof gone green at the seams. Towels, chlorine, potted palms, and the Pool People's banner strung over the deep end: WATER IS WARM. WATER IS LOVE."
-        "The Pool People, you gather, are at war with the Order of the Ice Machine over the true nature of water. It's supposed to be settled Sunday at 11:11 PM."
-        "Most of the costumes have been swapped for swimsuits. Some have not. Some never will be."
+        "The pool is the bright, (somewhat) ordinary half of the party: an indoor pool on the ground floor, under a big old glass atrium roof gone green at the seams. The smell of chlorine permeates the air."
+        "Most of the costumes have been swapped for swimsuits. Some have not. To the extent that they can people are letting their freak flags fly. Someone brought in a sound system and you can barely make conversation over the sound of the music, but you try anyway."
     elif day == 2:
-        "The pool on Saturday afternoon is full of people recovering from Friday night. Someone is teaching a slow-motion water aerobics class to no music at all."
-        "A herald in a gold cape walks the deck with a scroll."
-        herald "HEAR YE! The Order of the Ice Machine has frozen three of our pool noodles! The Pool People demand reparations in the form of warmth!"
+        "The pool on Saturday afternoon is full of people recovering from Friday night. Someone is teaching a slow-motion water aerobics class to no music at all. You revel in the silence."
     else:
-        "Last afternoon. The pool has the sleepy tenderness of a place where a lot of people have cried in a good way."
-        "The Pool People have lowered their banner to half mast, out of respect, or because the rope broke."
+        "Last afternoon. The pool has the sleepy tenderness of a place where a lot of people have cried in a good way.  The party isn't over but most people blew their wads already. You've still got a little left in the tank."
 
     menu:
         "Who do you spend the afternoon with?"
@@ -129,9 +123,9 @@ label pool_time:
         "Gerald, leading a very slow 'forest bathing' session on the pool deck." (guest="gerald") if pool_seen["gerald"] == 1:
             $ who = "gerald"
 
-        "A raver in fur leg warmers, handing out glitter like communion." (guest="solstice") if pool_seen["solstice"] == 0:
+        "A raver in covered in kandi beads, handing out glitter like communion." (guest="solstice") if pool_seen["solstice"] == 0:
             $ who = "solstice"
-        "Solstice, asleep on a lounger right under one of the big heat lamps, LED top switched off." (guest="solstice") if pool_seen["solstice"] == 1:
+        "Solstice, asleep on a lounger right under one of the big heat lamps, LED bikini top switched off." (guest="solstice") if pool_seen["solstice"] == 1:
             $ who = "solstice"
 
         "A person in black fishing a disco ball out of the deep end with a net." (guest="wren") if pool_seen["wren"] == 0:
@@ -160,27 +154,26 @@ label night_time:
     scene bg hallway with slowfade
 
     if day == 1:
-        "Night falls and the Paradiso turns inside out. Every door is open. Every room is something else now."
-        "Bass comes up through the carpet from the ballroom. Someone in a cape runs past you holding a lit candle and a stapler, apologizing."
+        "Night falls and the Paradiso turns inside out. Every door is open, inviting you."
+        "Bass comes up through the carpet from the ballroom. A group of people tied together with a giant ball of yarn stumble past you."
     elif day == 2:
-        "Saturday night. The hallways are louder and stranger. A troupe of mute clowns in fishnets moves through the crowd selling shares in people."
-        "A walkie-talkie taped to the ceiling crackles: {i}Room 404 has been located. Repeat. Room 404 has been located.{/i}"
+        "Saturday night. The hallways are louder and stranger. A troupe of mute clowns in fishnets moves through the crowd writing notes on invisible clipboards and nodding in approval."
     else:
-        "Sunday night. The last night. The tickers in the stairwell all read the same thing: 11:11."
-        "People are hugging in doorways for no reason. You catch yourself doing it too."
+        "Sunday night. The last night. The clocks in the stairwell all read the same thing: 11:11."
+        "Everyone looks slightly fried, like they're on the edge of breaking into laughter or tears. You take a few deep breaths trying to recenter yourself for another adventure."
 
     call random_encounter
     call hallway_encounter
     scene bg hallway with dissolve
     if day == 3:
-        "It's 10:40. You have time for one more thing before the ark."
+        "It's 10:40. You have time for one more thing before the big show."
     else:
         "The night isn't over. The hallway takes you back."
     call hallway_encounter
 
     if day < 3:
         scene bg hallway with slowfade
-        "Somewhere around four in the morning, the hallway gets quiet enough to hear the ice machine humming to itself. You find your room by touch."
+        "Somewhere around four in the morning, the hallway finally gets quiet enough to hear the ice machine humming to itself. You find your room by touch."
     return
 
 
@@ -189,7 +182,7 @@ label hallway_encounter:
     menu:
         "Which way do you wander?"
 
-        "A pink glowing tail disappears into a room with no number." (guest="juni") if night_seen["juni"] == 0 and "juni" not in met_tonight:
+        "A pink glowing tail disappears into a room piled to the ceiling with stuffed animals." (guest="juni") if night_seen["juni"] == 0 and "juni" not in met_tonight:
             $ who = "juni"
         "Juni is standing very still in front of a door labeled LOST & FOUND." (guest="juni") if night_seen["juni"] == 1 and "juni" not in met_tonight:
             $ who = "juni"
@@ -241,17 +234,17 @@ label wander:
     $ wanders += 1
     if wanders == 1:
         scene bg livingroom with dissolve
-        "You follow the smell of cardamom to a suite with a hand-painted sign on the door: THE COZY. Inside, someone has rebuilt a whole living room, down to the doilies."
-        oz "Sit, sit. Have a candy. They're strawberry. Everything here is strawberry, that's the rule."
-        "Auntie Acid is maybe sixty-five, in a kaftan covered in hand-sewn mirrors. She rocks. She hums. She has, you'd bet, seen some things."
+        "You follow the smell of cardamom to a suite with a hand-painted sign on the door: THE COZY. Inside, someone has rebuilt your grandmothers living room, down to the doilies."
+        oz "Sit, sit. You look confused, and maybe a little tired. Don't be, take a seat and have some tea."
+        "Auntie Acid is maybe sixty-five, in a kaftan covered in hand-sewn mirrors. She rocks. She buzzes with an inner energy. She has, you'd bet, seen some things."
         oz "First time? You've got first-time eyes. That's all right. Everyone here was new once. Even the Sasquatch."
-        oz "Here's the only advice I give, sweetheart. Don't come to watch. Come to be watched by something bigger than you. Then go be kind to somebody."
-        "You eat the candy. It's very strawberry. You leave feeling oddly blessed."
+        oz "Here's the only advice I give, sweetheart. Be yourself, feel good as yourself, then go be kind to somebody."
+        "You leave feeling oddly blessed, only remembering later that you forgot to drink your tea."
     elif wanders == 2:
         scene bg exchange with dissolve
-        "You wander into the Human Stock Exchange alone. A mute clown in a bra and fishnets immediately pantomimes, with great urgency, that you must sell shares of yourself."
-        "You sell eleven percent of yourself to a woman dressed as a lighthouse. The ticker above you reads YOU ▲0.4."
-        "It feels great. You don't know why. You leave before the market can correct."
+        "You wander into the Human Stock Exchange alone. An Auguste clown in a pointed bra and fishnets immediately pantomimes, with great urgency, that you must sell shares of yourself."
+        "You sell eleven percent of yourself to a woman dressed as sexy Garfield. The ticker above you reads YOU ▲0.4."
+        "It feels great to be on the winning side of capitalism for once. You feel weirdly giddy and guilty, and rush out the door before the market can correct."
     else:
         scene bg cryptid with dissolve
         "You find an empty folding-chair circle in a room labeled CRYPTIDS ANONYMOUS. There's an inflatable Loch Ness Monster wearing a name tag."
@@ -268,15 +261,14 @@ label ceremony:
     scene bg ballroom with slowfade
     $ time_label = "Sunday — 11:11 PM"
     "At 11:05 the music stops."
-    "Seven hundred people in costume stand in the ballroom in the dark, breathing. Someone whispers {i}is it happening{/i} and fifty people go {i}shhhhhh{/i}."
+    "Seven hundred people in costume shuffle into the ballroom in the dark, holding their breath. Someone whispers {i}is it happening{/i} and fifty people go {i}shhhhhh{/i}."
     "At 11:11 the doors at the back of the ballroom swing open."
     scene bg ballroom_ark with flash
     "A procession of people in silver alien suits carries a golden ark through the crowd. It's covered in psychedelic patterns. On the front, in big friendly letters: DON'T PANIC."
-    "Up on the stage, the leader of the Pool People and the High Abbot of the Ice Machine face each other. They have been at war over the true nature of water all weekend."
+    "Up on the stage, the leader of the covenant grabs a mic and delivers a rousing speech. You only catch bits and pieces, something about grabbing life by the cockles, and riding the bubbles pop into the sunset."
     "The aliens set the ark between them and open the lid."
-    "Inside is a single rubber duck."
+    "Inside it's empty, your enthusiasm is what fills it. You realize that society is also a shared hallucination. This doesn't end here."
     "The ballroom is completely silent for three full seconds."
-    "Then the High Abbot of the Ice Machine starts to cry, and the leader of the Pool People starts to cry, and they hug, because of course. Ice is water. A pool is water. A duck floats on both. They were never at war."
-    "The bass drops so hard the chandelier swings. Seven hundred people scream. Confetti falls from somewhere it couldn't possibly have been hidden."
-    "It is incredibly stupid. You are crying too."
+    "Then the bass drops so hard the chandelier swings. Seven hundred people scream. Confetti falls from everywhere."
+    "It is incredibly goofy, but heartfelt. You feel yourself beginning to tear up."
     return

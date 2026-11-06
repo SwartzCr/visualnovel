@@ -41,6 +41,8 @@ init python:
         for g in GUESTS:
             for k in (0, 1, 2):
                 cases.append({"name": "full-%s-%d" % (g, k), "kind": "full", "target": g, "option": k})
+        # Juni's first pool scene has a 4th option; other menus clamp to their last option.
+        cases.append({"name": "full-juni-3", "kind": "full", "target": "juni", "option": 3})
         cases.append({"name": "wanderer", "kind": "full", "target": "wander", "option": 0})
         for g in GUESTS:
             for k in (0, 1):

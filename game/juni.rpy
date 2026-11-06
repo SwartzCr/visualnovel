@@ -2,7 +2,7 @@
 ## The hood stays up. Whether it comes down is the whole route.
 
 label juni_pool_1:
-    "At the edge of the pool, fully zipped into a pink axolotl kigurumi, someone is sitting with their onesie feet in the water. The feet are soaked. They do not seem to care."
+    "At the edge of the pool, fully zipped into a pink axolotl kigurumi, someone is sitting with their onesie feet in the water. The bottom half of the onesie is soaked, but they do not seem to care."
     "The hood has its own little face on top, with two black eyes and a smile. Feathery gills fan out from either side. Under it, a real face, very pink, very warm."
     show juni neutral with dissolve
     j "Oh. Hi. Sorry. You're standing in my, um, sun. It's fine. I don't need the sun. I'm a cold-water creature."
@@ -11,12 +11,12 @@ label juni_pool_1:
 
         "\"Aren't you dying in that thing?\"":
             j "Yes. Axolotls are native to cold lakes in Mexico City. I am, therefore, suffering."
-            j "It's fine. I'm used to it. The hood is load-bearing."
+            j "But without this I don't know who I am, so probably best to keep it on."
 
         "\"Does your axolotl have a name?\"":
             $ gain("juni", 2)
             j surprised "Nobody's ever asked her name."
-            j happy "She's called Lotl. Lotl the axolotl. I'm aware that's not creative. She doesn't mind."
+            j happy "She's called Lotl. Lotl the axolotl. I'm aware that's not creative but AI wrote this part and I'm too lazy to change it."
             j "I'm Juni. She's Lotl. We're a package deal this weekend."
 
         "Sit down next to them and put your feet in the water too, without saying anything.":
@@ -27,39 +27,48 @@ label juni_pool_1:
 
     show juni neutral
     "A little while later Juni is explaining that axolotls can regrow almost anything. Legs. Tails. Parts of their own hearts. Even bits of their brains."
-    j "Out there, I work in databases. I'm the person who gets messaged at two in the morning because 'the thing is down.' I'm the guy who fixes the thing."
+    j "Out there, I work in databases. I'm the person who gets messaged at two in the morning because 'the thing is down.'"
     j "In here I'm a salamander. Salamanders don't have to be impressive. They just have to be wet and kind of cute."
 
     menu:
-        "\"Do you ever take the hood off?\"":
+        "\"Which do you feel more comfortable as, Juni or Lotl?\"":
             j surprised "Oh. Um."
             "Juni pulls the hood strings a little tighter, like a reflex."
-            j neutral "Not yet. Maybe never. Maybe Sunday. I don't know. It's... a thing."
+            j neutral "I'm not sure. I feel so free here, but this is the only place I can be Lotl ... right?"
 
         "\"If you could regrow anything, what would it be?\"":
             $ gain("juni", 2)
-            "Juni goes quiet for a long time. The Pool People's banner snaps in the wind."
+            "Juni goes quiet for a long time. You take the lull in the conversation to appreciate the music playing across the pool."
             j neutral "There used to be a part of me that sang in the car. Really loud. Badly. With the windows down."
             j "It fell off around year three of the job. I think I'd regrow that."
-            j blush "Sorry. That was a lot for a pool."
+            j blush "Sorry. That was a lot for a poolside chat. With a stranger! Well you used to be a stranger..."
 
         "\"Being unimpressive sounds amazing. Can I be a salamander too?\"":
             $ gain("juni", 1)
-            j happy "Applications are open. You'd need a hood. And to commit to being damp."
+            j happy "Applications are open. You'd need a suit. And to commit to being damp."
             j "Probationary salamander. I'll allow it."
+
+        "\"Let me ask a question to Lotl.\"":
+            $ gain("juni", -1)
+            "You lean down and address the little face on top of the hood, very seriously."
+            j surprised "Oh. Um. Lotl doesn't... she doesn't really talk to people she just met."
+            j neutral "Sorry. I think I'm going to go dry off. Or, um, get wetter. Somewhere else."
+            "Juni gets up, squelching, and pads away along the edge of the pool. The little face on the hood stares back at you the whole way."
+            hide juni with dissolve
+            return
 
     "Without warning, Juni slides off the edge into the pool, fully dressed. The kigurumi balloons up around them like a pink jellyfish."
     j happy "Ahhh. Regeneration."
     hide juni with dissolve
-    "You decide that's the best thing you've seen all day."
+    "You smile inside. Maybe you're not so bad at making friends after all."
     return
 
 
 label juni_pool_2:
     "Juni is floating face-up on an inflatable pizza slice, hood up, gills drooping in the heat. There's a second, smaller pizza slice tied to theirs by a string."
     show juni happy with dissolve
-    j "You came back. I saved you a slice. It's the crust one. Nobody wants the crust one, but it's very stable."
-    "You climb onto the crust. You drift together toward the deep end, where the herald is shouting about pool noodles."
+    j "You came back. I saved you a slice."
+    "You climb onto the crust. You drift together toward the deep end, where the some clowns are pantomiming having phone sex."
     show juni neutral
     menu:
         j "So, what do you do? Like, out there."
@@ -67,7 +76,7 @@ label juni_pool_2:
         "\"Out there I'm someone else. In here I'm still figuring out who.\"":
             $ gain("juni", 2)
             j surprised "Oh."
-            j blush "Yeah. Exactly that. That's exactly it."
+            j blush "Yeah. I get that. I hope you figure it.. I hope I figure it out too."
 
         "\"Honestly? I'd rather not talk about work this weekend.\"":
             $ gain("juni", 1)
@@ -81,7 +90,7 @@ label juni_pool_2:
 
     show juni neutral
     "Juni tells you this is their third year. Their roommate vouched for them the first time. That year they didn't leave their hotel room until Saturday."
-    j "The second year I made it to the pool. This year I got stuck in the revolving door and Wren had to rescue me, and somehow that broke the seal. I've talked to like nine people."
+    j "The second year I made it to the dance floor but was too shy to talk to anyone. This year I got stuck in the revolving door and Wren had to rescue me, and somehow that broke the seal. I've talked to like nine people."
     j "Ten. Ten with you."
 
     menu:
@@ -95,12 +104,11 @@ label juni_pool_2:
 
         "\"Only if I get to tell you one back.\"":
             $ gain("juni", 1)
-            j neutral "Deal. I've never gone into an art room by myself. I wait outside until somebody pulls me in."
-            "You tell them your embarrassing thing. Juni laughs so hard the pizza slice spins in a slow circle."
+            j neutral "Deal. I'm so worried that someone from work will see me here that I sometimes don't want to leave my room. Or well I used to be, talking about it now, maybe I finally don't care."
+            "You tell them your embarrassing thing. Being walked in on, while having sex, dressed in full clown makeup. Juni laughs so hard the pizza slice spins in a slow circle."
 
-        "\"Is it about the hood?\"":
-            j neutral "Everything is about the hood."
-            "They sigh, and tell you anyway: three years, and they've never gone into an art room alone."
+        "\"Is it about the kigurumi?\"":
+            "They sigh, and tell you: \"never mind, it wasn't important anyway.\""
 
     j happy "Okay. You know my secret now. That means you're responsible for me."
     "They say it like a joke. They don't let go of the string between your pizzas for the rest of the afternoon."
@@ -109,55 +117,39 @@ label juni_pool_2:
 
 
 label juni_night_1:
-    scene bg room404 with dissolve
-    "You follow the pink tail into a room that is blinding white. Error messages hang from the ceiling on fishing line. A giant sign on the wall reads 404 — ROOM NOT FOUND."
-    "A man in a beige suit stands in the middle of the room, holding a clipboard, looking straight through you."
+    scene bg pettingzoo with dissolve
+    "You follow the pink tail into a room that is full of stuffed animals. They're stacked in piles, people are lying across them in all sorts of poses. This room is the Heavy Petting Zoo, and it looks like people are taking the name as a mandate."
+    "A man in a beige suit stands in the middle of the room, holding a clipboard. \"Ah, look at the zoo's newest acquisitions! And what kind of animals might you be!\""
     show juni happy at slightright with dissolve
-    j "Oh my god. Oh my god. It's a 404 room. This is for me specifically. Someone made this for me."
-    beige "Please note: you are not in Room 404. There is no Room 404. You are not here."
+    j "A Zoo!! I mean, I'm an axolotl! This is my friend who is a probationary salamander for the weekend."
+    "The man in beige smiles."
+    beige "Well welcome, please make yourselves comfortable ;)"
     show juni neutral at slightright
 
     menu:
-        "Play along: \"Sorry. I'm also not here.\"":
-            $ gain("juni", 2)
-            beige "Thank you. Most people argue."
+        "Play along: \"I should get in character! What sounds do axolotls make??\"":
+            $ gain("juni", 4)
+            j "Try flicking your tongue and breathing at the same time."
+            "You try, it's sort of goofy, and you think Juni just wanted to see you wag your tongue around."
             "Juni makes a tiny noise of pure joy inside the hood."
-            j happy "I'm not here either! Lotl's not here! None of us exist!"
+            j happy "That's great, yes that's perfect, keep doing that :)"
 
-        "\"I mean... it's right here, though?\"":
-            beige "Literalism detected."
-            "He hands you a small laminated card. It says ERROR: TOOK IT TOO SERIOUSLY."
-            j neutral "Oof. You have to keep that."
+        "\"I don't even want to think about how gross these stuffed animals are\"":
+            "The man in the beige suit rolls his eyes."
+            beige "You should know better than to yuck someone else's yum. Besides, isn't it good to get a bit dirty every once in a while?"
+            j neutral "I expected you to be a little more willing to play along, I guess you're not great at being in character. I guess I should have known."
 
         "Look over at Juni to see what they do.":
-            $ gain("juni", 1)
-            "Juni leans in and whispers."
-            j neutral "Pretend you're a missing file. Just like... look a little corrupted."
-            "You do your best. The man in beige nods, satisfied."
-
-    "A dialog box pops up on an old monitor in front of Juni. It says: ARE YOU SURE YOU WANT TO BE HERE? There are two buttons. YES. ALSO YES."
-    show juni surprised at slightright
-    menu:
-        j "Which one do I press? It feels like a trick. It's always a trick."
-
-        "\"Press YES. I'll press ALSO YES. We'll both be sure.\"":
             $ gain("juni", 2)
-            "You press your buttons at the same time. The monitor plays a tinny little fanfare. Confetti made of hole-punched paper falls from the ceiling."
-            j happy "We're both sure! That's the most sure I've been about anything in months."
+            "Juni leans in and whispers."
+            j neutral "I wish I was one of those stuffed animals. Just think about what they get to see .. to feel."
+            "The man in beige nods, satisfied."
 
-        "\"There's no wrong answer. That's the trick.\"":
-            $ gain("juni", 1)
-            j neutral "...Huh. Yeah. Okay."
-            "Juni presses ALSO YES. Paper confetti falls from the ceiling."
-
-        "\"Neither. Let's go find a room that actually exists.\"":
-            j neutral "Oh. Right. Yeah, sure."
-            "Juni presses nothing. The dialog box waits patiently. You feel like you've made it sad."
-
+    "You lie down on a pile of Ikea sharks, their teeth wrap around your arms and legs. You just sit there loosely holding each other. It feels right, to be in a sea of stuffed animals, while holding a person sized stuffed animal."
     show juni happy at slightright
     beige "For your records."
-    "The man in beige hands each of you a card: THIS CERTIFIES THAT THE BEARER WAS NEVER HERE."
-    j "I'm keeping this forever. I'm going to frame it. Above my desk. At work. Where nobody will understand."
+    "The man in beige hands each of you a card, it's your animal certifications attesting that you're the zoo's best attraction."
+    j "OMG! I'm keeping this forever. I'm going to frame it. Above my desk at work. Where nobody will understand."
     hide juni with dissolve
     return
 
@@ -175,7 +167,7 @@ label juni_night_2:
 
         "An unsent text you've been carrying around for a year.":
             $ gain("juni", 2)
-            "You write it on one of the little cards and drop it in UNSENT TEXTS. It's lighter than you expected."
+            "You write it on one of the little cards and drop it in UNSENT TEXTS. You feel a weight lift from your shoulders."
             j surprised "Whoa. You just... let it go."
             "Juni picks up a card, writes something, and puts it in UNCLAIMED APOLOGIES without letting you see."
             j neutral "That was an apology I've been waiting for. From someone else. I'm done waiting. It can live here now."
@@ -184,11 +176,10 @@ label juni_night_2:
             $ gain("juni", 1)
             j happy "Oh, good one."
             "Juni writes JUNEBUG on a card and drops it in OLD NICKNAMES with a tiny flourish."
-            j "My manager calls me that. Not anymore. Not in here."
+            j "My manager calls me that. But here people call me what I want to be called."
 
         "A single left sock.":
-            $ gain("juni", 1)
-            j happy "Ha! The classic. Left socks are always the ones that get lost. Science can't explain it."
+            j surprised "Ummm okay. I think this room is supposed to be a bit more metaphorical, but I guess maybe someone will want your gross sock ...and now I have to smell your feet."
 
     "Then you both notice it. The bin labeled ONE (1) COURAGE, SLIGHTLY USED. There's only one card left in it."
     show juni neutral
@@ -199,21 +190,22 @@ label juni_night_2:
             $ gain("juni", 2)
             $ juni_has_courage = True
             j blush "Oh."
-            "Juni holds the card in both sleeves like it's warm. The hood dips down so you can't see their face."
+            "Juni holds the card to their chest like it's warm. The hood dips down so you can't see their face, but you think they might be starting to cry."
             j "Nobody's ever... okay. Okay. I'm going to use this. I don't know on what yet. But I'm going to."
 
         "\"Let's tear it in half. Half each.\"":
             $ gain("juni", 1)
             $ juni_has_courage = True
             j happy "Half a courage each. That's probably the right dose for a weekend."
-            "You tear it carefully down the middle. Juni tucks their half into the hood."
+            "You tear it carefully down the middle. Juni tucks their half into a hidden pocket in their kigurumi."
 
         "Take it. You could use it.":
             j neutral "Good. You'll use it better."
             "They sound like they mean it. They also sound a little like they wanted it."
 
     show juni neutral
-    j "Hey. Juni's short for Juniper. Nobody calls me Juniper. My mom, when I'm in trouble."
+    $ knows_juicero = True
+    j "Hey. Juni's short for Juicero. I know it wasn't popular, but I loved it anyways, just like I hope people love me, even though I'm useless."
     j happy "You can know that. You don't have to use it. I just wanted somebody here to know."
     hide juni with dissolve
     return
@@ -228,9 +220,9 @@ label juni_night_3:
     j "This is the last night. I feel like I should say something important and I don't know what it is."
 
     menu:
-        j "Can I ask you something? Why do you keep finding me? There are seven hundred people here."
+        j "Can I ask you something? Why do you keep finding me? There are like seven hundred people here."
 
-        "\"Because you're the most honest person here, and you're dressed as a salamander.\"":
+        "\"Because you're the most honest person here, and I admire how you're living your full self. Plus you're bright pink and easy to spot.\"":
             $ gain("juni", 2)
             j happy "Hah. That's... okay, that's the nicest thing anyone's said to me in a long time."
 
@@ -246,27 +238,27 @@ label juni_night_3:
     "Juni's sleeve drifts up toward the hood strings. It hovers there."
     show juni neutral
     menu:
-        j "I've been thinking about taking it down. The hood. Not right now. But... soon. Would that be weird?"
+        j "I've been thinking about taking it off. The party's almost over, and I guess I feel like I should face real life, right?"
 
-        "\"Whenever you want. Or never. Both are good.\"":
+        "\"You can be whoever you want, especially around me. I accept you as who you are\"":
             $ gain("juni", 2)
             j blush "Okay."
-            j "Okay. Thank you. That's... it's easier when nobody's waiting for it."
+            j "Okay. Thank you. That's... it's easier when nobody's asking for it."
 
-        "\"I'd really like to see your face. Your whole face.\"":
+        "\"I'd really like to see your face. Your real face.\"":
             $ gain("juni", 1)
-            j neutral "...Soon. I think. Maybe."
-            "Their sleeve stays on the strings a long time. Then it drops."
+            j blush "You're looking at it, here I'm an axolotl - that's the real me, and I like how you look at the real me."
+            "Their sleeve stays on the zipper a long time. Then it drops."
 
         "\"Do it now! Come on!\"":
             $ gain("juni", -1)
-            j surprised "Oh. Um. No. Not now."
-            "Juni pulls the strings tight. The hood closes around their face like a flower at night."
+            j surprised "Oh. Um. No. Not now. I'm not ready yet..."
+            "Juni pulls the strings of their hood tight. The hood closes around their face like a flower at night."
 
     if rapport["juni"] >= ROMANCE_THRESHOLD:
-        j blush "Hey. After the ark... find me? If you want. I'll be the pink one."
+        j blush "Hey. After the big event... find me? If you want. I'll be the pink one."
     else:
-        j neutral "I should go find my roommate before the ark. See you around, okay?"
+        j neutral "I should go find my roommate before the big event. See you around, okay?"
     hide juni with dissolve
     return
 
@@ -274,8 +266,8 @@ label juni_night_3:
 label juni_romance:
     scene bg pool with slowfade
     $ time_label = "Monday — 5:41 AM"
-    "The ballroom is still going when you slip out. The hallways are full of people sitting against the walls in pairs, talking quietly, capes folded into pillows."
-    "You take the back stairs down to the ground floor. The pool hall is empty. The Pool People's banner is lying in a heap by the towel hut, and somebody has tucked it in like a blanket."
+    "The ballroom is still going when you slip out. The hallways are full of people sitting against the walls in pairs, talking quietly, costumes folded into pillows."
+    "You take the back stairs down to the ground floor. The pool is empty. All that's left is party detritus and used towels."
     "The water is perfectly still. Through the old glass roof, the sky over the mountains is just starting to turn gray."
     "And at the edge of the pool, exactly where you first saw them, there's a pink shape with its onesie feet in the water."
     show juni neutral with dissolve
@@ -288,15 +280,15 @@ label juni_romance:
         j "So. How was your first time? Honestly."
 
         "\"I came here not knowing who I'd meet. Now I know a salamander.\"":
-            j happy "A full salamander. You were promoted. It's on your permanent record."
+            j happy "A full salamander. You're promoted. It's on your permanent record."
         "\"Honestly? The best part was the pizza slices.\"" if pool_seen["juni"] >= 2:
-            j happy "The crust one. I knew you'd appreciate the crust one. Nobody appreciates the crust one."
+            j happy "I knew you'd appreciate being a pizza topping. I couldn't stop thinking about how tasty you'd be."
 
     show juni neutral
     if night_seen["juni"] >= 1:
-        "For a while you just talk. About Room 404, and the man in beige who might still be in there, insisting he doesn't exist."
+        "For a while you just talk. About the petting zoo, and the man in beige who might still be in there, observing the other animals."
     else:
-        "For a while you just talk. About the weekend, the rooms, the people in capes, the herald who lost his voice."
+        "For a while you just talk. About the weekend, the rooms, the people in capes, the clown who lost his voice and became a mime."
     if juni_has_courage:
         j "I keep thinking about the courage card from the Lost & Found. I carried it around all weekend in the hood. It's soggy now. I went in the pool twice with it."
         "They hold it up. The card is warped and soft now, the word COURAGE bleeding blue at the edges."
@@ -305,27 +297,23 @@ label juni_romance:
         j "There's a Lost & Found upstairs where you can take a card that says COURAGE. I never got one. I kept chickening out."
         j "So I'm going to try it without the card. Is that okay?"
     j "You can look away if you want. Actually, don't look away. Please don't look away."
-    "Juni reaches up with both sleeves and pulls the hood strings loose. Their hands shake a little. They take a breath like they're about to go underwater."
-    "Then, slowly, they push the hood back."
-    "Lotl falls down their back, gills and all, and lands in the pool with a soft pink splash."
-    "Underneath is short dark hair stuck flat with sweat, and ears you've never seen, and a jaw, and a neck, and a face that's all the way there for the first time all weekend."
+    "Juni steps out of the water, a dripping mess. The kigurumi presses to their body, and in a way it feels right, like they've become one."
     show juni blush
-    j "Hi. This is... the rest of me."
-    j "It's really cold out here without it. Huh. I forgot what air felt like. On the ears. Ears are so weird."
+    j "Hi. This is... the real me."
+    j "It's really cold being so wet, but somehow it feels so right, and a bit hot actually."
 
     menu:
-        "\"Hi, Juniper.\"":
+        "\"Hi, Juicero.\"" if knows_juicero:
             j happy "Oh no. Oh, that's so much worse than I thought. In a good way. In a terrible, good way."
-            j blush "Nobody's said it like that before. Like it wasn't a punishment."
-        "\"Hi, Juni. It's nice to meet all of you.\"":
-            j happy "All of me. Yeah. That's everyone. That's the whole cast."
-            j blush "It's a small cast. But everyone showed up."
+            j blush "Nobody's said it like that before. Like it wasn't a joke. I'm going to have to give you a good squeeze as punishment."
+        "\"Hi, Lotl. It's nice to meet all of you.\"":
+            j happy "All of me. Yeah. This is who I am, and it's nice to be seen by someone who I feel really sees me."
 
     show juni blush
-    "The sky above the glass roof goes from gray to pale pink. Somewhere upstairs, a single kazoo is playing something slow."
+    "The sky above the glass roof goes from gray to pale pink. Somewhere upstairs, there's a party going on, but it's far from your mind."
     j "Three years I've been coming here. Three years I've been standing outside doors, waiting for someone to pull me in."
     j "And this year I spent the whole time hoping it'd be you. And it was. Every time. Even when I didn't wait."
-    j "I don't know what happens Monday. I'll go back to fixing the thing. My manager will call me Junebug. My phone is still in the ice bucket, by the way."
+    j "I don't know what happens Monday. I'll go back to fixing the thing. My manager will ping me at 3 am to fix a server. My phone is still in the ice bucket, by the way."
     j "But I think I want there to be a you on Monday. If that's... if you want that too."
 
     menu:
@@ -342,24 +330,23 @@ label juni_romance:
         "\"Yes.\"":
             "Juni leans over the water. They smell like chlorine and laundry and the tea bar's cardamom."
             "It's a small kiss, a careful one. The kind that asks again halfway through. You answer."
+            if night_seen["juni"] >= 1:
+                "You start petting, first lightly, then heavily, like you should have done in the art room upstairs."
+                "Their body is slimy but good, you embrace, you gyrate, you realize that Juni has always wanted to do this with the suit on. Maybe you do too."
+                "Juni asks you to do that thing with your tongue again, the one they taught you in the petting zoo. Juni tenses, shudders, and releases."
             "When you pull apart, Juni has their eyes shut tight, like they're making a wish."
-        "\"Can I hold your hand first?\"":
-            j happy "Yes. Yes, please. Sleeve's empty, it's just a hand in there."
-            "Their fingers lace through yours. After a while it's the most natural thing in the world to lean in, so you both do."
-            "It's a small kiss, a careful one. Juni laughs into it, just once, from pure surprise."
 
     show juni happy
     j "Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back."
 
     scene bg pool with slowfade
     "The sun comes up over the mountains and pours down through the old glass roof, across the water, gold on every ripple."
-    "Juni's hood floats behind you in the pool, gills spread out on the water, smiling up at the sky."
-    "Neither of you goes to fish it out. Eventually a Pool Person in a gold cape wades in, rescues it with great ceremony, and hangs it on the lifeguard chair to dry, like a flag."
+    if knows_juicero:
+        j "I guess I lived up to my name and gave you a good squeeze after all."
     scene black with slowfade
     "{i}Monday, 9:14 AM. A text from an unknown number.{/i}"
-    j "hi it's juni. juniper. it's me. I sang in the car the whole way home. windows down. it was so bad. a man at a stoplight clapped"
-    j "I took the phone out of the ice bucket. 41 messages from work. I answered none of them. I answered this one"
-    j "are you free thursday. I know a place with a very good crust"
+    j "hi it's juni. Lotl. it's me. I wore my costume to work for Halloween. No one made fun of me, and I felt authentic for the first time"
+    j "are you free thursday. I know a place where we can be ourselves"
     $ chosen = "juni"
     $ ending_name = "Regeneration"
     jump ending_card

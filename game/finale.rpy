@@ -65,7 +65,7 @@ label solo_ending:
     $ time_label = "Monday — 6:00 AM"
     "You end up on the roof alone at sunrise. The rigging is slack. The string lights have burned out one by one, like the party is going to sleep a room at a time."
     "You didn't find your person this weekend. Maybe you weren't looking. Maybe you were looking at everything else."
-    "And there was a lot of everything else. A hotel room that wasn't there. Mute clowns selling shares in people. A war over water, settled by a duck in a golden box."
+    "And there was a lot of everything else. A petting zoo that took its name very seriously. Mute clowns selling shares in people. A golden box with nothing in it, filled by seven hundred people."
     "Seven hundred people in costumes being kind to each other on purpose, for three days, for no reason anyone could name."
     "You sit on the bench and watch the light come over the mountains and across the lake. It's quiet up here. Somewhere below, a single kazoo plays one long note and stops."
     "Down in the parking lot, Tamsin is waving both arms at you, covered in balloons, shouting something you can't hear."
