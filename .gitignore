@@ -29,3 +29,4 @@
 # Keystore files used for signing Android apps.
 /*.keystore
 /vn_test_report.txt
+__pycache__/
