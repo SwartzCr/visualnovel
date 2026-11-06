@@ -105,7 +105,7 @@ All 30 backgrounds and the 20 character sprites are finished Midjourney art. Onl
 | `pool.png` | Every pool scene (an indoor pool under a glass atrium); Juni's ending |
 | `hallway.png` | Night hallways |
 | `bedroom.png` | Mornings (newspaper under the door) |
-| `pettingzoo.png` | Juni night 1 (still the old Room 404 art; prompt in MIDJOURNEY_PROMPTS.md) |
+| `pettingzoo.png` | Juni night 1: the Heavy Petting Zoo |
 | `lostfound.png` | Juni night 2 |
 | `regen.png` | Juni night 3 |
 | `breakfast.png` | Gerald night 1 |
