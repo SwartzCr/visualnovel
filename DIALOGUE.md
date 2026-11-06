@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit 2662dd9 -->
+<!-- exported from commit 2c5adb7 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -19,35 +19,33 @@ Edit this file and send it back; the changes get applied to the game.
 
 > *scene black*  
 > *scene bg exterior*  
-`script:25` The invitation was a paper card with no return address. One side said FRIDAY, 3PM. The other said {i}You were never here.{/i}  
-`script:26` The Hotel Paradiso is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The casino closed in 1987. The hotel never quite noticed.  
-`script:27` This weekend, somebody has rented every room. The big neon sign out front has lost its final O. It now reads HOTEL PARADIS, which half the people in the parking lot insist is French and the other half insist is a prophecy.  
-`script:29` **Tamsin (text):** omg you're here!! go check in. find the person in black. ask before touching. let it get weird  
+`script:25` It was a long drive, but you're finally there - your friend said to come, but was light on details. Your plan is to just see where it goes. Maybe you'll spend the weekend hiding in your room or maybe you'll find your soulmate - who knows!  
+`script:26` The Hotel Paradiso is a sixteen-story hotel-casino on the Nevada shore of Lake Tahoe, built in 1971 and showing every year of it. The people on the casino floor pumping quarters into slot machines are too hypnotized to notice the parade of weirdly dressed people streaming in. You take a deep breath and walk on through, keeping your eyes down.  
 > *scene bg lobby*  
-`script:33` The lobby still has its 1970s carpet, a migraine of orange and purple swirls. Past the front desk, the old casino floor is dark, the slot machines draped in fairy lights and feather boas.  
+`script:31` The lobby still has its 1970s carpet, a migraine of orange and purple swirls. You shuffle towards the front desk only raising your eyes when you hear a voice.  
 > *show wren neutral*  
-`script:36` **Wren:** Hi. Welcome to the Paradiso. I'm Wren, crew. You won't see much of me. If I'm doing my job, nothing breaks and you never know I was here.  
+`script:34` **Wren:** Hi. Welcome to the Paradiso. I'm Wren, crew. Usually I'm working behind the scenes with Black Ops, but I'm filling in here for now. I'd say 'Welcome Home' but this isn't {i}that{/i} party.  
+`script:35` **Wren:** Is this your first time? Don't worry, everything's going to go great - I'll see to that. We don't bite ... mostly ;)  
 
 > **Choice**
-`script:39` **Wren:** Any questions before I let you loose?  
+`script:38` **Wren:** Any questions before I let you loose?  
 
-`script:41` **▸** "Is there anything you need help with right now?"  
+`script:40` **▸** "Is there anything you need help with right now?"  
 > *rapport +1 Wren*  
-`script:43` **Wren (surprised):** Huh. Nobody asks crew that.  
-`script:44` **Wren (neutral):** I'm fine. But hold that thought. I might cash it in at 3 AM when the fog machine catches fire.  
+`script:42` **Wren (surprised):** Huh. Nobody asks crew that.  
+`script:43` **Wren (neutral):** I'm all set here, you're one of the last people to arrive. But hold that thought. I might cash it in at 3 AM when the Carpet Master catches fire.  
 
-`script:46` **▸** "Are there rules?"  
-`script:47` **Wren:** Two that matter. No photos, and ask before you touch anyone. Everything else is a suggestion.  
+`script:45` **▸** "What if I can't handle it?"  
+`script:46` **Wren:** Find your way to The Cozy and Auntie Acid will fix you right up. If things get really bad come find me.  
 
-`script:49` **▸** "So what {i}is{/i} this, exactly?"  
-`script:50` **Wren:** Nobody's allowed to say. The second anyone says it out loud, it turns into a brochure.  
+`script:48` **▸** "So what {i}is{/i} this, exactly?"  
+`script:49` **Wren:** A safe container for you to express yourself. It'll get weird, but just maybe you will too.  
 > *(end of choice)*
 
-`script:52` **Wren (neutral):** Here's the only advice I give first-timers. Don't watch. Nobody here is an audience.  
-`script:53` **Wren:** Walk into the room you'd normally walk past. Say the thing you'd normally keep to yourself. Be whoever you actually are. This is the one weekend nobody's going to laugh at you for it.  
-`script:54` **Wren (happy):** And somebody's probably going to catch your eye this weekend. It happens to everyone their first time. Let it.  
-`script:55` **Wren (neutral):** Pool's on the ground floor in the afternoons. Hallways all night. Go find out who you are here.  
-`script:58` Tip: open the {color=#ff5fb8}Guests{/color} menu at the bottom of the screen to see everyone you've met.  
+`script:51` **Wren (neutral):** Here's the only advice I give first-timers. Don't watch, participate. We are all the actors and the whole hotel is a stage.  
+`script:52` **Wren:** Push your boundaries. Walk into the room you'd normally walk past. Say the thing you'd normally keep to yourself. Be whoever you actually are. This is the one weekend nobody's going to laugh at you for it.  
+`script:53` **Wren (neutral):** Oh right, the pool's on the ground floor. You can hang out there in the afternoons. The hallways will be popping all night. Now get out there and be yourself. Welcome to the party!  
+`script:56` Tip: open the {color=#ff5fb8}Guests{/color} menu at the bottom of the screen to see everyone you've met.  
 > *→ jump the_weekend*  
 
 ## the_weekend
@@ -62,65 +60,61 @@ Edit this file and send it back; the changes get applied to the game.
 
 > *scene bg bedroom*  
 > *if day == 2:*  
-`script:83` You wake up on top of the covers in your shoes, in a room you're fairly sure is yours. Someone has drawn a small, friendly eye on the bathroom mirror in lipstick.  
-`script:84` A newspaper has been slid under the door.  
-`script:85` {b}THE DAILY DISTURBANCE{/b} — Saturday Edition  
-`script:86` {i}HEADLINE: POOL PEOPLE ACCUSE ICE MACHINE OF 'COLDNESS.' ICE MACHINE: 'WE ARE THE SAME WATER.'{/i}  
-`script:87` {i}HOROSCOPE (all signs): Today someone will tell you a secret about themselves. Do not make it about you. Do not make it a podcast.{/i}  
-`script:88` {i}LOST AND FOUND: One (1) Sasquatch footprint, left foot. Please return to the tea bar.{/i}  
+`script:81` You wake up on top of the covers in your shoes, in a room you're fairly sure is yours. Someone has drawn a small, friendly eye on the bathroom mirror in lipstick.  
+`script:82` A newspaper has been slid under the door.  
+`script:83` {b}THE DAILY STICK{/b} — Saturday Edition  
+`script:84` {i}HEADLINE: The body accuses the mind of having "Lost The Thread" while new guests complain about the amount of in jokes. More on page 3.{/i}  
+`script:85` {i}HOROSCOPE (all signs): Today someone will tell you a secret about themselves. Try to listen, do not make it about you.{/i}  
+`script:86` {i}IN: Metafiction, callbacks, romantasy. OUT: Veiled metaphors, doomerism, clown car-culture.{/i}  
 > *else:*  
-`script:90` Sunday. The light through the window is the color of weak tea. Somewhere below, a single kazoo is playing what might be the national anthem of a country that doesn't exist yet.  
-`script:91` {b}THE DAILY DISTURBANCE{/b} — Sunday (Final) Edition  
-`script:92` {i}HEADLINE: SOURCES CONFIRM SOMETHING ARRIVES AT 11:11. SOURCES DECLINE TO SAY WHAT. SOURCES ARE ALIENS.{/i}  
-`script:93` {i}HOROSCOPE (all signs): The last night of anything is the one you'll remember. Say the thing. Ask first. Then say the thing.{/i}  
-`script:94` {i}CLASSIFIEDS: Have you seen my friend? Answers to Tamsin. Last seen inside a balloon. — Tamsin{/i}  
+`script:88` Sunday. The light through the window is the color of weak tea. Somewhere below you can hear the faint pounding of bass from a renegade sound system.  
+`script:89` {b}THE DAILY STICK{/b} — Sunday (Final) Edition  
+`script:90` {i}HEADLINE: SOURCES CONFIRM SOMETHING ARRIVES AT 11:11. BEST TO MAKE YOUR WISHES NOW.{/i}  
+`script:91` {i}HOROSCOPE (all signs): The last night of anything is the one you'll remember. Try to stay sober enough to follow through.{/i}  
+`script:92` {i}MARKET REPORT: The Free Hugs booth has capitulated to market forces, hugs will now be available only for those with a monthly subscription. Shrugs will remain free. {/i}  
 
 ## pool_time
 
 > *scene bg pool*  
 > *if day == 1:*  
-`script:108` The pool is the bright, ordinary half of the party: an indoor pool hall on the ground floor, under a big old glass atrium roof gone green at the seams. Towels, chlorine, potted palms, and the Pool People's banner strung over the deep end: WATER IS WARM. WATER IS LOVE.  
-`script:109` The Pool People, you gather, are at war with the Order of the Ice Machine over the true nature of water. It's supposed to be settled Sunday at 11:11 PM.  
-`script:110` Most of the costumes have been swapped for swimsuits. Some have not. Some never will be.  
+`script:106` The pool is the bright, (somewhat) ordinary half of the party: an indoor pool on the ground floor, under a big old glass atrium roof gone green at the seams. The smell of chlorine permeates the air.  
+`script:107` Most of the costumes have been swapped for swimsuits. Some have not. To the extent that they can people are letting their freak flags fly. Someone brought in a sound system and you can barely make conversation over the sound of the music, but you try anyway.  
 > *elif day == 2:*  
-`script:112` The pool on Saturday afternoon is full of people recovering from Friday night. Someone is teaching a slow-motion water aerobics class to no music at all.  
-`script:113` A herald in a gold cape walks the deck with a scroll.  
-`script:114` **The Herald:** HEAR YE! The Order of the Ice Machine has frozen three of our pool noodles! The Pool People demand reparations in the form of warmth!  
+`script:109` The pool on Saturday afternoon is full of people recovering from Friday night. Someone is teaching a slow-motion water aerobics class to no music at all. You revel in the silence.  
 > *else:*  
-`script:116` Last afternoon. The pool has the sleepy tenderness of a place where a lot of people have cried in a good way.  
-`script:117` The Pool People have lowered their banner to half mast, out of respect, or because the rope broke.  
+`script:111` Last afternoon. The pool has the sleepy tenderness of a place where a lot of people have cried in a good way.  The party isn't over but most people blew their wads already. You've still got a little left in the tank.  
 
 > **Choice**
-`script:120` Who do you spend the afternoon with?  
+`script:114` Who do you spend the afternoon with?  
 
-`script:122` **▸** A pink axolotl kigurumi, sitting fully dressed at the pool's edge, looking very hot.  
+`script:116` **▸** A pink axolotl kigurumi, sitting fully dressed at the pool's edge, looking very hot.  
 > *(shown if pool_seen["juni"] == 0)*  
 
-`script:124` **▸** Juni the axolotl, floating face-up on a pizza-shaped inflatable.  
+`script:118` **▸** Juni the axolotl, floating face-up on a pizza-shaped inflatable.  
 > *(shown if pool_seen["juni"] == 1)*  
 
-`script:127` **▸** A Sasquatch in an innertube in the shallow end, holding a teacup above the water.  
+`script:121` **▸** A Sasquatch in an innertube in the shallow end, holding a teacup above the water.  
 > *(shown if pool_seen["gerald"] == 0)*  
 
-`script:129` **▸** Gerald, leading a very slow 'forest bathing' session on the pool deck.  
+`script:123` **▸** Gerald, leading a very slow 'forest bathing' session on the pool deck.  
 > *(shown if pool_seen["gerald"] == 1)*  
 
-`script:132` **▸** A raver in fur leg warmers, handing out glitter like communion.  
+`script:126` **▸** A raver in covered in kandi beads, handing out glitter like communion.  
 > *(shown if pool_seen["solstice"] == 0)*  
 
-`script:134` **▸** Solstice, asleep on a lounger right under one of the big heat lamps, LED top switched off.  
+`script:128` **▸** Solstice, asleep on a lounger right under one of the big heat lamps, LED bikini top switched off.  
 > *(shown if pool_seen["solstice"] == 1)*  
 
-`script:137` **▸** A person in black fishing a disco ball out of the deep end with a net.  
+`script:131` **▸** A person in black fishing a disco ball out of the deep end with a net.  
 > *(shown if pool_seen["wren"] == 0)*  
 
-`script:139` **▸** Wren, eating a sad sandwich behind the towel hut.  
+`script:133` **▸** Wren, eating a sad sandwich behind the towel hut.  
 > *(shown if pool_seen["wren"] == 1)*  
 
-`script:142` **▸** A silver alien under a beach umbrella, indoors, studying the pool with great suspicion.  
+`script:136` **▸** A silver alien under a beach umbrella, indoors, studying the pool with great suspicion.  
 > *(shown if pool_seen["zyx"] == 0)*  
 
-`script:144` **▸** Zyx, collecting lost flip-flops in a bag labeled EARTH ARTIFACTS.  
+`script:138` **▸** Zyx, collecting lost flip-flops in a bag labeled EARTH ARTIFACTS.  
 > *(shown if pool_seen["zyx"] == 1)*  
 > *(end of choice)*
 
@@ -130,79 +124,78 @@ Edit this file and send it back; the changes get applied to the game.
 
 > *scene bg hallway*  
 > *if day == 1:*  
-`script:163` Night falls and the Paradiso turns inside out. Every door is open. Every room is something else now.  
-`script:164` Bass comes up through the carpet from the ballroom. Someone in a cape runs past you holding a lit candle and a stapler, apologizing.  
+`script:157` Night falls and the Paradiso turns inside out. Every door is open, inviting you.  
+`script:158` Bass comes up through the carpet from the ballroom. A group of people tied together with a giant ball of yarn stumble past you.  
 > *elif day == 2:*  
-`script:166` Saturday night. The hallways are louder and stranger. A troupe of mute clowns in fishnets moves through the crowd selling shares in people.  
-`script:167` A walkie-talkie taped to the ceiling crackles: {i}Room 404 has been located. Repeat. Room 404 has been located.{/i}  
+`script:160` Saturday night. The hallways are louder and stranger. A troupe of mute clowns in fishnets moves through the crowd writing notes on invisible clipboards and nodding in approval.  
 > *else:*  
-`script:169` Sunday night. The last night. The tickers in the stairwell all read the same thing: 11:11.  
-`script:170` People are hugging in doorways for no reason. You catch yourself doing it too.  
+`script:162` Sunday night. The last night. The clocks in the stairwell all read the same thing: 11:11.  
+`script:163` Everyone looks slightly fried, like they're on the edge of breaking into laughter or tears. You take a few deep breaths trying to recenter yourself for another adventure.  
 > *→ call random_encounter*  
 > *→ call hallway_encounter*  
 > *scene bg hallway*  
 > *if day == 3:*  
-`script:176` It's 10:40. You have time for one more thing before the ark.  
+`script:169` It's 10:40. You have time for one more thing before the big show.  
 > *else:*  
-`script:178` The night isn't over. The hallway takes you back.  
+`script:171` The night isn't over. The hallway takes you back.  
 > *→ call hallway_encounter*  
 > *if day < 3:*  
 > *scene bg hallway*  
-`script:183` Somewhere around four in the morning, the hallway gets quiet enough to hear the ice machine humming to itself. You find your room by touch.  
+`script:176` Somewhere around four in the morning, the hallway finally gets quiet enough to hear the ice machine humming to itself. You find your room by touch.  
 
 ## hallway_encounter
 
 > *scene bg hallway*  
 
 > **Choice**
-`script:190` Which way do you wander?  
+`script:183` Which way do you wander?  
 
-`script:192` **▸** A pink glowing tail disappears into a room with no number.  
+`script:185` **▸** A pink glowing tail disappears into a room piled to the ceiling with stuffed animals.  
 > *(shown if night_seen["juni"] == 0 and "juni" not in met_tonight)*  
 
-`script:194` **▸** Juni is standing very still in front of a door labeled LOST & FOUND.  
+`script:187` **▸** Juni is standing very still in front of a door labeled LOST & FOUND.  
 > *(shown if night_seen["juni"] == 1 and "juni" not in met_tonight)*  
 
-`script:196` **▸** Blue light pours out of a room that sounds like the bottom of a lake. An axolotl hood bobs in the doorway.  
+`script:189` **▸** Blue light pours out of a room that sounds like the bottom of a lake. An axolotl hood bobs in the doorway.  
 > *(shown if night_seen["juni"] == 2 and "juni" not in met_tonight)*  
 
-`script:199` **▸** A very tall shape is being dragged down the hall by two rival breakfast cults.  
+`script:192` **▸** A very tall shape is being dragged down the hall by two rival breakfast cults.  
 > *(shown if night_seen["gerald"] == 0 and "gerald" not in met_tonight)*  
 
-`script:201` **▸** Room 312 smells like rain and cedar. A Sasquatch is standing in the doorway, not going in.  
+`script:194` **▸** Room 312 smells like rain and cedar. A Sasquatch is standing in the doorway, not going in.  
 > *(shown if night_seen["gerald"] == 1 and "gerald" not in met_tonight)*  
 
-`script:203` **▸** Through a door marked SUPPORT GROUP, you see Gerald in a folding chair that is much too small.  
+`script:196` **▸** Through a door marked SUPPORT GROUP, you see Gerald in a folding chair that is much too small.  
 > *(shown if night_seen["gerald"] == 2 and "gerald" not in met_tonight)*  
 
-`script:206` **▸** LED lights and a cheering crowd: someone is buying and selling people on the stock exchange.  
+`script:199` **▸** LED lights and a cheering crowd: someone is buying and selling people on the stock exchange.  
 > *(shown if night_seen["solstice"] == 0 and "solstice" not in met_tonight)*  
 
-`script:208` **▸** From a curtained booth, Solstice's voice, singing a confession very badly and very sincerely.  
+`script:201` **▸** From a curtained booth, Solstice's voice, singing a confession very badly and very sincerely.  
 > *(shown if night_seen["solstice"] == 1 and "solstice" not in met_tonight)*  
 
-`script:210` **▸** The ballroom. Lasers. In the middle of the floor, Solstice, dancing like it's the last song on Earth.  
+`script:203` **▸** The ballroom. Lasers. In the middle of the floor, Solstice, dancing like it's the last song on Earth.  
 > *(shown if night_seen["solstice"] == 2 and "solstice" not in met_tonight)*  
 
-`script:213` **▸** Behind a door marked BACKSTAGE, something is sparking. A voice says: "No no no no no."  
+`script:206` **▸** Behind a door marked BACKSTAGE, something is sparking. A voice says: "No no no no no."  
 > *(shown if night_seen["wren"] == 0 and "wren" not in met_tonight)*  
 
-`script:215` **▸** A door marked STAFF ONLY is open a crack. Inside, someone in a headset says your name.  
+`script:208` **▸** A door marked STAFF ONLY is open a crack. Inside, someone in a headset says your name.  
 > *(shown if night_seen["wren"] == 1 and "wren" not in met_tonight)*  
 
-`script:217` **▸** The stairwell to the roof is propped open. Wren's walkie is chirping somewhere above.  
+`script:210` **▸** The stairwell to the roof is propped open. Wren's walkie is chirping somewhere above.  
 > *(shown if night_seen["wren"] == 2 and "wren" not in met_tonight)*  
 
-`script:220` **▸** A silver figure is feeding ping-pong balls into a robot and taking notes.  
+`script:213` **▸** A silver figure is feeding ping-pong balls into a robot and taking notes.  
 > *(shown if night_seen["zyx"] == 0 and "zyx" not in met_tonight)*  
 
-`script:222` **▸** Two nurses are wheeling a protesting alien into the Clinic of Unnecessary Procedures.  
+`script:215` **▸** Two nurses are wheeling a protesting alien into the Clinic of Unnecessary Procedures.  
 > *(shown if night_seen["zyx"] == 1 and "zyx" not in met_tonight)*  
 
-`script:224` **▸** The ice machine alcove is glowing. Zyx's antennae are silhouetted against a field of stars.  
+`script:217` **▸** The ice machine alcove is glowing. Zyx's antennae are silhouetted against a field of stars.  
 > *(shown if night_seen["zyx"] == 2 and "zyx" not in met_tonight)*  
 
-`script:227` **▸** Don't follow anyone. Just wander.  
+`script:220` **▸** Don't follow anyone. Just wander.  
 > *(end of choice)*
 
 > *if who is None:*  
@@ -214,38 +207,37 @@ Edit this file and send it back; the changes get applied to the game.
 
 > *if wanders == 1:*  
 > *scene bg livingroom*  
-`script:244` You follow the smell of cardamom to a suite with a hand-painted sign on the door: THE COZY. Inside, someone has rebuilt a whole living room, down to the doilies.  
-`script:245` **Auntie Acid:** Sit, sit. Have a candy. They're strawberry. Everything here is strawberry, that's the rule.  
-`script:246` Auntie Acid is maybe sixty-five, in a kaftan covered in hand-sewn mirrors. She rocks. She hums. She has, you'd bet, seen some things.  
-`script:247` **Auntie Acid:** First time? You've got first-time eyes. That's all right. Everyone here was new once. Even the Sasquatch.  
-`script:248` **Auntie Acid:** Here's the only advice I give, sweetheart. Don't come to watch. Come to be watched by something bigger than you. Then go be kind to somebody.  
-`script:249` You eat the candy. It's very strawberry. You leave feeling oddly blessed.  
+`script:237` You follow the smell of cardamom to a suite with a hand-painted sign on the door: THE COZY. Inside, someone has rebuilt your grandmothers living room, down to the doilies.  
+`script:238` **Auntie Acid:** Sit, sit. You look confused, and maybe a little tired. Don't be, take a seat and have some tea.  
+`script:239` Auntie Acid is maybe sixty-five, in a kaftan covered in hand-sewn mirrors. She rocks. She buzzes with an inner energy. She has, you'd bet, seen some things.  
+`script:240` **Auntie Acid:** First time? You've got first-time eyes. That's all right. Everyone here was new once. Even the Sasquatch.  
+`script:241` **Auntie Acid:** Here's the only advice I give, sweetheart. Be yourself, feel good as yourself, then go be kind to somebody.  
+`script:242` You leave feeling oddly blessed, only remembering later that you forgot to drink your tea.  
 > *elif wanders == 2:*  
 > *scene bg exchange*  
-`script:252` You wander into the Human Stock Exchange alone. A mute clown in a bra and fishnets immediately pantomimes, with great urgency, that you must sell shares of yourself.  
-`script:253` You sell eleven percent of yourself to a woman dressed as a lighthouse. The ticker above you reads YOU ▲0.4.  
-`script:254` It feels great. You don't know why. You leave before the market can correct.  
+`script:245` You wander into the Human Stock Exchange alone. An Auguste clown in a pointed bra and fishnets immediately pantomimes, with great urgency, that you must sell shares of yourself.  
+`script:246` You sell eleven percent of yourself to a woman dressed as sexy Garfield. The ticker above you reads YOU ▲0.4.  
+`script:247` It feels great to be on the winning side of capitalism for once. You feel weirdly giddy and guilty, and rush out the door before the market can correct.  
 > *else:*  
 > *scene bg cryptid*  
-`script:257` You find an empty folding-chair circle in a room labeled CRYPTIDS ANONYMOUS. There's an inflatable Loch Ness Monster wearing a name tag.  
-`script:258` You sit down for a second. The silence is really nice. Nessie doesn't judge.  
-`script:259` When you get up, someone has left a small note on your chair: {i}you are not blurry here.{/i}  
+`script:250` You find an empty folding-chair circle in a room labeled CRYPTIDS ANONYMOUS. There's an inflatable Loch Ness Monster wearing a name tag.  
+`script:251` You sit down for a second. The silence is really nice. Nessie doesn't judge.  
+`script:252` When you get up, someone has left a small note on your chair: {i}you are not blurry here.{/i}  
 
 ## ceremony
 
 > *scene bg ballroom*  
-`script:270` At 11:05 the music stops.  
-`script:271` Seven hundred people in costume stand in the ballroom in the dark, breathing. Someone whispers {i}is it happening{/i} and fifty people go {i}shhhhhh{/i}.  
-`script:272` At 11:11 the doors at the back of the ballroom swing open.  
+`script:263` At 11:05 the music stops.  
+`script:264` Seven hundred people in costume shuffle into the ballroom in the dark, holding their breath. Someone whispers {i}is it happening{/i} and fifty people go {i}shhhhhh{/i}.  
+`script:265` At 11:11 the doors at the back of the ballroom swing open.  
 > *scene bg ballroom_ark*  
-`script:274` A procession of people in silver alien suits carries a golden ark through the crowd. It's covered in psychedelic patterns. On the front, in big friendly letters: DON'T PANIC.  
-`script:275` Up on the stage, the leader of the Pool People and the High Abbot of the Ice Machine face each other. They have been at war over the true nature of water all weekend.  
-`script:276` The aliens set the ark between them and open the lid.  
-`script:277` Inside is a single rubber duck.  
-`script:278` The ballroom is completely silent for three full seconds.  
-`script:279` Then the High Abbot of the Ice Machine starts to cry, and the leader of the Pool People starts to cry, and they hug, because of course. Ice is water. A pool is water. A duck floats on both. They were never at war.  
-`script:280` The bass drops so hard the chandelier swings. Seven hundred people scream. Confetti falls from somewhere it couldn't possibly have been hidden.  
-`script:281` It is incredibly stupid. You are crying too.  
+`script:267` A procession of people in silver alien suits carries a golden ark through the crowd. It's covered in psychedelic patterns. On the front, in big friendly letters: DON'T PANIC.  
+`script:268` Up on the stage, the leader of the covenant grabs a mic and delivers a rousing speech. You only catch bits and pieces, something about grabbing life by the cockles, and riding the bubbles pop into the sunset.  
+`script:269` The aliens set the ark between them and open the lid.  
+`script:270` Inside it's empty, your enthusiasm is what fills it. You realize that society is also a shared hallucination. This doesn't end here.  
+`script:271` The ballroom is completely silent for three full seconds.  
+`script:272` Then the bass drops so hard the chandelier swings. Seven hundred people scream. Confetti falls from everywhere.  
+`script:273` It is incredibly goofy, but heartfelt. You feel yourself beginning to tear up.  
 
 ---
 
@@ -253,7 +245,7 @@ Edit this file and send it back; the changes get applied to the game.
 
 ## juni_pool_1
 
-`juni:5` At the edge of the pool, fully zipped into a pink axolotl kigurumi, someone is sitting with their onesie feet in the water. The feet are soaked. They do not seem to care.  
+`juni:5` At the edge of the pool, fully zipped into a pink axolotl kigurumi, someone is sitting with their onesie feet in the water. The bottom half of the onesie is soaked, but they do not seem to care.  
 `juni:6` The hood has its own little face on top, with two black eyes and a smile. Feathery gills fan out from either side. Under it, a real face, very pink, very warm.  
 > *show juni neutral*  
 `juni:8` **Juni:** Oh. Hi. Sorry. You're standing in my, um, sun. It's fine. I don't need the sun. I'm a cold-water creature.  
@@ -263,12 +255,12 @@ Edit this file and send it back; the changes get applied to the game.
 
 `juni:12` **▸** "Aren't you dying in that thing?"  
 `juni:13` **Juni:** Yes. Axolotls are native to cold lakes in Mexico City. I am, therefore, suffering.  
-`juni:14` **Juni:** It's fine. I'm used to it. The hood is load-bearing.  
+`juni:14` **Juni:** But without this I don't know who I am, so probably best to keep it on.  
 
 `juni:16` **▸** "Does your axolotl have a name?"  
 > *rapport +2 Juni*  
 `juni:18` **Juni (surprised):** Nobody's ever asked her name.  
-`juni:19` **Juni (happy):** She's called Lotl. Lotl the axolotl. I'm aware that's not creative. She doesn't mind.  
+`juni:19` **Juni (happy):** She's called Lotl. Lotl the axolotl. I'm aware that's not creative but AI wrote this part and I'm too lazy to change it.  
 `juni:20` **Juni:** I'm Juni. She's Lotl. We're a package deal this weekend.  
 
 `juni:22` **▸** Sit down next to them and put your feet in the water too, without saying anything.  
@@ -280,365 +272,347 @@ Edit this file and send it back; the changes get applied to the game.
 
 > *show juni neutral*  
 `juni:29` A little while later Juni is explaining that axolotls can regrow almost anything. Legs. Tails. Parts of their own hearts. Even bits of their brains.  
-`juni:30` **Juni:** Out there, I work in databases. I'm the person who gets messaged at two in the morning because 'the thing is down.' I'm the guy who fixes the thing.  
+`juni:30` **Juni:** Out there, I work in databases. I'm the person who gets messaged at two in the morning because 'the thing is down.'  
 `juni:31` **Juni:** In here I'm a salamander. Salamanders don't have to be impressive. They just have to be wet and kind of cute.  
 
 > **Choice**
 
-`juni:34` **▸** "Do you ever take the hood off?"  
+`juni:34` **▸** "Which do you feel more comfortable as, Juni or Lotl?"  
 `juni:35` **Juni (surprised):** Oh. Um.  
 `juni:36` Juni pulls the hood strings a little tighter, like a reflex.  
-`juni:37` **Juni (neutral):** Not yet. Maybe never. Maybe Sunday. I don't know. It's... a thing.  
+`juni:37` **Juni (neutral):** I'm not sure. I feel so free here, but this is the only place I can be Lotl ... right?  
 
 `juni:39` **▸** "If you could regrow anything, what would it be?"  
 > *rapport +2 Juni*  
-`juni:41` Juni goes quiet for a long time. The Pool People's banner snaps in the wind.  
+`juni:41` Juni goes quiet for a long time. You take the lull in the conversation to appreciate the music playing across the pool.  
 `juni:42` **Juni (neutral):** There used to be a part of me that sang in the car. Really loud. Badly. With the windows down.  
 `juni:43` **Juni:** It fell off around year three of the job. I think I'd regrow that.  
-`juni:44` **Juni (blush):** Sorry. That was a lot for a pool.  
+`juni:44` **Juni (blush):** Sorry. That was a lot for a poolside chat. With a stranger! Well you used to be a stranger...  
 
 `juni:46` **▸** "Being unimpressive sounds amazing. Can I be a salamander too?"  
 > *rapport +1 Juni*  
-`juni:48` **Juni (happy):** Applications are open. You'd need a hood. And to commit to being damp.  
+`juni:48` **Juni (happy):** Applications are open. You'd need a suit. And to commit to being damp.  
 `juni:49` **Juni:** Probationary salamander. I'll allow it.  
+
+`juni:51` **▸** "Let me ask a question to Lotl."  
+> *rapport −1 Juni*  
+`juni:53` You lean down and address the little face on top of the hood, very seriously.  
+`juni:54` **Juni (surprised):** Oh. Um. Lotl doesn't... she doesn't really talk to people she just met.  
+`juni:55` **Juni (neutral):** Sorry. I think I'm going to go dry off. Or, um, get wetter. Somewhere else.  
+`juni:56` Juni gets up, squelching, and pads away along the edge of the pool. The little face on the hood stares back at you the whole way.  
 > *(end of choice)*
 
-`juni:51` Without warning, Juni slides off the edge into the pool, fully dressed. The kigurumi balloons up around them like a pink jellyfish.  
-`juni:52` **Juni (happy):** Ahhh. Regeneration.  
-`juni:54` You decide that's the best thing you've seen all day.  
+`juni:60` Without warning, Juni slides off the edge into the pool, fully dressed. The kigurumi balloons up around them like a pink jellyfish.  
+`juni:61` **Juni (happy):** Ahhh. Regeneration.  
+`juni:63` You smile inside. Maybe you're not so bad at making friends after all.  
 
 ## juni_pool_2
 
-`juni:59` Juni is floating face-up on an inflatable pizza slice, hood up, gills drooping in the heat. There's a second, smaller pizza slice tied to theirs by a string.  
+`juni:68` Juni is floating face-up on an inflatable pizza slice, hood up, gills drooping in the heat. There's a second, smaller pizza slice tied to theirs by a string.  
 > *show juni happy*  
-`juni:61` **Juni:** You came back. I saved you a slice. It's the crust one. Nobody wants the crust one, but it's very stable.  
-`juni:62` You climb onto the crust. You drift together toward the deep end, where the herald is shouting about pool noodles.  
+`juni:70` **Juni:** You came back. I saved you a slice.  
+`juni:71` You climb onto the crust. You drift together toward the deep end, where the some clowns are pantomiming having phone sex.  
 > *show juni neutral*  
 
 > **Choice**
-`juni:65` **Juni:** So, what do you do? Like, out there.  
+`juni:74` **Juni:** So, what do you do? Like, out there.  
 
-`juni:67` **▸** "Out there I'm someone else. In here I'm still figuring out who."  
+`juni:76` **▸** "Out there I'm someone else. In here I'm still figuring out who."  
 > *rapport +2 Juni*  
-`juni:69` **Juni (surprised):** Oh.  
-`juni:70` **Juni (blush):** Yeah. Exactly that. That's exactly it.  
+`juni:78` **Juni (surprised):** Oh.  
+`juni:79` **Juni (blush):** Yeah. I get that. I hope you figure it.. I hope I figure it out too.  
 
-`juni:72` **▸** "Honestly? I'd rather not talk about work this weekend."  
+`juni:81` **▸** "Honestly? I'd rather not talk about work this weekend."  
 > *rapport +1 Juni*  
-`juni:74` **Juni (happy):** Oh thank god. Me neither. I put my work phone in a ziplock bag in the hotel ice bucket.  
-`juni:75` **Juni:** It's an aquarium now. It's very calm in there.  
+`juni:83` **Juni (happy):** Oh thank god. Me neither. I put my work phone in a ziplock bag in the hotel ice bucket.  
+`juni:84` **Juni:** It's an aquarium now. It's very calm in there.  
 
-`juni:77` **▸** Make something up: "I'm a professional lighthouse."  
+`juni:86` **▸** Make something up: "I'm a professional lighthouse."  
 > *rapport +1 Juni*  
-`juni:79` **Juni (happy):** Hah! Is it hard? Being a lighthouse?  
-`juni:80` **Juni:** Actually don't answer. I want to imagine it. You just stand on a rock being helpful at boats.  
+`juni:88` **Juni (happy):** Hah! Is it hard? Being a lighthouse?  
+`juni:89` **Juni:** Actually don't answer. I want to imagine it. You just stand on a rock being helpful at boats.  
 > *(end of choice)*
 
 > *show juni neutral*  
-`juni:83` Juni tells you this is their third year. Their roommate vouched for them the first time. That year they didn't leave their hotel room until Saturday.  
-`juni:84` **Juni:** The second year I made it to the pool. This year I got stuck in the revolving door and Wren had to rescue me, and somehow that broke the seal. I've talked to like nine people.  
-`juni:85` **Juni:** Ten. Ten with you.  
+`juni:92` Juni tells you this is their third year. Their roommate vouched for them the first time. That year they didn't leave their hotel room until Saturday.  
+`juni:93` **Juni:** The second year I made it to the dance floor but was too shy to talk to anyone. This year I got stuck in the revolving door and Wren had to rescue me, and somehow that broke the seal. I've talked to like nine people.  
+`juni:94` **Juni:** Ten. Ten with you.  
 
 > **Choice**
-`juni:88` **Juni:** Can I tell you something embarrassing?  
+`juni:97` **Juni:** Can I tell you something embarrassing?  
 
-`juni:90` **▸** "Always."  
+`juni:99` **▸** "Always."  
 > *rapport +2 Juni*  
-`juni:92` **Juni (blush):** I've been coming here three years and I've never once gone into an art room alone.  
-`juni:93` **Juni:** I wait outside until somebody pulls me in. Like a cat at a door.  
-`juni:94` **Juni:** I think I'm... sort of hoping it's you who pulls me in. This weekend. If that's not weird.  
+`juni:101` **Juni (blush):** I've been coming here three years and I've never once gone into an art room alone.  
+`juni:102` **Juni:** I wait outside until somebody pulls me in. Like a cat at a door.  
+`juni:103` **Juni:** I think I'm... sort of hoping it's you who pulls me in. This weekend. If that's not weird.  
 
-`juni:96` **▸** "Only if I get to tell you one back."  
+`juni:105` **▸** "Only if I get to tell you one back."  
 > *rapport +1 Juni*  
-`juni:98` **Juni (neutral):** Deal. I've never gone into an art room by myself. I wait outside until somebody pulls me in.  
-`juni:99` You tell them your embarrassing thing. Juni laughs so hard the pizza slice spins in a slow circle.  
+`juni:107` **Juni (neutral):** Deal. I'm so worried that someone from work will see me here that I sometimes don't want to leave my room. Or well I used to be, talking about it now, maybe I finally don't care.  
+`juni:108` You tell them your embarrassing thing. Being walked in on, while having sex, dressed in full clown makeup. Juni laughs so hard the pizza slice spins in a slow circle.  
 
-`juni:101` **▸** "Is it about the hood?"  
-`juni:102` **Juni (neutral):** Everything is about the hood.  
-`juni:103` They sigh, and tell you anyway: three years, and they've never gone into an art room alone.  
+`juni:110` **▸** "Is it about the kigurumi?"  
+`juni:111` They sigh, and tell you: "never mind, it wasn't important anyway."  
 > *(end of choice)*
 
-`juni:105` **Juni (happy):** Okay. You know my secret now. That means you're responsible for me.  
-`juni:106` They say it like a joke. They don't let go of the string between your pizzas for the rest of the afternoon.  
+`juni:113` **Juni (happy):** Okay. You know my secret now. That means you're responsible for me.  
+`juni:114` They say it like a joke. They don't let go of the string between your pizzas for the rest of the afternoon.  
 
 ## juni_night_1
 
-> *scene bg room404*  
-`juni:113` You follow the pink tail into a room that is blinding white. Error messages hang from the ceiling on fishing line. A giant sign on the wall reads 404 — ROOM NOT FOUND.  
-`juni:114` A man in a beige suit stands in the middle of the room, holding a clipboard, looking straight through you.  
+> *scene bg pettingzoo*  
+`juni:121` You follow the pink tail into a room that is full of stuffed animals. They're stacked in piles, people are lying across them in all sorts of poses. This room is the Heavy Petting Zoo, and it looks like people are taking the name as a mandate.  
+`juni:122` A man in a beige suit stands in the middle of the room, holding a clipboard. "Ah, look at the zoo's newest acquisitions! And what kind of animals might you be!"  
 > *show juni happy at slightright*  
-`juni:116` **Juni:** Oh my god. Oh my god. It's a 404 room. This is for me specifically. Someone made this for me.  
-`juni:117` **Man in a Beige Suit:** Please note: you are not in Room 404. There is no Room 404. You are not here.  
+`juni:124` **Juni:** A Zoo!! I mean, I'm an axolotl! This is my friend who is a probationary salamander for the weekend.  
+`juni:125` The man in beige smiles.  
+`juni:126` **Man in a Beige Suit:** Well welcome, please make yourselves comfortable ;)  
 > *show juni neutral at slightright*  
 
 > **Choice**
 
-`juni:121` **▸** Play along: "Sorry. I'm also not here."  
+`juni:130` **▸** Play along: "I should get in character! What sounds do axolotls make??"  
+> *rapport +4 Juni*  
+`juni:132` **Juni:** Try flicking your tongue and breathing at the same time.  
+`juni:133` You try, it's sort of goofy, and you think Juni just wanted to see you wag your tongue around.  
+`juni:134` Juni makes a tiny noise of pure joy inside the hood.  
+`juni:135` **Juni (happy):** That's great, yes that's perfect, keep doing that :)  
+
+`juni:137` **▸** "I don't even want to think about how gross these stuffed animals are"  
+`juni:138` The man in the beige suit rolls his eyes.  
+`juni:139` **Man in a Beige Suit:** You should know better than to yuck someone else's yum. Besides, isn't it good to get a bit dirty every once in a while?  
+`juni:140` **Juni (neutral):** I expected you to be a little more willing to play along, I guess you're not great at being in character. I guess I should have known.  
+
+`juni:142` **▸** Look over at Juni to see what they do.  
 > *rapport +2 Juni*  
-`juni:123` **Man in a Beige Suit:** Thank you. Most people argue.  
-`juni:124` Juni makes a tiny noise of pure joy inside the hood.  
-`juni:125` **Juni (happy):** I'm not here either! Lotl's not here! None of us exist!  
-
-`juni:127` **▸** "I mean... it's right here, though?"  
-`juni:128` **Man in a Beige Suit:** Literalism detected.  
-`juni:129` He hands you a small laminated card. It says ERROR: TOOK IT TOO SERIOUSLY.  
-`juni:130` **Juni (neutral):** Oof. You have to keep that.  
-
-`juni:132` **▸** Look over at Juni to see what they do.  
-> *rapport +1 Juni*  
-`juni:134` Juni leans in and whispers.  
-`juni:135` **Juni (neutral):** Pretend you're a missing file. Just like... look a little corrupted.  
-`juni:136` You do your best. The man in beige nods, satisfied.  
+`juni:144` Juni leans in and whispers.  
+`juni:145` **Juni (neutral):** I wish I was one of those stuffed animals. Just think about what they get to see .. to feel.  
+`juni:146` The man in beige nods, satisfied.  
 > *(end of choice)*
 
-`juni:138` A dialog box pops up on an old monitor in front of Juni. It says: ARE YOU SURE YOU WANT TO BE HERE? There are two buttons. YES. ALSO YES.  
-> *show juni surprised at slightright*  
-
-> **Choice**
-`juni:141` **Juni:** Which one do I press? It feels like a trick. It's always a trick.  
-
-`juni:143` **▸** "Press YES. I'll press ALSO YES. We'll both be sure."  
-> *rapport +2 Juni*  
-`juni:145` You press your buttons at the same time. The monitor plays a tinny little fanfare. Confetti made of hole-punched paper falls from the ceiling.  
-`juni:146` **Juni (happy):** We're both sure! That's the most sure I've been about anything in months.  
-
-`juni:148` **▸** "There's no wrong answer. That's the trick."  
-> *rapport +1 Juni*  
-`juni:150` **Juni (neutral):** ...Huh. Yeah. Okay.  
-`juni:151` Juni presses ALSO YES. Paper confetti falls from the ceiling.  
-
-`juni:153` **▸** "Neither. Let's go find a room that actually exists."  
-`juni:154` **Juni (neutral):** Oh. Right. Yeah, sure.  
-`juni:155` Juni presses nothing. The dialog box waits patiently. You feel like you've made it sad.  
-> *(end of choice)*
-
+`juni:148` You lie down on a pile of Ikea sharks, their teeth wrap around your arms and legs. You just sit there loosely holding each other. It feels right, to be in a sea of stuffed animals, while holding a person sized stuffed animal.  
 > *show juni happy at slightright*  
-`juni:158` **Man in a Beige Suit:** For your records.  
-`juni:159` The man in beige hands each of you a card: THIS CERTIFIES THAT THE BEARER WAS NEVER HERE.  
-`juni:160` **Juni:** I'm keeping this forever. I'm going to frame it. Above my desk. At work. Where nobody will understand.  
+`juni:150` **Man in a Beige Suit:** For your records.  
+`juni:151` The man in beige hands each of you a card, it's your animal certifications attesting that you're the zoo's best attraction.  
+`juni:152` **Juni:** OMG! I'm keeping this forever. I'm going to frame it. Above my desk at work. Where nobody will understand.  
 
 ## juni_night_2
 
 > *scene bg lostfound*  
-`juni:167` The Lost & Found is lit like an old library. Bins line the shelves, each one labeled in careful handwriting: MISPLACED CONFIDENCE. UNCLAIMED APOLOGIES. SPARE EXCUSES. OLD NICKNAMES.  
-`juni:168` A sign on the counter says: TAKE ONE. LEAVE ONE.  
+`juni:159` The Lost & Found is lit like an old library. Bins line the shelves, each one labeled in careful handwriting: MISPLACED CONFIDENCE. UNCLAIMED APOLOGIES. SPARE EXCUSES. OLD NICKNAMES.  
+`juni:160` A sign on the counter says: TAKE ONE. LEAVE ONE.  
 > *show juni neutral*  
-`juni:170` **Juni:** I've been standing here for twenty minutes. I can't decide what to leave. Everything I own feels load-bearing.  
-`juni:171` **Juni:** You go first. Show me how it's done.  
+`juni:162` **Juni:** I've been standing here for twenty minutes. I can't decide what to leave. Everything I own feels load-bearing.  
+`juni:163` **Juni:** You go first. Show me how it's done.  
 
 > **Choice**
-`juni:174` What do you leave?  
+`juni:166` What do you leave?  
 
-`juni:176` **▸** An unsent text you've been carrying around for a year.  
+`juni:168` **▸** An unsent text you've been carrying around for a year.  
 > *rapport +2 Juni*  
-`juni:178` You write it on one of the little cards and drop it in UNSENT TEXTS. It's lighter than you expected.  
-`juni:179` **Juni (surprised):** Whoa. You just... let it go.  
-`juni:180` Juni picks up a card, writes something, and puts it in UNCLAIMED APOLOGIES without letting you see.  
-`juni:181` **Juni (neutral):** That was an apology I've been waiting for. From someone else. I'm done waiting. It can live here now.  
+`juni:170` You write it on one of the little cards and drop it in UNSENT TEXTS. You feel a weight lift from your shoulders.  
+`juni:171` **Juni (surprised):** Whoa. You just... let it go.  
+`juni:172` Juni picks up a card, writes something, and puts it in UNCLAIMED APOLOGIES without letting you see.  
+`juni:173` **Juni (neutral):** That was an apology I've been waiting for. From someone else. I'm done waiting. It can live here now.  
 
-`juni:183` **▸** An old nickname you never liked.  
+`juni:175` **▸** An old nickname you never liked.  
 > *rapport +1 Juni*  
-`juni:185` **Juni (happy):** Oh, good one.  
-`juni:186` Juni writes JUNEBUG on a card and drops it in OLD NICKNAMES with a tiny flourish.  
-`juni:187` **Juni:** My manager calls me that. Not anymore. Not in here.  
+`juni:177` **Juni (happy):** Oh, good one.  
+`juni:178` Juni writes JUNEBUG on a card and drops it in OLD NICKNAMES with a tiny flourish.  
+`juni:179` **Juni:** My manager calls me that. But here people call me what I want to be called.  
 
-`juni:189` **▸** A single left sock.  
-> *rapport +1 Juni*  
-`juni:191` **Juni (happy):** Ha! The classic. Left socks are always the ones that get lost. Science can't explain it.  
+`juni:181` **▸** A single left sock.  
+`juni:182` **Juni (surprised):** Ummm okay. I think this room is supposed to be a bit more metaphorical, but I guess maybe someone will want your gross sock ...and now I have to smell your feet.  
 > *(end of choice)*
 
-`juni:193` Then you both notice it. The bin labeled ONE (1) COURAGE, SLIGHTLY USED. There's only one card left in it.  
+`juni:184` Then you both notice it. The bin labeled ONE (1) COURAGE, SLIGHTLY USED. There's only one card left in it.  
 > *show juni neutral*  
 
 > **Choice**
-`juni:196` **Juni:** There's only one. You should take it. You're braver than me.  
+`juni:187` **Juni:** There's only one. You should take it. You're braver than me.  
 
-`juni:198` **▸** Take it, and hand it straight to Juni.  
+`juni:189` **▸** Take it, and hand it straight to Juni.  
 > *rapport +2 Juni*  
-`juni:201` **Juni (blush):** Oh.  
-`juni:202` Juni holds the card in both sleeves like it's warm. The hood dips down so you can't see their face.  
-`juni:203` **Juni:** Nobody's ever... okay. Okay. I'm going to use this. I don't know on what yet. But I'm going to.  
+`juni:192` **Juni (blush):** Oh.  
+`juni:193` Juni holds the card to their chest like it's warm. The hood dips down so you can't see their face, but you think they might be starting to cry.  
+`juni:194` **Juni:** Nobody's ever... okay. Okay. I'm going to use this. I don't know on what yet. But I'm going to.  
 
-`juni:205` **▸** "Let's tear it in half. Half each."  
+`juni:196` **▸** "Let's tear it in half. Half each."  
 > *rapport +1 Juni*  
-`juni:208` **Juni (happy):** Half a courage each. That's probably the right dose for a weekend.  
-`juni:209` You tear it carefully down the middle. Juni tucks their half into the hood.  
+`juni:199` **Juni (happy):** Half a courage each. That's probably the right dose for a weekend.  
+`juni:200` You tear it carefully down the middle. Juni tucks their half into a hidden pocket in their kigurumi.  
 
-`juni:211` **▸** Take it. You could use it.  
-`juni:212` **Juni (neutral):** Good. You'll use it better.  
-`juni:213` They sound like they mean it. They also sound a little like they wanted it.  
+`juni:202` **▸** Take it. You could use it.  
+`juni:203` **Juni (neutral):** Good. You'll use it better.  
+`juni:204` They sound like they mean it. They also sound a little like they wanted it.  
 > *(end of choice)*
 
 > *show juni neutral*  
-`juni:216` **Juni:** Hey. Juni's short for Juniper. Nobody calls me Juniper. My mom, when I'm in trouble.  
-`juni:217` **Juni (happy):** You can know that. You don't have to use it. I just wanted somebody here to know.  
+`juni:208` **Juni:** Hey. Juni's short for Juicero. I know it wasn't popular, but I loved it anyways, just like I hope people love me, even though I'm useless.  
+`juni:209` **Juni (happy):** You can know that. You don't have to use it. I just wanted somebody here to know.  
 
 ## juni_night_3
 
 > *scene bg regen*  
-`juni:224` The Regeneration Tank is a hotel suite painted the deep blue of a lake bottom. Light ripples across the walls. A huge waterbed fills the middle of the room. A sign says: LIE DOWN. GROW SOMETHING BACK.  
+`juni:216` The Regeneration Tank is a hotel suite painted the deep blue of a lake bottom. Light ripples across the walls. A huge waterbed fills the middle of the room. A sign says: LIE DOWN. GROW SOMETHING BACK.  
 > *show juni neutral*  
-`juni:226` **Juni:** You came in with me. I didn't even have to stand outside.  
-`juni:227` You lie down on the waterbed side by side. It sloshes. The kigurumi squeaks. Juni's gills are fanned out on the pillow like a halo.  
-`juni:228` **Juni:** This is the last night. I feel like I should say something important and I don't know what it is.  
+`juni:218` **Juni:** You came in with me. I didn't even have to stand outside.  
+`juni:219` You lie down on the waterbed side by side. It sloshes. The kigurumi squeaks. Juni's gills are fanned out on the pillow like a halo.  
+`juni:220` **Juni:** This is the last night. I feel like I should say something important and I don't know what it is.  
 
 > **Choice**
-`juni:231` **Juni:** Can I ask you something? Why do you keep finding me? There are seven hundred people here.  
+`juni:223` **Juni:** Can I ask you something? Why do you keep finding me? There are like seven hundred people here.  
 
-`juni:233` **▸** "Because you're the most honest person here, and you're dressed as a salamander."  
+`juni:225` **▸** "Because you're the most honest person here, and I admire how you're living your full self. Plus you're bright pink and easy to spot."  
 > *rapport +2 Juni*  
-`juni:235` **Juni (happy):** Hah. That's... okay, that's the nicest thing anyone's said to me in a long time.  
+`juni:227` **Juni (happy):** Hah. That's... okay, that's the nicest thing anyone's said to me in a long time.  
 
-`juni:237` **▸** "I don't know. I just like being near you."  
+`juni:229` **▸** "I don't know. I just like being near you."  
 > *rapport +2 Juni*  
-`juni:239` **Juni (blush):** Oh.  
-`juni:240` **Juni:** Me too. Near you, I mean. Not near me. I'm always near me. You know what I mean.  
+`juni:231` **Juni (blush):** Oh.  
+`juni:232` **Juni:** Me too. Near you, I mean. Not near me. I'm always near me. You know what I mean.  
 
-`juni:242` **▸** "Coincidence, probably."  
-`juni:243` **Juni (neutral):** Oh. Right. Yeah.  
-`juni:244` The waterbed sloshes. The ripples on the ceiling keep moving.  
+`juni:234` **▸** "Coincidence, probably."  
+`juni:235` **Juni (neutral):** Oh. Right. Yeah.  
+`juni:236` The waterbed sloshes. The ripples on the ceiling keep moving.  
 > *(end of choice)*
 
-`juni:246` Juni's sleeve drifts up toward the hood strings. It hovers there.  
+`juni:238` Juni's sleeve drifts up toward the hood strings. It hovers there.  
 > *show juni neutral*  
 
 > **Choice**
-`juni:249` **Juni:** I've been thinking about taking it down. The hood. Not right now. But... soon. Would that be weird?  
+`juni:241` **Juni:** I've been thinking about taking it off. The party's almost over, and I guess I feel like I should face real life, right?  
 
-`juni:251` **▸** "Whenever you want. Or never. Both are good."  
+`juni:243` **▸** "You can be whoever you want, especially around me. I accept you as who you are"  
 > *rapport +2 Juni*  
-`juni:253` **Juni (blush):** Okay.  
-`juni:254` **Juni:** Okay. Thank you. That's... it's easier when nobody's waiting for it.  
+`juni:245` **Juni (blush):** Okay.  
+`juni:246` **Juni:** Okay. Thank you. That's... it's easier when nobody's asking for it.  
 
-`juni:256` **▸** "I'd really like to see your face. Your whole face."  
+`juni:248` **▸** "I'd really like to see your face. Your real face."  
 > *rapport +1 Juni*  
-`juni:258` **Juni (neutral):** ...Soon. I think. Maybe.  
-`juni:259` Their sleeve stays on the strings a long time. Then it drops.  
+`juni:250` **Juni (blush):** You're looking at it, here I'm an axolotl - that's the real me, and I like how you look at the real me.  
+`juni:251` Their sleeve stays on the zipper a long time. Then it drops.  
 
-`juni:261` **▸** "Do it now! Come on!"  
+`juni:253` **▸** "Do it now! Come on!"  
 > *rapport −1 Juni*  
-`juni:263` **Juni (surprised):** Oh. Um. No. Not now.  
-`juni:264` Juni pulls the strings tight. The hood closes around their face like a flower at night.  
+`juni:255` **Juni (surprised):** Oh. Um. No. Not now. I'm not ready yet...  
+`juni:256` Juni pulls the strings of their hood tight. The hood closes around their face like a flower at night.  
 > *(end of choice)*
 
 > *if rapport["juni"] >= ROMANCE_THRESHOLD:*  
-`juni:267` **Juni (blush):** Hey. After the ark... find me? If you want. I'll be the pink one.  
+`juni:259` **Juni (blush):** Hey. After the big event... find me? If you want. I'll be the pink one.  
 > *else:*  
-`juni:269` **Juni (neutral):** I should go find my roommate before the ark. See you around, okay?  
+`juni:261` **Juni (neutral):** I should go find my roommate before the big event. See you around, okay?  
 
 ## juni_romance
 
 > *scene bg pool*  
-`juni:277` The ballroom is still going when you slip out. The hallways are full of people sitting against the walls in pairs, talking quietly, capes folded into pillows.  
-`juni:278` You take the back stairs down to the ground floor. The pool hall is empty. The Pool People's banner is lying in a heap by the towel hut, and somebody has tucked it in like a blanket.  
-`juni:279` The water is perfectly still. Through the old glass roof, the sky over the mountains is just starting to turn gray.  
-`juni:280` And at the edge of the pool, exactly where you first saw them, there's a pink shape with its onesie feet in the water.  
+`juni:269` The ballroom is still going when you slip out. The hallways are full of people sitting against the walls in pairs, talking quietly, costumes folded into pillows.  
+`juni:270` You take the back stairs down to the ground floor. The pool is empty. All that's left is party detritus and used towels.  
+`juni:271` The water is perfectly still. Through the old glass roof, the sky over the mountains is just starting to turn gray.  
+`juni:272` And at the edge of the pool, exactly where you first saw them, there's a pink shape with its onesie feet in the water.  
 > *show juni neutral*  
-`juni:282` **Juni:** You came.  
-`juni:283` **Juni:** I had a whole plan if you didn't come. It involved crying into the pool. Very damp. Very on-theme.  
-`juni:284` You sit down next to them and put your feet in. The water is cold enough to make you gasp. Juni laughs at you, a little, which seems fair.  
-`juni:285` **Juni:** Cold-water creature. Told you.  
+`juni:274` **Juni:** You came.  
+`juni:275` **Juni:** I had a whole plan if you didn't come. It involved crying into the pool. Very damp. Very on-theme.  
+`juni:276` You sit down next to them and put your feet in. The water is cold enough to make you gasp. Juni laughs at you, a little, which seems fair.  
+`juni:277` **Juni:** Cold-water creature. Told you.  
 
 > **Choice**
-`juni:288` **Juni:** So. How was your first time? Honestly.  
+`juni:280` **Juni:** So. How was your first time? Honestly.  
 
-`juni:290` **▸** "I came here not knowing who I'd meet. Now I know a salamander."  
-`juni:291` **Juni (happy):** A full salamander. You were promoted. It's on your permanent record.  
+`juni:282` **▸** "I came here not knowing who I'd meet. Now I know a salamander."  
+`juni:283` **Juni (happy):** A full salamander. You're promoted. It's on your permanent record.  
 
-`juni:292` **▸** "Honestly? The best part was the pizza slices."  
+`juni:284` **▸** "Honestly? The best part was the pizza slices."  
 > *(shown if pool_seen["juni"] >= 2)*  
-`juni:293` **Juni (happy):** The crust one. I knew you'd appreciate the crust one. Nobody appreciates the crust one.  
+`juni:285` **Juni (happy):** I knew you'd appreciate being a pizza topping. I couldn't stop thinking about how tasty you'd be.  
 > *(end of choice)*
 
 > *show juni neutral*  
 > *if night_seen["juni"] >= 1:*  
-`juni:297` For a while you just talk. About Room 404, and the man in beige who might still be in there, insisting he doesn't exist.  
+`juni:289` For a while you just talk. About the petting zoo, and the man in beige who might still be in there, observing the other animals.  
 > *else:*  
-`juni:299` For a while you just talk. About the weekend, the rooms, the people in capes, the herald who lost his voice.  
+`juni:291` For a while you just talk. About the weekend, the rooms, the people in capes, the clown who lost his voice and became a mime.  
 > *if juni_has_courage:*  
-`juni:301` **Juni:** I keep thinking about the courage card from the Lost & Found. I carried it around all weekend in the hood. It's soggy now. I went in the pool twice with it.  
-`juni:302` They hold it up. The card is warped and soft now, the word COURAGE bleeding blue at the edges.  
-`juni:303` **Juni:** I'm going to use it now. Is that okay?  
+`juni:293` **Juni:** I keep thinking about the courage card from the Lost & Found. I carried it around all weekend in the hood. It's soggy now. I went in the pool twice with it.  
+`juni:294` They hold it up. The card is warped and soft now, the word COURAGE bleeding blue at the edges.  
+`juni:295` **Juni:** I'm going to use it now. Is that okay?  
 > *else:*  
-`juni:305` **Juni:** There's a Lost & Found upstairs where you can take a card that says COURAGE. I never got one. I kept chickening out.  
-`juni:306` **Juni:** So I'm going to try it without the card. Is that okay?  
-`juni:307` **Juni:** You can look away if you want. Actually, don't look away. Please don't look away.  
-`juni:308` Juni reaches up with both sleeves and pulls the hood strings loose. Their hands shake a little. They take a breath like they're about to go underwater.  
-`juni:309` Then, slowly, they push the hood back.  
-`juni:310` Lotl falls down their back, gills and all, and lands in the pool with a soft pink splash.  
-`juni:311` Underneath is short dark hair stuck flat with sweat, and ears you've never seen, and a jaw, and a neck, and a face that's all the way there for the first time all weekend.  
+`juni:297` **Juni:** There's a Lost & Found upstairs where you can take a card that says COURAGE. I never got one. I kept chickening out.  
+`juni:298` **Juni:** So I'm going to try it without the card. Is that okay?  
+`juni:299` **Juni:** You can look away if you want. Actually, don't look away. Please don't look away.  
+`juni:300` Juni steps out of the water, a dripping mess. The kigurumi presses to their body, and in a way it feels right, like they've become one.  
 > *show juni blush*  
-`juni:313` **Juni:** Hi. This is... the rest of me.  
-`juni:314` **Juni:** It's really cold out here without it. Huh. I forgot what air felt like. On the ears. Ears are so weird.  
+`juni:302` **Juni:** Hi. This is... the real me.  
+`juni:303` **Juni:** It's really cold being so wet, but somehow it feels so right, and a bit hot actually.  
 
 > **Choice**
 
-`juni:317` **▸** "Hi, Juniper."  
-`juni:318` **Juni (happy):** Oh no. Oh, that's so much worse than I thought. In a good way. In a terrible, good way.  
-`juni:319` **Juni (blush):** Nobody's said it like that before. Like it wasn't a punishment.  
+`juni:306` **▸** "Hi, Juicero."  
+> *(shown if knows_juicero)*  
+`juni:307` **Juni (happy):** Oh no. Oh, that's so much worse than I thought. In a good way. In a terrible, good way.  
+`juni:308` **Juni (blush):** Nobody's said it like that before. Like it wasn't a joke. I'm going to have to give you a good squeeze as punishment.  
 
-`juni:320` **▸** "Hi, Juni. It's nice to meet all of you."  
-`juni:321` **Juni (happy):** All of me. Yeah. That's everyone. That's the whole cast.  
-`juni:322` **Juni (blush):** It's a small cast. But everyone showed up.  
+`juni:309` **▸** "Hi, Lotl. It's nice to meet all of you."  
+`juni:310` **Juni (happy):** All of me. Yeah. This is who I am, and it's nice to be seen by someone who I feel really sees me.  
 > *(end of choice)*
 
 > *show juni blush*  
-`juni:325` The sky above the glass roof goes from gray to pale pink. Somewhere upstairs, a single kazoo is playing something slow.  
-`juni:326` **Juni:** Three years I've been coming here. Three years I've been standing outside doors, waiting for someone to pull me in.  
-`juni:327` **Juni:** And this year I spent the whole time hoping it'd be you. And it was. Every time. Even when I didn't wait.  
-`juni:328` **Juni:** I don't know what happens Monday. I'll go back to fixing the thing. My manager will call me Junebug. My phone is still in the ice bucket, by the way.  
-`juni:329` **Juni:** But I think I want there to be a you on Monday. If that's... if you want that too.  
+`juni:313` The sky above the glass roof goes from gray to pale pink. Somewhere upstairs, there's a party going on, but it's far from your mind.  
+`juni:314` **Juni:** Three years I've been coming here. Three years I've been standing outside doors, waiting for someone to pull me in.  
+`juni:315` **Juni:** And this year I spent the whole time hoping it'd be you. And it was. Every time. Even when I didn't wait.  
+`juni:316` **Juni:** I don't know what happens Monday. I'll go back to fixing the thing. My manager will ping me at 3 am to fix a server. My phone is still in the ice bucket, by the way.  
+`juni:317` **Juni:** But I think I want there to be a you on Monday. If that's... if you want that too.  
 
 > **Choice**
 
-`juni:332` **▸** "I want that too."  
-`juni:333` **Juni (blush):** Okay. Okay. Good. Great. I'm going to be so normal about this.  
+`juni:320` **▸** "I want that too."  
+`juni:321` **Juni (blush):** Okay. Okay. Good. Great. I'm going to be so normal about this.  
 
-`juni:334` **▸** Take their hand, sleeve and all.  
-`juni:335` You find their hand inside the sleeve. It's warm and a little damp and holding on very tightly.  
-`juni:336` **Juni (blush):** ...Yeah. That's an answer.  
+`juni:322` **▸** Take their hand, sleeve and all.  
+`juni:323` You find their hand inside the sleeve. It's warm and a little damp and holding on very tightly.  
+`juni:324` **Juni (blush):** ...Yeah. That's an answer.  
 > *(end of choice)*
 
-`juni:338` **Juni (blush):** Can I ask you something? I'm out of courage, so I'm just going to do it raw.  
-`juni:339` **Juni:** Can I kiss you?  
+`juni:326` **Juni (blush):** Can I ask you something? I'm out of courage, so I'm just going to do it raw.  
+`juni:327` **Juni:** Can I kiss you?  
 
 > **Choice**
 
-`juni:342` **▸** "Yes."  
-`juni:343` Juni leans over the water. They smell like chlorine and laundry and the tea bar's cardamom.  
-`juni:344` It's a small kiss, a careful one. The kind that asks again halfway through. You answer.  
-`juni:345` When you pull apart, Juni has their eyes shut tight, like they're making a wish.  
-
-`juni:346` **▸** "Can I hold your hand first?"  
-`juni:347` **Juni (happy):** Yes. Yes, please. Sleeve's empty, it's just a hand in there.  
-`juni:348` Their fingers lace through yours. After a while it's the most natural thing in the world to lean in, so you both do.  
-`juni:349` It's a small kiss, a careful one. Juni laughs into it, just once, from pure surprise.  
+`juni:330` **▸** "Yes."  
+`juni:331` Juni leans over the water. They smell like chlorine and laundry and the tea bar's cardamom.  
+`juni:332` It's a small kiss, a careful one. The kind that asks again halfway through. You answer.  
+> *if night_seen["juni"] >= 1:*  
+`juni:334` You start petting, first lightly, then heavily, like you should have done in the art room upstairs.  
+`juni:335` Their body is slimy but good, you embrace, you gyrate, you realize that Juni has always wanted to do this with the suit on. Maybe you do too.  
+`juni:336` Juni asks you to do that thing with your tongue again, the one they taught you in the petting zoo. Juni tenses, shudders, and releases.  
+`juni:337` When you pull apart, Juni has their eyes shut tight, like they're making a wish.  
 > *(end of choice)*
 
 > *show juni happy*  
-`juni:352` **Juni:** Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back.  
+`juni:340` **Juni:** Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back.  
 > *scene bg pool*  
-`juni:355` The sun comes up over the mountains and pours down through the old glass roof, across the water, gold on every ripple.  
-`juni:356` Juni's hood floats behind you in the pool, gills spread out on the water, smiling up at the sky.  
-`juni:357` Neither of you goes to fish it out. Eventually a Pool Person in a gold cape wades in, rescues it with great ceremony, and hangs it on the lifeguard chair to dry, like a flag.  
+`juni:343` The sun comes up over the mountains and pours down through the old glass roof, across the water, gold on every ripple.  
+> *if knows_juicero:*  
+`juni:345` **Juni:** I guess I lived up to my name and gave you a good squeeze after all.  
 > *scene black*  
-`juni:359` {i}Monday, 9:14 AM. A text from an unknown number.{/i}  
-`juni:360` **Juni:** hi it's juni. juniper. it's me. I sang in the car the whole way home. windows down. it was so bad. a man at a stoplight clapped  
-`juni:361` **Juni:** I took the phone out of the ice bucket. 41 messages from work. I answered none of them. I answered this one  
-`juni:362` **Juni:** are you free thursday. I know a place with a very good crust  
+`juni:347` {i}Monday, 9:14 AM. A text from an unknown number.{/i}  
+`juni:348` **Juni:** hi it's juni. Lotl. it's me. I wore my costume to work for Halloween. No one made fun of me, and I felt authentic for the first time  
+`juni:349` **Juni:** are you free thursday. I know a place where we can be ourselves  
 > *→ jump ending_card*  
 
 ## juni_friend
 
 > *scene bg exterior*  
 > *show juni happy*  
-`juni:372` In the parking lot on Monday morning, a pink kigurumi waves at you from a dented hatchback. The hood is still up. Lotl looks a little sunburned.  
-`juni:373` **Juni:** Hey! Probationary salamander! You passed. You're a full salamander now. It's binding. There's paperwork.  
-`juni:374` **Juni (neutral):** I wanted to say... thanks. For finding me. Every time. I talked to eleven people this year. Eleven. You were most of them.  
-`juni:375` **Juni:** Next year I'm going to try going into a room by myself. Just one. A small one. Maybe the one with the moss.  
-`juni:376` **Juni (happy):** And if I chicken out, you're responsible for me. That's the rule. You know my secret.  
-`juni:377` They hug you through the onesie, which is like being hugged by a very determined pillow.  
-`juni:378` **Juni:** Same time next year? I'll stand outside a door and you can pull me in.  
+`juni:359` In the parking lot on Monday morning, a pink kigurumi waves at you from a dented hatchback. The hood is still up. Lotl looks a little sunburned.  
+`juni:360` **Juni:** Hey! Probationary salamander! You passed. You're a full salamander now. It's binding. There's paperwork.  
+`juni:361` **Juni (neutral):** I wanted to say... thanks. For finding me. Every time. I talked to eleven people this year. Eleven. You were most of them.  
+`juni:362` **Juni:** Next year I'm going to try going into a room by myself. Just one. A small one. Maybe the one with the moss.  
+`juni:363` **Juni (happy):** And if I chicken out, you're responsible for me. That's the rule. You know my secret.  
+`juni:364` They hug you through the onesie, which is like being hugged by a very determined pillow.  
+`juni:365` **Juni:** Same time next year? I'll stand outside a door and you can pull me in.  
 
 ---
 
@@ -904,9 +878,9 @@ Edit this file and send it back; the changes get applied to the game.
 > *(end of choice)*
 
 > *if rapport["gerald"] >= ROMANCE_THRESHOLD:*  
-`gerald:254` **Gerald (blush):** After the ark, I'll be on the roof. It's the only place tall enough for me to see the sunrise properly. If you'd like to see it too.  
+`gerald:254` **Gerald (blush):** After the big event, I'll be on the roof. It's the only place tall enough for me to see the sunrise properly. If you'd like to see it too.  
 > *else:*  
-`gerald:256` **Gerald (neutral):** Enjoy the ark. Don't let them get you in the eye with the confetti. It's biodegradable but it is relentless.  
+`gerald:256` **Gerald (neutral):** Enjoy the big event. Don't let them get you in the eye with the confetti. It's biodegradable but it is relentless.  
 
 ## gerald_romance
 
@@ -923,12 +897,12 @@ Edit this file and send it back; the changes get applied to the game.
 > **Choice**
 `gerald:274` **Gerald:** Did you enjoy the ark? I confess I wept. A great deal. I had to borrow a towel from Wren.  
 
-`gerald:276` **▸** "I cried too. Over a rubber duck."  
-`gerald:277` **Gerald (happy):** Over a rubber duck. Yes. Seven hundred people. One duck. It was the most profound thing I've seen in decades.  
+`gerald:276` **▸** "I cried too. Over an empty box."  
+`gerald:277` **Gerald (happy):** Over an empty box. Yes. Seven hundred people. Nothing inside. It was the most profound thing I've seen in decades.  
 
 `gerald:278` **▸** "I mostly watched you crying."  
 `gerald:279` **Gerald (blush):** Oh dear. Was it very loud? I'm told I sound like a foghorn when I'm moved.  
-`gerald:280` **Gerald (happy):** ...It was a beautiful duck, though.  
+`gerald:280` **Gerald (happy):** ...It was a beautiful empty box, though.  
 > *(end of choice)*
 
 > *show gerald neutral*  
@@ -996,7 +970,7 @@ Edit this file and send it back; the changes get applied to the game.
 > *scene bg roof_dawn*  
 `gerald:338` The sun clears the mountains. Down in the parking lot, somebody with a camera looks up at the roof, squints, and sees only a blur.  
 `gerald:339` Gerald laughs so hard the water tank rings like a bell.  
-`gerald:340` You stay up there until the last cars leave, until the Pool People fold their banner, until Wren comes up to tell you the casino has been closed since 1987 and the hotel is only now finding out.  
+`gerald:340` You stay up there until the last cars leave, until the last towels are folded, until Wren comes up to tell you the casino has been closed since 1987 and the hotel is only now finding out.  
 > *scene black*  
 `gerald:342` {i}Three weeks later, a package arrives with no return address. Inside: a tin of lapsang souchong, a pressed fern, a smooth gray stone from a creek, and a postcard of the Klamath.{/i}  
 `gerald:343` {i}On the back, in very careful handwriting:{/i}  
@@ -1027,356 +1001,320 @@ Edit this file and send it back; the changes get applied to the game.
 `solstice:6` She has goggles pushed up on her forehead and a sticker of a star under one eye. She reaches you and lights up, literally. Her top flickers through the rainbow.  
 > *show solstice happy*  
 `solstice:8` **Solstice:** HI! Hi hi. You're new. You have new-person energy. It's so cute. Hold out your hand. No, the other one. Perfect.  
-`solstice:9` She produces a bracelet of plastic beads from somewhere. It says, in lettered beads, ur doing great.  
+`solstice:9` She produces a bracelet of plastic beads from somewhere. It says, in lettered beads, PLUR4LIFE.  
 
 > **Choice**
 
 `solstice:11` **▸** Hold out your wrist and let her put it on.  
 > *rapport +1 Solstice*  
-`solstice:13` **Solstice (happy):** There. Now you're one of us. That's how it works. That's literally the whole ritual.  
+`solstice:13` **Solstice (happy):** There. Now you're one of us. Welcome to the party! Now stop being so shy!  
 
 `solstice:15` **▸** "Wait, I want to give you something too."  
 > *rapport +2 Solstice*  
-`solstice:18` You dig in your pockets. All you have is a hotel mint, slightly warm.  
-`solstice:19` **Solstice (surprised):** For me?  
-`solstice:20` **Solstice (blush):** Oh my god. No one ever gifts back. Everyone just takes the glitter and runs.  
-`solstice:21` She holds the mint up to the light like a jewel, then puts it very carefully into a pocket on her leg warmer.  
-`solstice:22` **Solstice (happy):** I'm going to keep this forever. Or eat it at three in the morning. One of the two.  
+`solstice:17` You dig in your pockets. All you have is a hotel mint, slightly warm.  
+`solstice:18` **Solstice (surprised):** For me?  
+`solstice:19` **Solstice (blush):** Oh my god. No one ever gifts back. Everyone just takes the beads and runs.  
+`solstice:20` She holds the mint up to the light like a jewel, then puts it very carefully into a pocket on her leg warmer.  
+`solstice:21` **Solstice (happy):** I'm going to keep this forever, as evidence. Or eat it at three in the morning. One of the two.  
 
-`solstice:24` **▸** "Oh, I didn't bring anything to trade."  
-`solstice:25` **Solstice (neutral):** It's not a trade! It's a gift! Gifts don't do math!  
-`solstice:26` She puts the bracelet on you anyway, with a firm little pat.  
+`solstice:23` **▸** "Oh, I didn't bring anything to trade."  
+`solstice:24` **Solstice (neutral):** It's not a trade! It's a gift! Free of charge!  
+`solstice:25` She puts the bracelet on you despite your reluctance, with a firm little pat. She seems like she's had a lot of practice.  
 > *(end of choice)*
 
 > *show solstice happy*  
-`solstice:29` **Solstice:** I'm Solstice. Like the longest day of the year. Because I go all night and all day. Also because I get up at four in the morning most days, so the joke works both ways.  
-`solstice:30` **Solstice:** Okay, important question.  
+`solstice:28` **Solstice:** I'm Solstice. Like the longest day of the year. Because I go all night and all day. Sometimes naturally, sometimes with a little help if you know what I mean ;)  
+`solstice:29` **Solstice:** Okay, important question.  
 
 > **Choice**
-`solstice:32` **Solstice:** Can I give you a glitter baptism?  
+`solstice:31` **Solstice:** Can I give you a light show?  
 
-`solstice:34` **▸** "Baptize me."  
+`solstice:33` **▸** "Light me up."  
 > *rapport +2 Solstice*  
-`solstice:36` She upends an entire jar over your head. It is a lot of glitter. It will still be in your ears in March.  
-`solstice:37` **Solstice (happy):** Welcome to the church of SPARKLE. You are SAVED.  
+`solstice:35` **Solstice:** Ok, stare into my chest.  
+`solstice:36` The LEDs of her bra flash in hypnotizing colors, while Solstice shakes her chest. She's moving to the beat and the lights begin to hypnotize you.  
+`solstice:37` You get the feeling that Solstice notices you starting to go into a trance and she stops before you completely lose control. She stops abruptly, but with a smile on her face.  
+`solstice:38` **Solstice (happy):** Welcome to the church of LIGHT. You are SAVED.  
 
-`solstice:39` **▸** "Just a little. On the cheeks."  
+`solstice:40` **▸** "Just a little, I'm pretty light sensitive."  
 > *rapport +1 Solstice*  
-`solstice:41` She dabs glitter under your eyes with one fingertip, very gently, like painting a tiny face.  
-`solstice:42` **Solstice (happy):** Perfect. Subtle. Mysterious. You look like a sad disco ghost. I mean that as the highest compliment.  
+`solstice:42` She presses a button on her glasses, and all of the lights on her costume pulse in unison, to her heart beat.  
+`solstice:43` **Solstice (happy):** Huh! I didn't expect my heartbeat to be so slow, I must feel comfortable around you.  
 
-`solstice:44` **▸** "I'm good, thanks."  
-`solstice:45` **Solstice (neutral):** Respect! Consent is sexy! Also glitter is forever, so honestly, smart call.  
+`solstice:45` **▸** "I'm good, thanks. I'm supposed to limit my exposure to artificial light, that is if I want to sleep on time."  
+`solstice:46` **Solstice (neutral):** Respect! Consent is sexy! Gotta get your beauty sleep if you're going to keep partying for the rest of the weekend.  
+`solstice:47` She's trying not to act dejected, but you can see her looking around the room for other people to talk to.  
 > *(end of choice)*
 
-`solstice:47` **Solstice (happy):** See you on the dance floor, new person!  
-`solstice:49` She bounces off to the next lounger. Her top blinks HAPPY HAPPY HAPPY in scrolling letters across her back.  
+`solstice:49` **Solstice (happy):** See you on the dance floor, new person!  
+`solstice:51` She bounces off to the next lounger. Her top blinks HAPPY HAPPY HAPPY to the beat of the music the DJ is playing.  
 
 ## solstice_pool_2
 
-`solstice:54` Solstice is asleep on a lounger right under one of the pool hall's big orange heat lamps. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink.  
-`solstice:55` Without the lights and the noise, she looks younger. And very tired.  
+`solstice:56` Solstice is asleep on a lounger right under one of the pool hall's big orange heat lamps. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink.  
+`solstice:57` Without the lights and the noise, she looks younger. And very tired.  
 
 > **Choice**
 
-`solstice:57` **▸** Quietly swing the heat lamp away from her.  
+`solstice:59` **▸** Quietly swing the heat lamp away from her.  
 > *rapport +2 Solstice*  
-`solstice:59` You swivel the heat lamp away, slowly, so it doesn't squeak. The orange glow slides off her face.  
-`solstice:60` A few minutes later she stirs, pushes up her goggles and looks at the heat lamp, then at you.  
+`solstice:61` You swivel the heat lamp away, slowly, so it doesn't squeak. The orange glow slides off her face.  
+`solstice:62` A few minutes later she stirs, pushes up her goggles and looks at the heat lamp, then at you.  
 > *show solstice blush*  
-`solstice:62` **Solstice:** Did you... do that? For me?  
-`solstice:63` **Solstice:** Huh. Nobody does stuff for me. I'm usually the one doing stuff.  
+`solstice:64` **Solstice:** Did you... do that? For me?  
+`solstice:65` **Solstice:** Huh. Nobody does stuff for me. I'm usually the one doing stuff.  
 
-`solstice:65` **▸** Gently wake her: "Hey. You're getting burned."  
+`solstice:67` **▸** Gently wake her: "Hey. You're getting burned."  
 > *rapport +1 Solstice*  
 > *show solstice surprised*  
-`solstice:68` **Solstice:** Wha—oh. OH. Oh no, I'm a lobster. Thank you. Thank you, oh my god.  
+`solstice:70` **Solstice:** Wha—oh. OH. Oh no, I'm a lobster. Thank you. Thank you, oh my god.  
 
-`solstice:70` **▸** Let her sleep. She clearly needs it.  
-`solstice:71` You leave her be. Half an hour later you hear a shriek from across the deck.  
+`solstice:72` **▸** Let her sleep. She clearly needs it.  
+`solstice:73` You leave her be. Half an hour later you hear a shriek from across the deck.  
 > *show solstice surprised*  
-`solstice:73` **Solstice:** OW. Why didn't anyone—ha. It's fine. It's fine! I'll be a shiny red raver. New look.  
+`solstice:75` **Solstice:** OW. Why didn't anyone—ha. It's fine. It's fine! I'll be a shiny red raver. New look.  
 > *(end of choice)*
 
 > *show solstice neutral*  
-`solstice:76` She sits up. She doesn't turn the lights back on.  
-`solstice:77` **Solstice:** I'm a nurse. ICU. Nights. I spend all week with people on the worst night of their lives.  
-`solstice:78` **Solstice:** And then I come here and dance like it's the best one. Every year. I think if I stop dancing, the other thing catches up.  
-`solstice:79` **Solstice:** When the lights are on, everyone loves me. Solstice! Glitter girl! When they're off, I'm just... tired. Really, really tired.  
+`solstice:78` She sits up. She doesn't turn her costume back on.  
+`solstice:79` **Solstice:** I don't like to think about what I do in the default world. It's draining, and grim, and well, y'know.  
+`solstice:80` **Solstice:** And then I come here and dance like everything is okay. Every year. I think if I stop dancing, the other thing catches up.  
+`solstice:81` **Solstice:** When the lights are on, everyone loves me. Solstice! Glitter girl! When they're off, I'm just... tired. Really, really tired.  
 
 > **Choice**
 
-`solstice:82` **▸** "I like you with the lights off too."  
+`solstice:84` **▸** "I like you with the lights off too."  
 > *rapport +2 Solstice*  
-`solstice:84` **Solstice (blush):** ...  
-`solstice:85` **Solstice:** That's... wow. Okay. You can't just say things like that at the pool. That's a ballroom thing to say. At least.  
+`solstice:86` **Solstice (blush):** ...  
+`solstice:87` **Solstice:** That's... wow. Okay. You can't just say things like that at the pool. That's a ballroom thing to say. At least.  
 
-`solstice:87` **▸** "That sounds exhausting. Do you ever get to rest?"  
+`solstice:89` **▸** "That sounds exhausting. Do you ever get to rest?"  
 > *rapport +1 Solstice*  
-`solstice:89` **Solstice (neutral):** Rest is... I'm bad at rest. Rest is where the thoughts are.  
-`solstice:90` **Solstice:** But this was nice. Right now. This was rest, kind of.  
+`solstice:91` **Solstice (neutral):** Rest is... I'm bad at rest. Rest is where the thoughts are.  
+`solstice:92` **Solstice:** But this was nice. Right now. This was rest, kind of.  
 
-`solstice:92` **▸** "Turn them back on! You're so much fun when they're on."  
-`solstice:93` **Solstice (neutral):** Yeah. Ha. Yeah.  
-`solstice:94` She flicks the switch. The top blazes back to life. Her smile comes on with it, a half-second late.  
+`solstice:94` **▸** "Turn them back on! You're so much fun when they're on."  
+`solstice:95` **Solstice (neutral):** Yeah. Ha. Yeah.  
+`solstice:96` She flicks the switch. The top blazes back to life. Her smile comes on with it, a half-second late.  
 > *(end of choice)*
 
 ## solstice_night_1
 
 > *scene bg exchange*  
-`solstice:102` The Human Stock Exchange is roaring. Tickers crawl across the walls in red and green: SELF ▲4.2. VIBES ▼1.1. GLITTER ▲99.  
-`solstice:103` Mute clowns in bras and fishnets run between the trading desks, pantomiming panic and euphoria. The air is full of confetti.  
+`solstice:104` The Human Stock Exchange is roaring. Tickers crawl across the walls in red and green: SELF ▲4.2. VIBES ▼1.1. GLITTER ▲99.  
+`solstice:105` Mute clowns in bras and fishnets run between the trading desks, pantomiming panic and euphoria. The air is full of confetti.  
 > *show solstice happy*  
-`solstice:105` **Solstice:** THERE you are! Okay, I just bought forty percent of you! Don't let me down! Diversify your feelings!  
-`solstice:106` A clown runs up to you and mimes, frantically, an offer. They're pointing at Solstice. Her ticker is on the wall: SOLSTICE ▲2.0.  
+`solstice:107` **Solstice:** THERE you are! Okay, I just bought forty percent of you! Don't let me down! Diversify your feelings!  
+`solstice:108` A clown runs up to you and mimes, frantically, an offer. They're pointing at Solstice. Her ticker is on the wall: SOLSTICE ▲2.0.  
 
 > **Choice**
 
-`solstice:108` **▸** Buy as many shares of Solstice as you can.  
+`solstice:110` **▸** Buy as many shares of Solstice as you can.  
 > *rapport +2 Solstice*  
-`solstice:110` You buy and buy. The clown mimes a heart attack of joy. On the wall, her ticker rockets: SOLSTICE ▲88.8.  
-`solstice:111` **Solstice (surprised):** Oh my god. I'm a blue chip. I'm a BLUE CHIP!  
-`solstice:112` **Solstice (happy):** Mutual investment! We own each other now! That's basically marriage on this floor!  
+`solstice:112` You buy and buy. The clown mimes a heart attack of joy. On the wall, her ticker rockets: SOLSTICE ▲88.8.  
+`solstice:113` **Solstice (surprised):** Oh my god. I'm a blue chip. I'm a BLUE CHIP!  
+`solstice:114` **Solstice (happy):** Mutual investment! We own each other now! That's basically marriage at this party!  
 
-`solstice:114` **▸** Short-sell Solstice.  
+`solstice:116` **▸** Short-sell Solstice.  
 > *rapport +1 Solstice*  
-`solstice:116` The clown gasps silently and hands you a little paper slip marked SHORT. Her ticker dips.  
-`solstice:117` **Solstice (surprised):** You absolute CAPITALIST!  
-`solstice:118` **Solstice (happy):** I respect it. I hate it. I respect it.  
+`solstice:118` The clown gasps silently and hands you a little paper slip marked SHORT. Her ticker dips.  
+`solstice:119` **Solstice (surprised):** You CAPITALIST PIG!  
+`solstice:120` **Solstice (happy):** I respect it. I hate it, but I respect it. Maybe I like it a little when people take advantage of me.  
 
-`solstice:120` **▸** Don't trade. Just watch the chaos.  
-`solstice:121` The clown stops. They look at you with enormous, sad, painted eyes, and mime: no spectators.  
-`solstice:122` Then they gently place a share of somebody's grandmother in your hand and run away.  
-`solstice:123` **Solstice (neutral):** Ha. They do that. Nobody gets to just watch here.  
+`solstice:122` **▸** Don't trade. Just watch the chaos.  
+`solstice:123` The clown stops. They look at you with enormous, sad, painted eyes, and mime a slow jackoff motion. No spectators, right.  
+`solstice:124` Then they gently place a share of yourself in your hand and run away.  
+`solstice:125` **Solstice (neutral):** Ha. They do that. Nobody gets to just watch. Unless you're in the cuck chair.  
 > *(end of choice)*
 
-`solstice:125` A siren wails. Every clown freezes, then slowly tears their own hair in silent anguish. The tickers flash red: MARKET CRASH. EVERYTHING ▼100.  
+`solstice:127` A siren wails. Every clown freezes, then slowly they tear at their wigs in silent anguish. The tickers flash red: MARKET CRASH. EVERYTHING ▼100.  
 > *show solstice surprised*  
 
 > **Choice**
-`solstice:128` **Solstice:** Oh no. Oh no, the crash. Quick, what do we do?  
+`solstice:130` **Solstice:** Oh no. Oh no, the crash. Quick, what do we do?  
 
-`solstice:130` **▸** "Can I grab your hand? We're getting out of here."  
+`solstice:132` **▸** "Can I grab your hand? We're getting out of here."  
 > *rapport +2 Solstice*  
-`solstice:132` **Solstice (happy):** YES. Run!  
-`solstice:133` You run hand in hand through a blizzard of confetti and out into the hallway, and you're both laughing so hard you have to sit down on the carpet.  
-`solstice:134` **Solstice (blush):** That's the best I've felt in like a month. That was so stupid. Thank you.  
+`solstice:134` **Solstice (happy):** YES. Run!  
+`solstice:135` You run hand in hand through a blizzard of stock ticker confetti and out into the hallway, and you're both laughing so hard you have to sit down on the carpet.  
+`solstice:136` **Solstice (blush):** That's the best I've felt in like a month. That was so stupid. Thank you.  
 
-`solstice:136` **▸** "Hold. Never sell. Diamond hands."  
+`solstice:138` **▸** "Hodl! Never sell. Diamond hands."  
 > *rapport +1 Solstice*  
-`solstice:138` **Solstice (happy):** DIAMOND HANDS!  
-`solstice:139` You both hold up your hands, defiant, as the market crumbles around you. A clown salutes you with a single tear.  
+`solstice:140` **Solstice (happy):** DIAMOND HANDS! APE STRONG! THANK YOU FOR THE DIP!  
+`solstice:141` You both hold up your hands, defiant, as the market crumbles around you. A clown salutes you with a single tear.  
 
-`solstice:141` **▸** "Sell everything and buy tea."  
+`solstice:143` **▸** "Sell everything and give your earnings to the next person who walks in."  
 > *rapport +1 Solstice*  
-`solstice:143` **Solstice (happy):** Honestly the most financially sound decision anyone's made in this room.  
+`solstice:145` **Solstice (happy):** Sharing is caring! Well I guess here you shared the joy of buying into capitalism. A bit of a downer I guess, but what else can you do but laugh.  
 > *(end of choice)*
 
 ## solstice_night_2
 
 > *scene bg karaoke*  
-`solstice:151` The confession booth karaoke room is draped in velvet. A neon sign on one wall says CONFESS. On the other, ABSOLVED.  
-`solstice:152` The rules, printed on a card: Pick a song. Replace the words with something true. Everybody claps either way.  
+`solstice:153` The confession booth karaoke room is draped in velvet. A neon sign on one wall says CONFESS. On the other, ABSOLVED.  
+`solstice:154` The rules, printed on a card: Pick a song. Replace the words with something true. Everybody claps either way.  
 > *show solstice neutral*  
-`solstice:154` Solstice is coming out of the booth. Her LED top is on its dimmest setting. She sees you and goes pink under the glitter.  
-`solstice:155` **Solstice (blush):** Oh no. Did you hear that?  
-`solstice:156` **Solstice:** I confessed that I don't actually like techno. I like slow songs. Sad, slow country songs about trucks and divorce. I've been lying to the scene for six years.  
-`solstice:157` **Solstice (neutral):** Okay. Your turn. You have to. That's the rule.  
+`solstice:156` Solstice is coming out of the booth. Her LED top is on its dimmest setting. She sees you and goes pink under the glitter.  
+`solstice:157` **Solstice (blush):** Oh no. Did you hear that?  
+`solstice:158` **Solstice:** I confessed that I don't actually like techno. I like slow songs. Sad, slow country songs about trucks and divorce. I've been lying to the scene for six years.  
+`solstice:159` **Solstice (neutral):** Okay. Your turn. You have to. That's the rule.  
 
 > **Choice**
 
-`solstice:160` **▸** Confess something real.  
+`solstice:162` **▸** Confess something real.  
 > *rapport +2 Solstice*  
-`solstice:162` You go into the booth. You pick a slow song. In place of the words, you sing something you haven't said out loud to anyone.  
-`solstice:163` It isn't good singing. It doesn't need to be. When you come out, Solstice is standing very still.  
-`solstice:164` **Solstice (blush):** ...Hey. That was brave. That was, like, the real version.  
+`solstice:164` You go into the booth. You pick a slow song. In place of the words, you sing something you haven't said out loud to anyone.  
+`solstice:165` It isn't good singing. It doesn't need to be. When you come out, Solstice is standing very still.  
+`solstice:166` **Solstice (blush):** ...Hey. That was brave. That was, like, the real version.  
 
-`solstice:166` **▸** Confess something silly.  
+`solstice:168` **▸** Confess something silly.  
 > *rapport +1 Solstice*  
-`solstice:168` You sing, with enormous drama, that you have never once understood how crosswords work. Not once. Not even the easy ones.  
-`solstice:169` **Solstice (happy):** NO. Not even Monday?? The Monday ones are for CHILDREN.  
+`solstice:170` You sing, with enormous drama, that you're bad at puzzles. You can't even solve a single one without help.  
+`solstice:171` **Solstice (happy):** NO. Not even the ones that Chuk makes?? Those ones are for CHILDREN.  
 
-`solstice:171` **▸** Refuse to sing.  
-`solstice:172` The booth plays a very sad trombone sound. Several people boo, lovingly.  
-`solstice:173` **Solstice (neutral):** Ha. Okay. Okay, that's fair. Not everyone's ready to confess on a Saturday.  
-> *(end of choice)*
-
-> *show solstice neutral*  
-
-> **Choice**
-`solstice:177` **Solstice:** Hey, so. There's a slow one up next. A real one. Will you... sing it with me?  
-
-`solstice:179` **▸** Sing the slow one with her.  
-> *rapport +2 Solstice*  
-`solstice:182` The two of you squeeze into the booth. The song is about a truck and a dog and a long road home. You don't know the words. She does.  
-`solstice:183` Halfway through, her voice cracks and she laughs and keeps going, and you sing the harmony that doesn't exist.  
-`solstice:184` **Solstice (blush):** Okay. That's... okay. I'm going to remember that one.  
-
-`solstice:186` **▸** "Only if you take the goggles off."  
-> *rapport +1 Solstice*  
-`solstice:188` She hesitates. Then she pulls them off and hangs them on the mic stand. Her eyes look naked without them.  
-`solstice:189` **Solstice (neutral):** Fine. Deal. Don't look at me while I sing, I make faces.  
-
-`solstice:191` **▸** "Let's do something faster."  
-`solstice:192` **Solstice (neutral):** Oh. Sure! Yeah! Something with a drop!  
-`solstice:193` She turns the lights on her top back up. The slow song goes to the next people in line.  
+`solstice:173` **▸** Refuse to sing.  
+`solstice:174` The booth plays a very sad trombone sound. Several people boo, lovingly.  
+`solstice:175` **Solstice (neutral):** Ha. Okay. Okay, that's fair. Not everyone's ready to confess on a Saturday. Maybe later you can confess something ... just to me.  
 > *(end of choice)*
 
 ## solstice_night_3
 
 > *scene bg ballroom*  
-`solstice:201` The ballroom on Sunday night is pure light. Lasers cut the haze. Projections of slow geometry crawl over seven hundred dancing bodies.  
-`solstice:202` And in the middle of the floor, under the disco ball, Solstice is dancing like it's the last song on Earth. Her LED top is blazing every color at once.  
+`solstice:183` The ballroom on Sunday night is pure light. Lasers cut the haze. Geometric projections crawl over seven hundred dancing bodies.  
+`solstice:184` And in the middle of the floor, under the disco ball, Solstice is dancing like it's the last song on Earth. Her LED top is blazing every color at once.  
 > *show solstice happy*  
-`solstice:204` **Solstice:** YOU CAME! DANCE WITH ME!  
-`solstice:205` You dance. It's ridiculous and good. And then, mid-song, with a little electronic sigh, every light on her top goes out at once.  
+`solstice:186` **Solstice:** YOU CAME! DANCE WITH ME!  
+`solstice:187` You can barely hear her over the music, but you dance. It's ridiculous and good. And then, mid-song, with a little electronic sigh, every light on her top goes out at once.  
 > *show solstice surprised*  
-`solstice:207` Battery's dead. She's just a dark shape in the crowd now. She freezes in the middle of the floor like someone pulled her plug too.  
+`solstice:189` Battery's dead. She's just a dark shape in the crowd now. She freezes in the middle of the floor like someone pulled her plug too.  
 
 > **Choice**
 
-`solstice:210` **▸** Keep dancing with her, right there in the dark.  
+`solstice:192` **▸** Keep dancing with her, right there in the dark.  
 > *rapport +2 Solstice*  
-`solstice:212` You don't stop. After a second, she starts again, slower. Nobody's watching her now. She's just dancing.  
-`solstice:213` **Solstice (blush):** You stayed.  
+`solstice:194` You don't stop. After a second, she starts again, slower. Nobody's watching her now. She's just dancing.  
+`solstice:195` **Solstice (blush):** You stayed.  
 
-`solstice:215` **▸** Hold up your phone's flashlight like a tiny moon.  
+`solstice:197` **▸** Hold up your phone's flashlight like a tiny moon.  
 > *rapport +1 Solstice*  
-`solstice:217` **Solstice (happy):** Ha! My little moon! Okay, okay.  
-`solstice:218` She dances in the circle of your phone light like it's a spotlight. It's the smallest stage in the ballroom.  
+`solstice:199` **Solstice (happy):** Ha! My little moon! Usually I'm the one shining lights on other people. Okay, okay, I can get used to this.  
+`solstice:200` She dances in the circle of your phone light like it's a spotlight. It's the smallest stage in the ballroom.  
 
-`solstice:220` **▸** "Let's go find you some batteries!"  
-`solstice:221` **Solstice (neutral):** Yeah. Yeah, good idea. Can't be dark at the end.  
-`solstice:222` You hunt for batteries. By the time you find some, the song is over.  
+`solstice:202` **▸** "Let's go find you some batteries!"  
+`solstice:203` **Solstice (neutral):** Yeah. Yeah, good idea. Can't be dark at the end.  
+`solstice:204` You hunt for batteries. By the time you find some, the DJ set is over.  
 > *(end of choice)*
 
 > *show solstice neutral*  
-`solstice:225` **Solstice:** Nobody's ever stayed when the lights went out. People like Solstice. Solstice is fun. When she runs out, they go find the next fun thing.  
+`solstice:207` **Solstice:** Nobody's ever stayed when the lights went out. People like Solstice. Solstice is fun. When she runs out, they go find the next fun thing.  
 
 > **Choice**
-`solstice:227` **Solstice:** Hey. Can I tell you my real name?  
+`solstice:209` **Solstice:** Hey. Can I tell you my real name?  
 
-`solstice:229` **▸** "I'd love that."  
+`solstice:211` **▸** "I'd love that."  
+> *(end of choice)*
+
+`solstice:214` **Solstice:** But first I think I need a little bump of courage, do you think you can help me out?  
+
+> **Choice**
+
+`solstice:216` **▸** "Of course, anything for my friends"  
 > *rapport +2 Solstice*  
-`solstice:232` **Solstice (blush):** It's Dana. Dana. It's so boring. It's a dentist's name.  
-`solstice:233` **Solstice:** Nobody here knows it. Now you do.  
+`solstice:218` **Solstice (blush):** YAY! We're friends, it's official! Ok, but maybe not right now. I'll let you know when.  
 
-`solstice:235` **▸** "Only if you want to. I like Solstice too."  
+`solstice:220` **▸** "Uh sure, but I don't have anything on me right now"  
 > *rapport +2 Solstice*  
-`solstice:238` **Solstice (blush):** I want to. It's Dana.  
-`solstice:239` **Solstice:** And you like Solstice too. Huh. Then maybe you'd like both.  
+`solstice:222` **Solstice (blush):** Don't worry, maybe we can meet up later, and I'll reveal more than my name.  
 
-`solstice:241` **▸** "Does it matter?"  
-`solstice:242` **Solstice (neutral):** ...Maybe not. Never mind.  
-`solstice:243` The music swells. She turns back to the dance floor, and the moment's gone.  
+`solstice:224` **▸** "Uh, I'm not sure what you're talking about. You're not a cop right?"  
+`solstice:225` **Solstice (neutral):** ...Maybe not. Never mind. I'll see you around.  
+`solstice:226` The music swells. She turns back to the dance floor, and the moment's gone.  
 > *(end of choice)*
 
 > *if rapport["solstice"] >= ROMANCE_THRESHOLD:*  
-`solstice:246` **Solstice (blush):** After the ark... come find me on the roof? I want to see a sunrise without being high on anything but, like. Life. Ew. You know what I mean.  
+`solstice:229` **Solstice (blush):** After the big event... come find me on the roof? I want to see a sunrise, with you there maybe it'll glow extra bright.  
 > *else:*  
-`solstice:248` **Solstice (happy):** Okay! Ark time soon! Go get a good spot, new person!  
+`solstice:231` **Solstice (happy):** Okay! Big event time soon! Go get a good spot, new person!  
 
 ## solstice_romance
 
 > *scene bg roof_dawn*  
-`solstice:256` The ballroom lets out around five. Seven hundred people spill into the hallways sticky with confetti, hugging strangers, trading kandi, crying a little.  
-`solstice:257` You find Solstice exactly where she said she'd be: on the roof, in a borrowed hoodie three sizes too big, leg warmers still on, LED top dead and dark underneath.  
-`solstice:258` She's sitting on the bench with two cups of tea, and she's not dancing. You're not sure you've ever seen her sit still.  
+`solstice:239` The ballroom lets out around five. Seven hundred people spill into the hallways sticky with confetti, hugging strangers, trading gifts, crying a little.  
+`solstice:240` You find Solstice exactly where she said she'd be: on the roof, in a borrowed hoodie three sizes too big, leg warmers still on, LED top dead and dark underneath.  
+`solstice:241` She's sitting on the bench with two cups of tea, and she's not dancing. You're not sure you've ever seen her sit still.  
 > *show solstice blush*  
-`solstice:260` **Solstice:** Hi. I got you tea. It's the cardamom one. I didn't know if you were coming, so I've been drinking both of them in turns, which means you get half.  
-`solstice:261` **Solstice:** That's a gift. Gifts don't do math.  
-`solstice:262` You sit. The bench is cold. She shifts over until her shoulder is against yours, and the hoodie smells like the ballroom: fog machine, sunscreen, glitter, if glitter has a smell.  
+`solstice:243` **Solstice:** Hi. I got you tea. It's the cardamom one. I didn't know if you were coming, so I've been drinking both of them in turns, which means you get half.  
+`solstice:244` You sit. The bench is cold. She shifts over until her shoulder is against yours, and the hoodie smells like the ballroom: fog machine, sunscreen, glitter, if glitter has a smell.  
 
 > **Choice**
-`solstice:265` **Solstice:** Okay. Real question. Did you have fun? Like, actually?  
+`solstice:247` **Solstice:** Okay. Real question. Did you have fun? Like, actually?  
 
-`solstice:267` **▸** "The most fun I've had in years. Mostly because of you."  
-`solstice:268` **Solstice (blush):** Stop. Stop it. You can't just... okay, keep going, actually.  
+`solstice:249` **▸** "The most fun I've had in years. Mostly because of you."  
+`solstice:250` **Solstice (blush):** Stop. Stop it. You can't just... okay, keep going, actually.  
+`solstice:251` You pull out the small bag you brought, just in case the party wasn't over.  
 
-`solstice:269` **▸** "Ask me again after I sleep for two days."  
-`solstice:270` **Solstice (happy):** Ha! Fair. I'm going to sleep until Thursday. Then I have a night shift. Then I'm going to sleep until next Thursday.  
+`solstice:252` **▸** "I brought a little something for us, that is if you want to keep partying for a bit longer"  
+`solstice:253` You pull out a small bag.  
+`solstice:254` **Solstice (happy):** Ha! Fair. I'm not going to sleep anyway. Let me see that.  
 > *(end of choice)*
 
+`solstice:256` She takes the bag, and then her expression turns serious. Before you know it, she's slipped a handcuff around your right hand, and the other end to the railing.  
+`solstice:257` She flips the lights on her bra back on, and gets them real close to your eyes. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless.  
 > *show solstice neutral*  
-`solstice:273` Below you, the parking lot is starting to empty. Someone is carrying a six-foot inflatable flamingo to a hatchback and losing.  
-> *if gave_mint:*  
-`solstice:275` **Solstice:** I still have your mint, by the way. The hotel mint. I didn't eat it.  
-`solstice:276` She digs in the pocket of her leg warmer and holds it up: a slightly squashed white disc in cellophane, now covered in glitter.  
-`solstice:277` **Solstice:** I'm going to keep it in my locker at work. Next to my badge. So I see it every shift.  
-> *if sang_slow_song:*  
-`solstice:279` **Solstice:** And I keep thinking about the slow song. The truck song. You didn't know any of the words.  
-`solstice:280` **Solstice (happy):** You sang anyway. Nobody sings anyway.  
-`solstice:281` **Solstice (neutral):** I've been to twenty festivals. I've never once watched the sunrise. I'm always inside, dancing, so I don't have to think.  
-`solstice:282` **Solstice:** Tomorrow I go back to the ICU. Night shift Tuesday. Somebody's going to have the worst night of their life and I'm going to be there.  
-`solstice:283` **Solstice:** Usually I come back from these things and I'm emptier than when I left. Like I spent it all. Like I'm on battery.  
-`solstice:284` **Solstice (blush):** But I don't feel like that right now. I feel... charged. Is that stupid? That's stupid.  
+`solstice:260` **Solstice:** Hey. Before we do this can I tell you something? My real name. Nobody here knows it.  
+`solstice:261` **Solstice (blush):** It's Dana. Dana. Now we both have some dirt on each other, you can blow my cover anytime you want.  
+`solstice:262` The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it.  
 
 > **Choice**
 
-`solstice:287` **▸** "It's not stupid. I feel it too."  
-`solstice:288` **Solstice (blush):** Okay. Okay, good. Because I was going to be so embarrassed.  
+`solstice:265` **▸** "I'm not going to blow your cover, not now not ever."  
+`solstice:266` **Solstice (blush):** I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else.  
+`solstice:267` You let yourself become hypnotized, and before you know it it's morning.  
 
-`solstice:289` **▸** "You don't have to be on all the time. Not with me."  
-`solstice:290` **Solstice (blush):** ...  
-`solstice:291` **Solstice:** Nobody's ever said that to me. People usually want me brighter. Not less bright. Just... less on.  
+`solstice:268` **▸** Hand her the bag again.  
+`solstice:269` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
 > *(end of choice)*
 
-> *show solstice neutral*  
-> *if knows_dana:*  
-`solstice:295` **Solstice:** You know my real name. Nobody here knows it. That's not nothing.  
-> *else:*  
-`solstice:297` **Solstice:** Hey. Can I tell you something? My real name. Nobody here knows it.  
-`solstice:298` **Solstice (blush):** It's Dana. Dana. It's a dentist's name. Don't laugh.  
-`solstice:299` The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it.  
+`solstice:271` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
 
 > **Choice**
 
-`solstice:302` **▸** "Hi, Dana."  
-`solstice:303` **Solstice (blush):** Oh, that's unfair. That's so unfair. Say it again.  
-`solstice:304` You do. She covers her face with her hands, and laughs, and doesn't take them away for a while.  
+`solstice:274` **▸** "Yes. Lights off. Just us."  
+`solstice:275` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
+`solstice:276` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
 
-`solstice:305` **▸** Take her hand.  
-`solstice:306` Her fingers are cold from the morning and covered in glitter. She squeezes back hard, like she's checking you're real.  
+`solstice:277` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
+`solstice:278` **Solstice (surprised):** Oh!  
+`solstice:279` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
+`solstice:280` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
 > *(end of choice)*
 
-`solstice:308` **Solstice (blush):** Can I kiss you? Or is that too much? I'm really bad at doing things without lights on. I'm figuring it out.  
-
-> **Choice**
-
-`solstice:311` **▸** "Yes. Lights off. Just us."  
-`solstice:312` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
-`solstice:313` It's a slow kiss. A slow-song kiss. Somewhere a bird sings the harmony that doesn't exist.  
-
-`solstice:314` **▸** Kiss her first, gently.  
-`solstice:315` **Solstice (surprised):** Oh!  
-`solstice:316` **Solstice (blush):** Oh. Okay. Yeah. Yes. Again, please.  
-`solstice:317` So you do it again, slower. She's smiling so hard it barely counts.  
-> *(end of choice)*
-
+`solstice:282` The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on.  
 > *show solstice happy*  
-`solstice:320` **Solstice:** Okay. The sun's up. I've officially seen one. I'm going to be insufferable about it.  
+`solstice:284` **Solstice:** Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once.  
 > *scene bg roof_dawn*  
-`solstice:323` The longest day of the year was months ago. This one feels longer, in the best way.  
-`solstice:324` Below, someone in the parking lot starts playing a slow country song about a truck from their car speakers. Solstice laughs so hard she spills both teas.  
-`solstice:325` She pulls you up off the bench and you dance, badly, slowly, with no lights at all, until the song ends and the car drives away.  
+`solstice:287` The longest day of the year was months ago. This one feels longer, in the best way.  
+`solstice:288` Below, someone in the parking lot starts playing Fight The Power on a shitty car stereo. Solstice laughs so hard she spills both teas.  
+`solstice:289` She uncuffs you and pulls you up off the bench and you embrace, swaying slowly, with no lights at all, until the song ends and the car drives away.  
 > *scene black*  
-`solstice:327` {i}Wednesday, 4:12 AM. A text.{/i}  
-`solstice:328` **Solstice:** on break. someone made it through the night. the family brought donuts for the whole floor  
-`solstice:329` **Solstice:** it's sunrise in like an hour. I'm going to go watch it from the parking garage roof. first one I've watched on purpose that wasn't with you  
-`solstice:330` **Solstice:** thinking about you. it's dana btw. obviously. come to the next one with me? I'll bring the tea. you bring a mint  
+`solstice:291` {i}Wednesday, 4:12 AM. A text.{/i}  
+`solstice:292` **Solstice:** I quit the force, and now I'm living my raver lifestyle, but not as a cover.  
+`solstice:293` **Solstice:** I stayed up all night at decompression. It's sunrise in like an hour. I'm going to go watch it from the top of an art car, not worrying about what drugs the people below are on. first one I've watched on purpose that wasn't with you  
+`solstice:294` **Solstice:** thinking about you. Next year can I be your +1? No fake names, but I'm still happy to handcuff you if you'd like ;)  
 > *→ jump ending_card*  
 
 ## solstice_friend
 
 > *scene bg exterior*  
 > *show solstice happy*  
-`solstice:340` Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price.  
-`solstice:341` **Solstice:** THERE you are! I was going to leave a note on your windshield made of glitter. A glitter note. A glote.  
-`solstice:342` **Solstice (neutral):** Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes.  
-`solstice:343` **Solstice:** Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts.  
-`solstice:344` She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}.  
-`solstice:345` **Solstice (happy):** You're stuck with me now. Friendship bracelet is legally binding. Next festival, you're on my camp. No excuses!  
-`solstice:346` **Solstice:** And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert.  
+`solstice:304` Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price.  
+`solstice:305` **Solstice:** THERE you are! I was going to leave a note on your windshield made of glitter but now I don't have to.  
+`solstice:306` **Solstice (neutral):** Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes.  
+`solstice:307` **Solstice:** Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts.  
+`solstice:308` She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}.  
+`solstice:309` **Solstice (happy):** You're my person on the inside now. Friendship bracelet is legally binding.  
+`solstice:310` **Solstice:** And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert.  
 
 ---
 
@@ -1384,17 +1322,17 @@ Edit this file and send it back; the changes get applied to the game.
 
 ## wren_pool_1
 
-`wren:9` A person in head-to-toe black is standing at the edge of the deep end with a long pool net, trying to fish out a disco ball the size of a beach ball. It keeps rolling off the net.  
+`wren:9` A person in head-to-toe black is standing at the edge of the deep end with a long pool net, trying to fish a disco ball out from the water. It keeps rolling off the net.  
 > *show wren neutral*  
-`wren:11` **Wren:** Come on. Come on. You were installed in a ballroom. You were not installed in a pool. Who did this. Why would you do this.  
-`wren:12` It's Wren, from check-in. Sweat is running down from under her headset.  
+`wren:11` **Wren:** Come on. Come on. You were installed in a ballroom. You were not installed in a pool. How did you even get here?  
+`wren:12` It's Wren, from check-in. Sweat is running down from under their headset.  
 
 > **Choice**
 
 `wren:15` **▸** Grab the other net off the wall and help.  
 > *rapport +2 Wren*  
 `wren:17` You work it from the opposite side. It takes three tries, a lot of teamwork, and one undignified lunge, but the disco ball comes out of the water dripping and spinning.  
-`wren:18` **Wren (happy):** Yes! YES. Okay. That's the most satisfying thing that's happened to me since Thursday.  
+`wren:18` **Wren (happy):** Yes! YES. Finally a little less chaos... for now.  
 `wren:19` **Wren (neutral):** Thank you. Seriously. You didn't have to.  
 
 `wren:21` **▸** "Need a hand?"  
@@ -1404,14 +1342,14 @@ Edit this file and send it back; the changes get applied to the game.
 
 `wren:26` **▸** "Isn't that someone else's job?"  
 `wren:27` **Wren (neutral):** Everything here is someone else's job until it breaks. Then it's mine.  
-`wren:28` She gets it out on the seventh try, alone.  
+`wren:28` Wren gets it out on the seventh try, alone.  
 > *(end of choice)*
 
 > *show wren neutral*  
-`wren:31` She sits down on the edge of a lounger with the wet disco ball in her lap, like a cat that's been rescued from a tree.  
+`wren:31` They sit down on the edge of a lounger with the wet disco ball in their lap, like a cat that's been rescued from a tree.  
 `wren:32` **Wren:** Six years I've been crew. First year I came as a guest. Didn't know a single person here.  
-`wren:33` **Wren:** By Sunday I was wearing a cape I'd made out of a shower curtain, leading a conga line through the old casino floor, saying things out loud I'd never said to anyone. I found out who I was in these hallways.  
-`wren:34` **Wren:** That only happens if the spell holds. The second the lasers die or the fog machine catches fire, everyone remembers they're standing in an old hotel. So now I'm the one who makes sure nothing breaks.  
+`wren:33` **Wren:** By Sunday I was cracking a whip, leading people around on leashes, finding a side of myself I never knew existed. This hotel means a lot to me.  
+`wren:34` **Wren:** The magic only happens if the spell holds. The second the lasers die or the fog machine catches fire, everyone remembers they're standing in an old hotel, not a magical party. So now I'm the one who makes sure nothing breaks.  
 
 > **Choice**
 
@@ -1419,7 +1357,7 @@ Edit this file and send it back; the changes get applied to the game.
 > *rapport +2 Wren*  
 `wren:39` **Wren (surprised):** Ha.  
 `wren:40` **Wren (neutral):** Sometimes. For about six minutes at a time. Between fires.  
-`wren:41` **Wren:** Nobody's asked me that in a long time. People mostly ask me where the bathroom is.  
+`wren:41` **Wren:** Nobody's asked me that in a long time. People mostly ask me to fix their art.  
 
 `wren:43` **▸** "That's a really beautiful reason."  
 > *rapport +1 Wren*  
@@ -1430,323 +1368,322 @@ Edit this file and send it back; the changes get applied to the game.
 `wren:49` **Wren:** ...It's a little bit unpaid labor.  
 > *(end of choice)*
 
-`wren:51` **Walkie-talkie:** Wren, someone's put the inflatable flamingo in the ice machine.  
-`wren:52` **Wren (neutral):** Copy. Of course they have.  
+`wren:51` **Walkie-talkie:** Wren, someone's trying to fuck the ATM. ON THE CASINO FLOOR!  
+`wren:52` **Wren (neutral):** Copy. Be right there.  
 
 ## wren_pool_2
 
-`wren:58` Behind the towel hut at the far end of the pool hall, out of sight, Wren is sitting on an upturned bucket eating a sandwich. It's a very sad sandwich. It's mostly bread.  
+`wren:58` Behind the towel hut at the far end of the pool hall, out of sight, Wren is sitting on an upturned bucket eating a sandwich. It's a very sad sandwich far past it's prime.  
 > *show wren surprised*  
-`wren:60` **Wren:** Oh. Hi. You found my secret place. I have a fifteen-minute break. I've had it for six minutes. I've spent four of them answering the radio.  
+`wren:60` **Wren:** Oh. Hi. You found my secret place. I have a fifteen-minute break. I've had it for six minutes so I've got nine minutes to spare.  
 
 > **Choice**
 
-`wren:63` **▸** Offer her half of the fancy pastry you grabbed from the tea bar.  
+`wren:63` **▸** Offer them half of the fancy pastry you grabbed from the pastriarchy cart.  
 > *rapport +2 Wren*  
-`wren:66` **Wren (surprised):** Is that the cardamom bun? There are only twelve of those. I've never gotten one. Not in six years.  
-`wren:67` **Wren (happy):** Oh my god. Oh my god, it's so good. I'm going to cry. I'm not going to cry. I'm crew.  
+`wren:66` **Wren (surprised):** Is that the cardamom bun? I've never gotten one, I'm always on shift when they do the renegades.  
+`wren:67` **Wren (happy):** Oh my god, it's so good. I'm going to cry. I can't cry, I'm crew, gotta keep my game face on.  
 
-`wren:69` **▸** Sit down on the floor next to her and say nothing.  
+`wren:69` **▸** Sit down on the floor next to Wren and say nothing.  
 > *rapport +1 Wren*  
-`wren:71` You sit. She eats her sad sandwich. The pool noises go on around the corner.  
+`wren:71` You sit. They eat their sad sandwich. The pool noises go on around the corner.  
 `wren:72` **Wren (neutral):** This is nice. Nothing's on fire right now. It's like being underwater.  
 
 `wren:74` **▸** "Want me to leave so you can actually have your break?"  
 > *rapport +1 Wren*  
-`wren:76` **Wren (neutral):** No. Stay. Actually, stay.  
-`wren:77` **Wren:** It's nice to talk to someone who isn't telling me something's broken.  
+`wren:76` **Wren (neutral):** No. Stay. It's nice to talk to someone who isn't telling me something's broken.  
 > *(end of choice)*
 
 > *show wren neutral*  
-`wren:80` She turns the walkie down to its lowest setting. You can tell it costs her something.  
-`wren:81` **Wren:** I'm on fire duty for the ark tomorrow. It comes down from the ballroom ceiling at 11:11 on a rig I built. Seven hundred people in the dark. If anything jams, I have about ninety seconds to fix it before anyone notices.  
-`wren:82` **Wren:** Last year the fog machine caught on fire. Small fire. Supportive fire. But still.  
+`wren:79` Wren turns the walkie down to its lowest setting. You can tell it costs them something.  
+`wren:80` **Wren:** I'm on duty for the big event tomorrow. It all comes down from the ballroom ceiling at 11:11 on a rig I built. Seven hundred people in the dark. If anything jams, I have about ninety seconds to fix it before anyone notices.  
+`wren:81` **Wren:** Last year the confetti cannon jammed, then caught on fire. Small fire. Supportive fire. But still.  
 
 > **Choice**
 
-`wren:85` **▸** "It'll go fine. And if it doesn't, it'll be a better story."  
+`wren:84` **▸** "It'll go fine. And if it doesn't, it'll be a better story."  
 > *rapport +2 Wren*  
-`wren:87` **Wren (happy):** Ha. Okay. Yeah. The fire was a really good story, honestly.  
-`wren:88` **Wren (neutral):** Thank you. I needed somebody to say that, and I've been saying it to everyone else.  
+`wren:86` **Wren (happy):** Ha. Okay. True. I was a hit at the wrap party.  
+`wren:87` **Wren (neutral):** Thank you for saying it'll be okay. I needed somebody to say that, and I've been saying it to everyone else.  
 
-`wren:90` **▸** "Can I help? Running errands, carrying stuff, anything?"  
+`wren:89` **▸** "Can I help? Running errands, carrying stuff, anything?"  
 > *rapport +1 Wren*  
-`wren:92` **Wren (neutral):** Guests aren't supposed to work. But I'll... keep that in mind. Seriously.  
+`wren:91` **Wren (neutral):** Guests aren't supposed to work. But I'll... keep that in mind. Seriously.  
 
-`wren:94` **▸** "You should let someone else handle it."  
-`wren:95` **Wren (neutral):** There isn't someone else. That's the whole job.  
+`wren:93` **▸** "You should let someone else handle it."  
+`wren:94` **Wren (neutral):** There isn't someone else. That's the whole job.  
 > *(end of choice)*
 
-`wren:97` **Walkie-talkie:** Wren, the Oracle robot is printing fortunes on the carpet. Just the carpet. It won't stop.  
-`wren:98` **Wren (neutral):** Copy.  
-`wren:99` **Wren (happy):** Thanks for the break. That was the best four minutes of my weekend.  
+`wren:96` **Walkie-talkie:** Wren, the Carpet Master is making prophecies again. It won't stop and it's freaking people out.  
+`wren:97` **Wren (neutral):** Copy.  
+`wren:98` **Wren (happy):** Thanks for the break. That was the best few minutes of my weekend.  
 
 ## wren_night_1
 
 > *scene bg backstage*  
-`wren:106` Behind a door marked BACKSTAGE: a forest of scaffolding, cables thick as pythons, road cases stenciled with names like PARTY HARDER and FRAGILE: FEELINGS. Through a gap in the curtain, the ballroom roars.  
-`wren:107` Except the lasers have gone dark. The DJ is vamping. Seven hundred people are dancing under nothing but the exit signs, and it's starting to feel like a hotel ballroom again.  
+`wren:105` Behind a door marked BACKSTAGE: a forest of scaffolding, cables thick as pythons, road cases stenciled with names like PARTY HARDER and FRAGILE: FEELINGS. Through a gap in the curtain, the ballroom roars.  
+`wren:106` Except the lasers have gone dark. The DJ is vamping. Seven hundred people are dancing under nothing but the exit signs, and it's starting to feel like a hotel ballroom again.  
 > *show wren neutral*  
-`wren:109` Halfway up a ladder, with a flashlight in her teeth and a screwdriver behind her ear, is Wren.  
-`wren:110` **Wren:** Mmf. Oh, thank god, it's you. Don't touch anything red.  
-`wren:111` **Wren:** The laser rig went down mid-set. I've got maybe two songs before people start noticing the carpet.  
+`wren:108` Halfway up a ladder, with a flashlight in their teeth and a screwdriver behind their ear, is Wren.  
+`wren:109` **Wren:** Mmf. Oh, thank god, it's you. Don't touch anything red.  
+`wren:110` **Wren:** The laser rig went down mid-set. I've got maybe one more song before people start noticing the carpet.  
 
 > **Choice**
 
-`wren:114` **▸** "What do you need?"  
+`wren:113` **▸** "What do you need?"  
 > *rapport +2 Wren*  
-`wren:116` She points at the flashlight in her mouth. You climb up and take it, and hold it exactly where she points, while she rewires something with the speed of a surgeon.  
-`wren:117` **Wren (neutral):** Little left. Little more. Perfect. Don't breathe.  
+`wren:115` They point at the flashlight in their mouth. You climb up and take it, and hold it exactly where they point, while they rewire something with the speed and deftness of a surgeon.  
+`wren:116` **Wren (neutral):** Little left. Little more. Perfect. Don't breathe.  
 
-`wren:118` **▸** "Have you tried turning it off and on again?"  
+`wren:117` **▸** "Have you tried turning it off and on again?"  
 > *rapport +1 Wren*  
-`wren:120` **Wren (neutral):** ...  
-`wren:121` She stares at you. Then she reaches over and flips the master switch off and on again.  
-`wren:122` Somewhere above you, the rig whirs back to life.  
-`wren:123` **Wren (blush):** Do not tell anyone that worked.  
+`wren:119` **Wren (neutral):** ...  
+`wren:120` They stare at you. Then they reach over and flip the master switch off and on again.  
+`wren:121` Somewhere above you, the rig whirs back to life.  
+`wren:122` **Wren (blush):** Do not tell anyone that worked.  
 
-`wren:124` **▸** "Shouldn't someone with a real job be doing this?"  
-`wren:125` **Wren (neutral):** I am someone with a real job. It's this. It's always this.  
+`wren:123` **▸** "Shouldn't someone with a real job be doing this?"  
+`wren:124` **Wren (neutral):** I am someone with a real job. It's this. Since no one else seems to want to help.  
 > *(end of choice)*
 
-`wren:127` The lasers blaze back on. Pink and cyan beams sweep the haze, the bass drops, and seven hundred people scream like it was all part of the show.  
-`wren:128` None of them will ever know anything went wrong. Wren climbs down the ladder, sits on a road case, and watches them through the gap in the curtain.  
+`wren:126` The lasers blaze back on. Pink and cyan beams sweep the haze, the bass drops, and seven hundred people scream like it was all part of the show.  
+`wren:127` None of them will ever know anything went wrong. Wren climbs down the ladder, sits on a road case, and watches them through the gap in the curtain.  
 > *show wren happy*  
-`wren:130` **Wren:** That. That's the job. Nobody's supposed to know. If they notice, the spell breaks.  
+`wren:129` **Wren:** That's the job. Nobody's supposed to know. If they notice, the spell breaks.  
 > *show wren neutral*  
-`wren:132` **Wren:** Every year someone walks in here as one person and walks out as somebody else. I just keep the lights on while it happens.  
+`wren:131` **Wren:** Every year someone walks in here as one person and walks out as somebody else. I just keep the lights on while it happens.  
 
 > **Choice**
 
-`wren:135` **▸** "Who keeps the lights on for you?"  
+`wren:134` **▸** "Who keeps the lights on for you?"  
 > *rapport +2 Wren*  
-`wren:137` Wren doesn't answer for a long time. The lasers sweep over her face, pink, then cyan, then pink.  
-`wren:138` **Wren (blush):** ...Nobody's asked me that. I don't know. I don't know.  
+`wren:136` Wren doesn't answer for a long time. The lasers sweep over their face, pink, then cyan, then pink.  
+`wren:137` **Wren (blush):** ...Nobody's asked me that. I don't know. But thank you, I'll think on that.  
 
-`wren:139` **▸** "Come out there for one song."  
+`wren:138` **▸** "Come out there for one song."  
 > *rapport +1 Wren*  
-`wren:141` **Wren (neutral):** One song. If anything breaks, I'm—  
-`wren:142` You pull her through the curtain. She stands at the very edge of the dance floor and doesn't dance, exactly, but she sways. For one song.  
-`wren:143` **Wren (blush):** ...Okay. That was nice. Don't tell my crew.  
+`wren:140` **Wren (neutral):** One song. If anything breaks, I'm—  
+`wren:141` You pull them through the curtain. They stand at the very edge of the dance floor and don't dance, exactly, but they sway. For one song.  
+`wren:142` **Wren (blush):** ...Okay. That was nice. Don't tell the rest of the crew.  
 
-`wren:144` **▸** "You look exhausted."  
-`wren:145` **Wren (neutral):** Thanks. I'm aware. I have a mirror. It's a crew mirror. It's black.  
+`wren:143` **▸** "You look exhausted."  
+`wren:144` **Wren (neutral):** Thanks. I'm aware. I have a mirror.  
 > *(end of choice)*
 
-`wren:147` **Walkie-talkie:** Wren, the Holy Skillet's spotlight just exploded. Small explosion. Supportive explosion.  
-`wren:148` **Wren (neutral):** Copy. On my way.  
-`wren:149` **Wren (happy):** Thanks for the flashlight. Or the moral support. Whichever it was.  
+`wren:146` **Walkie-talkie:** Wren, there's a wizard of the 9th floor, waving his, um, big stick around if you catch my drift.  
+`wren:147` **Wren (neutral):** Copy. On my way.  
+`wren:148` **Wren (happy):** Thanks for the flashlight. Or the moral support. Whichever it was.  
 
 ## wren_night_2
 
 > *scene bg mission*  
-`wren:156` STAFF ONLY. Inside, a linen closet has been turned into the crew's fire station. On one wall, a big hand-drawn map of the hotel, studded with little red magnets: one for everything that's currently broken. There are a lot of red magnets.  
-`wren:157` Walkie-talkies charge in a row. Clean towels are stacked to the ceiling. A toolbox the size of a coffin sits open on the floor.  
+`wren:155` STAFF ONLY. Inside, a linen closet has been turned into the crew's control station. On one wall, a big hand-drawn map of the hotel, studded with little red magnets: one for everything that's currently broken. There are a lot of red magnets.  
+`wren:156` Walkie-talkies charge in a row. Clean towels are stacked to the ceiling. A toolbox the size of a coffin sits open on the floor.  
 > *show wren neutral*  
-`wren:159` **Wren:** You found me. Don't tell anyone this room exists. I'll have to kill you. Gently. With towels.  
-`wren:160` **Wren:** Actually, I could use a hand. The fog machine in Room 312 is stuck on. The forest is turning into soup.  
-`wren:161` She points to a panel of big glowing buttons: FOG KILL. LASERS. ARK RIG. PANIC.  
-`wren:162` **Wren:** The fog kill switch is flaky. It has to be held down for exactly three seconds while I reset the unit, or it reboots and floods the room. On my count. Three, two—  
+`wren:158` **Wren:** You found me. Don't tell anyone this room exists. I'll have to kill you. Gently. With towels.  
+`wren:159` **Wren:** Actually, I could use a hand. The fog machine in Room 312 is stuck on. The forest is turning into soup.  
+`wren:160` They point to a panel of big glowing buttons: FOG KILL. LASERS. BIG EVENT RIG. PANIC.  
+`wren:161` **Wren:** The fog kill switch is flaky. It has to be held down for exactly three seconds while I reset the unit, or it reboots and floods the room. On my count. Three, two—  
 
 > **Choice**
 
-`wren:165` **▸** Hold FOG KILL down, perfectly steady, for exactly three seconds.  
+`wren:164` **▸** Hold FOG KILL down, perfectly steady, for exactly three seconds.  
 > *rapport +2 Wren*  
-`wren:168` You hold it. One. Two. Three. On the monitor, the fog in the forest room thins to a soft, pretty haze. Someone in there gasps, delighted.  
-`wren:169` **Wren (happy):** Perfect. That was {i}perfect.{/i} You have no idea how rare steady hands are on this crew. You'd make good crew.  
+`wren:167` You hold it. One. Two. Three. On the monitor, the fog in the forest room thins to a soft, pretty haze. Someone in there gasps, delighted.  
+`wren:168` **Wren (happy):** Perfect. That was {i}perfect.{/i} You have no idea how rare steady hands are on this crew. You'd make good crew.  
 
-`wren:170` **▸** Hold it down, panic, and let go a second early.  
-`wren:171` The fog in the forest room surges, then settles. On the monitor, someone in there sneezes.  
-`wren:172` **Wren (neutral):** That was early. It's fine. The forest got a little extra mood. Fog's very forgiving.  
+`wren:169` **▸** Hold it down, panic, and let go a second early.  
+`wren:170` The fog in the forest room surges, then settles. On the monitor, someone in there sneezes.  
+`wren:171` **Wren (neutral):** That was early. It's fine. The forest got a little extra mood. Fog's very forgiving.  
 
-`wren:173` **▸** Press PANIC, because how could you not.  
+`wren:172` **▸** Press PANIC, because how could you not.  
 > *rapport +1 Wren*  
-`wren:175` Somewhere in the walls, a single kazoo plays a long, sad note.  
-`wren:176` **Wren (surprised):** Oh my god. Nobody's ever pressed that. In six years.  
-`wren:177` **Wren (happy):** It's not connected to anything. It's just a kazoo. Somebody built it as a joke. You pressed the joke.  
+`wren:174` A small door opens on the control panel and a fake snake jumps out, over your head.  
+`wren:175` **Wren (surprised):** Oh my god. Nobody's ever pressed that. In six years.  
+`wren:176` **Wren (happy):** Thank god it's just a joke. I guess I needed a good laugh.  
 > *(end of choice)*
 
 > *show wren neutral*  
-`wren:180` Between fires, the two of you sit on stacks of towels in the dark, lit by the monitors. It's very quiet in here. You can feel the bass through the floor like a heartbeat.  
-`wren:181` Every so often she gets up and moves a red magnet to the other side of the map. Fixed.  
-`wren:182` **Wren:** This is my favorite part of the whole weekend. Right here. Everybody out there having the best night of their life, and in here it's just quiet and the map, and the magnets going from red to done.  
-`wren:183` **Walkie-talkie:** Wren, the Ice Machine Planetarium's star projector just went dark. Someone in there says the stars left them.  
-`wren:184` **Wren (neutral):** Copy.  
+`wren:179` Between fires, the two of you sit on stacks of towels in the dark, lit by the monitors. It's very quiet in here. You can feel the bass through the floor like a heartbeat.  
+`wren:180` Every so often they get up and move a red magnet to the other side of the map. Fixed.  
+`wren:181` **Wren:** This is my favorite part of the whole weekend. Everybody out there having the best night of their life, and in here it's just quiet and the map, and the magnets going from red to done.  
+`wren:182` **Walkie-talkie:** Wren, the Ice Machine Planetarium's star projector just went dark. I'm worried we've lost power to the whole rotunda.  
+`wren:183` **Wren (neutral):** Copy.  
 
 > **Choice**
-`wren:187` **Wren:** I have to go fix the sky. You should go enjoy the party. Or—I mean. You could come with me. You can hold the flashlight. You're good at it.  
+`wren:186` **Wren:** I have to go fix the sky. You should go enjoy the party. Or—I mean. You could come with me. You can hold the flashlight. You're good at it.  
 
-`wren:189` **▸** "This is the party. I'm coming."  
+`wren:188` **▸** "Wherever you are is the party. I'm coming."  
 > *rapport +2 Wren*  
-`wren:191` **Wren (blush):** ...Okay. Yeah. Okay. Grab the flashlight.  
-`wren:192` You walk the hallways side by side. She lets you carry the flashlight. Ten minutes later, the stars come back on in the planetarium, and a whole room of people says {i}oooh{/i} at once.  
+`wren:190` **Wren (blush):** ...Okay. Yeah. Grab the flashlight.  
+`wren:191` You walk the hallways side by side. They let you carry the flashlight. Ten minutes later, the stars come back on in the planetarium, and a whole room of people says {i}oooh{/i} at once.  
 
-`wren:193` **▸** "I'll hold down the fort here."  
+`wren:192` **▸** "I'll hold down the fort here."  
 > *rapport +1 Wren*  
-`wren:195` **Wren (surprised):** You'd... yeah. Okay. Don't press anything. Except PANIC. You can press PANIC.  
-`wren:196` She tosses you a spare walkie on her way out. For the next twenty minutes you're crew. You move two magnets. It feels incredible.  
+`wren:194` **Wren (surprised):** You'd... yeah. Okay. Don't press anything. Except PANIC. You seem good at that one.  
+`wren:195` They toss you a spare walkie on their way out. For the next twenty minutes you're crew. You move two magnets. It feels incredible.  
 
-`wren:197` **▸** "I'll see you later, then."  
-`wren:198` **Wren (neutral):** Yeah. Later. Have fun.  
+`wren:196` **▸** "I'll see you later, then."  
+`wren:197` **Wren (neutral):** Yeah. Later. Have fun.  
 > *(end of choice)*
 
 ## wren_night_3
 
 > *scene bg roof*  
-`wren:206` The roof of the hotel tower. Above you, a sky full of stars. Far below, the black mirror of the lake and the glitter of the other casinos along the shore. Under your feet, the bass. Thick cables run down from the rigging into the ballroom skylight, where in a few minutes the ark will come down.  
+`wren:205` The roof of the hotel tower. Above you, a sky full of stars. Far below, the black mirror of the lake and the glitter of the other casinos along the shore. Under your feet, the bass. Thick cables run down from the rigging into the ballroom skylight, where in a few minutes the big event will begin.  
 > *show wren neutral*  
-`wren:208` Wren is toolbox in hand, checking every knot. She looks up when the door clangs.  
-`wren:209` **Wren:** Hey. I have seven minutes until I need to be under the stage. The rig's checked. Triple-checked.  
-`wren:210` **Wren:** Seven minutes. What do people do with seven minutes?  
+`wren:207` Wren is toolbox in hand, checking every knot. They look up when the door clangs.  
+`wren:208` **Wren:** Hey. I have seven minutes until I need to be under the stage. The rig's checked. Triple-checked.  
+`wren:209` **Wren:** Seven minutes. What do people do with seven minutes?  
 
 > **Choice**
 
-`wren:213` **▸** "Sit down. Look at the stars. I'll watch the clock for you."  
+`wren:212` **▸** "Sit down. Look at the stars. I'll watch the clock for you."  
 > *rapport +2 Wren*  
-`wren:215` You hold out your hand. After a long second, she gives you the walkie.  
-`wren:216` She lies flat on her back on the gravel roof, arms out, and looks up. She doesn't say anything for three whole minutes.  
-`wren:217` **Wren (blush):** I forgot there were stars here. Six years. I forgot.  
+`wren:214` You hold out your hand. After a long second, they give you the walkie.  
+`wren:215` They lie flat on their back on the gravel roof, arms out, and look up. They don't say anything for three whole minutes.  
+`wren:216` **Wren (blush):** I forgot there were stars here. Six years. I forgot.  
 
-`wren:219` **▸** "Dance with me. No music."  
+`wren:218` **▸** "Dance with me. No music."  
 > *rapport +1 Wren*  
-`wren:221` **Wren (surprised):** There's music. It's coming up through the roof. It's... actually, okay.  
-`wren:222` You dance, badly, on the roof. She's stiff for a minute and then she isn't.  
+`wren:220` **Wren (surprised):** There's music. It's coming up through the roof. It's... actually, okay.  
+`wren:221` You dance, badly, on the roof. They're stiff for a minute and then they aren't.  
 
-`wren:224` **▸** "Shouldn't you be double-checking the rigging?"  
-`wren:225` **Wren (neutral):** Triple. I said triple. ...You're right. I'll check it again.  
-`wren:226` She spends the seven minutes checking knots.  
+`wren:223` **▸** "Shouldn't you be double-checking the rigging?"  
+`wren:224` **Wren (neutral):** Triple. I said triple. ...You're right. I'll check it again.  
+`wren:225` They spend the seven minutes checking knots.  
 > *(end of choice)*
 
 > *show wren neutral*  
-`wren:229` **Wren:** Can I tell you something stupid? I've never seen the ark. Not once. Six years.  
-`wren:230` **Wren:** During the ark I'm under the stage with a fire extinguisher and a roll of gaffer tape, watching it on a monitor the size of a sandwich. In case anything breaks. Ninety seconds, remember.  
-`wren:231` **Wren:** Everyone says it's the best moment of the whole weekend. I wouldn't know.  
+`wren:228` **Wren:** Can I tell you something stupid? I've never seen the big event. Not once. Six years.  
+`wren:229` **Wren:** During the big event I'm under the stage with a fire extinguisher and a roll of gaffer tape, watching it on a monitor the size of a sandwich. In case anything breaks. Ninety seconds, remember.  
+`wren:230` **Wren:** Everyone says it's the best moment of the whole weekend. I wouldn't know.  
 
 > **Choice**
 
-`wren:234` **▸** "After the ark lands, come find me. Watch the end of it with me."  
+`wren:233` **▸** "After the big event, come find me. Watch the end of it with me."  
 > *rapport +2 Wren*  
-`wren:236` **Wren (surprised):** I can't just—  
-`wren:237` **Wren (blush):** ...After it lands. If nothing's broken. Maybe I could. Maybe I could, actually.  
+`wren:235` **Wren (surprised):** I can't just—  
+`wren:236` **Wren (blush):** ...After it lands. If nothing's broken. Maybe I could. Maybe I could, actually.  
 
-`wren:239` **▸** "Next year, let someone else take fire duty. Come as a guest."  
+`wren:238` **▸** "Next year, let someone else take fire duty. Come as a guest."  
 > *rapport +1 Wren*  
-`wren:241` **Wren (neutral):** Ha. Maybe. That's... maybe.  
+`wren:240` **Wren (neutral):** Ha. Maybe. That's... maybe.  
 
-`wren:243` **▸** "You'll see it someday."  
-`wren:244` **Wren (neutral):** Yeah. Someday.  
+`wren:242` **▸** "You'll see it someday."  
+`wren:243` **Wren (neutral):** Yeah. Someday.  
 > *(end of choice)*
 
-`wren:246` **Walkie-talkie:** Wren, five minutes to ark. Rig's yours.  
-`wren:247` **Wren (neutral):** Copy. On my way.  
+`wren:245` **Walkie-talkie:** Wren, five minutes to the big event. Rig's yours.  
+`wren:246` **Wren (neutral):** Copy. On my way.  
 > *if rapport["wren"] >= ROMANCE_THRESHOLD:*  
-`wren:249` **Wren (blush):** My shift ends at 11:12. One minute after the ark. I've never once left on time. Tonight I'm going to.  
+`wren:248` **Wren (blush):** My shift ends at 11:12. One minute after the big event. I've never once left on time. Tonight I'm going to.  
 > *else:*  
-`wren:251` **Wren (neutral):** Go get a spot near the front. Trust me. It's worth seeing in person.  
+`wren:250` **Wren (neutral):** Go get a spot near the front. Trust me. It's worth seeing in person.  
 
 ## wren_romance
 
 > *scene bg ballroom*  
-`wren:259` At 11:12, while the ballroom is still screaming and the confetti is still falling, someone taps you on the shoulder.  
+`wren:258` At 11:12, while the ballroom is still screaming and the confetti is still falling, someone taps you on the shoulder.  
 > *show wren happy*  
-`wren:261` Wren. No toolbox. The headset is around her neck instead of on her head, and she looks like someone who has just jumped off a high diving board.  
-`wren:262` **Wren:** Nothing broke. Do you understand? Six years, and for the first time, nothing broke. Not one thing. I stood under that stage with a fire extinguisher and nothing caught fire.  
-`wren:263` **Wren:** So I handed the toolbox to Pilar. Pilar's been begging for it for two years. And I just... walked out.  
-`wren:264` **Wren:** I watched the duck come out of the ark from the back of the room. In person. With my actual eyes. It was so stupid. I cried so much.  
-`wren:265` **Wren (surprised):** I don't know what to do with my hands. They keep reaching for a screwdriver.  
+`wren:260` Wren. No toolbox. The headset is around their neck instead of on their head, and they look like someone who has just jumped off a high diving board.  
+`wren:261` **Wren:** Nothing broke. Do you understand? Six years, and for the first time, nothing broke. Not one thing. I stood under that stage with a fire extinguisher and nothing caught fire.  
+`wren:262` **Wren:** So I handed the toolbox to Pilar. Pilar's been begging for it for two years. And I just... walked out.  
+`wren:263` **Wren:** I watched them open the ark from the back of the room. In person. With my actual eyes. It was so stupid. I cried so much.  
+`wren:264` **Wren (surprised):** I don't know what to do with my hands. They keep reaching for a screwdriver.  
 
 > **Choice**
-`wren:267` **Wren:** What do guests do now? After the big moment? I've genuinely never known.  
+`wren:266` **Wren:** What do guests do now? After the big moment? I've genuinely never known.  
 
-`wren:269` **▸** "They dance. Badly. Come on."  
-`wren:270` You pull her into the crowd. She dances like someone who has seen a thousand people dance and never once done it herself, stiff, then less stiff, then laughing.  
+`wren:268` **▸** "They dance. Badly. Come on."  
+`wren:269` You pull them into the crowd. They dance like someone who has seen a thousand people dance and never once done it themself, stiff, then less stiff, then laughing.  
 
-`wren:271` **▸** "They go find a quiet corner and talk until the sun comes up."  
-`wren:272` **Wren (happy):** That sounds... incredible, honestly. I know every quiet corner in this building. I've fixed the lights in all of them.  
+`wren:270` **▸** "They go find a quiet corner and talk until the sun comes up."  
+`wren:271` **Wren (happy):** That sounds... incredible, honestly. I know every quiet corner in this building. I've fixed the lights in all of them.  
 > *(end of choice)*
 
 > *scene bg roof_dawn*  
 > *show wren neutral*  
-`wren:277` Hours later, you're both back on the roof, where you were before the ark. The rigging hangs slack. The sky is going gold over the mountains, and the lake below is turning from black to silver.  
-`wren:278` Wren is sitting on the gravel with her back against the water tank, boots off, a stolen cardamom bun in each hand. She gives you one.  
+`wren:276` Hours later, you're both back on the roof, where you were before the ark. The rigging hangs slack. The sky is going gold over the mountains, and the lake below is turning from black to silver.  
+`wren:277` Wren is sitting on the gravel with their back against the water tank, boots off, a stolen cardamom bun in each hand. They give you one.  
 > *if shared_bun:*  
-`wren:280` **Wren:** You gave me half of one on Saturday. I've been waiting all weekend to pay you back. With interest.  
+`wren:279` **Wren:** You gave me half of one on Saturday. I've been waiting all weekend to pay you back. With interest.  
 > *else:*  
-`wren:282` **Wren:** There were twelve of these. Now there are zero. I have abused my position. I regret nothing.  
-`wren:283` **Wren:** This is the first sunrise in six years I've watched without a radio on.  
-`wren:284` She takes the headset off her neck and sets it on the gravel between you. It crackles once. She doesn't touch it.  
+`wren:281` **Wren:** There were twelve of these. Now there are zero. I have abused my position. I regret nothing.  
+`wren:282` **Wren:** This is the first sunrise in six years I've watched without a radio on.  
+`wren:283` They take the headset off their neck and set it on the gravel between you. It crackles once. They don't touch it.  
 
 > **Choice**
 
-`wren:287` **▸** "How does it feel?"  
-`wren:288` **Wren (blush):** Terrifying. Amazing. Like I left the stove on, except the stove is a whole hotel.  
-`wren:289` **Wren:** ...But it's fine. It's fine without me for one morning. Huh.  
+`wren:286` **▸** "How does it feel?"  
+`wren:287` **Wren (blush):** Terrifying. Amazing. Like I left the stove on, except the stove is a whole hotel.  
+`wren:288` **Wren:** ...But it's fine. It's fine without me for one morning. Huh.  
 
-`wren:290` **▸** Lean your shoulder against hers.  
-`wren:291` She leans back. All of her, for once. You can feel how tired she is, and how much lighter.  
+`wren:289` **▸** Lean your shoulder against theirs.  
+`wren:290` They lean back. All of them, for once. You can feel how tired they are, and how much lighter.  
 > *(end of choice)*
 
 > *show wren neutral*  
-`wren:294` **Wren:** Can I tell you what this weekend was supposed to be? For me? Toolbox, radio, eleven hours of sleep across three days, the lasers die, the fog machine catches fire, someone puts a disco ball in the pool.  
+`wren:293` **Wren:** Can I tell you what this weekend was supposed to be? For me? Toolbox, radio, eleven hours of sleep across three days, the lasers die, the fog machine catches fire, someone puts a disco ball in the pool.  
 > *if called_fog_cue:*  
-`wren:296` **Wren (happy):** And instead some guest walks into my linen closet and holds a kill switch steadier than half my crew. Do you know how annoying that is? I trained Pilar for a year.  
-`wren:297` **Wren:** I keep thinking about my first year. The shower-curtain cape. The conga line. Saying things out loud I'd never said to anyone. I found out who I was in those hallways.  
-`wren:298` **Wren:** Every year since, I've been building the place so other people get to find out too. And somewhere along the way I stopped thinking I was allowed to be one of them.  
-`wren:299` **Wren (blush):** And then you just... kept pulling me back in. Over and over. A flashlight, a bun, a song. You kept asking if I needed anything.  
+`wren:295` **Wren (happy):** And instead some guest walks into my linen closet and holds a kill switch steadier than half my crew. Do you know how annoying that is? I trained Pilar for a year.  
+`wren:296` **Wren:** I keep thinking about my first year. The shower-curtain cape. The conga line. Saying things out loud I'd never said to anyone. I found out who I was in those hallways.  
+`wren:297` **Wren:** Every year since, I've been building the place so other people get to find out too. And somewhere along the way I stopped thinking I was allowed to be one of them.  
+`wren:298` **Wren (blush):** And then you just... kept pulling me back in. Over and over. A flashlight, a bun, a song. You kept asking if I needed anything.  
 
 > **Choice**
 
-`wren:302` **▸** "You always needed something. You just never got to ask."  
-`wren:303` **Wren (blush):** ...  
-`wren:304` **Wren:** Okay. That's... you can't just say that at sunrise. I'm going to think about that for a year.  
+`wren:301` **▸** "You always needed something. You just never got to ask."  
+`wren:302` **Wren (blush):** ...  
+`wren:303` **Wren:** Okay. That's... you can't just say that at sunrise. I'm going to think about that for a year.  
 
-`wren:305` **▸** "I liked being near you. That's all it was."  
-`wren:306` **Wren (blush):** That's all? That's everything. That's the whole reason I build any of this, actually. So people can just be near each other.  
+`wren:304` **▸** "I liked being near you. That's all it was."  
+`wren:305` **Wren (blush):** That's all? That's everything. That's the whole reason I build any of this, actually. So people can just be near each other.  
 > *(end of choice)*
 
-`wren:308` The sun clears the mountains. Far below, in the parking lot, a crew member is coiling cables and singing to themselves. It isn't Wren's problem. For once, nothing is.  
+`wren:307` The sun clears the mountains. Far below, in the parking lot, a crew member is coiling cables and singing to themselves. It isn't Wren's problem. For once, nothing is.  
 > *if pool_seen["wren"] >= 1:*  
-`wren:310` **Wren (blush):** I've been wanting to ask you something since the disco ball. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now.  
+`wren:309` **Wren (blush):** I've been wanting to ask you something since the disco ball. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now.  
 > *else:*  
-`wren:312` **Wren (blush):** I've been wanting to ask you something all weekend. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now.  
-`wren:313` **Wren:** Is it okay if I kiss you?  
+`wren:311` **Wren (blush):** I've been wanting to ask you something all weekend. It's very unprofessional. I'm not on shift. I'm allowed to be unprofessional now.  
+`wren:312` **Wren:** Is it okay if I kiss you?  
 
 > **Choice**
 
-`wren:316` **▸** "Yes. Very much yes."  
-`wren:317` She kisses you like she's been planning it for three days, which it turns out she has. She's precise about it. Steady hands. Nothing breaks.  
-`wren:318` **Wren (happy):** Fixed.  
+`wren:315` **▸** "Yes. Very much yes."  
+`wren:316` They kiss you like they've been planning it for three days, which it turns out they have. They're precise about it. Steady hands. Nothing breaks.  
+`wren:317` **Wren (happy):** Fixed.  
 
-`wren:319` **▸** "Only if I get to count it down. Three, two—"  
-`wren:320` **Wren (happy):** Oh, you're—  
-`wren:321` On one, she does.  
-`wren:322` **Wren (happy):** Perfect timing. You really would make good crew.  
+`wren:318` **▸** "Only if I get to count it down. Three, two—"  
+`wren:319` **Wren (happy):** Oh, you're—  
+`wren:320` On one, they do.  
+`wren:321` **Wren (happy):** Perfect timing. You really would make good crew.  
 > *(end of choice)*
 
 > *show wren happy*  
-`wren:325` **Wren:** I have to go help strike the set in about an hour. That's the deal. Everyone helps strike.  
-`wren:326` **Wren (blush):** But this hour's mine. I'm not giving it to anyone.  
+`wren:324` **Wren:** I have to go help strike the set in about an hour. That's the deal. Everyone helps strike.  
+`wren:325` **Wren (blush):** But this hour's mine. I'm not giving it to anyone.  
 > *scene bg roof_dawn*  
-`wren:329` On the gravel between you, the walkie crackles: {i}Wren? Wren, where are the extra towels? Wren, the flamingo is back in the ice machine.{/i}  
-`wren:330` She reaches over, very calmly, and turns it off. Then she lies back on the gravel next to you and watches the whole sky go from pink to blue over the lake.  
+`wren:328` On the gravel between you, the walkie crackles: {i}Wren? Wren, where are the extra towels? Wren, the flamingo is back in the ice machine.{/i}  
+`wren:329` They reach over, very calmly, and turn it off. Then they lie back on the gravel next to you and watch the whole sky go from pink to blue over the lake.  
 > *scene black*  
-`wren:332` {i}A week later, an envelope arrives. Inside: a crew badge, laminated. It doesn't say CREW. It says GUEST.{/i}  
-`wren:333` {i}On the back, in neat handwriting:{/i}  
-`wren:334` **Wren:** Next year we both come as guests. I already asked. Pilar's on fire duty for the ark. I'm watching it with you, from the front, with my eyes. That's the whole plan.  
-`wren:335` **Wren:** Also I'm free Saturday. Not a shift, not a fire. Just free. I had to look up what people do. Apparently it's brunch. — W  
+`wren:331` {i}A week later, an envelope arrives. Inside: a crew badge, laminated. It doesn't say CREW. It says GUEST.{/i}  
+`wren:332` {i}On the back, in neat handwriting:{/i}  
+`wren:333` **Wren:** Next year we both come as guests. I already asked. Pilar's on fire duty for the ark. I'm watching it with you, from the front, with my eyes. That's the whole plan.  
+`wren:334` **Wren:** Also I'm free Saturday. Not a shift, not a fire. Just free. I had to look up what people do. Apparently it's brunch. — W  
 > *→ jump ending_card*  
 
 ## wren_friend
 
 > *scene bg exterior*  
 > *show wren happy*  
-`wren:345` Wren is coiling cables under the hotel's big neon sign on Monday morning, headset back on, already somewhere in the middle of tomorrow. She sees you and lifts one hand.  
-`wren:346` **Wren:** Hey. You survived. Most people look worse than you on Monday. You look about forty percent worse. That's good.  
-`wren:347` **Wren (neutral):** Thanks for this weekend. Seriously. You kept checking on me. Crew doesn't get checked on. It's... it was nice.  
-`wren:348` **Walkie-talkie:** Wren, the moss in the forest room is smoking. Small smoke. Supportive smoke.  
-`wren:349` **Wren:** Copy. Give me five.  
-`wren:350` **Wren (happy):** You're on the list now. If you ever want to crew, I'll train you myself. You'd be good at it. You notice things right before they break.  
-`wren:351` She hands you a spare walkie-talkie, switched off, as a souvenir. It has a strip of gaffer tape on the back that says FIX IT.  
+`wren:344` Wren is coiling cables under the hotel's big neon sign on Monday morning, headset back on, already somewhere in the middle of tomorrow. They see you and lift one hand.  
+`wren:345` **Wren:** Hey. You survived. Most people look worse than you on Monday. You look about forty percent worse. That's good.  
+`wren:346` **Wren (neutral):** Thanks for this weekend. Seriously. You kept checking on me. Crew doesn't get checked on. It's... it was nice.  
+`wren:347` **Walkie-talkie:** Wren, the moss in the forest room is smoking. Small smoke. Supportive smoke.  
+`wren:348` **Wren:** Copy. Give me five.  
+`wren:349` **Wren (happy):** You're on the list now. If you ever want to crew, I'll train you myself. You'd be good at it. You notice things right before they break.  
+`wren:350` They hand you a spare walkie-talkie, switched off, as a souvenir. It has a strip of gaffer tape on the back that says FIX IT.  
 
 ---
 
@@ -1978,7 +1915,7 @@ Edit this file and send it back; the changes get applied to the game.
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:229` **Zyx:** After the ark, the mission ends. The Ambassadors carry the ark into the ballroom at 11:11. Then the report is complete. And then...  
+`zyx:229` **Zyx:** After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then...  
 `zyx:230` **Zyx:** Then this one is just Zyx. With no mission. On a strange planet. That is the part this one is afraid of.  
 
 > **Choice**
@@ -2000,14 +1937,14 @@ Edit this file and send it back; the changes get applied to the game.
 > *(end of choice)*
 
 > *if rapport["zyx"] >= ROMANCE_THRESHOLD:*  
-`zyx:249` **Zyx (blush):** After the ark. When the mission is complete. Come to the roof. There is one more piece of research this one wishes to do. With you. Only with you.  
+`zyx:249` **Zyx (blush):** After the big event. When the mission is complete. Come to the roof. There is one more piece of research this one wishes to do. With you. Only with you.  
 > *else:*  
 `zyx:251` **Zyx (happy):** Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic.  
 
 ## zyx_romance
 
 > *scene bg roof_dawn*  
-`zyx:259` After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the duck and the confetti.  
+`zyx:259` After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the empty ark and the confetti.  
 `zyx:260` You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink.  
 `zyx:261` They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn.  
 > *show zyx neutral*  
@@ -2015,7 +1952,7 @@ Edit this file and send it back; the changes get applied to the game.
 `zyx:264` **Zyx (happy):** You passed. Obviously. Sit.  
 > *if gave_rock:*  
 `zyx:266` They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin.  
-`zyx:267` **Zyx (neutral):** The ark has landed. The duck has been revealed. The war over the nature of water has ended in a hug. The report is filed.  
+`zyx:267` **Zyx (neutral):** The ark has landed. The ark has been opened. It was empty, and everyone filled it anyway. The report is filed.  
 `zyx:268` **Zyx:** The mission is complete.  
 
 > **Choice**
@@ -2164,7 +2101,7 @@ Edit this file and send it back; the changes get applied to the game.
 `encounters:74` He sits up in one smooth, theatrical motion, cape flaring. "At last." Then he notices his leg is asleep and has to lie back down.  
 
 `encounters:75` **▸** "It's actually morning. Go back to sleep."  
-`encounters:76` "Oh no," he whispers, and pulls the lid closed. From inside: "Wake me at the ark. Thank you, mortal."  
+`encounters:76` "Oh no," he whispers, and pulls the lid closed. From inside: "Wake me at the big event. Thank you, mortal."  
 
 `encounters:77` **▸** "Is there room in there for two?"  
 `encounters:78` He considers this seriously. "Ask before you touch," he says. "But yes. It's a double. The party thought of everything."  
@@ -2547,9 +2484,9 @@ Edit this file and send it back; the changes get applied to the game.
 `encounters:425` **Juni (blush):** I'm not nervous. I'm... okay, I'm holding my sleeves right now.  
 `encounters:426` They don't let go of them. They hold the postcard against their chest instead.  
 
-`encounters:427` **▸** "See you at the ark!"  
-`encounters:428` **Juni (neutral):** Oh. Ha. Yeah! See you at the ark.  
-`encounters:429` They look at the card a beat longer than a card that says {i}see you at the ark{/i} needs.  
+`encounters:427` **▸** "See you at the big event!"  
+`encounters:428` **Juni (neutral):** Oh. Ha. Yeah! See you at the big event.  
+`encounters:429` They look at the card a beat longer than a card that says {i}see you at the big event{/i} needs.  
 > *(end of choice)*
 
 `encounters:430` A penguin stamps Juni's postcard with a fish and tosses it into a mailbag.  
@@ -2679,35 +2616,35 @@ Edit this file and send it back; the changes get applied to the game.
 > *show wren neutral*  
 `encounters:548` **Wren:** Don't. Don't say anything. Pilar signed me up. She called it a {i}wellness intervention{/i}. In front of the whole crew.  
 `encounters:549` **Wren:** It's about saying goodbye to your phone. I don't even have my phone on me. I have this.  
-`encounters:550` She holds up her walkie-talkie like you've asked to see her ID.  
+`encounters:550` They hold up their walkie-talkie like you've asked to see their ID.  
 `encounters:551` Inside, folding chairs face a small stage. The presenter, in a turtleneck and headset mic, asks everyone to place their device in a wicker basket at the front. One by one, people do. Some of them are crying.  
-`encounters:552` Wren doesn't move. Her hand is wrapped around the walkie so tightly her knuckles are white.  
+`encounters:552` Wren doesn't move. Their hand is wrapped around the walkie so tightly their knuckles are white.  
 
 > **Choice**
 `encounters:554` What do you do?  
 
 `encounters:556` **▸** "I'll keep an ear on it. If anything comes through, I'll get you."  
 > *rapport +1 Wren*  
-`encounters:558` You hold out your hand. She looks at it for a long time, then puts the walkie in it, like she's handing over something alive.  
+`encounters:558` You hold out your hand. They look at it for a long time, then put the walkie in it, like they're handing over something alive.  
 `encounters:559` **Wren (blush):** Okay. Okay. If it says {i}fire{/i}, you come get me. It will say fire. If it says anything about a flamingo, ignore it.  
 
-`encounters:560` **▸** Put your own phone in the basket, then look at her.  
+`encounters:560` **▸** Put your own phone in the basket, then look at them.  
 > *rapport +1 Wren*  
-`encounters:562` You walk to the front and drop your phone into the basket. Then you turn around and look at her.  
+`encounters:562` You walk to the front and drop your phone into the basket. Then you turn around and look at them.  
 `encounters:563` **Wren (surprised):** Oh, that's... that's peer pressure. That's really effective peer pressure.  
-`encounters:564` She walks up and lays the walkie gently on top of your phone, like tucking it into bed.  
+`encounters:564` They walk up and lay the walkie gently on top of your phone, like tucking it into bed.  
 
 `encounters:565` **▸** "You don't have to. It's okay."  
 `encounters:566` **Wren (neutral):** ...Thanks. Yeah. I'll just... turn it down a little.  
-`encounters:567` She turns the volume down one notch. It's something.  
+`encounters:567` They turn the volume down one notch. It's something.  
 > *(end of choice)*
 
 `encounters:568` The presenter clicks to the first slide. Four slides in, the projector dies, and the talk continues on hand-drawn posterboard.  
-`encounters:569` Wren lasts four minutes and thirty seconds before her hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, she stops reaching altogether, sits back, and actually listens.  
+`encounters:569` Wren lasts four minutes and thirty seconds before their hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, they stop reaching altogether, sit back, and actually listen.  
 `encounters:570` At the end, there's a crafting table: blank wooden phones, googly eyes, glitter. Everyone gets to make an Emotional Support Phone.  
 `encounters:571` Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of gaffer tape on the back that says OFF DUTY. It doesn't do anything.  
 `encounters:572` **Wren (happy):** It's perfect. Nobody can reach me on it. Not a single person.  
-`encounters:573` When you walk out, the real walkie is back on her belt. But the wooden one is in her hand.  
+`encounters:573` When you walk out, the real walkie is back on their belt. But the wooden one is in their hand.  
 
 ## enc_speed_dating_cast
 
@@ -2803,7 +2740,7 @@ Edit this file and send it back; the changes get applied to the game.
 ## speed_mission_wren
 
 > *show wren happy*  
-`encounters:705` You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally she leads you to a broom closet she's never opened, because it's labeled FOR WREN ONLY and she didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} She does, for a full minute.  
+`encounters:705` You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally they lead you to a broom closet they've never opened, because it's labeled FOR WREN ONLY and they didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} They do, for a full minute.  
 
 ## speed_mission_zyx
 
@@ -2865,7 +2802,7 @@ Edit this file and send it back; the changes get applied to the game.
 > *scene bg roof_dawn*  
 `finale:66` You end up on the roof alone at sunrise. The rigging is slack. The string lights have burned out one by one, like the party is going to sleep a room at a time.  
 `finale:67` You didn't find your person this weekend. Maybe you weren't looking. Maybe you were looking at everything else.  
-`finale:68` And there was a lot of everything else. A hotel room that wasn't there. Mute clowns selling shares in people. A war over water, settled by a duck in a golden box.  
+`finale:68` And there was a lot of everything else. A petting zoo that took its name very seriously. Mute clowns selling shares in people. A golden box with nothing in it, filled by seven hundred people.  
 `finale:69` Seven hundred people in costumes being kind to each other on purpose, for three days, for no reason anyone could name.  
 `finale:70` You sit on the bench and watch the light come over the mountains and across the lake. It's quiet up here. Somewhere below, a single kazoo plays one long note and stops.  
 `finale:71` Down in the parking lot, Tamsin is waving both arms at you, covered in balloons, shouting something you can't hear.  
