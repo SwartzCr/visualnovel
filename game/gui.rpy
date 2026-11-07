@@ -58,22 +58,22 @@ define gui.interface_text_color = "#ffffff"
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/MPLUSRounded1c-Medium.ttf"
+define gui.text_font = "fonts/MochiyPopOne-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/Righteous-Regular.ttf"
+define gui.name_text_font = "fonts/DelaGothicOne-Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/MPLUSRounded1c-Medium.ttf"
+define gui.interface_text_font = "fonts/MochiyPopOne-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = gui.scale(23)
+define gui.text_size = gui.scale(20)
 
 ## The size of character names.
 define gui.name_text_size = gui.scale(24)
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = gui.scale(22)
+define gui.interface_text_size = gui.scale(20)
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = gui.scale(24)
@@ -190,7 +190,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(gui.scale(10), gui.scale(4), gui.scale(10), gui.scale(4))
 
 define gui.quick_button_borders = Borders(gui.scale(13), gui.scale(5), gui.scale(13), gui.scale(4))
-define gui.quick_button_text_size = gui.scale(18)
+define gui.quick_button_text_size = gui.scale(16)
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 

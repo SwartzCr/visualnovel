@@ -57,7 +57,7 @@ style say_dialogue:
     ypos 113
     yanchor 0.5
     outlines [ (2, "#0a041466", 0, 1) ]
-    line_spacing 4
+    line_spacing 2
 
 style say_label:
     outlines [ (2, "#0a0414cc", 0, 0) ]
@@ -69,7 +69,3 @@ style quick_button_text:
     outlines [ (2, "#0a0414cc", 0, 0) ]
 
 
-## The rounded font has a true bold weight; use it for {b} and bold text.
-init python:
-    config.font_replacement_map["fonts/MPLUSRounded1c-Medium.ttf", True, False] = ("fonts/MPLUSRounded1c-Bold.ttf", False, False)
-    config.font_replacement_map["fonts/MPLUSRounded1c-Medium.ttf", True, True] = ("fonts/MPLUSRounded1c-Bold.ttf", False, True)
