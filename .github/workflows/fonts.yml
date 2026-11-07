@@ -1,0 +1,32 @@
+name: Fetch font candidates (temporary)
+on:
+  push:
+    branches: [tmp-fonts]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          set -u
+          mkdir -p fonts
+          for p in zenmarugothic/ZenMaruGothic-Medium.ttf zenmarugothic/ZenMaruGothic-Bold.ttf zenmarugothic/OFL.txt \
+                   kiwimaru/KiwiMaru-Medium.ttf kiwimaru/KiwiMaru-Regular.ttf kiwimaru/OFL.txt \
+                   mochiypopone/MochiyPopOne-Regular.ttf mochiypopone/OFL.txt \
+                   shrikhand/Shrikhand-Regular.ttf shrikhand/OFL.txt \
+                   atkinsonhyperlegible/AtkinsonHyperlegible-Regular.ttf atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf atkinsonhyperlegible/OFL.txt \
+                   bungee/Bungee-Regular.ttf bungee/OFL.txt \
+                   delagothicone/DelaGothicOne-Regular.ttf delagothicone/OFL.txt \
+                   fredoka/Fredoka%5Bwdth,wght%5D.ttf fredoka/OFL.txt \
+                   nunito/Nunito%5Bwght%5D.ttf nunito/OFL.txt \
+                   lobster/Lobster-Regular.ttf lobster/OFL.txt; do
+            d=$(dirname $p); f=$(basename $p); mkdir -p fonts/$d
+            curl -sfL "https://raw.githubusercontent.com/google/fonts/main/ofl/$p" -o "fonts/$d/$f" || echo "missing $p"
+          done
+          ls -laR fonts
+          git -c user.name="github-actions[bot]" -c user.email="github-actions[bot]@users.noreply.github.com" add fonts
+          git -c user.name="github-actions[bot]" -c user.email="github-actions[bot]@users.noreply.github.com" commit -qm "Font candidates"
+          git push -q origin HEAD:tmp-fonts
