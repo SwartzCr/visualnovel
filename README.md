@@ -66,6 +66,10 @@ Everything builds to the big event at 11:11 on Sunday night, when the aliens car
 
 **[DIALOGUE.md](DIALOGUE.md)** has every line of dialogue and every choice in the game, in play order, with notes on scene changes and how much each choice is worth in rapport. Edit it in any text editor, then apply the changes with `python3 tools/dialogue.py import`. The instructions are at the top of the file. Run `python3 tools/dialogue.py export` to regenerate it after the scripts change.
 
+## Fonts
+
+Mochiy Pop One (dialogue, menus) and Dela Gothic One (names, headings), both under the SIL Open Font License (`game/fonts/`). They're subset to Latin characters with `pyftsubset`, which takes them from 7.5 MB to under 100 KB; the full fonts are on Google Fonts if the game ever needs Japanese text.
+
 ## Project layout
 
 ```
@@ -91,7 +95,7 @@ To tune difficulty, change `ROMANCE_THRESHOLD` and `FRIEND_THRESHOLD` in `game/c
 
 ## Replacing the art
 
-All 30 backgrounds and the 20 character sprites are finished Midjourney art. Only the UI (text box, buttons) is still drawn by the scripts in `tools/` (Pillow only). Drop in your own PNGs with the **same file names** and the game picks them up with no code changes.
+All 30 backgrounds and the 20 character sprites are finished Midjourney art. Only the UI (text box, buttons) is still drawn by the scripts in `tools/` (Pillow only). To replace a picture, drop in a PNG with the same name and convert it with `python3 tools/to_webp.py game/images/bg/<name>.png` (the game loads WebP, which is about 6× smaller than PNG and keeps the web version fast).
 
 **[MIDJOURNEY_PROMPTS.md](MIDJOURNEY_PROMPTS.md)** has Midjourney (Niji 7) prompts for every background, in the style of the finished lobby. **[ART_PROMPTS.md](ART_PROMPTS.md)** has ready-to-paste image-generation prompts (written for Google's Nano Banana) for every background and all 20 character sprites, plus how to keep characters consistent across expressions and how to prepare the images.
 
@@ -99,45 +103,45 @@ All 30 backgrounds and the 20 character sprites are finished Midjourney art. Onl
 
 | File | Used for |
 |---|---|
-| `exterior.png` | Arrival, Friday afternoon; Monday-morning goodbyes |
-| `exterior_night.png` | Main menu art (copied to `gui/main_menu.png`, and blurred for `gui/game_menu.png`) |
-| `lobby.png` | Check-in desk |
-| `pool.png` | Every pool scene (an indoor pool under a glass atrium); Juni's ending |
-| `hallway.png` | Night hallways |
-| `bedroom.png` | Mornings (newspaper under the door) |
-| `pettingzoo.png` | Juni night 1: the Heavy Petting Zoo |
-| `lostfound.png` | Juni night 2 |
-| `regen.png` | Juni night 3 |
-| `breakfast.png` | Gerald night 1 |
-| `forest.png` | Gerald night 2 |
-| `cryptid.png` | Gerald night 3, wandering |
-| `exchange.png` | Solstice night 1, wandering |
-| `karaoke.png` | Solstice night 2 |
-| `ballroom.png` | Solstice night 3, ceremony, after midnight |
-| `ballroom_ark.png` | The ark arrives at 11:11 |
-| `livingroom.png` | Wandering: Auntie Acid's room, The Cozy |
-| `backstage.png` | Wren night 1 |
-| `mission.png` | Wren night 2 |
-| `roof.png` | Wren night 3 |
-| `roof_dawn.png` | Sunrise endings (Gerald, Solstice, Wren, Zyx, Checkout) |
-| `fortune.png` | Zyx night 1 |
-| `clinic.png` | Zyx night 2 |
-| `planetarium.png` | Zyx night 3 |
-| `penguinpost.png` | Random encounter: Penguin Post |
-| `fanbar.png` | Random encounter: the OnlyFans Fanny Bar |
-| `tentacletopia.png` | Random encounter: Tentacletopia |
-| `optical.png` | Random encounter: Zany Optical |
-| `speeddating.png` | Random encounter: Platonic Speed Dating |
-| `letitgo.png` | Random encounter: the Let It Go workshop |
+| `exterior.webp` | Arrival, Friday afternoon; Monday-morning goodbyes |
+| `exterior_night.webp` | Main menu art (copied to `gui/main_menu.webp`, and blurred for `gui/game_menu.webp`) |
+| `lobby.webp` | Check-in desk |
+| `pool.webp` | Every pool scene (an indoor pool under a glass atrium); Juni's ending |
+| `hallway.webp` | Night hallways |
+| `bedroom.webp` | Mornings (newspaper under the door) |
+| `pettingzoo.webp` | Juni night 1: the Heavy Petting Zoo |
+| `lostfound.webp` | Juni night 2 |
+| `regen.webp` | Juni night 3 |
+| `breakfast.webp` | Gerald night 1 |
+| `forest.webp` | Gerald night 2 |
+| `cryptid.webp` | Gerald night 3, wandering |
+| `exchange.webp` | Solstice night 1, wandering |
+| `karaoke.webp` | Solstice night 2 |
+| `ballroom.webp` | Solstice night 3, ceremony, after midnight |
+| `ballroom_ark.webp` | The ark arrives at 11:11 |
+| `livingroom.webp` | Wandering: Auntie Acid's room, The Cozy |
+| `backstage.webp` | Wren night 1 |
+| `mission.webp` | Wren night 2 |
+| `roof.webp` | Wren night 3 |
+| `roof_dawn.webp` | Sunrise endings (Gerald, Solstice, Wren, Zyx, Checkout) |
+| `fortune.webp` | Zyx night 1 |
+| `clinic.webp` | Zyx night 2 |
+| `planetarium.webp` | Zyx night 3 |
+| `penguinpost.webp` | Random encounter: Penguin Post |
+| `fanbar.webp` | Random encounter: the OnlyFans Fanny Bar |
+| `tentacletopia.webp` | Random encounter: Tentacletopia |
+| `optical.webp` | Random encounter: Zany Optical |
+| `speeddating.webp` | Random encounter: Platonic Speed Dating |
+| `letitgo.webp` | Random encounter: the Let It Go workshop |
 
-**Sprites** go in `game/images/sprites/` and are transparent PNGs named `<guest>_<expression>.png`:
+**Sprites** go in `game/images/sprites/` and are transparent WebP images named `<guest>_<expression>.webp`:
 
 - Guests: `juni`, `gerald`, `solstice`, `wren`, `zyx`
 - Expressions: `neutral`, `happy`, `surprised`, `blush`
 
 That's 20 files. The current ones are 536×720 bust-ups (Gerald is 937×720). Any size works: sprites are anchored to the bottom-center of the screen, so keep them at most about 720 px tall and leave the bottom edge where the character is cropped.
 
-**Menu art:** `game/gui/main_menu.png` and `game/gui/game_menu.png` (1280×720).
+**Menu art:** `game/gui/main_menu.webp` and `game/gui/game_menu.webp` (1280×720).
 
 To import a Midjourney expression sheet (one row of four panels, see the end of MIDJOURNEY_PROMPTS.md):
 
@@ -147,7 +151,7 @@ python3 tools/import_sprite_sheet.py sheet.png juni --height 720
 python3 tools/import_sprite_sheet.py --height 720 sheet.png wren -- neutral,blush,happy,surprised
 ```
 
-It removes the flat background (any color), trims stray bits of the neighboring panels and saves `game/images/sprites/<name>_<expression>.png`. Requires Pillow and numpy.
+It removes the flat background (any color), trims stray bits of the neighboring panels and saves `game/images/sprites/<name>_<expression>.webp`. Requires Pillow and numpy.
 
 To regenerate the UI: `python3 tools/make_gui.py` (requires Pillow). **Don't run `tools/make_backgrounds.py` or `tools/make_sprites.py`**: they would overwrite the Midjourney art with the old procedural versions.
 

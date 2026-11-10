@@ -2,7 +2,7 @@
 
 The sheet is one row of four equal panels of the same character on a flat
 background (any color: green, blue, white...). Each panel is keyed out,
-cleaned up, scaled and saved as game/images/sprites/<name>_<expression>.png.
+cleaned up, scaled and saved as game/images/sprites/<name>_<expression>.webp.
 
     python3 tools/import_sprite_sheet.py SHEET NAME [ORDER] [--height N]
 
@@ -161,8 +161,8 @@ def main():
         if args.height and args.height != img.height:
             s = args.height / img.height
             img = img.resize((round(img.width * s), args.height), Image.LANCZOS)
-        path = os.path.join(OUT, "%s_%s.png" % (args.name, expr))
-        img.save(path, optimize=True)
+        path = os.path.join(OUT, "%s_%s.webp" % (args.name, expr))
+        img.save(path, "WEBP", quality=90, method=6, alpha_quality=100)
         print("wrote", os.path.relpath(path, ROOT), img.size)
 
 
