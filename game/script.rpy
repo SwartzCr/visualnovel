@@ -123,7 +123,7 @@ label pool_time:
         "Gerald, leading a very slow 'forest bathing' session on the pool deck." (guest="gerald") if pool_seen["gerald"] == 1:
             $ who = "gerald"
 
-        "A raver covered in kandi beads, handing out glitter like communion and asking a lot of questions." (guest="solstice") if pool_seen["solstice"] == 0:
+        "A raver covered in kandi beads, handing out glitter like communion." (guest="solstice") if pool_seen["solstice"] == 0:
             $ who = "solstice"
         "Solstice, asleep on a lounger right under one of the big heat lamps, LED bikini top switched off." (guest="solstice") if pool_seen["solstice"] == 1:
             $ who = "solstice"

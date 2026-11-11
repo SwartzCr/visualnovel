@@ -1,7 +1,8 @@
 ## zyx.rpy — Zyx, Ambassador of the Outer Drift. Pronouns: they/them.
 ## Never breaks character. It's their first party ever, and without trying they fit in better
-## than you, or than the people who've been coming for a decade. They flirt like it's a research
-## protocol. The romance ends aboard their ship, with the probe.
+## than you, or than the people who've been coming for a decade, and through their eyes you get
+## to see the party new again. They flirt like it's a research protocol. The romance ends
+## aboard their ship, with the probe.
 
 label zyx_pool_1:
     "Under a giant striped beach umbrella, set up indoors for reasons nobody has asked about, sits a silver alien with three eyes, two antennae and a sash that reads AMBASSADOR. They are wearing at least an inch of sunscreen anyway, and taking notes on a clipboard."
@@ -33,6 +34,9 @@ label zyx_pool_1:
     "A woman who has been coming to this party for eleven years swims over to ask Zyx how they got in with the pool crowd so fast. Zyx tells her to {i}simply arrive from space.{/i} She nods and writes it down."
 
     show zyx neutral
+    z "Observe. Seven hundred humans. None of them were made to come here. They each decided, separately, to spend a weekend being kind to strangers in costumes."
+    z "On the Outer Drift, an agreement like that would take a treaty. Here it took a group chat."
+    "You look back at the pool: the sunscreen, the inflatable flamingo, the grown adults shrieking POLO. An hour ago it was just a pool. It's a little hard to see it that way now."
     "Zyx explains that they are here on a research mission: to determine whether Earth is ready for contact."
     z "Our current findings: Earth is not ready. Earth is very, very fun. These two findings are in tension. The report is going poorly."
 
@@ -87,6 +91,9 @@ label zyx_pool_2:
             z neutral "Understandable. Humans are very attached to stuff. We have noted it."
 
     show zyx neutral
+    "You look at the towel of artifacts again. A child-size flip-flop. Sunglasses with one lens. A paperback someone read until it fell in the pool."
+    z "Every object here is proof that someone had a good time and forgot about their belongings. On the Outer Drift, nobody has ever had that good a time."
+    "For a second you see it the way Zyx does: not lost property, but a record of everyone who was too happy to keep track of their stuff."
     "Zyx leaves the museum in the care of a volunteer who has already, unprompted, made themself a little docent badge. Zyx sits down on a lounger next to you, close, and folds their silver hands."
     z "The Outer Drift is very quiet. Thirty-one of us, spread across a nebula. We communicate by changing color, very slowly. A conversation can take a year."
     z "No one has hugged on the Outer Drift since the third moon. We are not built for it. Too many antennae."
@@ -142,6 +149,9 @@ label zyx_night_1:
             z neutral "Everything means something to the Oracle. But we will log your skepticism."
 
     show zyx neutral at slightright
+    z "Do you understand what your species has done here? Someone built a robot whose only purpose is to tell strangers their fortunes. Then other strangers stood in line for an hour to hear them."
+    z "Nobody is paid. Nobody wins. This one has been crying behind the dome, a little."
+    "You look at the queue, at the capes and the headsets and the people reading each other's ping pong balls out loud. You'd walked past this room twice tonight without going in."
     z "Now you. Your turn. This one will read yours personally."
     "The robot whirs and prints a ball for you. Zyx reads it, and their antennae go straight up."
     robot "SOMEONE WILL TAKE YOU HOME."
@@ -217,6 +227,9 @@ label zyx_night_2:
             z neutral "Understood. This one will dance alone. Doctor's orders."
             "They do, in the hallway, very precisely. Within a minute they're not alone at all. Within five, there's a line dance. Zyx leads it with a slightly puzzled expression."
 
+    "Afterward, walking the hall with Zyx is slow, because Zyx stops at everything. The carpet. A painted sign that says {i}HYDRATE OR DIEDRATE{/i}. A man asleep in a bathtub full of balloons, which Zyx photographs with their eyes only, as per the rules."
+    z "Did you see? Did you see that one? There is a door that has been painted to look like a different door."
+    "You had stopped noticing the hallway hours ago. Zyx hasn't stopped once. By the elevators, you realize you're pointing things out too."
     hide zyx with dissolve
     return
 
@@ -246,6 +259,9 @@ label zyx_night_3:
             z neutral "Is anything? Is the ice machine? It makes ice. That seems real enough."
 
     show zyx neutral
+    z "For the report. This one has described the party from the outside. Describe it from the inside. Your favorite moment. Not the biggest. The favorite."
+    "You think about it. It isn't any of the big rooms. It's something small: a stranger saying hi, a song in a hallway, somebody's glitter ending up on you."
+    "You tell Zyx. They write it down very carefully, and when you hear it back in their voice, it sounds like the best weekend you've had in years. You think it might be."
     z "After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then..."
     z "Then this one is just Zyx. With no mission. On a strange planet, where everyone keeps asking this one for directions. That is the part this one is afraid of."
     menu:
@@ -298,6 +314,7 @@ label zyx_romance:
     z neutral "{i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}"
     z "{i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium.{/i}"
     z "{i}But one Earthling is ready. Recommend further study. Close study. Recommend this one brings the Earthling aboard.{/i}"
+    "Hearing it read out loud, on the roof, at dawn, you realize how much of it you'd stopped seeing until Zyx pointed at it."
     show zyx blush
     z "It was approved. By this one. This one is in charge of approvals."
 
@@ -374,4 +391,5 @@ label zyx_friend:
     "Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly."
     z happy "This is the highest honor of our people. Do not lose it. We already lost the other one."
     z "Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!"
+    "On the drive home you catch yourself noticing things: a weird sign, a nice rock, two strangers waving at each other across a parking lot. You wonder how long it'll last. You hope a while."
     return

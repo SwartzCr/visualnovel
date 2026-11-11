@@ -478,8 +478,8 @@ label enc_tentacletopia_solstice:
     "The shrimp guide nods gravely. \"The jellyfish run it now. They have evolved. They have opinions. We ask only one thing in return: an extended broadcast of {i}Shrimp Justice: A Crustacean Courtroom Show{/i}.\""
     s "I already said yes. I've seen four episodes. The hermit crab one is devastating."
     "Beyond the airlock: kelp swaying under blue light, sunken art-deco towers, neon signs still faintly glowing in the gloom. Giant jellyfish drift overhead. Solstice's LED top lights up the water around her like a little submarine."
-    s neutral "Okay. Savior tech. Let's sweep it. You take the left, I'll take the right, we meet at the coral. Go, go, go."
-    "She says it like she's done it a hundred times, with a door and a battering ram."
+    s neutral "Okay. Savior tech. Where do we look?"
+    "She searches the coral like she's done this kind of thing before: methodically, left to right, checking behind everything."
     "You dig together through the coral dioramas: a shrimp wedding, a shrimp tax office, a shrimp on a tiny therapist's couch. Then Solstice shrieks and holds something up."
     "It's a disco ball."
     show solstice surprised

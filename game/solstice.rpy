@@ -1,16 +1,16 @@
 ## solstice.rpy — Solstice, a raver in fur leg warmers and an LED top. Pronouns: she/her.
 ## Everyone loves her when the lights are on. The route is about the lights going off.
-## She's also an undercover cop doing a very bad job of pretending to be a raver. The tells
-## pile up (the notepad, the earpiece, the boots, the questions) until the sunrise reveal.
+## She's also an undercover cop. Before the sunrise reveal there are only small hints: the
+## sensible boots, the back to the wall, eyes on the exits, something in her leg warmer she
+## silences without looking.
 
 label solstice_pool_1:
     "A woman in rainbow fur leg warmers, holographic shorts and a black crop top studded with little LEDs is working her way down the row of loungers, handing out glitter like it's communion."
-    "She has goggles pushed up on her forehead and a sticker of a star under one eye. Under the leg warmers, you notice, are black lace-up boots. Sensible ones. Steel toe."
+    "She has goggles pushed up on her forehead and a sticker of a star under one eye. Under the leg warmers are black lace-up boots, very sensible ones, the only sensible thing about her."
     "She reaches you and lights up, literally. Her top flickers through the rainbow."
     show solstice happy with dissolve
     s "HI! Hi hi. You're new. You have new-person energy. It's so cute. Hold out your hand. No, the other one. Perfect."
     "She produces a bracelet of plastic beads from somewhere. It says, in lettered beads, PLUR4LIFE."
-    s happy "Peace, Love, Unity, Rules! Respect. {i}Respect.{/i} I said respect."
     menu:
         "Hold out your wrist and let her put it on.":
             $ gain("solstice", 1)
@@ -30,9 +30,6 @@ label solstice_pool_1:
 
     show solstice happy
     s "I'm Solstice. Like the longest day of the year. Because I go all night and all day. Sometimes naturally, sometimes with a little help if you know what I mean ;)"
-    s neutral "Speaking of which. Do you know where a girl could find some of that help? Like, who's holding at this party? Names, room numbers, just a ballpark."
-    "She has, you notice, taken a tiny notepad out of her leg warmer. The pen is already clicked."
-    s happy "For me! Personal use! Normal raver question! Forget I asked."
     s "Okay, important question."
     menu:
         s "Can I give you a light show?"
@@ -56,15 +53,14 @@ label solstice_pool_1:
     s happy "See you on the dance floor, new person!"
     hide solstice with dissolve
     "She bounces off to the next lounger. Her top blinks HAPPY HAPPY HAPPY to the beat of the music the DJ is playing."
-    "Halfway there, she touches her ear and murmurs something that sounds a lot like {i}no contraband at the pool, over.{/i}"
+    "Halfway there she glances back at you, just once, the way people look back when they're memorizing a face."
     return
 
 
 label solstice_pool_2:
     "Solstice is asleep on a lounger right under one of the pool hall's big orange heat lamps. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink."
     "Without the lights and the noise, she looks younger. And very tired."
-    "A little notepad has slid out of her leg warmer onto the tiles, open. The top page reads: {i}Bear-suit guy: dealer?? Test the glitter. Crystal lady by the hot tub: DEFINITELY something.{/i}"
-    "At the bottom there's a small doodle of you, labeled {i}NEW PERSON. Clean?{/i}"
+    "Even asleep, she's picked the one lounger with its back to the wall and a clear view of both doors."
     menu:
         "Quietly swing the heat lamp away from her.":
             $ gain("solstice", 2)
@@ -85,11 +81,8 @@ label solstice_pool_2:
             s "OW. Why didn't anyone—ha. It's fine. It's fine! I'll be a shiny red raver. New look."
 
     show solstice neutral
-    "She spots the notepad on the tiles and slides it back into her leg warmer, fast and smooth, like someone palming a badge."
-    s "Grocery list."
     "She sits up. She doesn't turn her costume back on."
-    s "I can't really talk about what I do in the default world. Legally. There's a contract. A normal contract! Lots of jobs have contracts."
-    s "It's draining, and grim, and, well, y'know. Stakeouts. Paperwork. Normal job stuff."
+    s "I don't really talk about what I do in the default world. It's draining, and grim, and, well, y'know. A lot of nights sitting in cars."
     s "And then I come here and dance like everything is okay. Every year. I think if I stop dancing, the other thing catches up."
     s "When the lights are on, everyone loves me. Solstice! Glitter girl! When they're off, I'm just... tired. Really, really tired."
 
@@ -138,11 +131,7 @@ label solstice_night_1:
             "Then they gently place a share of yourself in your hand and run away."
             s neutral "Ha. They do that. Nobody gets to just watch. Unless you're in the cuck chair."
 
-    "A siren wails."
-    s surprised "FREEZE!"
-    "Everyone freezes. Including the clowns, who were already frozen, and who now look deeply confused."
-    s happy "...dance! Freeze dance! It's a rave thing. You freeze, and then you dance. As you were!"
-    "Slowly, the clowns start tearing at their wigs in silent anguish. The tickers flash red: MARKET CRASH. EVERYTHING ▼100."
+    "A siren wails. Every clown freezes, then slowly they tear at their wigs in silent anguish. The tickers flash red: MARKET CRASH. EVERYTHING ▼100."
     show solstice surprised
     menu:
         s "Oh no. Oh no, the crash. Quick, what do we do?"
@@ -162,9 +151,7 @@ label solstice_night_1:
             $ gain("solstice", 1)
             s happy "Sharing is caring! Well I guess here you shared the joy of buying into capitalism. A bit of a downer I guess, but what else can you do but laugh."
 
-    show solstice neutral
-    s "Someone's going to make a lot of money off that crash, you know. Classic pump and dump. Somebody should really look into that."
-    s happy "Not me! I'm just a raver. I just rave."
+    "On the way out, she slows down next to one clown who's been quietly counting real cash behind a desk. She watches him a beat too long. Then she bounces off after you."
     hide solstice with dissolve
     return
 
@@ -177,9 +164,7 @@ label solstice_night_2:
     "Solstice is coming out of the booth. Her LED top is on its dimmest setting. She sees you and goes pink under the glitter."
     s blush "Oh no. Did you hear that?"
     s "I confessed that I don't actually like techno. I like slow songs. Sad, slow country songs about trucks and divorce. I've been lying to the scene for six years."
-    s "Also that I've never taken a drug in my life. Not even the ones I've taken. Wait. Those don't count. The booth was off for that part."
-    "She leans against the booth with her arms crossed, the way people lean on the hood of a squad car."
-    s neutral "Okay. Your turn. You have the right to remain sil— no. No, you don't, actually. Not in here. You have to. That's the rule."
+    s neutral "Okay. Your turn. You have to. That's the rule."
 
     menu:
         "Confess something real.":
@@ -210,9 +195,7 @@ label solstice_night_3:
     "You can barely hear her over the music, but you dance. It's ridiculous and good. And then, mid-song, with a little electronic sigh, every light on her top goes out at once."
     show solstice surprised
     "Battery's dead. She's just a dark shape in the crowd now. She freezes in the middle of the floor like someone pulled her plug too."
-    "In the sudden dark, a tiny voice crackles out of her leg warmer: {i}Unit Four, we've lost your visual. Status?{/i}"
-    s surprised "...That's my phone. It's a ringtone. It's a very realistic ringtone."
-    "She smacks her leg warmer. It goes quiet."
+    "Something in her leg warmer buzzes. She silences it without looking, the way you'd silence an alarm you've heard a thousand times."
 
     menu:
         "Keep dancing with her, right there in the dark.":
@@ -332,8 +315,7 @@ label solstice_friend:
     s neutral "Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes."
     s "Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts."
     "She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}."
-    s happy "You're my person on the inside now. Friendship bracelet is legally binding. I would know."
-    s neutral "Also, if anyone ever asks, you never saw me here. For... raver reasons."
+    s happy "You're my person on the inside now. Friendship bracelet is legally binding."
     s "And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert."
     return
 
