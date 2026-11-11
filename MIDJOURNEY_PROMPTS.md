@@ -276,6 +276,14 @@ hand-painted anime background art, 2D anime key visual, flat cel shading with tw
 
 *Text to add afterwards:* on the machine: ICE
 
+### `ship.webp`
+
+*Used for:* Zyx's ending: aboard the Outer Drift ship.
+
+```text
+hand-painted anime background art, 2D anime key visual, flat cel shading with two-tone shadows, bold clean line art, simplified shapes, the interior of a retro 1970s flying saucer, a round chrome room with a low domed ceiling, curved walls covered in glowing star maps and blinking round buttons, a big round porthole showing a golden sunrise over a mountain lake far below, a padded silver examination table in the middle under a soft pink spotlight, chrome curves, warm pink and teal mood lighting, playful and a little romantic, empty open space in the center, vibrant saturated colors, soft bloom --ar 16:9 --niji 7 --s 400 --no people, text, watermark, photorealistic, 3d render, photo, realistic
+```
+
 ## Random-encounter art rooms
 
 ### `penguinpost.png`

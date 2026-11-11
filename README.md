@@ -58,7 +58,7 @@ VN_TEST=1 RENPY_PERFORMANCE_TEST=0 /path/to/renpy-sdk/renpy.sh /path/to/visualno
 - **Gerald** (he/him): a Sasquatch from the Klamath. Drinks lapsang souchong. Possibly not a costume. Rooms: *The Breakfast Schism* (Church of Cast Iron vs. Temple of Teflon), *Room 312: The Forest*, *Cryptids Anonymous*.
 - **Solstice** (she/her): a raver in fur leg warmers and an LED top who hands out kandi and light shows. She's also an undercover cop, which comes out in her sunrise scene. Rooms: *The Human Stock Exchange*, *Confession Booth Karaoke*, *The Ballroom*.
 - **Wren** (they/them): crew, dressed in black, the party's behind-the-scenes fixer. They found themself at a party like this years ago, and now spend the weekend putting out fires so the magic holds for everyone else, and never gets to be at it. Rooms: *Backstage* (the laser rig dies mid-set), *Mission Control* (a linen closet), *The Roof*.
-- **Zyx** (they/them): Ambassador of the Outer Drift, here to determine whether Earth is ready for contact. Never breaks character. Rooms: *The Oracle of Ping Pong*, *The Clinic of Unnecessary Procedures*, *The Ice Machine Planetarium*.
+- **Zyx** (they/them): Ambassador of the Outer Drift, here to determine whether Earth is ready for contact. Never breaks character. It's their first party, and without trying they fit in better than anyone; they flirt like it's a research protocol, and their romance ends aboard their ship. Rooms: *The Oracle of Ping Pong*, *The Clinic of Unnecessary Procedures*, *The Ice Machine Planetarium*.
 
 Everything builds to the big event at 11:11 on Sunday night, when the aliens carry a golden ark into the ballroom.
 
@@ -127,6 +127,7 @@ All 30 backgrounds and the 20 character sprites are finished Midjourney art. Onl
 | `fortune.webp` | Zyx night 1 |
 | `clinic.webp` | Zyx night 2 |
 | `planetarium.webp` | Zyx night 3 |
+| `ship.webp` | Zyx's ending: aboard the ship (placeholder: a recolored planetarium; prompt in MIDJOURNEY_PROMPTS.md) |
 | `penguinpost.webp` | Random encounter: Penguin Post |
 | `fanbar.webp` | Random encounter: the OnlyFans Fanny Bar |
 | `tentacletopia.webp` | Random encounter: Tentacletopia |
