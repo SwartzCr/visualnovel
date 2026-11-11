@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit d28426e -->
+<!-- exported from commit e718fa2 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -99,7 +99,7 @@ Edit this file and send it back; the changes get applied to the game.
 `script:123` **▸** Gerald, leading a very slow 'forest bathing' session on the pool deck.  
 > *(shown if pool_seen["gerald"] == 1)*  
 
-`script:126` **▸** A raver in covered in kandi beads, handing out glitter like communion.  
+`script:126` **▸** A raver covered in kandi beads, handing out glitter like communion and asking a lot of questions.  
 > *(shown if pool_seen["solstice"] == 0)*  
 
 `script:128` **▸** Solstice, asleep on a lounger right under one of the big heat lamps, LED bikini top switched off.  
@@ -997,324 +997,350 @@ Edit this file and send it back; the changes get applied to the game.
 
 ## solstice_pool_1
 
-`solstice:5` A woman in rainbow fur leg warmers, holographic shorts and a black crop top studded with little LEDs is working her way down the row of loungers, handing out glitter like it's communion.  
-`solstice:6` She has goggles pushed up on her forehead and a sticker of a star under one eye. She reaches you and lights up, literally. Her top flickers through the rainbow.  
+`solstice:7` A woman in rainbow fur leg warmers, holographic shorts and a black crop top studded with little LEDs is working her way down the row of loungers, handing out glitter like it's communion.  
+`solstice:8` She has goggles pushed up on her forehead and a sticker of a star under one eye. Under the leg warmers, you notice, are black lace-up boots. Sensible ones. Steel toe.  
+`solstice:9` She reaches you and lights up, literally. Her top flickers through the rainbow.  
 > *show solstice happy*  
-`solstice:8` **Solstice:** HI! Hi hi. You're new. You have new-person energy. It's so cute. Hold out your hand. No, the other one. Perfect.  
-`solstice:9` She produces a bracelet of plastic beads from somewhere. It says, in lettered beads, PLUR4LIFE.  
+`solstice:11` **Solstice:** HI! Hi hi. You're new. You have new-person energy. It's so cute. Hold out your hand. No, the other one. Perfect.  
+`solstice:12` She produces a bracelet of plastic beads from somewhere. It says, in lettered beads, PLUR4LIFE.  
+`solstice:13` **Solstice (happy):** Peace, Love, Unity, Rules! Respect. {i}Respect.{/i} I said respect.  
 
 > **Choice**
 
-`solstice:11` **▸** Hold out your wrist and let her put it on.  
+`solstice:15` **▸** Hold out your wrist and let her put it on.  
 > *rapport +1 Solstice*  
-`solstice:13` **Solstice (happy):** There. Now you're one of us. Welcome to the party! Now stop being so shy!  
+`solstice:17` **Solstice (happy):** There. Now you're one of us. Welcome to the party! Now stop being so shy!  
 
-`solstice:15` **▸** "Wait, I want to give you something too."  
+`solstice:19` **▸** "Wait, I want to give you something too."  
 > *rapport +2 Solstice*  
-`solstice:17` You dig in your pockets. All you have is a hotel mint, slightly warm.  
-`solstice:18` **Solstice (surprised):** For me?  
-`solstice:19` **Solstice (blush):** Oh my god. No one ever gifts back. Everyone just takes the beads and runs.  
-`solstice:20` She holds the mint up to the light like a jewel, then puts it very carefully into a pocket on her leg warmer.  
-`solstice:21` **Solstice (happy):** I'm going to keep this forever, as evidence. Or eat it at three in the morning. One of the two.  
+`solstice:21` You dig in your pockets. All you have is a hotel mint, slightly warm.  
+`solstice:22` **Solstice (surprised):** For me?  
+`solstice:23` **Solstice (blush):** Oh my god. No one ever gifts back. Everyone just takes the beads and runs.  
+`solstice:24` She holds the mint up to the light like a jewel, then puts it very carefully into a pocket on her leg warmer.  
+`solstice:25` **Solstice (happy):** I'm going to keep this forever, as evidence. Or eat it at three in the morning. One of the two.  
 
-`solstice:23` **▸** "Oh, I didn't bring anything to trade."  
-`solstice:24` **Solstice (neutral):** It's not a trade! It's a gift! Free of charge!  
-`solstice:25` She puts the bracelet on you despite your reluctance, with a firm little pat. She seems like she's had a lot of practice.  
+`solstice:27` **▸** "Oh, I didn't bring anything to trade."  
+`solstice:28` **Solstice (neutral):** It's not a trade! It's a gift! Free of charge!  
+`solstice:29` She puts the bracelet on you despite your reluctance, with a firm little pat. She seems like she's had a lot of practice.  
 > *(end of choice)*
 
 > *show solstice happy*  
-`solstice:28` **Solstice:** I'm Solstice. Like the longest day of the year. Because I go all night and all day. Sometimes naturally, sometimes with a little help if you know what I mean ;)  
-`solstice:29` **Solstice:** Okay, important question.  
+`solstice:32` **Solstice:** I'm Solstice. Like the longest day of the year. Because I go all night and all day. Sometimes naturally, sometimes with a little help if you know what I mean ;)  
+`solstice:33` **Solstice (neutral):** Speaking of which. Do you know where a girl could find some of that help? Like, who's holding at this party? Names, room numbers, just a ballpark.  
+`solstice:34` She has, you notice, taken a tiny notepad out of her leg warmer. The pen is already clicked.  
+`solstice:35` **Solstice (happy):** For me! Personal use! Normal raver question! Forget I asked.  
+`solstice:36` **Solstice:** Okay, important question.  
 
 > **Choice**
-`solstice:31` **Solstice:** Can I give you a light show?  
+`solstice:38` **Solstice:** Can I give you a light show?  
 
-`solstice:33` **▸** "Light me up."  
+`solstice:40` **▸** "Light me up."  
 > *rapport +2 Solstice*  
-`solstice:35` **Solstice:** Ok, stare into my chest.  
-`solstice:36` The LEDs of her bra flash in hypnotizing colors, while Solstice shakes her chest. She's moving to the beat and the lights begin to hypnotize you.  
-`solstice:37` You get the feeling that Solstice notices you starting to go into a trance and she stops before you completely lose control. She stops abruptly, but with a smile on her face.  
-`solstice:38` **Solstice (happy):** Welcome to the church of LIGHT. You are SAVED.  
+`solstice:42` **Solstice:** Ok, stare into my chest.  
+`solstice:43` The LEDs of her bra flash in hypnotizing colors, while Solstice shakes her chest. She's moving to the beat and the lights begin to hypnotize you.  
+`solstice:44` You get the feeling that Solstice notices you starting to go into a trance and she stops before you completely lose control. She stops abruptly, but with a smile on her face.  
+`solstice:45` **Solstice (happy):** Welcome to the church of LIGHT. You are SAVED.  
 
-`solstice:40` **▸** "Just a little, I'm pretty light sensitive."  
+`solstice:47` **▸** "Just a little, I'm pretty light sensitive."  
 > *rapport +1 Solstice*  
-`solstice:42` She presses a button on her glasses, and all of the lights on her costume pulse in unison, to her heart beat.  
-`solstice:43` **Solstice (happy):** Huh! I didn't expect my heartbeat to be so slow, I must feel comfortable around you.  
+`solstice:49` She presses a button on her glasses, and all of the lights on her costume pulse in unison, to her heart beat.  
+`solstice:50` **Solstice (happy):** Huh! I didn't expect my heartbeat to be so slow, I must feel comfortable around you.  
 
-`solstice:45` **▸** "I'm good, thanks. I'm supposed to limit my exposure to artificial light, that is if I want to sleep on time."  
-`solstice:46` **Solstice (neutral):** Respect! Consent is sexy! Gotta get your beauty sleep if you're going to keep partying for the rest of the weekend.  
-`solstice:47` She's trying not to act dejected, but you can see her looking around the room for other people to talk to.  
+`solstice:52` **▸** "I'm good, thanks. I'm supposed to limit my exposure to artificial light, that is if I want to sleep on time."  
+`solstice:53` **Solstice (neutral):** Respect! Consent is sexy! Gotta get your beauty sleep if you're going to keep partying for the rest of the weekend.  
+`solstice:54` She's trying not to act dejected, but you can see her looking around the room for other people to talk to.  
 > *(end of choice)*
 
-`solstice:49` **Solstice (happy):** See you on the dance floor, new person!  
-`solstice:51` She bounces off to the next lounger. Her top blinks HAPPY HAPPY HAPPY to the beat of the music the DJ is playing.  
+`solstice:56` **Solstice (happy):** See you on the dance floor, new person!  
+`solstice:58` She bounces off to the next lounger. Her top blinks HAPPY HAPPY HAPPY to the beat of the music the DJ is playing.  
+`solstice:59` Halfway there, she touches her ear and murmurs something that sounds a lot like {i}no contraband at the pool, over.{/i}  
 
 ## solstice_pool_2
 
-`solstice:56` Solstice is asleep on a lounger right under one of the pool hall's big orange heat lamps. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink.  
-`solstice:57` Without the lights and the noise, she looks younger. And very tired.  
+`solstice:64` Solstice is asleep on a lounger right under one of the pool hall's big orange heat lamps. Her LED top is switched off. Her goggles are over her eyes. Her shoulders are going pink.  
+`solstice:65` Without the lights and the noise, she looks younger. And very tired.  
+`solstice:66` A little notepad has slid out of her leg warmer onto the tiles, open. The top page reads: {i}Bear-suit guy: dealer?? Test the glitter. Crystal lady by the hot tub: DEFINITELY something.{/i}  
+`solstice:67` At the bottom there's a small doodle of you, labeled {i}NEW PERSON. Clean?{/i}  
 
 > **Choice**
 
-`solstice:59` **▸** Quietly swing the heat lamp away from her.  
+`solstice:69` **▸** Quietly swing the heat lamp away from her.  
 > *rapport +2 Solstice*  
-`solstice:61` You swivel the heat lamp away, slowly, so it doesn't squeak. The orange glow slides off her face.  
-`solstice:62` A few minutes later she stirs, pushes up her goggles and looks at the heat lamp, then at you.  
+`solstice:71` You swivel the heat lamp away, slowly, so it doesn't squeak. The orange glow slides off her face.  
+`solstice:72` A few minutes later she stirs, pushes up her goggles and looks at the heat lamp, then at you.  
 > *show solstice blush*  
-`solstice:64` **Solstice:** Did you... do that? For me?  
-`solstice:65` **Solstice:** Huh. Nobody does stuff for me. I'm usually the one doing stuff.  
+`solstice:74` **Solstice:** Did you... do that? For me?  
+`solstice:75` **Solstice:** Huh. Nobody does stuff for me. I'm usually the one doing stuff.  
 
-`solstice:67` **▸** Gently wake her: "Hey. You're getting burned."  
+`solstice:77` **▸** Gently wake her: "Hey. You're getting burned."  
 > *rapport +1 Solstice*  
 > *show solstice surprised*  
-`solstice:70` **Solstice:** Wha—oh. OH. Oh no, I'm a lobster. Thank you. Thank you, oh my god.  
+`solstice:80` **Solstice:** Wha—oh. OH. Oh no, I'm a lobster. Thank you. Thank you, oh my god.  
 
-`solstice:72` **▸** Let her sleep. She clearly needs it.  
-`solstice:73` You leave her be. Half an hour later you hear a shriek from across the deck.  
+`solstice:82` **▸** Let her sleep. She clearly needs it.  
+`solstice:83` You leave her be. Half an hour later you hear a shriek from across the deck.  
 > *show solstice surprised*  
-`solstice:75` **Solstice:** OW. Why didn't anyone—ha. It's fine. It's fine! I'll be a shiny red raver. New look.  
+`solstice:85` **Solstice:** OW. Why didn't anyone—ha. It's fine. It's fine! I'll be a shiny red raver. New look.  
 > *(end of choice)*
 
 > *show solstice neutral*  
-`solstice:78` She sits up. She doesn't turn her costume back on.  
-`solstice:79` **Solstice:** I don't like to think about what I do in the default world. It's draining, and grim, and well, y'know.  
-`solstice:80` **Solstice:** And then I come here and dance like everything is okay. Every year. I think if I stop dancing, the other thing catches up.  
-`solstice:81` **Solstice:** When the lights are on, everyone loves me. Solstice! Glitter girl! When they're off, I'm just... tired. Really, really tired.  
+`solstice:88` She spots the notepad on the tiles and slides it back into her leg warmer, fast and smooth, like someone palming a badge.  
+`solstice:89` **Solstice:** Grocery list.  
+`solstice:90` She sits up. She doesn't turn her costume back on.  
+`solstice:91` **Solstice:** I can't really talk about what I do in the default world. Legally. There's a contract. A normal contract! Lots of jobs have contracts.  
+`solstice:92` **Solstice:** It's draining, and grim, and, well, y'know. Stakeouts. Paperwork. Normal job stuff.  
+`solstice:93` **Solstice:** And then I come here and dance like everything is okay. Every year. I think if I stop dancing, the other thing catches up.  
+`solstice:94` **Solstice:** When the lights are on, everyone loves me. Solstice! Glitter girl! When they're off, I'm just... tired. Really, really tired.  
 
 > **Choice**
 
-`solstice:84` **▸** "I like you with the lights off too."  
+`solstice:97` **▸** "I like you with the lights off too."  
 > *rapport +2 Solstice*  
-`solstice:86` **Solstice (blush):** ...  
-`solstice:87` **Solstice:** That's... wow. Okay. You can't just say things like that at the pool. That's a ballroom thing to say. At least.  
+`solstice:99` **Solstice (blush):** ...  
+`solstice:100` **Solstice:** That's... wow. Okay. You can't just say things like that at the pool. That's a ballroom thing to say. At least.  
 
-`solstice:89` **▸** "That sounds exhausting. Do you ever get to rest?"  
+`solstice:102` **▸** "That sounds exhausting. Do you ever get to rest?"  
 > *rapport +1 Solstice*  
-`solstice:91` **Solstice (neutral):** Rest is... I'm bad at rest. Rest is where the thoughts are.  
-`solstice:92` **Solstice:** But this was nice. Right now. This was rest, kind of.  
+`solstice:104` **Solstice (neutral):** Rest is... I'm bad at rest. Rest is where the thoughts are.  
+`solstice:105` **Solstice:** But this was nice. Right now. This was rest, kind of.  
 
-`solstice:94` **▸** "Turn them back on! You're so much fun when they're on."  
-`solstice:95` **Solstice (neutral):** Yeah. Ha. Yeah.  
-`solstice:96` She flicks the switch. The top blazes back to life. Her smile comes on with it, a half-second late.  
+`solstice:107` **▸** "Turn them back on! You're so much fun when they're on."  
+`solstice:108` **Solstice (neutral):** Yeah. Ha. Yeah.  
+`solstice:109` She flicks the switch. The top blazes back to life. Her smile comes on with it, a half-second late.  
 > *(end of choice)*
 
 ## solstice_night_1
 
 > *scene bg exchange*  
-`solstice:104` The Human Stock Exchange is roaring. Tickers crawl across the walls in red and green: SELF ▲4.2. VIBES ▼1.1. GLITTER ▲99.  
-`solstice:105` Mute clowns in bras and fishnets run between the trading desks, pantomiming panic and euphoria. The air is full of confetti.  
+`solstice:117` The Human Stock Exchange is roaring. Tickers crawl across the walls in red and green: SELF ▲4.2. VIBES ▼1.1. GLITTER ▲99.  
+`solstice:118` Mute clowns in bras and fishnets run between the trading desks, pantomiming panic and euphoria. The air is full of confetti.  
 > *show solstice happy*  
-`solstice:107` **Solstice:** THERE you are! Okay, I just bought forty percent of you! Don't let me down! Diversify your feelings!  
-`solstice:108` A clown runs up to you and mimes, frantically, an offer. They're pointing at Solstice. Her ticker is on the wall: SOLSTICE ▲2.0.  
+`solstice:120` **Solstice:** THERE you are! Okay, I just bought forty percent of you! Don't let me down! Diversify your feelings!  
+`solstice:121` She's grinning, but her eyes are doing laps of the room. Not the tickers. The exits.  
+`solstice:122` A clown runs up to you and mimes, frantically, an offer. They're pointing at Solstice. Her ticker is on the wall: SOLSTICE ▲2.0.  
 
 > **Choice**
 
-`solstice:110` **▸** Buy as many shares of Solstice as you can.  
+`solstice:124` **▸** Buy as many shares of Solstice as you can.  
 > *rapport +2 Solstice*  
-`solstice:112` You buy and buy. The clown mimes a heart attack of joy. On the wall, her ticker rockets: SOLSTICE ▲88.8.  
-`solstice:113` **Solstice (surprised):** Oh my god. I'm a blue chip. I'm a BLUE CHIP!  
-`solstice:114` **Solstice (happy):** Mutual investment! We own each other now! That's basically marriage at this party!  
+`solstice:126` You buy and buy. The clown mimes a heart attack of joy. On the wall, her ticker rockets: SOLSTICE ▲88.8.  
+`solstice:127` **Solstice (surprised):** Oh my god. I'm a blue chip. I'm a BLUE CHIP!  
+`solstice:128` **Solstice (happy):** Mutual investment! We own each other now! That's basically marriage at this party!  
 
-`solstice:116` **▸** Short-sell Solstice.  
+`solstice:130` **▸** Short-sell Solstice.  
 > *rapport +1 Solstice*  
-`solstice:118` The clown gasps silently and hands you a little paper slip marked SHORT. Her ticker dips.  
-`solstice:119` **Solstice (surprised):** You CAPITALIST PIG!  
-`solstice:120` **Solstice (happy):** I respect it. I hate it, but I respect it. Maybe I like it a little when people take advantage of me.  
+`solstice:132` The clown gasps silently and hands you a little paper slip marked SHORT. Her ticker dips.  
+`solstice:133` **Solstice (surprised):** You CAPITALIST PIG!  
+`solstice:134` **Solstice (happy):** I respect it. I hate it, but I respect it. Maybe I like it a little when people take advantage of me.  
 
-`solstice:122` **▸** Don't trade. Just watch the chaos.  
-`solstice:123` The clown stops. They look at you with enormous, sad, painted eyes, and mime a slow jackoff motion. No spectators, right.  
-`solstice:124` Then they gently place a share of yourself in your hand and run away.  
-`solstice:125` **Solstice (neutral):** Ha. They do that. Nobody gets to just watch. Unless you're in the cuck chair.  
+`solstice:136` **▸** Don't trade. Just watch the chaos.  
+`solstice:137` The clown stops. They look at you with enormous, sad, painted eyes, and mime a slow jackoff motion. No spectators, right.  
+`solstice:138` Then they gently place a share of yourself in your hand and run away.  
+`solstice:139` **Solstice (neutral):** Ha. They do that. Nobody gets to just watch. Unless you're in the cuck chair.  
 > *(end of choice)*
 
-`solstice:127` A siren wails. Every clown freezes, then slowly they tear at their wigs in silent anguish. The tickers flash red: MARKET CRASH. EVERYTHING ▼100.  
+`solstice:141` A siren wails.  
+`solstice:142` **Solstice (surprised):** FREEZE!  
+`solstice:143` Everyone freezes. Including the clowns, who were already frozen, and who now look deeply confused.  
+`solstice:144` **Solstice (happy):** ...dance! Freeze dance! It's a rave thing. You freeze, and then you dance. As you were!  
+`solstice:145` Slowly, the clowns start tearing at their wigs in silent anguish. The tickers flash red: MARKET CRASH. EVERYTHING ▼100.  
 > *show solstice surprised*  
 
 > **Choice**
-`solstice:130` **Solstice:** Oh no. Oh no, the crash. Quick, what do we do?  
+`solstice:148` **Solstice:** Oh no. Oh no, the crash. Quick, what do we do?  
 
-`solstice:132` **▸** "Can I grab your hand? We're getting out of here."  
+`solstice:150` **▸** "Can I grab your hand? We're getting out of here."  
 > *rapport +2 Solstice*  
-`solstice:134` **Solstice (happy):** YES. Run!  
-`solstice:135` You run hand in hand through a blizzard of stock ticker confetti and out into the hallway, and you're both laughing so hard you have to sit down on the carpet.  
-`solstice:136` **Solstice (blush):** That's the best I've felt in like a month. That was so stupid. Thank you.  
+`solstice:152` **Solstice (happy):** YES. Run!  
+`solstice:153` You run hand in hand through a blizzard of stock ticker confetti and out into the hallway, and you're both laughing so hard you have to sit down on the carpet.  
+`solstice:154` **Solstice (blush):** That's the best I've felt in like a month. That was so stupid. Thank you.  
 
-`solstice:138` **▸** "Hodl! Never sell. Diamond hands."  
+`solstice:156` **▸** "Hodl! Never sell. Diamond hands."  
 > *rapport +1 Solstice*  
-`solstice:140` **Solstice (happy):** DIAMOND HANDS! APE STRONG! THANK YOU FOR THE DIP!  
-`solstice:141` You both hold up your hands, defiant, as the market crumbles around you. A clown salutes you with a single tear.  
+`solstice:158` **Solstice (happy):** DIAMOND HANDS! APE STRONG! THANK YOU FOR THE DIP!  
+`solstice:159` You both hold up your hands, defiant, as the market crumbles around you. A clown salutes you with a single tear.  
 
-`solstice:143` **▸** "Sell everything and give your earnings to the next person who walks in."  
+`solstice:161` **▸** "Sell everything and give your earnings to the next person who walks in."  
 > *rapport +1 Solstice*  
-`solstice:145` **Solstice (happy):** Sharing is caring! Well I guess here you shared the joy of buying into capitalism. A bit of a downer I guess, but what else can you do but laugh.  
+`solstice:163` **Solstice (happy):** Sharing is caring! Well I guess here you shared the joy of buying into capitalism. A bit of a downer I guess, but what else can you do but laugh.  
 > *(end of choice)*
+
+> *show solstice neutral*  
+`solstice:166` **Solstice:** Someone's going to make a lot of money off that crash, you know. Classic pump and dump. Somebody should really look into that.  
+`solstice:167` **Solstice (happy):** Not me! I'm just a raver. I just rave.  
 
 ## solstice_night_2
 
 > *scene bg karaoke*  
-`solstice:153` The confession booth karaoke room is draped in velvet. A neon sign on one wall says CONFESS. On the other, ABSOLVED.  
-`solstice:154` The rules, printed on a card: Pick a song. Replace the words with something true. Everybody claps either way.  
+`solstice:174` The confession booth karaoke room is draped in velvet. A neon sign on one wall says CONFESS. On the other, ABSOLVED.  
+`solstice:175` The rules, printed on a card: Pick a song. Replace the words with something true. Everybody claps either way.  
 > *show solstice neutral*  
-`solstice:156` Solstice is coming out of the booth. Her LED top is on its dimmest setting. She sees you and goes pink under the glitter.  
-`solstice:157` **Solstice (blush):** Oh no. Did you hear that?  
-`solstice:158` **Solstice:** I confessed that I don't actually like techno. I like slow songs. Sad, slow country songs about trucks and divorce. I've been lying to the scene for six years.  
-`solstice:159` **Solstice (neutral):** Okay. Your turn. You have to. That's the rule.  
+`solstice:177` Solstice is coming out of the booth. Her LED top is on its dimmest setting. She sees you and goes pink under the glitter.  
+`solstice:178` **Solstice (blush):** Oh no. Did you hear that?  
+`solstice:179` **Solstice:** I confessed that I don't actually like techno. I like slow songs. Sad, slow country songs about trucks and divorce. I've been lying to the scene for six years.  
+`solstice:180` **Solstice:** Also that I've never taken a drug in my life. Not even the ones I've taken. Wait. Those don't count. The booth was off for that part.  
+`solstice:181` She leans against the booth with her arms crossed, the way people lean on the hood of a squad car.  
+`solstice:182` **Solstice (neutral):** Okay. Your turn. You have the right to remain sil— no. No, you don't, actually. Not in here. You have to. That's the rule.  
 
 > **Choice**
 
-`solstice:162` **▸** Confess something real.  
+`solstice:185` **▸** Confess something real.  
 > *rapport +2 Solstice*  
-`solstice:164` You go into the booth. You pick a slow song. In place of the words, you sing something you haven't said out loud to anyone.  
-`solstice:165` It isn't good singing. It doesn't need to be. When you come out, Solstice is standing very still.  
-`solstice:166` **Solstice (blush):** ...Hey. That was brave. That was, like, the real version.  
+`solstice:187` You go into the booth. You pick a slow song. In place of the words, you sing something you haven't said out loud to anyone.  
+`solstice:188` It isn't good singing. It doesn't need to be. When you come out, Solstice is standing very still.  
+`solstice:189` **Solstice (blush):** ...Hey. That was brave. That was, like, the real version.  
 
-`solstice:168` **▸** Confess something silly.  
+`solstice:191` **▸** Confess something silly.  
 > *rapport +1 Solstice*  
-`solstice:170` You sing, with enormous drama, that you're bad at puzzles. You can't even solve a single one without help.  
-`solstice:171` **Solstice (happy):** NO. Not even the ones that Chuk makes?? Those ones are for CHILDREN.  
+`solstice:193` You sing, with enormous drama, that you're bad at puzzles. You can't even solve a single one without help.  
+`solstice:194` **Solstice (happy):** NO. Not even the ones that Chuk makes?? Those ones are for CHILDREN.  
 
-`solstice:173` **▸** Refuse to sing.  
-`solstice:174` The booth plays a very sad trombone sound. Several people boo, lovingly.  
-`solstice:175` **Solstice (neutral):** Ha. Okay. Okay, that's fair. Not everyone's ready to confess on a Saturday. Maybe later you can confess something ... just to me.  
+`solstice:196` **▸** Refuse to sing.  
+`solstice:197` The booth plays a very sad trombone sound. Several people boo, lovingly.  
+`solstice:198` **Solstice (neutral):** Ha. Okay. Okay, that's fair. Not everyone's ready to confess on a Saturday. Maybe later you can confess something ... just to me.  
 > *(end of choice)*
 
 ## solstice_night_3
 
 > *scene bg ballroom*  
-`solstice:183` The ballroom on Sunday night is pure light. Lasers cut the haze. Geometric projections crawl over seven hundred dancing bodies.  
-`solstice:184` And in the middle of the floor, under the disco ball, Solstice is dancing like it's the last song on Earth. Her LED top is blazing every color at once.  
+`solstice:206` The ballroom on Sunday night is pure light. Lasers cut the haze. Geometric projections crawl over seven hundred dancing bodies.  
+`solstice:207` And in the middle of the floor, under the disco ball, Solstice is dancing like it's the last song on Earth. Her LED top is blazing every color at once.  
 > *show solstice happy*  
-`solstice:186` **Solstice:** YOU CAME! DANCE WITH ME!  
-`solstice:187` You can barely hear her over the music, but you dance. It's ridiculous and good. And then, mid-song, with a little electronic sigh, every light on her top goes out at once.  
+`solstice:209` **Solstice:** YOU CAME! DANCE WITH ME!  
+`solstice:210` You can barely hear her over the music, but you dance. It's ridiculous and good. And then, mid-song, with a little electronic sigh, every light on her top goes out at once.  
 > *show solstice surprised*  
-`solstice:189` Battery's dead. She's just a dark shape in the crowd now. She freezes in the middle of the floor like someone pulled her plug too.  
+`solstice:212` Battery's dead. She's just a dark shape in the crowd now. She freezes in the middle of the floor like someone pulled her plug too.  
+`solstice:213` In the sudden dark, a tiny voice crackles out of her leg warmer: {i}Unit Four, we've lost your visual. Status?{/i}  
+`solstice:214` **Solstice (surprised):** ...That's my phone. It's a ringtone. It's a very realistic ringtone.  
+`solstice:215` She smacks her leg warmer. It goes quiet.  
 
 > **Choice**
 
-`solstice:192` **▸** Keep dancing with her, right there in the dark.  
+`solstice:218` **▸** Keep dancing with her, right there in the dark.  
 > *rapport +2 Solstice*  
-`solstice:194` You don't stop. After a second, she starts again, slower. Nobody's watching her now. She's just dancing.  
-`solstice:195` **Solstice (blush):** You stayed.  
+`solstice:220` You don't stop. After a second, she starts again, slower. Nobody's watching her now. She's just dancing.  
+`solstice:221` **Solstice (blush):** You stayed.  
 
-`solstice:197` **▸** Hold up your phone's flashlight like a tiny moon.  
+`solstice:223` **▸** Hold up your phone's flashlight like a tiny moon.  
 > *rapport +1 Solstice*  
-`solstice:199` **Solstice (happy):** Ha! My little moon! Usually I'm the one shining lights on other people. Okay, okay, I can get used to this.  
-`solstice:200` She dances in the circle of your phone light like it's a spotlight. It's the smallest stage in the ballroom.  
+`solstice:225` **Solstice (happy):** Ha! My little moon! Usually I'm the one shining lights on other people. Okay, okay, I can get used to this.  
+`solstice:226` She dances in the circle of your phone light like it's a spotlight. It's the smallest stage in the ballroom.  
 
-`solstice:202` **▸** "Let's go find you some batteries!"  
-`solstice:203` **Solstice (neutral):** Yeah. Yeah, good idea. Can't be dark at the end.  
-`solstice:204` You hunt for batteries. By the time you find some, the DJ set is over.  
+`solstice:228` **▸** "Let's go find you some batteries!"  
+`solstice:229` **Solstice (neutral):** Yeah. Yeah, good idea. Can't be dark at the end.  
+`solstice:230` You hunt for batteries. By the time you find some, the DJ set is over.  
 > *(end of choice)*
 
 > *show solstice neutral*  
-`solstice:207` **Solstice:** Nobody's ever stayed when the lights went out. People like Solstice. Solstice is fun. When she runs out, they go find the next fun thing.  
+`solstice:233` **Solstice:** Nobody's ever stayed when the lights went out. People like Solstice. Solstice is fun. When she runs out, they go find the next fun thing.  
 
 > **Choice**
-`solstice:209` **Solstice:** Hey. Can I tell you my real name?  
+`solstice:235` **Solstice:** Hey. Can I tell you my real name?  
 
-`solstice:211` **▸** "I'd love that."  
+`solstice:237` **▸** "I'd love that."  
 > *(end of choice)*
 
-`solstice:214` **Solstice:** But first I think I need a little bump of courage, do you think you can help me out?  
+`solstice:240` **Solstice:** But first I think I need a little bump of courage, do you think you can help me out?  
 
 > **Choice**
 
-`solstice:216` **▸** "Of course, anything for my friends"  
+`solstice:242` **▸** "Of course, anything for my friends"  
 > *rapport +2 Solstice*  
-`solstice:218` **Solstice (blush):** YAY! We're friends, it's official! Ok, but maybe not right now. I'll let you know when.  
+`solstice:244` **Solstice (blush):** YAY! We're friends, it's official! Ok, but maybe not right now. I'll let you know when.  
 
-`solstice:220` **▸** "Uh sure, but I don't have anything on me right now"  
+`solstice:246` **▸** "Uh sure, but I don't have anything on me right now"  
 > *rapport +2 Solstice*  
-`solstice:222` **Solstice (blush):** Don't worry, maybe we can meet up later, and I'll reveal more than my name.  
+`solstice:248` **Solstice (blush):** Don't worry, maybe we can meet up later, and I'll reveal more than my name.  
 
-`solstice:224` **▸** "Uh, I'm not sure what you're talking about. You're not a cop right?"  
-`solstice:225` **Solstice (neutral):** ...Maybe not. Never mind. I'll see you around.  
-`solstice:226` The music swells. She turns back to the dance floor, and the moment's gone.  
+`solstice:250` **▸** "Uh, I'm not sure what you're talking about. You're not a cop right?"  
+`solstice:251` **Solstice (neutral):** ...Maybe not. Never mind. I'll see you around.  
+`solstice:252` The music swells. She turns back to the dance floor, and the moment's gone.  
 > *(end of choice)*
 
 > *if rapport["solstice"] >= ROMANCE_THRESHOLD:*  
-`solstice:229` **Solstice (blush):** After the big event... come find me on the roof? I want to see a sunrise, with you there maybe it'll glow extra bright.  
+`solstice:255` **Solstice (blush):** After the big event... come find me on the roof? I want to see a sunrise, with you there maybe it'll glow extra bright.  
 > *else:*  
-`solstice:231` **Solstice (happy):** Okay! Big event time soon! Go get a good spot, new person!  
+`solstice:257` **Solstice (happy):** Okay! Big event time soon! Go get a good spot, new person!  
 
 ## solstice_romance
 
 > *scene bg roof_dawn*  
-`solstice:239` The ballroom lets out around five. Seven hundred people spill into the hallways sticky with confetti, hugging strangers, trading gifts, crying a little.  
-`solstice:240` You find Solstice exactly where she said she'd be: on the roof, in a borrowed hoodie three sizes too big, leg warmers still on, LED top dead and dark underneath.  
-`solstice:241` She's sitting on the bench with two cups of tea, and she's not dancing. You're not sure you've ever seen her sit still.  
+`solstice:265` The ballroom lets out around five. Seven hundred people spill into the hallways sticky with confetti, hugging strangers, trading gifts, crying a little.  
+`solstice:266` You find Solstice exactly where she said she'd be: on the roof, in a borrowed hoodie three sizes too big, leg warmers still on, LED top dead and dark underneath.  
+`solstice:267` She's sitting on the bench with two cups of tea, and she's not dancing. You're not sure you've ever seen her sit still.  
 > *show solstice blush*  
-`solstice:243` **Solstice:** Hi. I got you tea. It's the cardamom one. I didn't know if you were coming, so I've been drinking both of them in turns, which means you get half.  
-`solstice:244` You sit. The bench is cold. She shifts over until her shoulder is against yours, and the hoodie smells like the ballroom: fog machine, sunscreen, glitter, if glitter has a smell.  
+`solstice:269` **Solstice:** Hi. I got you tea. It's the cardamom one. I didn't know if you were coming, so I've been drinking both of them in turns, which means you get half.  
+`solstice:270` You sit. The bench is cold. She shifts over until her shoulder is against yours, and the hoodie smells like the ballroom: fog machine, sunscreen, glitter, if glitter has a smell.  
 
 > **Choice**
-`solstice:247` **Solstice:** Okay. Real question. Did you have fun? Like, actually?  
+`solstice:273` **Solstice:** Okay. Real question. Did you have fun? Like, actually?  
 
-`solstice:249` **▸** "The most fun I've had in years. Mostly because of you."  
-`solstice:250` **Solstice (blush):** Stop. Stop it. You can't just... okay, keep going, actually.  
-`solstice:251` You pull out the small bag you brought, just in case the party wasn't over.  
+`solstice:275` **▸** "The most fun I've had in years. Mostly because of you."  
+`solstice:276` **Solstice (blush):** Stop. Stop it. You can't just... okay, keep going, actually.  
+`solstice:277` You pull out the small bag you brought, just in case the party wasn't over.  
 
-`solstice:252` **▸** "I brought a little something for us, that is if you want to keep partying for a bit longer"  
-`solstice:253` You pull out a small bag.  
-`solstice:254` **Solstice (happy):** Ha! Fair. I'm not going to sleep anyway. Let me see that.  
+`solstice:278` **▸** "I brought a little something for us, that is if you want to keep partying for a bit longer"  
+`solstice:279` You pull out a small bag.  
+`solstice:280` **Solstice (happy):** Ha! Fair. I'm not going to sleep anyway. Let me see that.  
 > *(end of choice)*
 
-`solstice:256` She takes the bag, and then her expression turns serious. Before you know it, she's slipped a handcuff around your right hand, and the other end to the railing.  
-`solstice:257` She flips the lights on her bra back on, and gets them real close to your eyes. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless.  
+`solstice:282` She takes the bag, and then her expression turns serious. Before you know it, she's slipped a handcuff around your right hand, and the other end to the railing.  
+`solstice:283` She flips the lights on her bra back on, and gets them real close to your eyes. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless.  
 > *show solstice neutral*  
-`solstice:260` **Solstice:** Hey. Before we do this can I tell you something? My real name. Nobody here knows it.  
-`solstice:261` **Solstice (blush):** It's Dana. Dana. Now we both have some dirt on each other, you can blow my cover anytime you want.  
-`solstice:262` The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it.  
+`solstice:286` **Solstice:** Hey. Before we do this can I tell you something? My real name. Nobody here knows it.  
+`solstice:287` **Solstice (blush):** It's Dana. Dana. Now we both have some dirt on each other, you can blow my cover anytime you want.  
+`solstice:288` The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it.  
 
 > **Choice**
 
-`solstice:265` **▸** "I'm not going to blow your cover, not now not ever."  
-`solstice:266` **Solstice (blush):** I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else.  
-`solstice:267` You let yourself become hypnotized, and before you know it it's morning.  
+`solstice:291` **▸** "I'm not going to blow your cover, not now not ever."  
+`solstice:292` **Solstice (blush):** I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else.  
+`solstice:293` You let yourself become hypnotized, and before you know it it's morning.  
 
-`solstice:268` **▸** Hand her the bag again.  
-`solstice:269` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
+`solstice:294` **▸** Hand her the bag again.  
+`solstice:295` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
 > *(end of choice)*
 
-`solstice:271` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
+`solstice:297` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
 
 > **Choice**
 
-`solstice:274` **▸** "Yes. Lights off. Just us."  
-`solstice:275` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
-`solstice:276` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
+`solstice:300` **▸** "Yes. Lights off. Just us."  
+`solstice:301` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
+`solstice:302` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
 
-`solstice:277` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
-`solstice:278` **Solstice (surprised):** Oh!  
-`solstice:279` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
-`solstice:280` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
+`solstice:303` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
+`solstice:304` **Solstice (surprised):** Oh!  
+`solstice:305` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
+`solstice:306` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
 > *(end of choice)*
 
-`solstice:282` The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on.  
+`solstice:308` The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on.  
 > *show solstice happy*  
-`solstice:284` **Solstice:** Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once.  
+`solstice:310` **Solstice:** Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once.  
 > *scene bg roof_dawn*  
-`solstice:287` The longest day of the year was months ago. This one feels longer, in the best way.  
-`solstice:288` Below, someone in the parking lot starts playing Fight The Power on a shitty car stereo. Solstice laughs so hard she spills both teas.  
-`solstice:289` She uncuffs you and pulls you up off the bench and you embrace, swaying slowly, with no lights at all, until the song ends and the car drives away.  
+`solstice:313` The longest day of the year was months ago. This one feels longer, in the best way.  
+`solstice:314` Below, someone in the parking lot starts playing Fight The Power on a shitty car stereo. Solstice laughs so hard she spills both teas.  
+`solstice:315` She uncuffs you and pulls you up off the bench and you embrace, swaying slowly, with no lights at all, until the song ends and the car drives away.  
 > *scene black*  
-`solstice:291` {i}Wednesday, 4:12 AM. A text.{/i}  
-`solstice:292` **Solstice:** I quit the force, and now I'm living my raver lifestyle, but not as a cover.  
-`solstice:293` **Solstice:** I stayed up all night at decompression. It's sunrise in like an hour. I'm going to go watch it from the top of an art car, not worrying about what drugs the people below are on. first one I've watched on purpose that wasn't with you  
-`solstice:294` **Solstice:** thinking about you. Next year can I be your +1? No fake names, but I'm still happy to handcuff you if you'd like ;)  
+`solstice:317` {i}Wednesday, 4:12 AM. A text.{/i}  
+`solstice:318` **Solstice:** I quit the force, and now I'm living my raver lifestyle, but not as a cover.  
+`solstice:319` **Solstice:** I stayed up all night at decompression. It's sunrise in like an hour. I'm going to go watch it from the top of an art car, not worrying about what drugs the people below are on. first one I've watched on purpose that wasn't with you  
+`solstice:320` **Solstice:** thinking about you. Next year can I be your +1? No fake names, but I'm still happy to handcuff you if you'd like ;)  
 > *→ jump ending_card*  
 
 ## solstice_friend
 
 > *scene bg exterior*  
 > *show solstice happy*  
-`solstice:304` Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price.  
-`solstice:305` **Solstice:** THERE you are! I was going to leave a note on your windshield made of glitter but now I don't have to.  
-`solstice:306` **Solstice (neutral):** Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes.  
-`solstice:307` **Solstice:** Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts.  
-`solstice:308` She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}.  
-`solstice:309` **Solstice (happy):** You're my person on the inside now. Friendship bracelet is legally binding.  
-`solstice:310` **Solstice:** And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert.  
+`solstice:330` Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price.  
+`solstice:331` **Solstice:** THERE you are! I was going to leave a note on your windshield made of glitter but now I don't have to.  
+`solstice:332` **Solstice (neutral):** Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes.  
+`solstice:333` **Solstice:** Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts.  
+`solstice:334` She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}.  
+`solstice:335` **Solstice (happy):** You're my person on the inside now. Friendship bracelet is legally binding. I would know.  
+`solstice:336` **Solstice (neutral):** Also, if anyone ever asks, you never saw me here. For... raver reasons.  
+`solstice:337` **Solstice:** And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert.  
 
 ---
 
@@ -1691,360 +1717,375 @@ Edit this file and send it back; the changes get applied to the game.
 
 ## zyx_pool_1
 
-`zyx:5` Under a giant striped beach umbrella, set up indoors for reasons nobody has asked about, sits a silver alien with three eyes, two antennae and a sash that reads AMBASSADOR. They are wearing at least an inch of sunscreen anyway, and taking notes on a clipboard.  
+`zyx:7` Under a giant striped beach umbrella, set up indoors for reasons nobody has asked about, sits a silver alien with three eyes, two antennae and a sash that reads AMBASSADOR. They are wearing at least an inch of sunscreen anyway, and taking notes on a clipboard.  
 > *show zyx neutral*  
-`zyx:7` **Zyx:** Greetings, Earthling. This one is Zyx, Ambassador of the Outer Drift. You may approach. Slowly. The sun is very aggressive on this planet. Even through glass.  
-`zyx:8` **Zyx:** Please explain the following ritual.  
-`zyx:9` They point at the pool, where a dozen adults have their eyes closed, splashing around and screaming the same two words at each other.  
-`zyx:10` **Zyx:** Why do humans close their eyes and shout the name of a dead Venetian explorer?  
+`zyx:9` **Zyx:** Greetings, Earthling. This one is Zyx, Ambassador of the Outer Drift. You may approach. Slowly. The sun is very aggressive on this planet. Even through glass.  
+`zyx:10` **Zyx:** Please explain the following ritual.  
+`zyx:11` They point at the pool, where a dozen adults have their eyes closed, splashing around and screaming the same two words at each other.  
+`zyx:12` **Zyx:** Why do humans close their eyes and shout the name of a dead Venetian explorer?  
 
 > **Choice**
 
-`zyx:13` **▸** Explain Marco Polo as seriously as possible.  
+`zyx:15` **▸** Explain Marco Polo as seriously as possible.  
 > *rapport +2 Zyx*  
-`zyx:15` You explain the rules in full. The seeker. The call. The response. The fish-out-of-water rule, which you're not sure is real.  
-`zyx:16` **Zyx (happy):** Fascinating. A game of trust and echolocation. Your species is part bat. We suspected.  
-`zyx:17` They write {i}PART BAT{/i} in large letters on the clipboard and underline it twice.  
+`zyx:17` You explain the rules in full. The seeker. The call. The response. The fish-out-of-water rule, which you're not sure is real.  
+`zyx:18` **Zyx (happy):** Fascinating. A game of trust and echolocation. Your species is part bat. We suspected.  
+`zyx:19` They write {i}PART BAT{/i} in large letters on the clipboard and underline it twice.  
 
-`zyx:19` **▸** "Just play it with me. You'll get it."  
+`zyx:21` **▸** "Just play it with me. You'll get it."  
 > *rapport +1 Zyx*  
-`zyx:21` You drag them into the shallow end. Zyx is the seeker. They close all three eyes.  
-`zyx:22` **Zyx (surprised):** MARCO.  
-`zyx:23` Everyone shouts POLO. Zyx's antennae go limp with delight.  
-`zyx:24` **Zyx (happy):** Again. AGAIN.  
+`zyx:23` You drag them into the shallow end. Zyx is the seeker. They close all three eyes.  
+`zyx:24` **Zyx (surprised):** MARCO.  
+`zyx:25` Everyone shouts POLO. Zyx's antennae go limp with delight.  
+`zyx:26` **Zyx (happy):** Again. AGAIN.  
 
-`zyx:26` **▸** "Are you... actually an alien?"  
-`zyx:27` **Zyx (neutral):** Are you actually a human?  
-`zyx:28` **Zyx:** Do not answer. It would ruin it. For both of us.  
+`zyx:28` **▸** "Are you... actually an alien?"  
+`zyx:29` **Zyx (neutral):** Are you actually a human?  
+`zyx:30` **Zyx:** Do not answer. It would ruin it. For both of us.  
 > *(end of choice)*
 
+`zyx:32` Ten minutes later, the Marco Polo players vote Zyx honorary seeker for life. Zyx has played once. You have been trying to get into that game since noon.  
+`zyx:33` A woman who has been coming to this party for eleven years swims over to ask Zyx how they got in with the pool crowd so fast. Zyx tells her to {i}simply arrive from space.{/i} She nods and writes it down.  
 > *show zyx neutral*  
-`zyx:31` Zyx explains that they are here on a research mission: to determine whether Earth is ready for contact.  
-`zyx:32` **Zyx:** Our current findings: Earth is not ready. Earth is very, very fun. These two findings are in tension. The report is going poorly.  
+`zyx:36` Zyx explains that they are here on a research mission: to determine whether Earth is ready for contact.  
+`zyx:37` **Zyx:** Our current findings: Earth is not ready. Earth is very, very fun. These two findings are in tension. The report is going poorly.  
 
 > **Choice**
-`zyx:35` **Zyx:** Question for the report. Why do humans gather like this? In secret? Wearing other faces?  
+`zyx:40` **Zyx:** Question for the report. Why do humans gather like this? In secret? Wearing other faces?  
 
-`zyx:37` **▸** "Because sometimes the other face is the real one."  
+`zyx:42` **▸** "Because sometimes the other face is the real one."  
 > *rapport +2 Zyx*  
-`zyx:39` All three of Zyx's eyes look at you at once.  
-`zyx:40` **Zyx (blush):** ...That is the most accurate thing anyone has said for the report.  
-`zyx:41` **Zyx:** This one is writing it down. With your name. No, without your name. Earth rules. No names in the report.  
+`zyx:44` All three of Zyx's eyes look at you at once.  
+`zyx:45` **Zyx (blush):** ...That is the most accurate thing anyone has said for the report.  
+`zyx:46` **Zyx:** This one is writing it down. With your name. No, without your name. Earth rules. No names in the report.  
 
-`zyx:43` **▸** "To have fun. That's it. That's all."  
+`zyx:48` **▸** "To have fun. That's it. That's all."  
 > *rapport +1 Zyx*  
-`zyx:45` **Zyx (happy):** Simple. Elegant. This one respects it. Writing: FUN.  
+`zyx:50` **Zyx (happy):** Simple. Elegant. This one respects it. Writing: FUN.  
 
-`zyx:47` **▸** "I'm not sure. I came here to find out."  
+`zyx:52` **▸** "I'm not sure. I came here to find out."  
 > *rapport +1 Zyx*  
-`zyx:49` **Zyx (neutral):** A fellow researcher. We will compare notes before the end.  
+`zyx:54` **Zyx (neutral):** A fellow researcher. We will compare notes before the end.  
 > *(end of choice)*
+
+`zyx:56` **Zyx (neutral):** One more observation. Unrelated to the mission.  
+`zyx:57` **Zyx (blush):** Your face is very symmetrical. This one checked twice. Three times, actually. This one has three eyes.  
+`zyx:58` **Zyx:** Also, this one's antennae have been pointing at you since you sat down. This is not voluntary. It will be investigated.  
 
 ## zyx_pool_2
 
-`zyx:56` Zyx is walking the pool deck with a mesh bag labeled EARTH ARTIFACTS. It contains nine mismatched flip-flops, a pair of sunglasses, a single swim fin, and a paperback novel swollen to twice its size from water.  
+`zyx:64` There's a queue at the far end of the pool. Someone has made a sign out of a pizza box: THE MUSEUM OF THE OUTER DRIFT. FREE. NO PHOTOS. GIFT SHOP COMING SOON.  
+`zyx:65` At the front, Zyx is curating a beach towel covered in EARTH ARTIFACTS: nine mismatched flip-flops, a pair of sunglasses, a single swim fin, and a paperback novel swollen to twice its size from water.  
+`zyx:66` Two people from the art crew are taking notes on how Zyx did it. Zyx does not know it's an art piece. Zyx thinks it's a museum.  
 > *show zyx happy*  
-`zyx:58` **Zyx:** Earthling! You are here! Good. The museum of the Outer Drift requires donations. Every visitor gives one artifact. It is the custom of our people. Just now. We invented it just now.  
+`zyx:68` **Zyx:** Earthling! You are here. You may skip the line. You are this one's favorite visitor. Do not tell the other visitors.  
+`zyx:69` **Zyx:** Every visitor gives one artifact. It is the custom of our people. Since this morning. We invented it this morning, and now it is the custom of yours too, apparently.  
 
 > **Choice**
-`zyx:61` **Zyx:** What do you donate to the Outer Drift?  
+`zyx:72` **Zyx:** What do you donate to the Outer Drift?  
 
-`zyx:63` **▸** Find a perfect smooth pebble by the planters, and explain that it's a 'nice rock.'  
+`zyx:74` **▸** Find a perfect smooth pebble by the planters, and explain that it's a 'nice rock.'  
 > *rapport +2 Zyx*  
-`zyx:66` **Zyx (surprised):** A nice rock.  
-`zyx:67` They hold it up to the light from the atrium roof with all three eyes.  
-`zyx:68` **Zyx (happy):** On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This changes everything. This is the centerpiece.  
+`zyx:77` **Zyx (surprised):** A nice rock.  
+`zyx:78` They hold it up to the light from the atrium roof with all three eyes.  
+`zyx:79` **Zyx (happy):** On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This changes everything. This is the centerpiece.  
 
-`zyx:70` **▸** Your hotel key card.  
+`zyx:81` **▸** Your hotel key card.  
 > *rapport +1 Zyx*  
-`zyx:72` **Zyx (neutral):** A key to a door that already opens. Because everyone who enters is already checked in.  
-`zyx:73` **Zyx (happy):** Profound. It goes in the philosophy wing.  
+`zyx:83` **Zyx (neutral):** A key to a door that already opens. Because everyone who enters is already checked in.  
+`zyx:84` **Zyx (happy):** Profound. It goes in the philosophy wing.  
 
-`zyx:75` **▸** "Nothing. Sorry. I need all my stuff."  
-`zyx:76` **Zyx (neutral):** Understandable. Humans are very attached to stuff. We have noted it.  
+`zyx:86` **▸** "Nothing. Sorry. I need all my stuff."  
+`zyx:87` **Zyx (neutral):** Understandable. Humans are very attached to stuff. We have noted it.  
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:79` Zyx sits down on a lounger next to you and folds their silver hands.  
-`zyx:80` **Zyx:** The Outer Drift is very quiet. Thirty-one of us, spread across a nebula. We communicate by changing color, very slowly. A conversation can take a year.  
-`zyx:81` **Zyx:** No one has hugged on the Outer Drift since the third moon. We are not built for it. Too many antennae.  
-`zyx:82` **Zyx:** But this one has observed many hugs here. Data suggests they are... good.  
+`zyx:90` Zyx leaves the museum in the care of a volunteer who has already, unprompted, made themself a little docent badge. Zyx sits down on a lounger next to you, close, and folds their silver hands.  
+`zyx:91` **Zyx:** The Outer Drift is very quiet. Thirty-one of us, spread across a nebula. We communicate by changing color, very slowly. A conversation can take a year.  
+`zyx:92` **Zyx:** No one has hugged on the Outer Drift since the third moon. We are not built for it. Too many antennae.  
+`zyx:93` **Zyx:** But this one has observed many hugs here. Data suggests they are... good. This one would like a larger sample size. Of you, specifically.  
 
 > **Choice**
-`zyx:85` **Zyx:** Earthling. For the report. Please demonstrate a hug. Consent is requested, in the Earth style.  
+`zyx:96` **Zyx:** Earthling. For the report. Please demonstrate a hug. Consent is requested, in the Earth style.  
 
-`zyx:87` **▸** "Yes. Come here."  
+`zyx:98` **▸** "Yes. Come here."  
 > *rapport +2 Zyx*  
-`zyx:90` You hug. Zyx is very stiff at first, like a coat hanger. Then, slowly, their arms come up around you. Their antennae droop down over your shoulder.  
-`zyx:91` **Zyx (blush):** Oh.  
-`zyx:92` **Zyx:** Data confirmed. Data... very confirmed.  
+`zyx:101` You hug. Zyx is very stiff at first, like a coat hanger. Then, slowly, their arms come up around you. Their antennae droop down over your shoulder.  
+`zyx:102` **Zyx (blush):** Oh.  
+`zyx:103` **Zyx:** Data confirmed. Data... very confirmed. This one may need to repeat the measurement. Several times. Science.  
 
-`zyx:94` **▸** Offer a high five instead.  
+`zyx:105` **▸** Offer a high five instead.  
 > *rapport +1 Zyx*  
-`zyx:96` Zyx studies your palm. Then, very carefully, presses their three-fingered glove against it.  
-`zyx:97` **Zyx (happy):** A hug for hands. Efficient. We approve.  
+`zyx:107` Zyx studies your palm. Then, very carefully, presses their three-fingered glove against it, and leaves it there a little longer than a high five lasts.  
+`zyx:108` **Zyx (happy):** A hug for hands. Efficient. We approve. We would approve more of the full version.  
 
-`zyx:99` **▸** "Maybe later."  
-`zyx:100` **Zyx (neutral):** Noted. Later. This one will hold you to the Earth word 'later.'  
+`zyx:110` **▸** "Maybe later."  
+`zyx:111` **Zyx (neutral):** Noted. Later. This one will hold you to the Earth word 'later.'  
 > *(end of choice)*
 
 ## zyx_night_1
 
 > *scene bg fortune*  
-`zyx:108` THE ORACLE OF PING PONG, says the sign. A boxy robot with a glass dome on its head takes ping pong balls from a lottery machine and prints fortunes on them with a tiny buzzing arm.  
-`zyx:109` People in capes and headsets queue in the purple light. At the front, Zyx is feeding the machine with great seriousness.  
+`zyx:119` THE ORACLE OF PING PONG, says the sign. A boxy robot with a glass dome on its head takes ping pong balls from a lottery machine and prints fortunes on them with a tiny buzzing arm.  
+`zyx:120` People in capes and headsets queue in the purple light. Most of them aren't queuing for the robot. They're queuing for Zyx, who has started interpreting everyone's fortunes, and is apparently better at it than the robot.  
 > *show zyx neutral at slightright*  
-`zyx:111` **Zyx:** Earthling! You are just in time. This machine is the most advanced intelligence on your planet. We have been consulting it for an hour.  
-`zyx:112` The robot whirs. It spits out a ball. Zyx catches it and reads it aloud.  
-`zyx:113` **THE ORACLE:** YOU ARE NOT THE ONLY ONE.  
+`zyx:122` **Zyx:** Earthling! You are just in time. This machine is the most advanced intelligence on your planet. This one is its assistant now. Nobody asked. It simply happened.  
+`zyx:123` A man who has run this room for six years is standing off to the side, holding a ping pong ball, looking quietly replaced.  
+`zyx:124` The robot whirs. It spits out a ball. Zyx catches it and reads it aloud.  
+`zyx:125` **THE ORACLE:** YOU ARE NOT THE ONLY ONE.  
 > *show zyx surprised at slightright*  
-`zyx:115` **Zyx:** Not the only one. Not the only one... what? This is troubling. Interpret it, please.  
+`zyx:127` **Zyx:** Not the only one. Not the only one... what? This is troubling. Interpret it, please. This one only interprets other people's.  
 
 > **Choice**
 
-`zyx:118` **▸** "It means you're not alone. Here, at least."  
+`zyx:130` **▸** "It means you're not alone. Here, at least."  
 > *rapport +2 Zyx*  
-`zyx:120` **Zyx (blush):** Not alone.  
-`zyx:121` They turn the ball over and over in their gloved fingers.  
-`zyx:122` **Zyx:** On the Outer Drift, the nearest Zyx is four light-years away. This one had forgotten that 'not alone' was a thing a person could be.  
+`zyx:132` **Zyx (blush):** Not alone.  
+`zyx:133` They turn the ball over and over in their gloved fingers.  
+`zyx:134` **Zyx:** On the Outer Drift, the nearest Zyx is four light-years away. This one had forgotten that 'not alone' was a thing a person could be.  
 
-`zyx:124` **▸** "It means there's another alien at this party."  
+`zyx:136` **▸** "It means there's another alien at this party."  
 > *rapport +1 Zyx*  
-`zyx:126` **Zyx (surprised):** !!!  
-`zyx:127` Zyx spins around, scanning the crowd with all three eyes. A man in a cape waves at them. Zyx waves back, suspicious.  
+`zyx:138` **Zyx (surprised):** !!!  
+`zyx:139` Zyx spins around, scanning the crowd with all three eyes. A man in a cape waves at them. Zyx waves back, suspicious. The man looks thrilled to have been noticed.  
 
-`zyx:129` **▸** "It's a ping pong ball. It doesn't mean anything."  
-`zyx:130` **Zyx (neutral):** Everything means something to the Oracle. But we will log your skepticism.  
+`zyx:141` **▸** "It's a ping pong ball. It doesn't mean anything."  
+`zyx:142` **Zyx (neutral):** Everything means something to the Oracle. But we will log your skepticism.  
 > *(end of choice)*
 
 > *show zyx neutral at slightright*  
-`zyx:133` **Zyx:** Now you. Your turn. This one will read yours.  
-`zyx:134` The robot whirs and prints a ball for you. Zyx reads it.  
-`zyx:135` **THE ORACLE:** STAY UNTIL SUNRISE.  
+`zyx:145` **Zyx:** Now you. Your turn. This one will read yours personally.  
+`zyx:146` The robot whirs and prints a ball for you. Zyx reads it, and their antennae go straight up.  
+`zyx:147` **THE ORACLE:** SOMEONE WILL TAKE YOU HOME.  
+`zyx:148` **Zyx (blush):** Home. Interesting. Home is four light-years away. That is a long commute.  
+`zyx:149` **Zyx:** This one is willing to drive.  
 
 > **Choice**
-`zyx:137` **Zyx:** Will you follow the Oracle's guidance?  
+`zyx:151` **Zyx:** Will you follow the Oracle's guidance?  
 
-`zyx:139` **▸** "Only if you stay too."  
+`zyx:153` **▸** "Only if it's you."  
 > *rapport +2 Zyx*  
-`zyx:141` **Zyx (blush):** Ah.  
-`zyx:142` **Zyx:** Then it is decided. The Oracle has spoken. We both stay. For science.  
+`zyx:155` **Zyx (blush):** Ah.  
+`zyx:156` **Zyx:** Then it is decided. The Oracle has spoken. This one is taking you home. Eventually. For science.  
 
-`zyx:144` **▸** "Probably. I'm not great at leaving things."  
+`zyx:158` **▸** "Depends. Is your place nice?"  
 > *rapport +1 Zyx*  
-`zyx:146` **Zyx (happy):** Good. Neither is this one. This one came for a weekend nine years ago.  
+`zyx:160` **Zyx (happy):** It has a view of every star. And the lighting is very flattering. You would look excellent in it.  
 
-`zyx:148` **▸** "I don't really believe in fortunes."  
-`zyx:149` **Zyx (neutral):** The Oracle does not need your belief. It is a robot. It has a printer.  
+`zyx:162` **▸** "I don't really believe in fortunes."  
+`zyx:163` **Zyx (neutral):** The Oracle does not need your belief. It is a robot. It has a printer.  
 > *(end of choice)*
 
 ## zyx_night_2
 
 > *scene bg clinic*  
-`zyx:157` The Clinic of Unnecessary Procedures smells like rubbing alcohol and bubblegum. An eye chart on the wall is made entirely of astrological symbols.  
-`zyx:158` Two nurses in vintage uniforms are wheeling Zyx in on a gurney. Zyx is protesting in a language that sounds a lot like the noise a modem makes.  
+`zyx:171` The Clinic of Unnecessary Procedures smells like rubbing alcohol and bubblegum. An eye chart on the wall is made entirely of astrological symbols.  
+`zyx:172` Two nurses in vintage uniforms are wheeling Zyx in on a gurney. Zyx is protesting in a language that sounds a lot like the noise a modem makes.  
 > *show zyx surprised*  
-`zyx:160` **Nurse Ratchet-and-Clank:** Are you the alien's next of kin?  
+`zyx:174` **Nurse Ratchet-and-Clank:** Are you the alien's next of kin?  
 
 > **Choice**
 
-`zyx:163` **▸** "Yes. I'm their emergency contact."  
+`zyx:177` **▸** "Yes. I'm their emergency contact."  
 > *rapport +2 Zyx*  
-`zyx:166` **Zyx (blush):** You are?  
-`zyx:167` **Zyx:** ...You are. Yes. Correct. This one's emergency contact. Please inform them of everything.  
+`zyx:180` **Zyx (blush):** You are?  
+`zyx:181` **Zyx:** ...You are. Yes. Correct. This one's emergency contact. Please inform them of everything. Especially the intimate things.  
 
-`zyx:169` **▸** "I'm a friend."  
+`zyx:183` **▸** "I'm a friend."  
 > *rapport +1 Zyx*  
-`zyx:171` **Nurse Ratchet-and-Clank:** A friend may stay. Friends are encouraged. It says so on the chart.  
+`zyx:185` **Nurse Ratchet-and-Clank:** A friend may stay. Friends are encouraged. It says so on the chart.  
+`zyx:186` **Zyx (neutral):** For now. A friend. For now.  
 
-`zyx:173` **▸** "Never seen them before in my life."  
-`zyx:174` **Zyx (surprised):** Betrayal! This one will be noting this in the report! In red!  
-`zyx:175` The nurses let you stay anyway. They need a witness.  
+`zyx:188` **▸** "Never seen them before in my life."  
+`zyx:189` **Zyx (surprised):** Betrayal! This one will be noting this in the report! In red!  
+`zyx:190` The nurses let you stay anyway. They need a witness.  
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:178` **Nurse Ratchet-and-Clank:** May I listen to your heart, Ambassador? The stethoscope is cold. I'm asking first.  
-`zyx:179` **Zyx:** ...Permission granted.  
-`zyx:180` The nurse listens for a long, long time. She frowns. She moves the stethoscope. She frowns harder.  
-`zyx:181` **Nurse Ratchet-and-Clank:** Heart: one. Normal size. Slightly lonely.  
-`zyx:182` **Zyx (surprised):** Slightly lonely!  
-`zyx:183` **Nurse Ratchet-and-Clank:** It happens. Especially to travelers. Here's the prescription.  
-`zyx:184` She writes on a pad and tears off the page with great ceremony: ONE (1) DANCE. TO BE TAKEN BEFORE SUNRISE. REPEAT AS NEEDED.  
+`zyx:193` While the nurses prepare, Zyx examines the clinic's instruments with professional interest: a tongue depressor, a reflex hammer, a rubber glove.  
+`zyx:194` **Zyx:** Primitive. Charming. Ours are... more thorough. You would find them very interesting. One day this one may show you.  
+`zyx:195` **Nurse Ratchet-and-Clank:** May I listen to your heart, Ambassador? The stethoscope is cold. I'm asking first.  
+`zyx:196` **Zyx:** ...Permission granted.  
+`zyx:197` The nurse listens for a long, long time. She frowns. She moves the stethoscope. She frowns harder.  
+`zyx:198` **Nurse Ratchet-and-Clank:** Heart: one. Normal size. Slightly lonely. And it's racing.  
+`zyx:199` **Zyx (blush):** The cause of the racing is standing right there. In the corner. Being symmetrical.  
+`zyx:200` **Nurse Ratchet-and-Clank:** It happens. Especially to travelers. Here's the prescription.  
+`zyx:201` She writes on a pad and tears off the page with great ceremony: ONE (1) DANCE. TO BE TAKEN BEFORE SUNRISE. REPEAT AS NEEDED.  
 > *show zyx neutral*  
 
 > **Choice**
-`zyx:187` **Zyx:** The prescription requires a partner. Are you... available? For medical purposes?  
+`zyx:204` **Zyx:** The prescription requires a partner. Are you... available? For medical purposes? And other purposes?  
 
-`zyx:189` **▸** "Doctor's orders. I'm available."  
+`zyx:206` **▸** "Doctor's orders. I'm available."  
 > *rapport +2 Zyx*  
-`zyx:191` **Zyx (blush):** Medical purposes. Yes. Strictly medical.  
-`zyx:192` Zyx dances like an alien who's watched a lot of dancing through a telescope: very precise, very wrong. You love it.  
+`zyx:208` **Zyx (blush):** Medical purposes. Yes. Strictly medical. Mostly.  
+`zyx:209` Zyx dances like an alien who's watched a lot of dancing through a telescope: very precise, very wrong. You love it.  
+`zyx:210` So, it turns out, does everyone else. By the end of the song, thirty people in the hallway are copying it. Somebody upstairs is already calling it {i}the Zyx{/i}. You are the only one still doing it wrong.  
 
-`zyx:194` **▸** "I'll have to check my schedule."  
+`zyx:212` **▸** "I'll have to check my schedule."  
 > *rapport +1 Zyx*  
-`zyx:196` **Zyx (happy):** A tease. Your species is called 'a tease.' We have the data.  
+`zyx:214` **Zyx (happy):** A tease. Your species is called 'a tease.' We have the data. We find it very compelling.  
 
-`zyx:198` **▸** "You should ask someone else. I'm a terrible dancer."  
-`zyx:199` **Zyx (neutral):** Understood. This one will dance alone. Doctor's orders.  
-`zyx:200` They do, in the hallway, very precisely. It's a little sad.  
+`zyx:216` **▸** "You should ask someone else. I'm a terrible dancer."  
+`zyx:217` **Zyx (neutral):** Understood. This one will dance alone. Doctor's orders.  
+`zyx:218` They do, in the hallway, very precisely. Within a minute they're not alone at all. Within five, there's a line dance. Zyx leads it with a slightly puzzled expression.  
 > *(end of choice)*
 
 ## zyx_night_3
 
 > *scene bg planetarium*  
-`zyx:208` Someone has turned the ice machine alcove into a planetarium. Stars cover every surface. Constellations are drawn between them in faint blue lines. The ice machine glows in the middle like a small, cold sun.  
+`zyx:226` Someone has turned the ice machine alcove into a planetarium. Stars cover every surface. Constellations are drawn between them in faint blue lines. The ice machine glows in the middle like a small, cold sun.  
 > *show zyx neutral*  
-`zyx:210` Zyx is sitting on the floor in front of it, antennae dimmed, looking up.  
-`zyx:211` **Zyx:** Ah. Earthling. Sit. This is this one's favorite room. The ice machine dreams of the cold between stars. We understand each other.  
+`zyx:228` Zyx is sitting on the floor in front of it, antennae dimmed, looking up.  
+`zyx:229` Every few minutes, someone sticks their head in. A crew member asking Zyx which way the fog should go. A regular of fifteen years asking Zyx whether he's doing the party right. Zyx answers each one with total confidence, and each one leaves looking relieved.  
+`zyx:230` **Zyx:** Ah. Earthling. Sit. There is room on this floor for exactly two. This one measured. Earlier. Before you arrived. Not because this one hoped.  
+`zyx:231` **Zyx:** This is this one's favorite room. The ice machine dreams of the cold between stars. We understand each other.  
 
 > **Choice**
-`zyx:213` **Zyx:** That one, there. The faint one, near the Swan. That is home. Do you see it?  
+`zyx:233` **Zyx:** That one, there. The faint one, near the Swan. That is home. Do you see it?  
 
-`zyx:215` **▸** "I can't find it. Show me?"  
+`zyx:235` **▸** "I can't find it. Show me?"  
 > *rapport +2 Zyx*  
-`zyx:217` **Zyx (neutral):** May this one take your hand to point?  
-`zyx:218` You say yes. Their gloved fingers wrap around yours and guide your arm up to a dim, blue star.  
-`zyx:219` **Zyx (blush):** There. Home. Now two beings on this planet know where it is.  
+`zyx:237` **Zyx (neutral):** May this one take your hand to point?  
+`zyx:238` You say yes. Their gloved fingers wrap around yours and guide your arm up to a dim, blue star. They don't let go after.  
+`zyx:239` **Zyx (blush):** There. Home. Now two beings on this planet know where it is. Soon, perhaps, two beings will have been there.  
 
-`zyx:221` **▸** "I see it. It's beautiful."  
+`zyx:241` **▸** "I see it. It's beautiful."  
 > *rapport +1 Zyx*  
-`zyx:223` **Zyx (happy):** It is not, actually. It is very small and quite gray. But thank you.  
+`zyx:243` **Zyx (happy):** It is not, actually. It is very small and quite gray. But thank you. You are more beautiful. That is a scientific finding.  
 
-`zyx:225` **▸** "Is home even real?"  
-`zyx:226` **Zyx (neutral):** Is anything? Is the ice machine? It makes ice. That seems real enough.  
+`zyx:245` **▸** "Is home even real?"  
+`zyx:246` **Zyx (neutral):** Is anything? Is the ice machine? It makes ice. That seems real enough.  
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:229` **Zyx:** After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then...  
-`zyx:230` **Zyx:** Then this one is just Zyx. With no mission. On a strange planet. That is the part this one is afraid of.  
+`zyx:249` **Zyx:** After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then...  
+`zyx:250` **Zyx:** Then this one is just Zyx. With no mission. On a strange planet, where everyone keeps asking this one for directions. That is the part this one is afraid of.  
 
 > **Choice**
-`zyx:232` **Zyx:** Most Earthlings ask what is under the suit. Would you like to know?  
+`zyx:252` **Zyx:** Most Earthlings ask what is under the suit. Would you like to know?  
 
-`zyx:234` **▸** "Only if you want to tell me. I like Zyx."  
+`zyx:254` **▸** "Only if you want to tell me. I like Zyx."  
 > *rapport +2 Zyx*  
-`zyx:236` Zyx's antennae light up, very slowly, pink.  
-`zyx:237` **Zyx (blush):** You like Zyx.  
-`zyx:238` **Zyx:** Then Zyx is what you get. Zyx is what is under the suit. All the way down.  
+`zyx:256` Zyx's antennae light up, very slowly, pink.  
+`zyx:257` **Zyx (blush):** You like Zyx.  
+`zyx:258` **Zyx:** Then Zyx is what you get. Zyx is what is under the suit. All the way down. You are welcome to check. Thoroughly. Later.  
 
-`zyx:240` **▸** "No. Keep the mystery. It's yours."  
+`zyx:260` **▸** "No. Keep the mystery. It's yours."  
 > *rapport +1 Zyx*  
-`zyx:242` **Zyx (happy):** A respecter of mysteries. Rare. Noted.  
+`zyx:262` **Zyx (happy):** A respecter of mysteries. Rare. Noted. This one has some mysteries of yours it would like to investigate, in return.  
 
-`zyx:244` **▸** "Yes! Who are you, really?"  
-`zyx:245` **Zyx (neutral):** This one is Zyx. That is the only answer this one has tonight.  
-`zyx:246` The ice machine hums. It's a cold sound.  
+`zyx:264` **▸** "Yes! Who are you, really?"  
+`zyx:265` **Zyx (neutral):** This one is Zyx. That is the only answer this one has tonight.  
+`zyx:266` The ice machine hums. It's a cold sound.  
 > *(end of choice)*
 
 > *if rapport["zyx"] >= ROMANCE_THRESHOLD:*  
-`zyx:249` **Zyx (blush):** After the big event. When the mission is complete. Come to the roof. There is one more piece of research this one wishes to do. With you. Only with you.  
+`zyx:269` **Zyx (blush):** After the big event. When the mission is complete. Come to the roof, and wear something you can be beamed in. There is one more piece of research this one wishes to do. With you. Only with you.  
 > *else:*  
-`zyx:251` **Zyx (happy):** Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic.  
+`zyx:271` **Zyx (happy):** Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic.  
 
 ## zyx_romance
 
 > *scene bg roof_dawn*  
-`zyx:259` After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the empty ark and the confetti.  
-`zyx:260` You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink.  
-`zyx:261` They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn.  
+`zyx:279` After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the empty ark and the confetti.  
+`zyx:280` You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink.  
+`zyx:281` They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn. They keep glancing up, at a patch of sky above the lake where there isn't anything. Yet.  
 > *show zyx neutral*  
-`zyx:263` **Zyx:** Earthling. You found this one. This one was hoping you would. This one did not leave a map. That was a test.  
-`zyx:264` **Zyx (happy):** You passed. Obviously. Sit.  
+`zyx:283` **Zyx:** Earthling. You found this one. This one was hoping you would. This one did not leave a map. That was a test.  
+`zyx:284` **Zyx (happy):** You passed. Obviously. Sit. Closer. Closer than that.  
 > *if gave_rock:*  
-`zyx:266` They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin.  
-`zyx:267` **Zyx (neutral):** The ark has landed. The ark has been opened. It was empty, and everyone filled it anyway. The report is filed.  
-`zyx:268` **Zyx:** The mission is complete.  
+`zyx:286` They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin.  
+`zyx:287` **Zyx (neutral):** The ark has landed. The ark has been opened. It was empty, and everyone filled it anyway. The report is filed.  
+`zyx:288` **Zyx:** The mission is complete.  
 
 > **Choice**
-`zyx:271` **Zyx:** Do you want to hear the conclusion? This one wrote it during the ark. While crying. Which was not in the mission plan.  
+`zyx:291` **Zyx:** Do you want to hear the conclusion? This one wrote it during the ark. While crying. Which was not in the mission plan.  
 
-`zyx:273` **▸** "Read it to me."  
-`zyx:274` **Zyx (neutral):** Ahem.  
+`zyx:293` **▸** "Read it to me."  
+`zyx:294` **Zyx (neutral):** Ahem.  
 
-`zyx:275` **▸** "Only if it says nice things about me."  
-`zyx:276` **Zyx (happy):** It says extremely specific things about you. You will be studied for generations.  
+`zyx:295` **▸** "Only if it says nice things about me."  
+`zyx:296` **Zyx (happy):** It says extremely specific things about you. You will be studied for generations. Starting this morning.  
 > *(end of choice)*
 
-`zyx:278` **Zyx (neutral):** {i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}  
-`zyx:279` **Zyx:** {i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium.{/i}  
-`zyx:280` **Zyx:** {i}But one Earthling is ready. Recommend further study. Recommend this one stays.{/i}  
+`zyx:298` **Zyx (neutral):** {i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}  
+`zyx:299` **Zyx:** {i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium.{/i}  
+`zyx:300` **Zyx:** {i}But one Earthling is ready. Recommend further study. Close study. Recommend this one brings the Earthling aboard.{/i}  
 > *show zyx blush*  
-`zyx:282` **Zyx:** It was approved. By this one. This one is in charge of approvals.  
-
-> **Choice**
-
-`zyx:285` **▸** "So you're staying?"  
-`zyx:286` **Zyx (blush):** For a while. On Earth, there is a thing called 'a while.' It is very elastic. We intend to stretch it.  
-
-`zyx:287` **▸** Sit down next to them and take their gloved hand.  
-`zyx:288` Three fingers fold around yours. Their antennae go from pink to a deep, warm red.  
-> *(end of choice)*
-
-> *show zyx neutral*  
-`zyx:291` **Zyx:** Can this one confess something? For the report. The unofficial report.  
-`zyx:292` **Zyx:** On the Outer Drift, we communicate by changing color. Slowly. A conversation can take a year. There are thirty-one of us and we are very, very far apart.  
+`zyx:302` **Zyx:** It was approved. By this one. This one is in charge of approvals.  
 > *if hugged_zyx:*  
-`zyx:294` **Zyx:** When you hugged this one by the pool, this one's antennae went a color that does not have a name at home. This one has been trying to name it since Saturday.  
+`zyx:305` **Zyx:** When you hugged this one by the pool, this one's antennae went a color that does not have a name at home. This one has been trying to name it since Saturday.  
 > *if zyx_emergency_contact:*  
-`zyx:296` **Zyx:** And in the clinic, when you said you were this one's emergency contact. Nobody has ever been this one's anything.  
-`zyx:297` **Zyx (blush):** This one would like to keep finding new colors. With you. If that is permitted under Earth law.  
+`zyx:307` **Zyx:** And in the clinic, when you said you were this one's emergency contact. Nobody has ever been this one's anything.  
+`zyx:309` The patch of sky above the lake isn't empty anymore. Something is lowering itself out of the dawn, silent and enormous and shaped, unmistakably, like a giant golden box. Its underside is lined with blinking lights.  
+`zyx:310` Down in the parking lot, a raver looks up, says {i}huh{/i}, and goes back to her burrito.  
+`zyx:311` **Zyx (neutral):** That is this one's ride. It has been parked behind the moon all weekend. The ark was the landing beacon. You thought it was empty. It was a signal.  
+`zyx:312` **Zyx (blush):** This one has requested permission to bring a specimen aboard. A volunteer specimen. Consent is required, in the Earth style and in ours. Ours is forty-seven pages.  
+`zyx:313` They produce, from somewhere in the sash, a very thick consent form and a pen shaped like a tiny rocket.  
 
 > **Choice**
 
-`zyx:300` **▸** "It's permitted. It's encouraged."  
-`zyx:301` **Zyx (happy):** Excellent. This one will update the legal section of the report.  
+`zyx:316` **▸** Initial every single page.  
+`zyx:317` **Zyx (happy):** Thorough. This one finds that very attractive. Page thirty-one is the important one.  
 
-`zyx:302` **▸** "What's the color now?"  
-`zyx:303` Zyx's antennae are glowing a soft, warm gold, the exact color of the sun coming over the mountains.  
-`zyx:304` **Zyx (blush):** This one is calling it... Monday.  
+`zyx:318` **▸** "Where do I sign?"  
+`zyx:319` **Zyx (blush):** Everywhere. And here. And here. And here, twice, because of the antennae clause.  
 > *(end of choice)*
 
-`zyx:306` **Zyx (blush):** There is one final experiment. On the Outer Drift, when two beings wish to be close, they touch foreheads. Third eye to third eye.  
-`zyx:307` **Zyx:** You have only two eyes. This is a known limitation. We will adapt.  
+`zyx:321` A column of soft pink light comes down over the bench. It's warm, like standing in a sunbeam, and your feet leave the roof.  
+> *scene bg ship*  
+`zyx:324` The inside of the ship looks like the ice machine planetarium, if the planetarium had been designed by someone who'd seen a lot of 1970s science fiction and taken all of it as instructions.  
+`zyx:325` There are stars on every surface, and a padded silver table in the middle, and very good mood lighting.  
+> *show zyx blush*  
+`zyx:327` **Zyx:** Welcome aboard. Please keep your arms and legs inside the ship. Unless this one asks for them.  
+`zyx:328` **Zyx:** Now. You know what happens next. Every abductee in your films asks about it. The probe.  
+`zyx:329` Zyx holds up the probe. It glows softly. It's smaller than in the films, and it's warm, and it hums, quietly, in a key you've never heard before.  
+`zyx:330` **Zyx:** This one will be extremely gentle and extremely thorough. You may say stop at any time. You may say {i}more{/i} at any time. Both are valid data.  
 
 > **Choice**
 
-`zyx:309` **▸** Lean in and touch foreheads.  
-`zyx:310` Their forehead is cool and smooth and smells faintly of sunscreen. The third eye closes.  
-`zyx:311` For a long moment you just breathe like that, foreheads together, while the birds start up in the pines.  
+`zyx:333` **▸** "Proceed. For science."  
+`zyx:334` **Zyx (happy):** For science.  
+
+`zyx:335` **▸** "Can we do the forehead thing first?"  
+`zyx:336` **Zyx (blush):** You remembered. This one did not tell you about the forehead thing. You simply... knew. Yes.  
+`zyx:337` Zyx leans in until their forehead rests against yours, cool and smooth and smelling faintly of sunscreen. The third eye closes. For a long moment you just breathe like that.  
+`zyx:338` **Zyx:** On the Outer Drift, this is how two beings say they wish to be close. Now. The Earth part. And then the Outer Drift part.  
+`zyx:339` They kiss you. Their antennae spark. Actually spark. You're almost sure.  
 > *(end of choice)*
 
-`zyx:313` **Zyx (blush):** And now, for comparison. The Earth version. Consent is requested.  
-
-> **Choice**
-
-`zyx:316` **▸** "Granted. For science."  
-`zyx:317` You kiss the Ambassador of the Outer Drift on the roof of the Hotel Paradiso at sunrise.  
-`zyx:318` Their antennae spark. Actually spark. You're almost sure. It might have been the sun.  
-`zyx:319` **Zyx (happy):** Data... very, very confirmed. Further study required. Extensive further study.  
-`zyx:320` **Zyx:** This one will need to repeat the experiment. For reproducibility. Science is very strict about this.  
-> *(end of choice)*
-
+`zyx:341` What follows is slow, and extremely thorough, and enthusiastically consensual on both sides, and at one point the whole ship changes color.  
+`zyx:342` Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up.  
+`zyx:343` **Zyx (blush):** Data... very, very confirmed. Further study required. Extensive further study.  
+`zyx:344` **Zyx:** This one will need to repeat the experiment. For reproducibility. Science is very strict about this.  
 > *scene bg roof_dawn*  
-`zyx:323` The sun clears the mountains and lights up the lake. Down below, cars are starting in the parking lot. Neither of you moves.  
-`zyx:324` At some point Zyx takes off one glove and holds your hand properly. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either.  
+`zyx:348` When the pink light sets you back down on the roof, the sun has cleared the mountains and the lake is gold. You're holding a printout. Zyx is holding your hand.  
+`zyx:349` At some point Zyx took off one glove. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either.  
+`zyx:350` The printout says: {i}SPECIMEN: EXCELLENT. 4% BAT, AS SUSPECTED. RECOMMEND RETURN VISIT.{/i}  
 > *scene black*  
-`zyx:326` {i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}  
-`zyx:327` {i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}  
-`zyx:328` **Zyx:** Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it.  
+`zyx:352` {i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}  
+`zyx:353` {i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}  
+`zyx:354` **Zyx:** Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it. Afterward, the ship is parked out back.  
 > *if gave_rock:*  
-`zyx:330` **Zyx:** Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends.  
+`zyx:356` **Zyx:** Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends.  
 > *else:*  
-`zyx:332` **Zyx:** This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you.  
-`zyx:333` **Zyx:** — Z. (The report now has a section about you. It is forty pages long and still in progress.)  
+`zyx:358` **Zyx:** This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you.  
+`zyx:359` **Zyx:** — Z. (The report now has a section about you. It is forty pages long and still in progress. Several pages are classified. You know which ones.)  
 > *→ jump ending_card*  
 
 ## zyx_friend
 
 > *scene bg exterior*  
 > *show zyx happy*  
-`zyx:343` On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out.  
-`zyx:344` **Zyx:** Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing.  
-`zyx:345` **Zyx (neutral):** The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them.  
-`zyx:346` **Zyx:** On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver.  
-`zyx:347` Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly.  
-`zyx:348` **Zyx (happy):** This is the highest honor of our people. Do not lose it. We already lost the other one.  
-`zyx:349` **Zyx:** Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!  
+`zyx:369` On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out. Every car waves back. One honks the rhythm from {i}the Zyx{/i}.  
+`zyx:370` The crew has already asked them to come back next year and run something. Zyx has agreed, without being entirely sure what they're running.  
+`zyx:371` **Zyx:** Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing. Apparently it has become very popular.  
+`zyx:372` **Zyx (neutral):** The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them.  
+`zyx:373` **Zyx:** On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver.  
+`zyx:374` Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly.  
+`zyx:375` **Zyx (happy):** This is the highest honor of our people. Do not lose it. We already lost the other one.  
+`zyx:376` **Zyx:** Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!  
 
 ---
 
@@ -2541,211 +2582,212 @@ Edit this file and send it back; the changes get applied to the game.
 `encounters:478` The shrimp guide nods gravely. "The jellyfish run it now. They have evolved. They have opinions. We ask only one thing in return: an extended broadcast of {i}Shrimp Justice: A Crustacean Courtroom Show{/i}."  
 `encounters:479` **Solstice:** I already said yes. I've seen four episodes. The hermit crab one is devastating.  
 `encounters:480` Beyond the airlock: kelp swaying under blue light, sunken art-deco towers, neon signs still faintly glowing in the gloom. Giant jellyfish drift overhead. Solstice's LED top lights up the water around her like a little submarine.  
-`encounters:481` **Solstice (neutral):** Okay. Savior tech. Where do we look?  
-`encounters:482` You dig together through the coral dioramas: a shrimp wedding, a shrimp tax office, a shrimp on a tiny therapist's couch. Then Solstice shrieks and holds something up.  
-`encounters:483` It's a disco ball.  
+`encounters:481` **Solstice (neutral):** Okay. Savior tech. Let's sweep it. You take the left, I'll take the right, we meet at the coral. Go, go, go.  
+`encounters:482` She says it like she's done it a hundred times, with a door and a battering ram.  
+`encounters:483` You dig together through the coral dioramas: a shrimp wedding, a shrimp tax office, a shrimp on a tiny therapist's couch. Then Solstice shrieks and holds something up.  
+`encounters:484` It's a disco ball.  
 > *show solstice surprised*  
-`encounters:485` **Solstice:** DISCO. It's DISCO. The savior tech is DISCO. I KNEW it! I've been saying this for YEARS!  
-`encounters:486` A speaker kicks on. A 1977 disco track fills the sea. The shrimp weep with joy. The jellyfish, very slowly, begin to dance.  
+`encounters:486` **Solstice:** DISCO. It's DISCO. The savior tech is DISCO. I KNEW it! I've been saying this for YEARS!  
+`encounters:487` A speaker kicks on. A 1977 disco track fills the sea. The shrimp weep with joy. The jellyfish, very slowly, begin to dance.  
 
 > **Choice**
-`encounters:488` **Solstice (happy):** Come on! The jellyfish are dancing! We have to dance with the jellyfish! It's literally the end of the world!  
+`encounters:489` **Solstice (happy):** Come on! The jellyfish are dancing! We have to dance with the jellyfish! It's literally the end of the world!  
 
-`encounters:490` **▸** Dance with her and the jellyfish.  
+`encounters:491` **▸** Dance with her and the jellyfish.  
 > *rapport +1 Solstice*  
-`encounters:492` You dance at the bottom of the sea with a raver and a swarm of evolved jellyfish. Solstice is laughing so hard her snorkel fills with air.  
-`encounters:493` **Solstice (blush):** This is the best rave I've ever been to. And it's in a hotel room. And it's underwater. And it's with you.  
+`encounters:493` You dance at the bottom of the sea with a raver and a swarm of evolved jellyfish. Solstice is laughing so hard her snorkel fills with air.  
+`encounters:494` **Solstice (blush):** This is the best rave I've ever been to. And it's in a hotel room. And it's underwater. And it's with you.  
 
-`encounters:494` **▸** Hold up the disco ball so it catches her lights.  
+`encounters:495` **▸** Hold up the disco ball so it catches her lights.  
 > *rapport +1 Solstice*  
-`encounters:496` You hold the disco ball up over her head. Her LED top throws a thousand tiny colored lights across the whole ocean floor, the towers, the kelp, the jellyfish.  
-`encounters:497` **Solstice (blush):** Oh. Oh wow. Look what we made.  
+`encounters:497` You hold the disco ball up over her head. Her LED top throws a thousand tiny colored lights across the whole ocean floor, the towers, the kelp, the jellyfish.  
+`encounters:498` **Solstice (blush):** Oh. Oh wow. Look what we made.  
 
-`encounters:498` **▸** Sit on the coral and watch.  
-`encounters:499` You sit down on the reef. Solstice stops dancing and points at you, scandalized.  
-`encounters:500` **Solstice (neutral):** Hey! No spectators! It's the rule! Even at the bottom of the sea!  
-`encounters:501` She drags you up by both hands anyway. The jellyfish make room.  
+`encounters:499` **▸** Sit on the coral and watch.  
+`encounters:500` You sit down on the reef. Solstice stops dancing and points at you, scandalized.  
+`encounters:501` **Solstice (neutral):** Hey! No spectators! It's the rule! Even at the bottom of the sea!  
+`encounters:502` She drags you up by both hands anyway. The jellyfish make room.  
 > *(end of choice)*
 
-`encounters:502` As you leave, the shrimp crown Solstice Disco Queen of the Lost City of Miami with a crown made of bottle caps. She wears it for the rest of the night.  
+`encounters:503` As you leave, the shrimp crown Solstice Disco Queen of the Lost City of Miami with a crown made of bottle caps. She wears it for the rest of the night.  
 
 ## enc_zany_optical_zyx
 
 > *scene bg optical*  
-`encounters:509` Through a door propped open by a giant inflatable eyeball: a vaporwave optometrist's office, pink and teal neon, synth music, an enormous googly eye rolling slowly on the wall.  
-`encounters:510` At the reception desk, a silver alien is deep in an argument with an iPad.  
+`encounters:510` Through a door propped open by a giant inflatable eyeball: a vaporwave optometrist's office, pink and teal neon, synth music, an enormous googly eye rolling slowly on the wall.  
+`encounters:511` At the reception desk, a silver alien is deep in an argument with an iPad.  
 > *show zyx neutral*  
-`encounters:512` **Zyx:** This one's insurance is from the Outer Drift. It is very comprehensive. It covers meteors.  
-`encounters:513` "I'm sorry," chirps the iPad, "we don't accept Outer Drift. Have you considered paying with a compliment?"  
-`encounters:514` **Zyx (happy):** Earthling! You are here. Good. This one requires an emergency contact for an eye exam. You have experience in this field.  
-`encounters:515` A doctor in glasses with tiny windshield wipers leads you both into the exam room, sits Zyx in the chair, looks into their face, and drops the clipboard.  
-`encounters:516` "That's three eyes," the doctor whispers. "I've only ever examined two at a time. This is the greatest day of my career."  
-`encounters:517` The diagnosis comes quickly: third-eye astigmatism, mild. Then the doctor floods the room with a strange yellow light that drains all color away, and holds up a flag.  
-`encounters:518` "Ambassador. What color is this flag?"  
-`encounters:519` **Zyx (neutral):** Magenta.  
-`encounters:520` "There's no magenta flag," says the doctor. "There's red, and there's green."  
-`encounters:521` **Zyx:** There is magenta. It means: proceed, but with feelings. We use it constantly at home.  
-`encounters:522` The doctor writes it down, reverently. Then they bring out a tray of frames, each with three lenses.  
+`encounters:513` **Zyx:** This one's insurance is from the Outer Drift. It is very comprehensive. It covers meteors.  
+`encounters:514` "I'm sorry," chirps the iPad, "we don't accept Outer Drift. Have you considered paying with a compliment?"  
+`encounters:515` **Zyx (happy):** Earthling! You are here. Good. This one requires an emergency contact for an eye exam. You have experience in this field.  
+`encounters:516` A doctor in glasses with tiny windshield wipers leads you both into the exam room, sits Zyx in the chair, looks into their face, and drops the clipboard.  
+`encounters:517` "That's three eyes," the doctor whispers. "I've only ever examined two at a time. This is the greatest day of my career."  
+`encounters:518` The diagnosis comes quickly: third-eye astigmatism, mild. Then the doctor floods the room with a strange yellow light that drains all color away, and holds up a flag.  
+`encounters:519` "Ambassador. What color is this flag?"  
+`encounters:520` **Zyx (neutral):** Magenta.  
+`encounters:521` "There's no magenta flag," says the doctor. "There's red, and there's green."  
+`encounters:522` **Zyx:** There is magenta. It means: proceed, but with feelings. We use it constantly at home.  
+`encounters:523` The doctor writes it down, reverently. Then they bring out a tray of frames, each with three lenses.  
 
 > **Choice**
-`encounters:524` **Zyx:** Earthling. You will choose this one's glasses. This one trusts your Earth taste.  
+`encounters:525` **Zyx:** Earthling. You will choose this one's glasses. This one trusts your Earth taste.  
 
-`encounters:526` **▸** The sparkly cat-eye ones.  
+`encounters:527` **▸** The sparkly cat-eye ones.  
 > *rapport +1 Zyx*  
-`encounters:528` **Zyx (blush):** Fabulous. This one is fabulous. Write that down for the report.  
+`encounters:529` **Zyx (blush):** Fabulous. This one is fabulous. Write that down for the report.  
 
-`encounters:529` **▸** The ones with tiny windshield wipers, like the doctor's.  
+`encounters:530` **▸** The ones with tiny windshield wipers, like the doctor's.  
 > *rapport +1 Zyx*  
-`encounters:531` The wipers go back and forth across all three lenses. Zyx is delighted beyond words, which for Zyx is a lot of words.  
-`encounters:532` **Zyx (happy):** For meteors. Practical. The insurance company will be thrilled.  
+`encounters:532` The wipers go back and forth across all three lenses. Zyx is delighted beyond words, which for Zyx is a lot of words.  
+`encounters:533` **Zyx (happy):** For meteors. Practical. The insurance company will be thrilled.  
 
-`encounters:533` **▸** "Honestly? You look perfect without them."  
+`encounters:534` **▸** "Honestly? You look perfect without them."  
 > *rapport +1 Zyx*  
-`encounters:535` Zyx goes very still. Their antennae glow, slowly, pink.  
-`encounters:536` **Zyx (blush):** ...Then this one will wear them only for science.  
+`encounters:536` Zyx goes very still. Their antennae glow, slowly, pink.  
+`encounters:537` **Zyx (blush):** ...Then this one will wear them only for science.  
 > *(end of choice)*
 
-`encounters:537` On the way out, the iPad flips around: HOW MUCH WOULD YOU LIKE TO TIP YOUR PROVIDER TODAY? Zyx chooses A Compliment, leans in close to the giant googly eye and says, very formally:  
-`encounters:538` **Zyx (neutral):** Your eye is extremely round. On behalf of the Outer Drift, well done.  
-`encounters:539` The googly eye rolls with what can only be described as joy.  
+`encounters:538` On the way out, the iPad flips around: HOW MUCH WOULD YOU LIKE TO TIP YOUR PROVIDER TODAY? Zyx chooses A Compliment, leans in close to the giant googly eye and says, very formally:  
+`encounters:539` **Zyx (neutral):** Your eye is extremely round. On behalf of the Outer Drift, well done.  
+`encounters:540` The googly eye rolls with what can only be described as joy.  
 
 ## enc_let_it_go_wren
 
 > *scene bg letitgo*  
-`encounters:546` Outside a door, a sign reads LET IT GO: A WORKSHOP. Beside it, looking like someone who has been sentenced, stands Wren.  
+`encounters:547` Outside a door, a sign reads LET IT GO: A WORKSHOP. Beside it, looking like someone who has been sentenced, stands Wren.  
 > *show wren neutral*  
-`encounters:548` **Wren:** Don't. Don't say anything. Pilar signed me up. She called it a {i}wellness intervention{/i}. In front of the whole crew.  
-`encounters:549` **Wren:** It's about saying goodbye to your phone. I don't even have my phone on me. I have this.  
-`encounters:550` They hold up their walkie-talkie like you've asked to see their ID.  
-`encounters:551` Inside, folding chairs face a small stage. The presenter, in a turtleneck and headset mic, asks everyone to place their device in a wicker basket at the front. One by one, people do. Some of them are crying.  
-`encounters:552` Wren doesn't move. Their hand is wrapped around the walkie so tightly their knuckles are white.  
+`encounters:549` **Wren:** Don't. Don't say anything. Pilar signed me up. She called it a {i}wellness intervention{/i}. In front of the whole crew.  
+`encounters:550` **Wren:** It's about saying goodbye to your phone. I don't even have my phone on me. I have this.  
+`encounters:551` They hold up their walkie-talkie like you've asked to see their ID.  
+`encounters:552` Inside, folding chairs face a small stage. The presenter, in a turtleneck and headset mic, asks everyone to place their device in a wicker basket at the front. One by one, people do. Some of them are crying.  
+`encounters:553` Wren doesn't move. Their hand is wrapped around the walkie so tightly their knuckles are white.  
 
 > **Choice**
-`encounters:554` What do you do?  
+`encounters:555` What do you do?  
 
-`encounters:556` **▸** "I'll keep an ear on it. If anything comes through, I'll get you."  
+`encounters:557` **▸** "I'll keep an ear on it. If anything comes through, I'll get you."  
 > *rapport +1 Wren*  
-`encounters:558` You hold out your hand. They look at it for a long time, then put the walkie in it, like they're handing over something alive.  
-`encounters:559` **Wren (blush):** Okay. Okay. If it says {i}fire{/i}, you come get me. It will say fire. If it says anything about a flamingo, ignore it.  
+`encounters:559` You hold out your hand. They look at it for a long time, then put the walkie in it, like they're handing over something alive.  
+`encounters:560` **Wren (blush):** Okay. Okay. If it says {i}fire{/i}, you come get me. It will say fire. If it says anything about a flamingo, ignore it.  
 
-`encounters:560` **▸** Put your own phone in the basket, then look at them.  
+`encounters:561` **▸** Put your own phone in the basket, then look at them.  
 > *rapport +1 Wren*  
-`encounters:562` You walk to the front and drop your phone into the basket. Then you turn around and look at them.  
-`encounters:563` **Wren (surprised):** Oh, that's... that's peer pressure. That's really effective peer pressure.  
-`encounters:564` They walk up and lay the walkie gently on top of your phone, like tucking it into bed.  
+`encounters:563` You walk to the front and drop your phone into the basket. Then you turn around and look at them.  
+`encounters:564` **Wren (surprised):** Oh, that's... that's peer pressure. That's really effective peer pressure.  
+`encounters:565` They walk up and lay the walkie gently on top of your phone, like tucking it into bed.  
 
-`encounters:565` **▸** "You don't have to. It's okay."  
-`encounters:566` **Wren (neutral):** ...Thanks. Yeah. I'll just... turn it down a little.  
-`encounters:567` They turn the volume down one notch. It's something.  
+`encounters:566` **▸** "You don't have to. It's okay."  
+`encounters:567` **Wren (neutral):** ...Thanks. Yeah. I'll just... turn it down a little.  
+`encounters:568` They turn the volume down one notch. It's something.  
 > *(end of choice)*
 
-`encounters:568` The presenter clicks to the first slide. Four slides in, the projector dies, and the talk continues on hand-drawn posterboard.  
-`encounters:569` Wren lasts four minutes and thirty seconds before their hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, they stop reaching altogether, sit back, and actually listen.  
-`encounters:570` At the end, there's a crafting table: blank wooden phones, googly eyes, glitter. Everyone gets to make an Emotional Support Phone.  
-`encounters:571` Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of gaffer tape on the back that says OFF DUTY. It doesn't do anything.  
-`encounters:572` **Wren (happy):** It's perfect. Nobody can reach me on it. Not a single person.  
-`encounters:573` When you walk out, the real walkie is back on their belt. But the wooden one is in their hand.  
+`encounters:569` The presenter clicks to the first slide. Four slides in, the projector dies, and the talk continues on hand-drawn posterboard.  
+`encounters:570` Wren lasts four minutes and thirty seconds before their hand starts drifting toward the basket. Then five minutes. Then, somewhere around minute eight, they stop reaching altogether, sit back, and actually listen.  
+`encounters:571` At the end, there's a crafting table: blank wooden phones, googly eyes, glitter. Everyone gets to make an Emotional Support Phone.  
+`encounters:572` Wren makes an Emotional Support Walkie instead. It's a block of wood with a pipe-cleaner antenna, two googly eyes, and a strip of gaffer tape on the back that says OFF DUTY. It doesn't do anything.  
+`encounters:573` **Wren (happy):** It's perfect. Nobody can reach me on it. Not a single person.  
+`encounters:574` When you walk out, the real walkie is back on their belt. But the wooden one is in their hand.  
 
 ## enc_speed_dating_cast
 
 > *scene bg speeddating*  
-`encounters:580` A sign on a door reads PLATONIC SPEED DATING: FIND YOUR SURVIVAL BUDDY. Inside, a crowd is milling around a side-room of the ballroom, with a strip of yellow tape down the middle of the floor.  
-`encounters:581` And it's not just strangers. You spot familiar faces in the crowd: [speed_cast_names].  
-`encounters:582` The host, in a sequined blazer and a headset microphone, claps. "Every round, I ask a question. You pick a side. Everyone quietly judges each other. Then I loudly judge everyone."  
-`encounters:583` Round one. The host holds up a whiteboard paddle: ONLY ONE CAN EXIST.  
+`encounters:581` A sign on a door reads PLATONIC SPEED DATING: FIND YOUR SURVIVAL BUDDY. Inside, a crowd is milling around a side-room of the ballroom, with a strip of yellow tape down the middle of the floor.  
+`encounters:582` And it's not just strangers. You spot familiar faces in the crowd: [speed_cast_names].  
+`encounters:583` The host, in a sequined blazer and a headset microphone, claps. "Every round, I ask a question. You pick a side. Everyone quietly judges each other. Then I loudly judge everyone."  
+`encounters:584` Round one. The host holds up a whiteboard paddle: ONLY ONE CAN EXIST.  
 
 > **Choice**
-`encounters:585` Electric guitar, or electric synths?  
+`encounters:586` Electric guitar, or electric synths?  
 
-`encounters:587` **▸** Electric guitar.  
+`encounters:588` **▸** Electric guitar.  
 
-`encounters:589` **▸** Electric synths.  
+`encounters:590` **▸** Electric synths.  
 
-`encounters:591` **▸** Stand exactly in the middle.  
+`encounters:592` **▸** Stand exactly in the middle.  
 > *(end of choice)*
 
-`encounters:594` Round two. WOULD YOU RATHER.  
+`encounters:595` Round two. WOULD YOU RATHER.  
 
 > **Choice**
-`encounters:596` Know every language, or be able to talk to animals?  
+`encounters:597` Know every language, or be able to talk to animals?  
 
-`encounters:598` **▸** Every language.  
+`encounters:599` **▸** Every language.  
 
-`encounters:600` **▸** Talk to animals.  
+`encounters:601` **▸** Talk to animals.  
 
-`encounters:602` **▸** Talk to animals, but only pigeons.  
+`encounters:603` **▸** Talk to animals, but only pigeons.  
 > *(end of choice)*
 
-`encounters:605` Round three. THIS OR THAT.  
+`encounters:606` Round three. THIS OR THAT.  
 
 > **Choice**
-`encounters:607` Sunrise, or sunset?  
+`encounters:608` Sunrise, or sunset?  
 
-`encounters:609` **▸** Sunrise.  
+`encounters:610` **▸** Sunrise.  
 
-`encounters:611` **▸** Sunset.  
+`encounters:612` **▸** Sunset.  
 
-`encounters:613` **▸** "I've never stayed up to see either."  
+`encounters:614` **▸** "I've never stayed up to see either."  
 > *(end of choice)*
 
-`encounters:617` The host walks the room, matching people who kept ending up on the same side.  
-`encounters:618` "You!" They point at you, then at [dating_match_name]. "Survival buddies. I've been watching. Draw a mission."  
-`encounters:620` You pull a handwritten tag from the grab bag: {i}Go somewhere neither of you has been yet this weekend. Report back.{/i}  
+`encounters:618` The host walks the room, matching people who kept ending up on the same side.  
+`encounters:619` "You!" They point at you, then at [dating_match_name]. "Survival buddies. I've been watching. Draw a mission."  
+`encounters:621` You pull a handwritten tag from the grab bag: {i}Go somewhere neither of you has been yet this weekend. Report back.{/i}  
 > *→ call expression "speed_mission_" + dating_match*  
-`encounters:629` juni  
-`encounters:630` gerald  
-`encounters:631` solstice  
-`encounters:632` wren  
-`encounters:633` zyx  
+`encounters:630` juni  
+`encounters:631` gerald  
+`encounters:632` solstice  
+`encounters:633` wren  
+`encounters:634` zyx  
 
 > **Platonic Speed Dating: what each guest says when they're on your side**
 
-`encounters:638` **Juni (happy):** Synths! Synths are like... music that doesn't need you to be cool about it.  
-`encounters:639` **Gerald (happy):** Guitar. My cousin Bernard played. Badly. Movingly.  
-`encounters:640` **Solstice (happy):** SYNTHS. I'm going to hug everyone on this side. Brace.  
-`encounters:641` **Wren (neutral):** Guitar. You can fix a guitar with tape. You can't fix a synth with tape. I've tried.  
-`encounters:642` **Zyx (neutral):** The middle. This one is gathering data from both sides. Also, this one is a fence.  
+`encounters:639` **Juni (happy):** Synths! Synths are like... music that doesn't need you to be cool about it.  
+`encounters:640` **Gerald (happy):** Guitar. My cousin Bernard played. Badly. Movingly.  
+`encounters:641` **Solstice (happy):** SYNTHS. I'm going to hug everyone on this side. Brace.  
+`encounters:642` **Wren (neutral):** Guitar. You can fix a guitar with tape. You can't fix a synth with tape. I've tried.  
+`encounters:643` **Zyx (neutral):** The middle. This one is gathering data from both sides. Also, this one is a fence.  
 
-`encounters:643` **Juni (happy):** Animals. They don't need you to make small talk. Lotl agrees.  
-`encounters:644` **Gerald (neutral):** I already talk to animals. I thought everyone did. This is very upsetting news.  
-`encounters:645` **Solstice (happy):** Every language! Imagine telling people they're doing great in like four hundred languages.  
-`encounters:646` **Wren (neutral):** Every language. Then I could finally read the manuals for every fog machine. They're never in English.  
-`encounters:647` **Zyx (happy):** Pigeons. Yes. This one already speaks pigeon. They are excellent diplomats.  
+`encounters:644` **Juni (happy):** Animals. They don't need you to make small talk. Lotl agrees.  
+`encounters:645` **Gerald (neutral):** I already talk to animals. I thought everyone did. This is very upsetting news.  
+`encounters:646` **Solstice (happy):** Every language! Imagine telling people they're doing great in like four hundred languages.  
+`encounters:647` **Wren (neutral):** Every language. Then I could finally read the manuals for every fog machine. They're never in English.  
+`encounters:648` **Zyx (happy):** Pigeons. Yes. This one already speaks pigeon. They are excellent diplomats.  
 
-`encounters:648` **Juni (blush):** Neither. I've never stayed up. Maybe this weekend. If I'm with someone.  
-`encounters:649` **Gerald (happy):** Sunrise. Always sunrise. It's the only time the forest is completely honest.  
-`encounters:650` **Solstice (blush):** Neither! I'm always inside, dancing. That's... wow, that sounded sadder out loud.  
-`encounters:651` **Wren (neutral):** Sunrise. Usually through a crack in a loading dock door, holding a toolbox. But still. Sunrise.  
-`encounters:652` **Zyx (neutral):** Sunset. At home, sunset lasts four years. This one finds yours very brisk.  
+`encounters:649` **Juni (blush):** Neither. I've never stayed up. Maybe this weekend. If I'm with someone.  
+`encounters:650` **Gerald (happy):** Sunrise. Always sunrise. It's the only time the forest is completely honest.  
+`encounters:651` **Solstice (blush):** Neither! I'm always inside, dancing. That's... wow, that sounded sadder out loud.  
+`encounters:652` **Wren (neutral):** Sunrise. Usually through a crack in a loading dock door, holding a toolbox. But still. Sunrise.  
+`encounters:653` **Zyx (neutral):** Sunset. At home, sunset lasts four years. This one finds yours very brisk.  
 
 > *if not same:*  
-`encounters:665` You look around. Nobody you know is on your side this time. The host notices and nods at you, impressed: "A lone wolf."  
+`encounters:666` You look around. Nobody you know is on your side this time. The host notices and nods at you, impressed: "A lone wolf."  
 
 ## speed_mission_juni
 
 > *show juni happy*  
-`encounters:686` You and Juni wander the halls looking for a room neither of you has been in. Juni stops at every door. Then, at a door marked SUPPLY, they take a breath and walk in first.  
-`encounters:687` **Juni (blush):** I went in first. Did you see that? I went in first.  
+`encounters:687` You and Juni wander the halls looking for a room neither of you has been in. Juni stops at every door. Then, at a door marked SUPPLY, they take a breath and walk in first.  
+`encounters:688` **Juni (blush):** I went in first. Did you see that? I went in first.  
 
 ## speed_mission_gerald
 
 > *show gerald happy*  
-`encounters:693` You and Gerald find a room neither of you has been in: the hotel's old boiler room, warm and humming. Gerald declares it the coziest cave he's been in since 1974. You report back: ten out of ten, would hibernate.  
+`encounters:694` You and Gerald find a room neither of you has been in: the hotel's old boiler room, warm and humming. Gerald declares it the coziest cave he's been in since 1974. You report back: ten out of ten, would hibernate.  
 
 ## speed_mission_solstice
 
 > *show solstice happy*  
-`encounters:699` You and Solstice find a room neither of you has been in: a tiny closet with one disco light and nobody in it. She turns off her LED top. You stand there in the slow-turning light, not dancing, just talking. It's her favorite room of the weekend.  
+`encounters:700` You and Solstice find a room neither of you has been in: a tiny closet with one disco light and nobody in it. She turns off her LED top. You stand there in the slow-turning light, not dancing, just talking. It's her favorite room of the weekend.  
 
 ## speed_mission_wren
 
 > *show wren happy*  
-`encounters:705` You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally they lead you to a broom closet they've never opened, because it's labeled FOR WREN ONLY and they didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} They do, for a full minute.  
+`encounters:706` You and Wren try to find a room neither of you has been in. This is impossible: Wren has been in every room. Finally they lead you to a broom closet they've never opened, because it's labeled FOR WREN ONLY and they didn't make that sign. Inside is a single folding chair and a note: {i}Sit down. — Pilar.{/i} They do, for a full minute.  
 
 ## speed_mission_zyx
 
 > *show zyx happy*  
-`encounters:711` You and Zyx find a room neither of you has been in: the hotel laundry. Zyx stands in front of the dryers for a long time, watching the clothes go round. "Small planets," they whisper. "Warm, tumbling planets." They take extensive notes.  
+`encounters:712` You and Zyx find a room neither of you has been in: the hotel laundry. Zyx stands in front of the dryers for a long time, watching the clothes go round. "Small planets," they whisper. "Warm, tumbling planets." They take extensive notes.  
 
 ---
 
