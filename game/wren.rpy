@@ -143,7 +143,7 @@ label wren_night_1:
         "\"You look exhausted.\"":
             w neutral "Thanks. I'm aware. I have a mirror."
 
-    walkie "Wren, there's a wizard of the 9th floor, waving his, um, big stick around if you catch my drift."
+    walkie "Wren, there's a wizard on the 9th floor, waving his, um, big stick around if you catch my drift."
     w neutral "Copy. On my way."
     w happy "Thanks for the flashlight. Or the moral support. Whichever it was."
     hide wren with dissolve

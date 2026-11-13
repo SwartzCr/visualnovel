@@ -1,6 +1,6 @@
 # Late Checkout: all dialogue
 
-<!-- exported from commit 1ceb717 -->
+<!-- exported from commit 54655be -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -1483,7 +1483,7 @@ Edit this file and send it back; the changes get applied to the game.
 `wren:144` **Wren (neutral):** Thanks. I'm aware. I have a mirror.  
 > *(end of choice)*
 
-`wren:146` **Walkie-talkie:** Wren, there's a wizard of the 9th floor, waving his, um, big stick around if you catch my drift.  
+`wren:146` **Walkie-talkie:** Wren, there's a wizard on the 9th floor, waving his, um, big stick around if you catch my drift.  
 `wren:147` **Wren (neutral):** Copy. On my way.  
 `wren:148` **Wren (happy):** Thanks for the flashlight. Or the moral support. Whichever it was.  
 
