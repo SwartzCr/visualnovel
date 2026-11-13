@@ -140,6 +140,13 @@ def key_panel(rgb, bg, single=True):
     return Image.fromarray(out, "RGBA")
 
 
+def touch_rows(mine, others):
+    """How many rows this figure shares a border with another figure."""
+    from skimage.morphology import dilation, disk
+    contact = dilation(mine, disk(2)) & others
+    return int(contact.any(axis=1).sum())
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("sheet")
@@ -193,6 +200,23 @@ def main():
             # Fine detail (outlines, gill fringe, hair tips) within a few
             # pixels of the body stays; long thin strands don't.
             mine &= dilation(body, disk(6))
+        # Where figures merge into each other (shoulders, fur), the outlines
+        # can't say whose pixels are whose. Below the heads, keep only this
+        # panel's strip and fade the cut edges so they don't look sliced.
+        px0, px1 = int(round(i * pw)), int(round((i + 1) * pw))
+        neighbours = (owner > 0) & (owner != i + 1)
+        rows = np.where(neighbours[:, max(px0 - margin, 0):min(px1 + margin, w)].any(axis=1)
+                        & mine[:, max(px0 - margin, 0):min(px1 + margin, w)].any(axis=1))[0]
+        if len(rows) and touch_rows(mine, neighbours) > 0.15 * h:
+            top = int(h * 0.45)
+            xs = np.arange(w)
+            fade = int(pw * 0.06)
+            weight = np.clip(np.minimum(xs - px0, px1 - 1 - xs) / max(fade, 1), 0, 1)
+            band = np.zeros((h, w), dtype=np.float32) + 1.0
+            band[top:] = weight[None, :]
+            ramp = np.clip((np.arange(h) - top) / (h * 0.08), 0, 1)[:, None]
+            band = 1.0 - ramp * (1.0 - band)
+            rgba[:, :, 3] = (rgba[:, :, 3] * band).astype(np.uint8)
         rgba[~mine, 3] = 0
         x0 = int(round(i * pw)) - margin
         x1 = int(round((i + 1) * pw)) + margin
