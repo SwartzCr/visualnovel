@@ -1,6 +1,6 @@
 # Late Checkout: all dialogue
 
-<!-- exported from commit 48644c2 -->
+<!-- exported from commit 1ceb717 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -78,7 +78,7 @@ Edit this file and send it back; the changes get applied to the game.
 > *scene bg pool*  
 > *if day == 1:*  
 `script:106` The pool is the bright, (somewhat) ordinary half of the party: an indoor pool on the ground floor, under a big old glass atrium roof gone green at the seams. The smell of chlorine permeates the air.  
-`script:107` Most of the costumes have been swapped for swimsuits. Some have not. To the extent that they can people are letting their freak flags fly. Someone brought in a sound system and you can barely make conversation over the sound of the music, but you try anyway.  
+`script:107` Most of the costumes have been swapped for swimsuits. Some have not. To the extent that they can, people are letting their freak flags fly. Someone brought in a sound system and you can barely make conversation over the sound of the music, but you try anyway.  
 > *elif day == 2:*  
 `script:109` The pool on Saturday afternoon is full of people recovering from Friday night. Someone is teaching a slow-motion water aerobics class to no music at all. You revel in the silence.  
 > *else:*  
