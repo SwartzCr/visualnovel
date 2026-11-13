@@ -104,7 +104,7 @@ jobs:
           code=$?
           set -e
           if [ ! -f "$VN_TEST_REPORT" ]; then
-            echo "Do Not Disturb — automated playthrough report: FAIL" > "$VN_TEST_REPORT"
+            echo "Late Checkout — automated playthrough report: FAIL" > "$VN_TEST_REPORT"
             echo "The game exited (status $code) before writing a report." >> "$VN_TEST_REPORT"
             code=1
           fi

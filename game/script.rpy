@@ -14,7 +14,7 @@ label start:
     $ quick_menu = False
     scene black
     pause 0.6
-    show text "{size=48}{color=#ff5fb8}DO NOT DISTURB{/color}{/size}\n\n{size=22}{color=#c8b8ff}three nights at the Hotel Paradiso{/color}{/size}" at truecenter as title with dissolve
+    show text "{size=48}{color=#ff5fb8}LATE CHECKOUT{/color}{/size}\n\n{size=22}{color=#c8b8ff}a Hotel Paradiso experience{/color}{/size}" at truecenter as title with dissolve
     pause 2.5
     hide title with dissolve
     $ quick_menu = True

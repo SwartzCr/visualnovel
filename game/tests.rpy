@@ -283,7 +283,7 @@ init python:
 
         lines = []
         status = "FAIL" if (vn.failures or unreached) else "PASS"
-        lines.append("Do Not Disturb — automated playthrough report: %s" % status)
+        lines.append("Late Checkout — automated playthrough report: %s" % status)
         lines.append("Cases run: %d   Failures: %d   Labels unreached: %d   Menus not fully covered: %d   Time: %.1fs"
                      % (len(vn.results), len(vn.failures), len(unreached), len(partial), time.time() - vn.started))
         lines.append("")

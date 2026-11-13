@@ -112,7 +112,7 @@ def parse_say(line, chars):
 def export(md_path, quiet=False):
     chars = load_characters()
     out = [
-        "# Do Not Disturb: all dialogue",
+        "# Late Checkout: all dialogue",
         "",
         "<!-- exported from commit %s -->" % git_commit(),
         "",

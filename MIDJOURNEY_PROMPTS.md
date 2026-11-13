@@ -1,6 +1,6 @@
 # Midjourney prompts (Niji 7)
 
-Prompts for every background in *Do Not Disturb*, written in the same style as the prompt that produced `game/images/bg/lobby.png`. Each one is ready to paste into Midjourney.
+Prompts for every background in *Late Checkout*, written in the same style as the prompt that produced `game/images/bg/lobby.png`. Each one is ready to paste into Midjourney.
 
 ## Keep every scene matching the lobby
 

@@ -69,3 +69,12 @@ style quick_button_text:
     outlines [ (2, "#0a0414cc", 0, 0) ]
 
 
+
+## Main menu title and subtitle: dark outlines so they read over the bright neon art.
+style main_menu_title:
+    outlines [(4, "#1a0b2e", 0, 0)]
+
+style main_menu_version:
+    size gui.scale(22)
+    color "#ffe6f4"
+    outlines [(3, "#1a0b2e", 0, 0)]

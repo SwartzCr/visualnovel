@@ -383,7 +383,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text "[game_subtitle!t]":
                 style "main_menu_version"
 
 

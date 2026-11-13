@@ -14,7 +14,11 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Do Not Disturb")
+define config.name = _("Late Checkout")
+
+## Shown under the title on the main menu, and in the window title.
+define game_subtitle = _("a Hotel Paradiso experience")
+define config.window_title = "Late Checkout: a Hotel Paradiso experience"
 
 
 ## Determines if the title given above is shown on the main menu
@@ -42,7 +46,7 @@ No photos. Ask before touching. Tea, not booze. If you're having a hard time, fi
 ## built distribution. This must be ASCII-only, and must not contain
 ## spaces, colons, or semicolons.
 
-define build.name = "DoNotDisturb"
+define build.name = "LateCheckout"
 
 
 ## Sounds and music ############################################################
@@ -149,6 +153,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
+## (Kept from the game's old name so existing saves still load.)
 define config.save_directory = "DoNotDisturb-1761468000"
 
 

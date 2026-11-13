@@ -1,6 +1,6 @@
 # Art prompts for Nano Banana
 
-Copy-paste prompts for every background and character sprite in *Do Not Disturb*, written for Google's Nano Banana image model (Gemini image generation).
+Copy-paste prompts for every background and character sprite in *Late Checkout*, written for Google's Nano Banana image model (Gemini image generation).
 
 When an image is ready, save it with the file name shown and drop it in the folder listed under [Getting the images into the game](#getting-the-images-into-the-game). The game picks it up with no code changes.
 
