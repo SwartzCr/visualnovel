@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit da061d2 -->
+<!-- exported from commit d5750ea -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -2054,37 +2054,39 @@ Edit this file and send it back; the changes get applied to the game.
 > *(end of choice)*
 
 `zyx:358` What follows is slow, and extremely thorough, and enthusiastically consensual on both sides, and at one point the whole ship changes color.  
-`zyx:359` Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up.  
-`zyx:360` **Zyx (blush):** Data... very, very confirmed. Further study required. Extensive further study.  
-`zyx:361` **Zyx:** This one will need to repeat the experiment. For reproducibility. Science is very strict about this.  
+`zyx:359` The probe hums lower wherever you sigh, as if it's taking notes of its own, and Zyx follows it, murmuring readings in the modem language that sound a lot like praise.  
+`zyx:360` Somewhere around the forty-third reading, you stop being able to tell where the humming ends and you begin. Zyx gets very quiet, then very loud, in two languages.  
+`zyx:361` Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up.  
+`zyx:362` **Zyx (blush):** Data... very, very confirmed. Further study required. Extensive further study.  
+`zyx:363` **Zyx:** This one will need to repeat the experiment. For reproducibility. Science is very strict about this.  
 > *scene bg roof_dawn*  
-`zyx:365` When the pink light sets you back down on the roof, the sun has cleared the mountains and the lake is gold. You're holding a printout. Zyx is holding your hand.  
-`zyx:366` At some point Zyx took off one glove. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either.  
-`zyx:367` The printout says: {i}SPECIMEN: EXCELLENT. 4% BAT, AS SUSPECTED. RECOMMEND RETURN VISIT.{/i}  
+`zyx:367` When the pink light sets you back down on the roof, the sun has cleared the mountains and the lake is gold. You're holding a printout. Zyx is holding your hand.  
+`zyx:368` At some point Zyx took off one glove. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either.  
+`zyx:369` The printout says: {i}SPECIMEN: EXCELLENT. 4% BAT, AS SUSPECTED. RECOMMEND RETURN VISIT.{/i}  
 > *scene black*  
-`zyx:369` {i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}  
-`zyx:370` {i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}  
-`zyx:371` **Zyx:** Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it. Afterward, the ship is parked out back.  
+`zyx:371` {i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}  
+`zyx:372` {i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}  
+`zyx:373` **Zyx:** Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it. Afterward, the ship is parked out back.  
 > *if gave_rock:*  
-`zyx:373` **Zyx:** Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends.  
+`zyx:375` **Zyx:** Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends.  
 > *else:*  
-`zyx:375` **Zyx:** This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you.  
-`zyx:376` **Zyx:** — Z. (The report now has a section about you. It is forty pages long and still in progress. Several pages are classified. You know which ones.)  
+`zyx:377` **Zyx:** This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you.  
+`zyx:378` **Zyx:** — Z. (The report now has a section about you. It is forty pages long and still in progress. Several pages are classified. You know which ones.)  
 > *→ jump ending_card*  
 
 ## zyx_friend
 
 > *scene bg exterior*  
 > *show zyx happy*  
-`zyx:386` On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out. Every car waves back. One honks the rhythm from {i}the Zyx{/i}.  
-`zyx:387` The crew has already asked them to come back next year and run something. Zyx has agreed, without being entirely sure what they're running.  
-`zyx:388` **Zyx:** Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing. Apparently it has become very popular.  
-`zyx:389` **Zyx (neutral):** The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them.  
-`zyx:390` **Zyx:** On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver.  
-`zyx:391` Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly.  
-`zyx:392` **Zyx (happy):** This is the highest honor of our people. Do not lose it. We already lost the other one.  
-`zyx:393` **Zyx:** Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!  
-`zyx:394` On the drive home you catch yourself noticing things: a weird sign, a nice rock, two strangers waving at each other across a parking lot. You wonder how long it'll last. You hope a while.  
+`zyx:388` On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out. Every car waves back. One honks the rhythm from {i}the Zyx{/i}.  
+`zyx:389` The crew has already asked them to come back next year and run something. Zyx has agreed, without being entirely sure what they're running.  
+`zyx:390` **Zyx:** Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing. Apparently it has become very popular.  
+`zyx:391` **Zyx (neutral):** The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them.  
+`zyx:392` **Zyx:** On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver.  
+`zyx:393` Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly.  
+`zyx:394` **Zyx (happy):** This is the highest honor of our people. Do not lose it. We already lost the other one.  
+`zyx:395` **Zyx:** Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!  
+`zyx:396` On the drive home you catch yourself noticing things: a weird sign, a nice rock, two strangers waving at each other across a parking lot. You wonder how long it'll last. You hope a while.  
 
 ---
 
