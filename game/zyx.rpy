@@ -356,8 +356,8 @@ label zyx_romance:
             "They kiss you. Their antennae spark. Actually spark. You're almost sure."
 
     "What follows is slow, and extremely thorough, and enthusiastically consensual on both sides, and at one point the whole ship changes color."
-    "The probe hums lower wherever you sigh, as if it's taking notes of its own, and Zyx follows it, murmuring readings in the modem language that sound a lot like praise."
-    "Somewhere around the forty-third reading, you stop being able to tell where the humming ends and you begin. Zyx gets very quiet, then very loud, in two languages."
+    "The probe is warm, and patient, and it seems to know where you want it before you do. It lingers. It wanders. It finds places you didn't know were waiting to be found, and the hum settles somewhere deep inside you and stays."
+    "You stop keeping track of time, or the stars, or anything except the slow, unhurried feeling of being explored, all of you, as if you were the most interesting thing in the galaxy. For a while, you are."
     "Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up."
     z blush "Data... very, very confirmed. Further study required. Extensive further study."
     z "This one will need to repeat the experiment. For reproducibility. Science is very strict about this."
