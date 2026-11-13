@@ -389,3 +389,51 @@ anime visual novel character expression sheet, 2D anime, flat cel shading with t
 ```text
 anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times in one row, each copy small and centered in its own quarter of the image with wide empty gaps between them so nothing overlaps, hair and accessories fully inside their own quarter, waist-up, facing the viewer, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, Zyx, an androgynous adult alien ambassador, smooth pale mint-green skin, three large anime eyes with glossy magenta irises, two in the usual place and a smaller third eye in the center of the forehead, small pointed ears, sleek shiny chrome-silver bob with perfectly straight bangs, two thin antennae each ending in a softly glowing pink bulb, silver metallic bodysuit with a high collar of spiky teal points, a plain gold diagonal sash across the chest, one hand raised in a friendly wave in a teal three-fingered glove, formal earnest and a little awkward, from left to right: polite small neutral smile, joyful open grin with all three eyes closed in happy upward crescents, surprised with all three eyes wide and a small round open mouth, flustered shy smile with all three eyes glancing aside and a strong pink blush, flat solid chroma-key blue background --ar 3:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
 ```
+
+## Still to make
+
+### Zyx's third eye (fix)
+
+Open each of Zyx's four panels in the editor, choose **Vary (Region)**, select just the forehead between the bangs, and use:
+
+```text
+a small third anime eye in the center of the forehead, same glossy magenta iris and same style as the other two eyes, matching the expression of the face
+```
+
+### Wren, with the clipboard in every panel (re-roll)
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times in one row, each copy small and centered in its own quarter of the image with wide empty gaps between them so nothing overlaps, waist-up, facing the viewer, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, Wren, an adult in their early thirties on the event crew, pale skin, sleek black asymmetric bob with a long side-swept fringe, tired but kind violet eyes, black over-ear headset with a small boom microphone, plain black hoodie, bright pink lanyard with a blank white badge, in every single panel a brown clipboard hugged flat against the chest with both arms, a black walkie-talkie at the hip, from left to right: calm dry half-smile, joyful open grin with eyes closed in happy upward crescents, surprised with wide eyes and a small round open mouth, flustered shy smile with eyes glancing aside and a strong pink blush, flat solid chroma-key green background --ar 3:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
+```
+
+### Gerald, with a real blush (re-roll)
+
+```text
+anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn four times in one row, each copy centered in its own quarter of the image with wide empty gaps between them, chest-up, facing the viewer, identical pose, size and framing in every panel, only the facial expression changes, Gerald, a gentle Sasquatch covered in long chestnut-brown fur with a tufted crest on top of his head, a soft tan face framed by fur, kind warm brown eyes, big gentle hands cradling a tiny white teacup with a small pink heart on it in every panel, a real creature drawn in anime style, from left to right: calm kind closed-mouth expression, joyful open smile with eyes closed in happy crescents, surprised with wide eyes and a small round open mouth, bashful and shy with eyes looking down and away, a small embarrassed smile and a bright pink blush across the cheeks, flat solid chroma-key green background --ar 4:1 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, chibi, 3d render, photorealistic, human
+```
+
+### Extra expressions: sad, serious, flirty (optional)
+
+Paste the link to that character's existing sheet at the start, so the design matches, then fill in the description from their sprite prompt above. Panels from left to right are always sad, serious, flirty.
+
+```text
+<link to the character's sheet> anime visual novel character expression sheet, 2D anime, flat cel shading with two-tone shadows, bold clean line art, the same character drawn three times in one row, each copy centered in its own third of the image with wide empty gaps between them, identical outfit, hair, pose, size and framing in every panel, only the facial expression changes, <character description>, from left to right: sad with downturned eyes, raised inner eyebrows and a small frown, serious and cold with narrowed eyes, level brows and a flat mouth, flirty with half-lidded eyes, a sly one-sided smile and a light blush, flat solid chroma-key green background --iw 1.5 --ar 9:4 --niji 7 --s 250 --no scenery, gradient, shadow, floor, border, text, watermark, child, chibi, 3d render, photorealistic
+```
+
+The ones the story would use most: **Juni** sad, **Solstice** serious, **Zyx** flirty.
+
+### Loading screen (optional) — `web-presplash`
+
+Shown while the web version downloads. 1280×720.
+
+```text
+hand-painted anime background art, 2D anime key visual, flat cel shading with two-tone shadows, bold clean line art, a 16-story 1970s hotel-casino tower at night on the shore of a mountain lake, a huge glowing pink and teal neon hotel sign on a tall pole, a hallway door in the foreground slightly ajar with warm party light and confetti spilling out, a DO NOT DISTURB tag hanging from the handle, snowy pines and dark mountains, big empty sky at the top for a title, vibrant saturated colors, soft bloom --ar 16:9 --niji 7 --s 400 --no people, text, watermark, photorealistic, 3d render, photo, realistic
+```
+
+### App icon (optional)
+
+Square, simple shapes so it still reads at tiny sizes. 256×256 or larger.
+
+```text
+app icon, 2D anime flat illustration, bold clean line art, a cute pink axolotl kigurumi hood face with feathery hot-pink gills peeking over a vintage hotel room key tag shaped like a diamond, simple shapes, centered, thick outline, solid deep purple background, vibrant saturated colors --ar 1:1 --niji 7 --s 200 --no text, watermark, photorealistic, 3d render, gradient
+```
