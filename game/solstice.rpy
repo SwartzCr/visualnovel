@@ -277,7 +277,6 @@ label solstice_romance:
     menu:
         "\"I'm not going to blow your cover, not now not ever.\"":
             s blush "I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else."
-            "You let yourself become hypnotized, and before you know it it's morning."
         "Hand her the bag again.":
             s "You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone."
 
@@ -285,13 +284,14 @@ label solstice_romance:
 
     menu:
         "\"Yes. Lights off. Just us.\"":
-            "She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend."
+            "She leans in. She tastes like leather and bubble gum. You let her lean into you, taking some of her weight as her fatigue shows through."
             "It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed."
         "\"You fucking pig. I'm sick of getting fucked by the state.\"":
             s surprised "Oh!"
             s blush "I love it when you talk to me like that. Again, please."
             "So you do it again, slower. She's smiling so hard it barely feels like an insult."
 
+    "And then she gets to work. She's slow and methodical at first, like she's following protocol, but then it gets sloppy and passionate. Her raver persona is really coming out, and you think you were right to be drawn to her."
     "The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on."
     show solstice happy
     s "Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once."

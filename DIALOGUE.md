@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit 8d935c4 -->
+<!-- exported from commit bf0fef2 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -1283,26 +1283,26 @@ Edit this file and send it back; the changes get applied to the game.
 
 `solstice:278` **▸** "I'm not going to blow your cover, not now not ever."  
 `solstice:279` **Solstice (blush):** I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else.  
-`solstice:280` You let yourself become hypnotized, and before you know it it's morning.  
 
-`solstice:281` **▸** Hand her the bag again.  
-`solstice:282` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
+`solstice:280` **▸** Hand her the bag again.  
+`solstice:281` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
 > *(end of choice)*
 
-`solstice:284` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
+`solstice:283` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
 
 > **Choice**
 
-`solstice:287` **▸** "Yes. Lights off. Just us."  
-`solstice:288` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
-`solstice:289` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
+`solstice:286` **▸** "Yes. Lights off. Just us."  
+`solstice:287` She leans in. She tastes like leather and bubble gum. You let her lean into you, taking some of her weight as her fatigue shows through.  
+`solstice:288` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
 
-`solstice:290` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
-`solstice:291` **Solstice (surprised):** Oh!  
-`solstice:292` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
-`solstice:293` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
+`solstice:289` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
+`solstice:290` **Solstice (surprised):** Oh!  
+`solstice:291` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
+`solstice:292` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
 > *(end of choice)*
 
+`solstice:294` And then she gets to work. She's slow and methodical at first, like she's following protocol, but then it gets sloppy and passionate. Her raver persona is really coming out, and you think you were right to be drawn to her.  
 `solstice:295` The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on.  
 > *show solstice happy*  
 `solstice:297` **Solstice:** Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once.  
