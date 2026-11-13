@@ -9,7 +9,10 @@ cleaned up, scaled and saved as game/images/sprites/<name>_<expression>.webp.
 ORDER says which expression each panel is, left to right, comma separated.
 It defaults to the order the prompts ask for: neutral,happy,surprised,blush.
 Use "-" to skip a panel, e.g. "happy,-,surprised,blush" to keep the current
-neutral sprite. Requires Pillow and numpy.
+neutral sprite. Requires Pillow, numpy and scikit-image.
+
+Figures may overlap their neighbors' panels (gills, hair, hands): each pixel
+goes to the figure it's connected to, so nothing gets cut off.
 """
 
 import argparse
@@ -79,7 +82,7 @@ def components(mask):
     return labels, sizes
 
 
-def key_panel(rgb, bg):
+def key_panel(rgb, bg, single=True):
     rgbf = rgb.astype(np.float32)
     dist = np.sqrt(((rgbf - bg) ** 2).sum(axis=2))
     # Soft edge: fully clear below `clear`, fully solid above `solid`.
@@ -103,7 +106,7 @@ def key_panel(rgb, bg):
 
     # Drop bits of the neighboring panels: keep the main figure plus any
     # sizable piece that doesn't touch the left or right edge.
-    labels, sizes = components(alpha > 40)
+    labels, sizes = components(alpha > 40) if single else (None, [0])
     if len(sizes) > 1:
         main = int(np.argmax(sizes))
         edge = set(labels[:, 0].tolist()) | set(labels[:, -1].tolist())
@@ -120,7 +123,7 @@ def key_panel(rgb, bg):
     # A neighboring panel's edge can stay attached at the bottom. If a fully
     # clear column sits near either side, clear everything beyond it.
     w = alpha.shape[1]
-    clear_cols = np.where((alpha > 40).sum(axis=0) <= 3)[0]
+    clear_cols = np.where((alpha > 40).sum(axis=0) <= 3)[0] if single else []
     for c in clear_cols:
         if c < 0.15 * w:
             alpha[:, :c] = 0
@@ -152,19 +155,57 @@ def main():
     bg = np.median(corners, axis=0)
 
     order = [o.strip() for o in args.order.split(",")]
-    pw = w / len(order)
+    n = len(order)
+    pw = w / n
+
+    # Key out the whole sheet at once, then give every pixel to the figure it
+    # is connected to. That keeps hair, gills and hands that reach into the
+    # next panel with their own figure instead of cutting them off.
+    sheet = np.array(key_panel(rgb, bg, single=False))
+    fg = sheet[:, :, 3] > 40
+    markers = np.zeros((h, w), dtype=np.int32)
+    for i in range(n):
+        x0, x1 = int((i + 0.35) * pw), int((i + 0.65) * pw)
+        markers[:, x0:x1][fg[:, x0:x1]] = i + 1
+    # Flood outward from the middle of each panel. Dark outline pixels are
+    # "high ground", so where two figures touch, the boundary falls on the
+    # outlines between them rather than cutting through one of them.
+    from skimage.segmentation import watershed
+    lum = rgb.astype(np.float32).mean(axis=2)
+    elevation = np.clip(255 - lum, 0, 255)
+    owner = watershed(elevation, markers, mask=sheet[:, :, 3] > 0)
+
+    # Every expression gets the same frame: the panel plus a margin on each
+    # side, so the character doesn't shift sideways when the expression changes.
+    margin = int(pw * 0.2)
     for i, expr in enumerate(order):
         if expr in ("", "-"):
             continue
-        panel = rgb[:, int(round(i * pw)):int(round((i + 1) * pw))]
-        img = key_panel(panel, bg)
+        rgba = sheet.copy()
+        mine = owner == i + 1
+        # Trim thin strands of a neighbor's outline that tag along.
+        from skimage.morphology import opening, dilation, disk
+        from skimage.measure import label
+        core = opening(mine, disk(3))
+        lab = label(core)
+        if lab.max():
+            body = lab == np.bincount(lab.ravel())[1:].argmax() + 1
+            # Fine detail (outlines, gill fringe, hair tips) within a few
+            # pixels of the body stays; long thin strands don't.
+            mine &= dilation(body, disk(6))
+        rgba[~mine, 3] = 0
+        x0 = int(round(i * pw)) - margin
+        x1 = int(round((i + 1) * pw)) + margin
+        frame = np.zeros((h, x1 - x0, 4), dtype=np.uint8)
+        sx0, sx1 = max(x0, 0), min(x1, w)
+        frame[:, sx0 - x0:sx1 - x0] = rgba[:, sx0:sx1]
+        img = Image.fromarray(frame, "RGBA")
         if args.height and args.height != img.height:
             s = args.height / img.height
             img = img.resize((round(img.width * s), args.height), Image.LANCZOS)
         path = os.path.join(OUT, "%s_%s.webp" % (args.name, expr))
         img.save(path, "WEBP", quality=90, method=6, alpha_quality=100)
         print("wrote", os.path.relpath(path, ROOT), img.size)
-
 
 if __name__ == "__main__":
     main()

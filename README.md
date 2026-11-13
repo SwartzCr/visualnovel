@@ -152,7 +152,7 @@ python3 tools/import_sprite_sheet.py sheet.png juni --height 720
 python3 tools/import_sprite_sheet.py --height 720 sheet.png wren -- neutral,blush,happy,surprised
 ```
 
-It removes the flat background (any color), trims stray bits of the neighboring panels and saves `game/images/sprites/<name>_<expression>.webp`. Requires Pillow and numpy.
+It removes the flat background (any color), follows each figure's outline so overlapping hair or gills stay with the right copy, and saves `game/images/sprites/<name>_<expression>.webp`. Requires Pillow, numpy and scikit-image.
 
 To regenerate the UI: `python3 tools/make_gui.py` (requires Pillow). **Don't run `tools/make_backgrounds.py` or `tools/make_sprites.py`**: they would overwrite the Midjourney art with the old procedural versions.
 
