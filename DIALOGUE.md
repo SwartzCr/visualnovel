@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit 707ca01 -->
+<!-- exported from commit 8d935c4 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -1269,61 +1269,65 @@ Edit this file and send it back; the changes get applied to the game.
 > *(end of choice)*
 
 `solstice:265` She takes the bag, and then her expression turns serious. Before you know it, she's slipped a handcuff around your right hand, and the other end to the railing.  
-`solstice:266` She flips the lights on her bra back on, and gets them real close to your eyes. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless.  
+`solstice:266` She flashes a badge and says, "You're under arrest. Anything you say or do can be used against you in court. Don't resist." Her face no longer looks like the sweet, innocent raver's, and you realize that what you thought was just fatigue earlier was really the thick-skinned cop poking through her raver persona.  
+`solstice:267` You should have seen it coming, but now there's not much you can do but let it happen.  
+`solstice:268` She flips the lights on her bra back on, but this time they're bright like a cop car's searchlight. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless.  
 > *show solstice neutral*  
-`solstice:269` **Solstice:** Hey. Before we do this can I tell you something? My real name. Nobody here knows it.  
-`solstice:270` **Solstice (blush):** It's Dana. Dana. Now we both have some dirt on each other, you can blow my cover anytime you want.  
-`solstice:271` The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it.  
+`solstice:271` But then you notice that she's eased up. Maybe she's having second thoughts about turning you in.  
+`solstice:272` **Solstice:** You were the perfect mark. So trusting, so gullible. I thought I'd have no trouble turning you in, another step on my way to a promotion.  
+`solstice:273` **Solstice (blush):** But you showed me something this weekend. That if I want to, I can really be the raver I was just pretending to be. And that I'm loved no matter what.  
+`solstice:274` **Solstice:** So I think rather than take you to the station, I'll just take you right here, and show some of that love back. Don't resist <3  
+`solstice:275` **Solstice:** Just promise you won't blow my cover.  
 
 > **Choice**
 
-`solstice:274` **▸** "I'm not going to blow your cover, not now not ever."  
-`solstice:275` **Solstice (blush):** I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else.  
-`solstice:276` You let yourself become hypnotized, and before you know it it's morning.  
+`solstice:278` **▸** "I'm not going to blow your cover, not now not ever."  
+`solstice:279` **Solstice (blush):** I love it when you're obedient. Well if you're not going to blow my cover I guess you'll just have to blow something else.  
+`solstice:280` You let yourself become hypnotized, and before you know it it's morning.  
 
-`solstice:277` **▸** Hand her the bag again.  
-`solstice:278` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
+`solstice:281` **▸** Hand her the bag again.  
+`solstice:282` **Solstice:** You're naughty! Tempting me while I'm on the job. Ok, maybe just this once, just because we're finally alone.  
 > *(end of choice)*
 
-`solstice:280` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
+`solstice:284` **Solstice (blush):** Can I kiss you? Or is that too much? I know I'm in control here, but consent is still sexy.  
 
 > **Choice**
 
-`solstice:283` **▸** "Yes. Lights off. Just us."  
-`solstice:284` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
-`solstice:285` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
+`solstice:287` **▸** "Yes. Lights off. Just us."  
+`solstice:288` She leans in. She tastes like cardamom and smells like sunscreen and the end of a very long weekend.  
+`solstice:289` It's a slow kiss. A slow-song kiss. You feel guilty but a little smug that you've been able to corrupt a fed.  
 
-`solstice:286` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
-`solstice:287` **Solstice (surprised):** Oh!  
-`solstice:288` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
-`solstice:289` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
+`solstice:290` **▸** "You fucking pig. I'm sick of getting fucked by the state."  
+`solstice:291` **Solstice (surprised):** Oh!  
+`solstice:292` **Solstice (blush):** I love it when you talk to me like that. Again, please.  
+`solstice:293` So you do it again, slower. She's smiling so hard it barely feels like an insult.  
 > *(end of choice)*
 
-`solstice:291` The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on.  
+`solstice:295` The night blurs, fluids and powders are shared, clothes are removed. The handcuffs stay on.  
 > *show solstice happy*  
-`solstice:293` **Solstice:** Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once.  
+`solstice:297` **Solstice:** Okay. The sun's up. I've officially seen one. Thanks for helping me really party for once.  
 > *scene bg roof_dawn*  
-`solstice:296` The longest day of the year was months ago. This one feels longer, in the best way.  
-`solstice:297` Below, someone in the parking lot starts playing Fight The Power on a shitty car stereo. Solstice laughs so hard she spills both teas.  
-`solstice:298` She uncuffs you and pulls you up off the bench and you embrace, swaying slowly, with no lights at all, until the song ends and the car drives away.  
+`solstice:300` The longest day of the year was months ago. This one feels longer, in the best way.  
+`solstice:301` Below, someone in the parking lot starts playing Fight The Power on a shitty car stereo. Solstice laughs so hard she spills both teas.  
+`solstice:302` She uncuffs you and pulls you up off the bench and you embrace, swaying slowly, with no lights at all, until the song ends and the car drives away.  
 > *scene black*  
-`solstice:300` {i}Wednesday, 4:12 AM. A text.{/i}  
-`solstice:301` **Solstice:** I quit the force, and now I'm living my raver lifestyle, but not as a cover.  
-`solstice:302` **Solstice:** I stayed up all night at decompression. It's sunrise in like an hour. I'm going to go watch it from the top of an art car, not worrying about what drugs the people below are on. first one I've watched on purpose that wasn't with you  
-`solstice:303` **Solstice:** thinking about you. Next year can I be your +1? No fake names, but I'm still happy to handcuff you if you'd like ;)  
+`solstice:304` {i}Wednesday, 4:12 AM. A text.{/i}  
+`solstice:305` **Solstice:** I quit the force, and now I'm living my raver lifestyle, but not as a cover.  
+`solstice:306` **Solstice:** I stayed up all night at decompression. It's sunrise in like an hour. I'm going to go watch it from the top of an art car, not worrying about what drugs the people below are on. first one I've watched on purpose that wasn't with you  
+`solstice:307` **Solstice:** thinking about you. Next year can I be your +1? No fake names, but I'm still happy to handcuff you if you'd like ;)  
 > *→ jump ending_card*  
 
 ## solstice_friend
 
 > *scene bg exterior*  
 > *show solstice happy*  
-`solstice:313` Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price.  
-`solstice:314` **Solstice:** THERE you are! I was going to leave a note on your windshield made of glitter but now I don't have to.  
-`solstice:315` **Solstice (neutral):** Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes.  
-`solstice:316` **Solstice:** Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts.  
-`solstice:317` She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}.  
-`solstice:318` **Solstice (happy):** You're my person on the inside now. Friendship bracelet is legally binding.  
-`solstice:319` **Solstice:** And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert.  
+`solstice:317` Solstice tackles you in the parking lot with a full-body hug and a fresh handful of glitter. Some of it goes in your mouth. That's the price.  
+`solstice:318` **Solstice:** THERE you are! I was going to leave a note on your windshield made of glitter but now I don't have to.  
+`solstice:319` **Solstice (neutral):** Real talk for one second. This weekend was the first one in a long time I didn't feel like I was running on fumes.  
+`solstice:320` **Solstice:** Some of that's the party. Some of it's you. You're good at the quiet parts. I'm bad at the quiet parts.  
+`solstice:321` She ties a new bracelet onto your wrist next to the first one. This one says, in lettered beads, {i}call me{/i}.  
+`solstice:322` **Solstice (happy):** You're my person on the inside now. Friendship bracelet is legally binding.  
+`solstice:323` **Solstice:** And if you ever want to watch a sunrise, I hear they're good. I've seen one. I'm basically an expert.  
 
 ---
 

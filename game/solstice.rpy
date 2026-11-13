@@ -263,12 +263,16 @@ label solstice_romance:
             s happy "Ha! Fair. I'm not going to sleep anyway. Let me see that."
 
     "She takes the bag, and then her expression turns serious. Before you know it, she's slipped a handcuff around your right hand, and the other end to the railing."
-    "She flips the lights on her bra back on, and gets them real close to your eyes. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless."
+    "She flashes a badge and says, \"You're under arrest. Anything you say or do can be used against you in court. Don't resist.\" Her face no longer looks like the sweet, innocent raver's, and you realize that what you thought was just fatigue earlier was really the thick-skinned cop poking through her raver persona."
+    "You should have seen it coming, but now there's not much you can do but let it happen."
+    "She flips the lights on her bra back on, but this time they're bright like a cop car's searchlight. You kind of like it. Being handcuffed to the railing, no longer in control. A cop trying to entrap you. You feel a guilty rush, but it's a rush nonetheless."
 
     show solstice neutral
-    s "Hey. Before we do this can I tell you something? My real name. Nobody here knows it."
-    s blush "It's Dana. Dana. Now we both have some dirt on each other, you can blow my cover anytime you want."
-    "The sun is just coming over the mountains now. It turns her glitter gold, every last fleck of it, so she looks like she's been dipped in it."
+    "But then you notice that she's eased up. Maybe she's having second thoughts about turning you in."
+    s "You were the perfect mark. So trusting, so gullible. I thought I'd have no trouble turning you in, another step on my way to a promotion."
+    s blush "But you showed me something this weekend. That if I want to, I can really be the raver I was just pretending to be. And that I'm loved no matter what."
+    s "So I think rather than take you to the station, I'll just take you right here, and show some of that love back. Don't resist <3"
+    s "Just promise you won't blow my cover."
 
     menu:
         "\"I'm not going to blow your cover, not now not ever.\"":
