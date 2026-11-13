@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit e7b8650 -->
+<!-- exported from commit 707ca01 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -587,7 +587,7 @@ Edit this file and send it back; the changes get applied to the game.
 `juni:334` You start petting, first lightly, then heavily, like you should have done in the art room upstairs.  
 `juni:335` Their body is slimy but good, you embrace, you gyrate, you realize that Juni has always wanted to do this with the suit on. Maybe you do too.  
 `juni:336` **Juni (blush):** Don't stop. Please don't stop. I've thought about this every time you walked past me this weekend.  
-`juni:337` **Juni:** There's a zipper. You can find it. Take your time, I want to feel you looking for it.  
+`juni:337` You hold each other tighter and tighter, squeezing through the soaked fleece, and Juni starts to tremble, then to hum, then to vibrate with pleasure against you, gills and all.  
 `juni:338` Juni asks you to do that thing with your tongue again, the one they taught you in the petting zoo. Juni tenses, shudders, and releases.  
 `juni:339` When you pull apart, Juni has their eyes shut tight, like they're making a wish.  
 > *(end of choice)*
