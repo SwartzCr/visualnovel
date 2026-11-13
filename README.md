@@ -127,7 +127,7 @@ All 30 backgrounds and the 20 character sprites are finished Midjourney art. Onl
 | `fortune.webp` | Zyx night 1 |
 | `clinic.webp` | Zyx night 2 |
 | `planetarium.webp` | Zyx night 3 |
-| `ship.webp` | Zyx's ending: aboard the ship (placeholder: a recolored planetarium; prompt in MIDJOURNEY_PROMPTS.md) |
+| `ship.webp` | Zyx's ending: aboard the ship |
 | `penguinpost.webp` | Random encounter: Penguin Post |
 | `fanbar.webp` | Random encounter: the OnlyFans Fanny Bar |
 | `tentacletopia.webp` | Random encounter: Tentacletopia |
