@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit 3ece6e1 -->
+<!-- exported from commit e7b8650 -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -586,33 +586,35 @@ Edit this file and send it back; the changes get applied to the game.
 > *if night_seen["juni"] >= 1:*  
 `juni:334` You start petting, first lightly, then heavily, like you should have done in the art room upstairs.  
 `juni:335` Their body is slimy but good, you embrace, you gyrate, you realize that Juni has always wanted to do this with the suit on. Maybe you do too.  
-`juni:336` Juni asks you to do that thing with your tongue again, the one they taught you in the petting zoo. Juni tenses, shudders, and releases.  
-`juni:337` When you pull apart, Juni has their eyes shut tight, like they're making a wish.  
+`juni:336` **Juni (blush):** Don't stop. Please don't stop. I've thought about this every time you walked past me this weekend.  
+`juni:337` **Juni:** There's a zipper. You can find it. Take your time, I want to feel you looking for it.  
+`juni:338` Juni asks you to do that thing with your tongue again, the one they taught you in the petting zoo. Juni tenses, shudders, and releases.  
+`juni:339` When you pull apart, Juni has their eyes shut tight, like they're making a wish.  
 > *(end of choice)*
 
 > *show juni happy*  
-`juni:340` **Juni:** Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back.  
+`juni:342` **Juni:** Okay. Okay. I regenerated something. I'm pretty sure. I don't know what yet, but something grew back.  
 > *scene bg pool*  
-`juni:343` The sun comes up over the mountains and pours down through the old glass roof, across the water, gold on every ripple.  
+`juni:345` The sun comes up over the mountains and pours down through the old glass roof, across the water, gold on every ripple.  
 > *if knows_juicero:*  
-`juni:345` **Juni:** I guess I lived up to my name and gave you a good squeeze after all.  
+`juni:347` **Juni:** I guess I lived up to my name and gave you a good squeeze after all.  
 > *scene black*  
-`juni:347` {i}Monday, 9:14 AM. A text from an unknown number.{/i}  
-`juni:348` **Juni:** hi it's juni. Lotl. it's me. I wore my costume to work for Halloween. No one made fun of me, and I felt authentic for the first time  
-`juni:349` **Juni:** are you free thursday. I know a place where we can be ourselves  
+`juni:349` {i}Monday, 9:14 AM. A text from an unknown number.{/i}  
+`juni:350` **Juni:** hi it's juni. Lotl. it's me. I wore my costume to work for Halloween. No one made fun of me, and I felt authentic for the first time  
+`juni:351` **Juni:** are you free thursday. I know a place where we can be ourselves  
 > *→ jump ending_card*  
 
 ## juni_friend
 
 > *scene bg exterior*  
 > *show juni happy*  
-`juni:359` In the parking lot on Monday morning, a pink kigurumi waves at you from a dented hatchback. The hood is still up. Lotl looks a little sunburned.  
-`juni:360` **Juni:** Hey! Probationary salamander! You passed. You're a full salamander now. It's binding. There's paperwork.  
-`juni:361` **Juni (neutral):** I wanted to say... thanks. For finding me. Every time. I talked to eleven people this year. Eleven. You were most of them.  
-`juni:362` **Juni:** Next year I'm going to try going into a room by myself. Just one. A small one. Maybe the one with the moss.  
-`juni:363` **Juni (happy):** And if I chicken out, you're responsible for me. That's the rule. You know my secret.  
-`juni:364` They hug you through the onesie, which is like being hugged by a very determined pillow.  
-`juni:365` **Juni:** Same time next year? I'll stand outside a door and you can pull me in.  
+`juni:361` In the parking lot on Monday morning, a pink kigurumi waves at you from a dented hatchback. The hood is still up. Lotl looks a little sunburned.  
+`juni:362` **Juni:** Hey! Probationary salamander! You passed. You're a full salamander now. It's binding. There's paperwork.  
+`juni:363` **Juni (neutral):** I wanted to say... thanks. For finding me. Every time. I talked to eleven people this year. Eleven. You were most of them.  
+`juni:364` **Juni:** Next year I'm going to try going into a room by myself. Just one. A small one. Maybe the one with the moss.  
+`juni:365` **Juni (happy):** And if I chicken out, you're responsible for me. That's the rule. You know my secret.  
+`juni:366` They hug you through the onesie, which is like being hugged by a very determined pillow.  
+`juni:367` **Juni:** Same time next year? I'll stand outside a door and you can pull me in.  
 
 ---
 
