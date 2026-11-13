@@ -15,9 +15,10 @@ label zyx_pool_1:
     menu:
         "Explain Marco Polo as seriously as possible.":
             $ gain("zyx", 2)
-            "You explain the rules in full. The seeker. The call. The response. The fish-out-of-water rule, which you're not sure is real."
+            "You explain the rules in full. The seeker. The call and response. The fish-out-of-water rule, which you're not sure is real."
             z happy "Fascinating. A game of trust and echolocation. Your species is part bat. We suspected."
             "They write {i}PART BAT{/i} in large letters on the clipboard and underline it twice."
+            "Then the clipboard goes down, and Zyx wades into the shallow end to test the theory in person."
 
         "\"Just play it with me. You'll get it.\"":
             $ gain("zyx", 1)
@@ -29,6 +30,7 @@ label zyx_pool_1:
         "\"Are you... actually an alien?\"":
             z neutral "Are you actually a human?"
             z "Do not answer. It would ruin it. For both of us."
+            "Then they set the clipboard down and wade into the shallow end to play anyway."
 
     "Ten minutes later, the Marco Polo players vote Zyx honorary seeker for life. Zyx has played once. You have been trying to get into that game since noon."
     "A woman who has been coming to this party for eleven years swims over to ask Zyx how they got in with the pool crowd so fast. Zyx tells her to {i}simply arrive from space.{/i} She nods and writes it down."
@@ -36,14 +38,14 @@ label zyx_pool_1:
     show zyx neutral
     z "Observe. Seven hundred humans. None of them were made to come here. They each decided, separately, to spend a weekend being kind to strangers in costumes."
     z "On the Outer Drift, an agreement like that would take a treaty. Here it took a group chat."
-    "You look back at the pool: the sunscreen, the inflatable flamingo, the grown adults shrieking POLO. An hour ago it was just a pool. It's a little hard to see it that way now."
+    "You look back at the pool: the sunscreen, the inflatable flamingo, the grown adults shrieking POLO. An hour ago it was just a pool, now you see a party."
     "Zyx explains that they are here on a research mission: to determine whether Earth is ready for contact."
-    z "Our current findings: Earth is not ready. Earth is very, very fun. These two findings are in tension. The report is going poorly."
+    z "Our current findings: Earth is not ready, and yet Earth is very, very fun. These two findings are in tension. The report mission is going poorly."
 
     menu:
         z "Question for the report. Why do humans gather like this? In secret? Wearing other faces?"
 
-        "\"Because sometimes the other face is the real one.\"":
+        "\"Because sometimes it's nice trying to be someone new. Who knows, maybe the other face is the real one.\"":
             $ gain("zyx", 2)
             "All three of Zyx's eyes look at you at once."
             z blush "...That is the most accurate thing anyone has said for the report."
@@ -66,11 +68,11 @@ label zyx_pool_1:
 
 label zyx_pool_2:
     "There's a queue at the far end of the pool. Someone has made a sign out of a pizza box: THE MUSEUM OF THE OUTER DRIFT. FREE. NO PHOTOS. GIFT SHOP COMING SOON."
-    "At the front, Zyx is curating a beach towel covered in EARTH ARTIFACTS: nine mismatched flip-flops, a pair of sunglasses, a single swim fin, and a paperback novel swollen to twice its size from water."
+    "At the front, Zyx is curating a beach towel covered in EARTH ARTIFACTS: three mismatched flip-flops, a pair of sunglasses, a single swim fin, a paperback novel swollen to twice its size from water, and pool noodles tying everything together."
     "Two people from the art crew are taking notes on how Zyx did it. Zyx does not know it's an art piece. Zyx thinks it's a museum."
     show zyx happy with dissolve
     z "Earthling! You are here. You may skip the line. You are this one's favorite visitor. Do not tell the other visitors."
-    z "Every visitor gives one artifact. It is the custom of our people. Since this morning. We invented it this morning, and now it is the custom of yours too, apparently."
+    z "Every visitor gives one artifact. It is the custom of our people. Since this morning. We invented it this morning."
 
     menu:
         z "What do you donate to the Outer Drift?"
@@ -80,11 +82,11 @@ label zyx_pool_2:
             $ gave_rock = True
             z surprised "A nice rock."
             "They hold it up to the light from the atrium roof with all three eyes."
-            z happy "On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This changes everything. This is the centerpiece."
+            z happy "On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This will be the new centerpiece."
 
         "Your hotel key card.":
             $ gain("zyx", 1)
-            z neutral "A key to a door that already opens. Because everyone who enters is already checked in."
+            z neutral "A key to a door that already opens, and yet an invitation to continue our research."
             z happy "Profound. It goes in the philosophy wing."
 
         "\"Nothing. Sorry. I need all my stuff.\"":
@@ -96,7 +98,7 @@ label zyx_pool_2:
     "For a second you see it the way Zyx does: not lost property, but a record of everyone who was too happy to keep track of their stuff."
     "Zyx leaves the museum in the care of a volunteer who has already, unprompted, made themself a little docent badge. Zyx sits down on a lounger next to you, close, and folds their silver hands."
     z "The Outer Drift is very quiet. Thirty-one of us, spread across a nebula. We communicate by changing color, very slowly. A conversation can take a year."
-    z "No one has hugged on the Outer Drift since the third moon. We are not built for it. Too many antennae."
+    z "No one has hugged on the Outer Drift since the third moon diaspora. Being here has opened my three eyes to a world of new possibilities."
     z "But this one has observed many hugs here. Data suggests they are... good. This one would like a larger sample size. Of you, specifically."
 
     menu:
@@ -107,12 +109,12 @@ label zyx_pool_2:
             $ hugged_zyx = True
             "You hug. Zyx is very stiff at first, like a coat hanger. Then, slowly, their arms come up around you. Their antennae droop down over your shoulder."
             z blush "Oh."
-            z "Data confirmed. Data... very confirmed. This one may need to repeat the measurement. Several times. Science."
+            z "Data confirmed. Data... very confirmed. This one may need to repeat the measurement. For... science."
 
         "Offer a high five instead.":
             $ gain("zyx", 1)
             "Zyx studies your palm. Then, very carefully, presses their three-fingered glove against it, and leaves it there a little longer than a high five lasts."
-            z happy "A hug for hands. Efficient. We approve. We would approve more of the full version."
+            z happy "A hug for hands. Efficient. We approve. Maybe someday we will experience the full version."
 
         "\"Maybe later.\"":
             z neutral "Noted. Later. This one will hold you to the Earth word 'later.'"
@@ -150,9 +152,9 @@ label zyx_night_1:
 
     show zyx neutral at slightright
     z "Do you understand what your species has done here? Someone built a robot whose only purpose is to tell strangers their fortunes. Then other strangers stood in line for an hour to hear them."
-    z "Nobody is paid. Nobody wins. This one has been crying behind the dome, a little."
+    z "Nobody is paid. Nobody wins. It's beautiful. This one has been crying behind the dome, a little."
     "You look at the queue, at the capes and the headsets and the people reading each other's ping pong balls out loud. You'd walked past this room twice tonight without going in."
-    z "Now you. Your turn. This one will read yours personally."
+    z "Now you. Your turn. This one will read your fortune personally."
     "The robot whirs and prints a ball for you. Zyx reads it, and their antennae go straight up."
     robot "SOMEONE WILL TAKE YOU HOME."
     z blush "Home. Interesting. Home is four light-years away. That is a long commute."
@@ -170,7 +172,7 @@ label zyx_night_1:
             z happy "It has a view of every star. And the lighting is very flattering. You would look excellent in it."
 
         "\"I don't really believe in fortunes.\"":
-            z neutral "The Oracle does not need your belief. It is a robot. It has a printer."
+            z neutral "The Oracle does not need your belief. Maybe this one doesn't either."
 
     hide zyx with dissolve
     return
@@ -181,18 +183,18 @@ label zyx_night_2:
     "The Clinic of Unnecessary Procedures smells like rubbing alcohol and bubblegum. An eye chart on the wall is made entirely of astrological symbols."
     "Two nurses in vintage uniforms are wheeling Zyx in on a gurney. Zyx is protesting in a language that sounds a lot like the noise a modem makes."
     show zyx surprised with dissolve
-    nurse "Are you the alien's next of kin?"
+    nurse "Are you the alien's guardian?"
 
     menu:
         "\"Yes. I'm their emergency contact.\"":
             $ gain("zyx", 2)
             $ zyx_emergency_contact = True
             z blush "You are?"
-            z "...You are. Yes. Correct. This one's emergency contact. Please inform them of everything. Especially the intimate things."
+            z "...You are. Yes. This one's emergency contact. Please inform them of everything. Though maybe not the intimate things."
 
         "\"I'm a friend.\"":
             $ gain("zyx", 1)
-            nurse "A friend may stay. Friends are encouraged. It says so on the chart."
+            nurse "A friend may stay. Friends are encouraged."
             z neutral "For now. A friend. For now."
 
         "\"Never seen them before in my life.\"":
@@ -204,14 +206,14 @@ label zyx_night_2:
     z "Primitive. Charming. Ours are... more thorough. You would find them very interesting. One day this one may show you."
     nurse "May I listen to your heart, Ambassador? The stethoscope is cold. I'm asking first."
     z "...Permission granted."
-    "The nurse listens for a long, long time. She frowns. She moves the stethoscope. She frowns harder."
+    "The nurse listens for a long time. She frowns. She moves the stethoscope. She frowns harder."
     nurse "Heart: one. Normal size. Slightly lonely. And it's racing."
     z blush "The cause of the racing is standing right there. In the corner. Being symmetrical."
     nurse "It happens. Especially to travelers. Here's the prescription."
     "She writes on a pad and tears off the page with great ceremony: ONE (1) DANCE. TO BE TAKEN BEFORE SUNRISE. REPEAT AS NEEDED."
     show zyx neutral
     menu:
-        z "The prescription requires a partner. Are you... available? For medical purposes? And other purposes?"
+        z "The prescription requires a partner. Are you... available? For medical purposes? And maybe other purposes?"
 
         "\"Doctor's orders. I'm available.\"":
             $ gain("zyx", 2)
@@ -221,13 +223,13 @@ label zyx_night_2:
 
         "\"I'll have to check my schedule.\"":
             $ gain("zyx", 1)
-            z happy "A tease. Your species is called 'a tease.' We have the data. We find it very compelling."
+            z happy "A tease. Your species is called 'a tease.' We have the data. For some reason we find it very compelling."
 
         "\"You should ask someone else. I'm a terrible dancer.\"":
-            z neutral "Understood. This one will dance alone. Doctor's orders."
+            z neutral "Understood. This one will dance alone. Regardless of the doctor's orders."
             "They do, in the hallway, very precisely. Within a minute they're not alone at all. Within five, there's a line dance. Zyx leads it with a slightly puzzled expression."
 
-    "Afterward, walking the hall with Zyx is slow, because Zyx stops at everything. The carpet. A painted sign that says {i}HYDRATE OR DIEDRATE{/i}. A man asleep in a bathtub full of balloons, which Zyx photographs with their eyes only, as per the rules."
+    "Afterward, walking the hall with Zyx is slow, because Zyx stops at everything. The carpet. A painted sign that says {i}HYDRATE OR DIEDRATE{/i}. A man asleep in a bathtub full of empty nitrous canisters, which Zyx photographs with their eyes only, as per the rules."
     z "Did you see? Did you see that one? There is a door that has been painted to look like a different door."
     "You had stopped noticing the hallway hours ago. Zyx hasn't stopped once. By the elevators, you realize you're pointing things out too."
     hide zyx with dissolve
@@ -239,8 +241,8 @@ label zyx_night_3:
     "Someone has turned the ice machine alcove into a planetarium. Stars cover every surface. Constellations are drawn between them in faint blue lines. The ice machine glows in the middle like a small, cold sun."
     show zyx neutral with dissolve
     "Zyx is sitting on the floor in front of it, antennae dimmed, looking up."
-    "Every few minutes, someone sticks their head in. A crew member asking Zyx which way the fog should go. A regular of fifteen years asking Zyx whether he's doing the party right. Zyx answers each one with total confidence, and each one leaves looking relieved."
-    z "Ah. Earthling. Sit. There is room on this floor for exactly two. This one measured. Earlier. Before you arrived. Not because this one hoped."
+    "Every few minutes, someone sticks their head in. A crew member asking Zyx which way the fog should go. A regular of ten years asking Zyx whether he's doing the party right. Zyx answers each one with total confidence, and each one leaves looking relieved."
+    z "Ah. Earthling. Sit. There is room on this floor for exactly two. This one measured. Earlier. Before you arrived. For my notes, not because this one hoped."
     z "This is this one's favorite room. The ice machine dreams of the cold between stars. We understand each other."
     menu:
         z "That one, there. The faint one, near the Swan. That is home. Do you see it?"
@@ -259,9 +261,9 @@ label zyx_night_3:
             z neutral "Is anything? Is the ice machine? It makes ice. That seems real enough."
 
     show zyx neutral
-    z "For the report. This one has described the party from the outside. Describe it from the inside. Your favorite moment. Not the biggest. The favorite."
-    "You think about it. It isn't any of the big rooms. It's something small: a stranger saying hi, a song in a hallway, somebody's glitter ending up on you."
-    "You tell Zyx. They write it down very carefully, and when you hear it back in their voice, it sounds like the best weekend you've had in years. You think it might be."
+    z "For the report. This one has described the party from the outside. Can you describe it from the inside? Your favorite moment. Not the biggest, just your favorite."
+    "You think about it. It isn't any of the big rooms. You realize it's seeing the party through fresh eyes, Zyx's eyes. All three of them. You had forgotten how to enjoy yourself years ago, but now you realize you're starting to remember. You tell Zyx all of the little things you noticed that made you happy."
+    "Zyx writes it down very carefully, and when you hear it back in their voice, it sounds like the best weekend you've had in years. You think it might be."
     z "After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then..."
     z "Then this one is just Zyx. With no mission. On a strange planet, where everyone keeps asking this one for directions. That is the part this one is afraid of."
     menu:
@@ -282,7 +284,7 @@ label zyx_night_3:
             "The ice machine hums. It's a cold sound."
 
     if rapport["zyx"] >= ROMANCE_THRESHOLD:
-        z blush "After the big event. When the mission is complete. Come to the roof, and wear something you can be beamed in. There is one more piece of research this one wishes to do. With you. Only with you."
+        z blush "After the big event. When the mission is complete. Come to the roof, and wear something you can be beamed up in. There's one more piece of research this one wishes to do. Only with you."
     else:
         z happy "Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic."
     hide zyx with dissolve
@@ -312,7 +314,7 @@ label zyx_romance:
             z happy "It says extremely specific things about you. You will be studied for generations. Starting this morning."
 
     z neutral "{i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}"
-    z "{i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium.{/i}"
+    z "{i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium. None of this makes any sense.{/i}"
     z "{i}But one Earthling is ready. Recommend further study. Close study. Recommend this one brings the Earthling aboard.{/i}"
     "Hearing it read out loud, on the roof, at dawn, you realize how much of it you'd stopped seeing until Zyx pointed at it."
     show zyx blush
@@ -359,7 +361,7 @@ label zyx_romance:
     "The probe is warm, and patient, and it seems to know where you want it before you do. It lingers. It wanders. It finds places you didn't know were waiting to be found, and the hum settles somewhere deep inside you and stays."
     "You stop keeping track of time, or the stars, or anything except the slow, unhurried feeling of being explored, all of you, as if you were the most interesting thing in the galaxy. For a while, you are."
     "Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up."
-    z blush "Data... very, very confirmed. Further study required. Extensive further study."
+    z blush "Data... yes, confirmed. Further study required. Extensive further study."
     z "This one will need to repeat the experiment. For reproducibility. Science is very strict about this."
 
     scene bg roof_dawn with slowfade

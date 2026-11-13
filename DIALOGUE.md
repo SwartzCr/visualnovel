@@ -1,6 +1,6 @@
 # Do Not Disturb: all dialogue
 
-<!-- exported from commit bf0fef2 -->
+<!-- exported from commit 83c466a -->
 
 Edit this file and send it back; the changes get applied to the game.
 
@@ -1715,384 +1715,386 @@ Edit this file and send it back; the changes get applied to the game.
 
 `zyx:16` **▸** Explain Marco Polo as seriously as possible.  
 > *rapport +2 Zyx*  
-`zyx:18` You explain the rules in full. The seeker. The call. The response. The fish-out-of-water rule, which you're not sure is real.  
+`zyx:18` You explain the rules in full. The seeker. The call and response. The fish-out-of-water rule, which you're not sure is real.  
 `zyx:19` **Zyx (happy):** Fascinating. A game of trust and echolocation. Your species is part bat. We suspected.  
 `zyx:20` They write {i}PART BAT{/i} in large letters on the clipboard and underline it twice.  
+`zyx:21` Then the clipboard goes down, and Zyx wades into the shallow end to test the theory in person.  
 
-`zyx:22` **▸** "Just play it with me. You'll get it."  
+`zyx:23` **▸** "Just play it with me. You'll get it."  
 > *rapport +1 Zyx*  
-`zyx:24` You drag them into the shallow end. Zyx is the seeker. They close all three eyes.  
-`zyx:25` **Zyx (surprised):** MARCO.  
-`zyx:26` Everyone shouts POLO. Zyx's antennae go limp with delight.  
-`zyx:27` **Zyx (happy):** Again. AGAIN.  
+`zyx:25` You drag them into the shallow end. Zyx is the seeker. They close all three eyes.  
+`zyx:26` **Zyx (surprised):** MARCO.  
+`zyx:27` Everyone shouts POLO. Zyx's antennae go limp with delight.  
+`zyx:28` **Zyx (happy):** Again. AGAIN.  
 
-`zyx:29` **▸** "Are you... actually an alien?"  
-`zyx:30` **Zyx (neutral):** Are you actually a human?  
-`zyx:31` **Zyx:** Do not answer. It would ruin it. For both of us.  
+`zyx:30` **▸** "Are you... actually an alien?"  
+`zyx:31` **Zyx (neutral):** Are you actually a human?  
+`zyx:32` **Zyx:** Do not answer. It would ruin it. For both of us.  
+`zyx:33` Then they set the clipboard down and wade into the shallow end to play anyway.  
 > *(end of choice)*
 
-`zyx:33` Ten minutes later, the Marco Polo players vote Zyx honorary seeker for life. Zyx has played once. You have been trying to get into that game since noon.  
-`zyx:34` A woman who has been coming to this party for eleven years swims over to ask Zyx how they got in with the pool crowd so fast. Zyx tells her to {i}simply arrive from space.{/i} She nods and writes it down.  
+`zyx:35` Ten minutes later, the Marco Polo players vote Zyx honorary seeker for life. Zyx has played once. You have been trying to get into that game since noon.  
+`zyx:36` A woman who has been coming to this party for eleven years swims over to ask Zyx how they got in with the pool crowd so fast. Zyx tells her to {i}simply arrive from space.{/i} She nods and writes it down.  
 > *show zyx neutral*  
-`zyx:37` **Zyx:** Observe. Seven hundred humans. None of them were made to come here. They each decided, separately, to spend a weekend being kind to strangers in costumes.  
-`zyx:38` **Zyx:** On the Outer Drift, an agreement like that would take a treaty. Here it took a group chat.  
-`zyx:39` You look back at the pool: the sunscreen, the inflatable flamingo, the grown adults shrieking POLO. An hour ago it was just a pool. It's a little hard to see it that way now.  
-`zyx:40` Zyx explains that they are here on a research mission: to determine whether Earth is ready for contact.  
-`zyx:41` **Zyx:** Our current findings: Earth is not ready. Earth is very, very fun. These two findings are in tension. The report is going poorly.  
+`zyx:39` **Zyx:** Observe. Seven hundred humans. None of them were made to come here. They each decided, separately, to spend a weekend being kind to strangers in costumes.  
+`zyx:40` **Zyx:** On the Outer Drift, an agreement like that would take a treaty. Here it took a group chat.  
+`zyx:41` You look back at the pool: the sunscreen, the inflatable flamingo, the grown adults shrieking POLO. An hour ago it was just a pool, now you see a party.  
+`zyx:42` Zyx explains that they are here on a research mission: to determine whether Earth is ready for contact.  
+`zyx:43` **Zyx:** Our current findings: Earth is not ready, and yet Earth is very, very fun. These two findings are in tension. The report mission is going poorly.  
 
 > **Choice**
-`zyx:44` **Zyx:** Question for the report. Why do humans gather like this? In secret? Wearing other faces?  
+`zyx:46` **Zyx:** Question for the report. Why do humans gather like this? In secret? Wearing other faces?  
 
-`zyx:46` **▸** "Because sometimes the other face is the real one."  
+`zyx:48` **▸** "Because sometimes it's nice trying to be someone new. Who knows, maybe the other face is the real one."  
 > *rapport +2 Zyx*  
-`zyx:48` All three of Zyx's eyes look at you at once.  
-`zyx:49` **Zyx (blush):** ...That is the most accurate thing anyone has said for the report.  
-`zyx:50` **Zyx:** This one is writing it down. With your name. No, without your name. Earth rules. No names in the report.  
+`zyx:50` All three of Zyx's eyes look at you at once.  
+`zyx:51` **Zyx (blush):** ...That is the most accurate thing anyone has said for the report.  
+`zyx:52` **Zyx:** This one is writing it down. With your name. No, without your name. Earth rules. No names in the report.  
 
-`zyx:52` **▸** "To have fun. That's it. That's all."  
+`zyx:54` **▸** "To have fun. That's it. That's all."  
 > *rapport +1 Zyx*  
-`zyx:54` **Zyx (happy):** Simple. Elegant. This one respects it. Writing: FUN.  
+`zyx:56` **Zyx (happy):** Simple. Elegant. This one respects it. Writing: FUN.  
 
-`zyx:56` **▸** "I'm not sure. I came here to find out."  
+`zyx:58` **▸** "I'm not sure. I came here to find out."  
 > *rapport +1 Zyx*  
-`zyx:58` **Zyx (neutral):** A fellow researcher. We will compare notes before the end.  
+`zyx:60` **Zyx (neutral):** A fellow researcher. We will compare notes before the end.  
 > *(end of choice)*
 
-`zyx:60` **Zyx (neutral):** One more observation. Unrelated to the mission.  
-`zyx:61` **Zyx (blush):** Your face is very symmetrical. This one checked twice. Three times, actually. This one has three eyes.  
-`zyx:62` **Zyx:** Also, this one's antennae have been pointing at you since you sat down. This is not voluntary. It will be investigated.  
+`zyx:62` **Zyx (neutral):** One more observation. Unrelated to the mission.  
+`zyx:63` **Zyx (blush):** Your face is very symmetrical. This one checked twice. Three times, actually. This one has three eyes.  
+`zyx:64` **Zyx:** Also, this one's antennae have been pointing at you since you sat down. This is not voluntary. It will be investigated.  
 
 ## zyx_pool_2
 
-`zyx:68` There's a queue at the far end of the pool. Someone has made a sign out of a pizza box: THE MUSEUM OF THE OUTER DRIFT. FREE. NO PHOTOS. GIFT SHOP COMING SOON.  
-`zyx:69` At the front, Zyx is curating a beach towel covered in EARTH ARTIFACTS: nine mismatched flip-flops, a pair of sunglasses, a single swim fin, and a paperback novel swollen to twice its size from water.  
-`zyx:70` Two people from the art crew are taking notes on how Zyx did it. Zyx does not know it's an art piece. Zyx thinks it's a museum.  
+`zyx:70` There's a queue at the far end of the pool. Someone has made a sign out of a pizza box: THE MUSEUM OF THE OUTER DRIFT. FREE. NO PHOTOS. GIFT SHOP COMING SOON.  
+`zyx:71` At the front, Zyx is curating a beach towel covered in EARTH ARTIFACTS: three mismatched flip-flops, a pair of sunglasses, a single swim fin, a paperback novel swollen to twice its size from water, and pool noodles tying everything together.  
+`zyx:72` Two people from the art crew are taking notes on how Zyx did it. Zyx does not know it's an art piece. Zyx thinks it's a museum.  
 > *show zyx happy*  
-`zyx:72` **Zyx:** Earthling! You are here. You may skip the line. You are this one's favorite visitor. Do not tell the other visitors.  
-`zyx:73` **Zyx:** Every visitor gives one artifact. It is the custom of our people. Since this morning. We invented it this morning, and now it is the custom of yours too, apparently.  
+`zyx:74` **Zyx:** Earthling! You are here. You may skip the line. You are this one's favorite visitor. Do not tell the other visitors.  
+`zyx:75` **Zyx:** Every visitor gives one artifact. It is the custom of our people. Since this morning. We invented it this morning.  
 
 > **Choice**
-`zyx:76` **Zyx:** What do you donate to the Outer Drift?  
+`zyx:78` **Zyx:** What do you donate to the Outer Drift?  
 
-`zyx:78` **▸** Find a perfect smooth pebble by the planters, and explain that it's a 'nice rock.'  
+`zyx:80` **▸** Find a perfect smooth pebble by the planters, and explain that it's a 'nice rock.'  
 > *rapport +2 Zyx*  
-`zyx:81` **Zyx (surprised):** A nice rock.  
-`zyx:82` They hold it up to the light from the atrium roof with all three eyes.  
-`zyx:83` **Zyx (happy):** On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This changes everything. This is the centerpiece.  
+`zyx:83` **Zyx (surprised):** A nice rock.  
+`zyx:84` They hold it up to the light from the atrium roof with all three eyes.  
+`zyx:85` **Zyx (happy):** On the Outer Drift, there are no nice rocks. Every rock is jagged and furious. This will be the new centerpiece.  
 
-`zyx:85` **▸** Your hotel key card.  
+`zyx:87` **▸** Your hotel key card.  
 > *rapport +1 Zyx*  
-`zyx:87` **Zyx (neutral):** A key to a door that already opens. Because everyone who enters is already checked in.  
-`zyx:88` **Zyx (happy):** Profound. It goes in the philosophy wing.  
+`zyx:89` **Zyx (neutral):** A key to a door that already opens, and yet an invitation to continue our research.  
+`zyx:90` **Zyx (happy):** Profound. It goes in the philosophy wing.  
 
-`zyx:90` **▸** "Nothing. Sorry. I need all my stuff."  
-`zyx:91` **Zyx (neutral):** Understandable. Humans are very attached to stuff. We have noted it.  
+`zyx:92` **▸** "Nothing. Sorry. I need all my stuff."  
+`zyx:93` **Zyx (neutral):** Understandable. Humans are very attached to stuff. We have noted it.  
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:94` You look at the towel of artifacts again. A child-size flip-flop. Sunglasses with one lens. A paperback someone read until it fell in the pool.  
-`zyx:95` **Zyx:** Every object here is proof that someone had a good time and forgot about their belongings. On the Outer Drift, nobody has ever had that good a time.  
-`zyx:96` For a second you see it the way Zyx does: not lost property, but a record of everyone who was too happy to keep track of their stuff.  
-`zyx:97` Zyx leaves the museum in the care of a volunteer who has already, unprompted, made themself a little docent badge. Zyx sits down on a lounger next to you, close, and folds their silver hands.  
-`zyx:98` **Zyx:** The Outer Drift is very quiet. Thirty-one of us, spread across a nebula. We communicate by changing color, very slowly. A conversation can take a year.  
-`zyx:99` **Zyx:** No one has hugged on the Outer Drift since the third moon. We are not built for it. Too many antennae.  
-`zyx:100` **Zyx:** But this one has observed many hugs here. Data suggests they are... good. This one would like a larger sample size. Of you, specifically.  
+`zyx:96` You look at the towel of artifacts again. A child-size flip-flop. Sunglasses with one lens. A paperback someone read until it fell in the pool.  
+`zyx:97` **Zyx:** Every object here is proof that someone had a good time and forgot about their belongings. On the Outer Drift, nobody has ever had that good a time.  
+`zyx:98` For a second you see it the way Zyx does: not lost property, but a record of everyone who was too happy to keep track of their stuff.  
+`zyx:99` Zyx leaves the museum in the care of a volunteer who has already, unprompted, made themself a little docent badge. Zyx sits down on a lounger next to you, close, and folds their silver hands.  
+`zyx:100` **Zyx:** The Outer Drift is very quiet. Thirty-one of us, spread across a nebula. We communicate by changing color, very slowly. A conversation can take a year.  
+`zyx:101` **Zyx:** No one has hugged on the Outer Drift since the third moon diaspora. Being here has opened my three eyes to a world of new possibilities.  
+`zyx:102` **Zyx:** But this one has observed many hugs here. Data suggests they are... good. This one would like a larger sample size. Of you, specifically.  
 
 > **Choice**
-`zyx:103` **Zyx:** Earthling. For the report. Please demonstrate a hug. Consent is requested, in the Earth style.  
+`zyx:105` **Zyx:** Earthling. For the report. Please demonstrate a hug. Consent is requested, in the Earth style.  
 
-`zyx:105` **▸** "Yes. Come here."  
+`zyx:107` **▸** "Yes. Come here."  
 > *rapport +2 Zyx*  
-`zyx:108` You hug. Zyx is very stiff at first, like a coat hanger. Then, slowly, their arms come up around you. Their antennae droop down over your shoulder.  
-`zyx:109` **Zyx (blush):** Oh.  
-`zyx:110` **Zyx:** Data confirmed. Data... very confirmed. This one may need to repeat the measurement. Several times. Science.  
+`zyx:110` You hug. Zyx is very stiff at first, like a coat hanger. Then, slowly, their arms come up around you. Their antennae droop down over your shoulder.  
+`zyx:111` **Zyx (blush):** Oh.  
+`zyx:112` **Zyx:** Data confirmed. Data... very confirmed. This one may need to repeat the measurement. For... science.  
 
-`zyx:112` **▸** Offer a high five instead.  
+`zyx:114` **▸** Offer a high five instead.  
 > *rapport +1 Zyx*  
-`zyx:114` Zyx studies your palm. Then, very carefully, presses their three-fingered glove against it, and leaves it there a little longer than a high five lasts.  
-`zyx:115` **Zyx (happy):** A hug for hands. Efficient. We approve. We would approve more of the full version.  
+`zyx:116` Zyx studies your palm. Then, very carefully, presses their three-fingered glove against it, and leaves it there a little longer than a high five lasts.  
+`zyx:117` **Zyx (happy):** A hug for hands. Efficient. We approve. Maybe someday we will experience the full version.  
 
-`zyx:117` **▸** "Maybe later."  
-`zyx:118` **Zyx (neutral):** Noted. Later. This one will hold you to the Earth word 'later.'  
+`zyx:119` **▸** "Maybe later."  
+`zyx:120` **Zyx (neutral):** Noted. Later. This one will hold you to the Earth word 'later.'  
 > *(end of choice)*
 
 ## zyx_night_1
 
 > *scene bg fortune*  
-`zyx:126` THE ORACLE OF PING PONG, says the sign. A boxy robot with a glass dome on its head takes ping pong balls from a lottery machine and prints fortunes on them with a tiny buzzing arm.  
-`zyx:127` People in capes and headsets queue in the purple light. Most of them aren't queuing for the robot. They're queuing for Zyx, who has started interpreting everyone's fortunes, and is apparently better at it than the robot.  
+`zyx:128` THE ORACLE OF PING PONG, says the sign. A boxy robot with a glass dome on its head takes ping pong balls from a lottery machine and prints fortunes on them with a tiny buzzing arm.  
+`zyx:129` People in capes and headsets queue in the purple light. Most of them aren't queuing for the robot. They're queuing for Zyx, who has started interpreting everyone's fortunes, and is apparently better at it than the robot.  
 > *show zyx neutral at slightright*  
-`zyx:129` **Zyx:** Earthling! You are just in time. This machine is the most advanced intelligence on your planet. This one is its assistant now. Nobody asked. It simply happened.  
-`zyx:130` A man who has run this room for six years is standing off to the side, holding a ping pong ball, looking quietly replaced.  
-`zyx:131` The robot whirs. It spits out a ball. Zyx catches it and reads it aloud.  
-`zyx:132` **THE ORACLE:** YOU ARE NOT THE ONLY ONE.  
+`zyx:131` **Zyx:** Earthling! You are just in time. This machine is the most advanced intelligence on your planet. This one is its assistant now. Nobody asked. It simply happened.  
+`zyx:132` A man who has run this room for six years is standing off to the side, holding a ping pong ball, looking quietly replaced.  
+`zyx:133` The robot whirs. It spits out a ball. Zyx catches it and reads it aloud.  
+`zyx:134` **THE ORACLE:** YOU ARE NOT THE ONLY ONE.  
 > *show zyx surprised at slightright*  
-`zyx:134` **Zyx:** Not the only one. Not the only one... what? This is troubling. Interpret it, please. This one only interprets other people's.  
+`zyx:136` **Zyx:** Not the only one. Not the only one... what? This is troubling. Interpret it, please. This one only interprets other people's.  
 
 > **Choice**
 
-`zyx:137` **▸** "It means you're not alone. Here, at least."  
+`zyx:139` **▸** "It means you're not alone. Here, at least."  
 > *rapport +2 Zyx*  
-`zyx:139` **Zyx (blush):** Not alone.  
-`zyx:140` They turn the ball over and over in their gloved fingers.  
-`zyx:141` **Zyx:** On the Outer Drift, the nearest Zyx is four light-years away. This one had forgotten that 'not alone' was a thing a person could be.  
+`zyx:141` **Zyx (blush):** Not alone.  
+`zyx:142` They turn the ball over and over in their gloved fingers.  
+`zyx:143` **Zyx:** On the Outer Drift, the nearest Zyx is four light-years away. This one had forgotten that 'not alone' was a thing a person could be.  
 
-`zyx:143` **▸** "It means there's another alien at this party."  
+`zyx:145` **▸** "It means there's another alien at this party."  
 > *rapport +1 Zyx*  
-`zyx:145` **Zyx (surprised):** !!!  
-`zyx:146` Zyx spins around, scanning the crowd with all three eyes. A man in a cape waves at them. Zyx waves back, suspicious. The man looks thrilled to have been noticed.  
+`zyx:147` **Zyx (surprised):** !!!  
+`zyx:148` Zyx spins around, scanning the crowd with all three eyes. A man in a cape waves at them. Zyx waves back, suspicious. The man looks thrilled to have been noticed.  
 
-`zyx:148` **▸** "It's a ping pong ball. It doesn't mean anything."  
-`zyx:149` **Zyx (neutral):** Everything means something to the Oracle. But we will log your skepticism.  
+`zyx:150` **▸** "It's a ping pong ball. It doesn't mean anything."  
+`zyx:151` **Zyx (neutral):** Everything means something to the Oracle. But we will log your skepticism.  
 > *(end of choice)*
 
 > *show zyx neutral at slightright*  
-`zyx:152` **Zyx:** Do you understand what your species has done here? Someone built a robot whose only purpose is to tell strangers their fortunes. Then other strangers stood in line for an hour to hear them.  
-`zyx:153` **Zyx:** Nobody is paid. Nobody wins. This one has been crying behind the dome, a little.  
-`zyx:154` You look at the queue, at the capes and the headsets and the people reading each other's ping pong balls out loud. You'd walked past this room twice tonight without going in.  
-`zyx:155` **Zyx:** Now you. Your turn. This one will read yours personally.  
-`zyx:156` The robot whirs and prints a ball for you. Zyx reads it, and their antennae go straight up.  
-`zyx:157` **THE ORACLE:** SOMEONE WILL TAKE YOU HOME.  
-`zyx:158` **Zyx (blush):** Home. Interesting. Home is four light-years away. That is a long commute.  
-`zyx:159` **Zyx:** This one is willing to drive.  
+`zyx:154` **Zyx:** Do you understand what your species has done here? Someone built a robot whose only purpose is to tell strangers their fortunes. Then other strangers stood in line for an hour to hear them.  
+`zyx:155` **Zyx:** Nobody is paid. Nobody wins. It's beautiful. This one has been crying behind the dome, a little.  
+`zyx:156` You look at the queue, at the capes and the headsets and the people reading each other's ping pong balls out loud. You'd walked past this room twice tonight without going in.  
+`zyx:157` **Zyx:** Now you. Your turn. This one will read your fortune personally.  
+`zyx:158` The robot whirs and prints a ball for you. Zyx reads it, and their antennae go straight up.  
+`zyx:159` **THE ORACLE:** SOMEONE WILL TAKE YOU HOME.  
+`zyx:160` **Zyx (blush):** Home. Interesting. Home is four light-years away. That is a long commute.  
+`zyx:161` **Zyx:** This one is willing to drive.  
 
 > **Choice**
-`zyx:161` **Zyx:** Will you follow the Oracle's guidance?  
+`zyx:163` **Zyx:** Will you follow the Oracle's guidance?  
 
-`zyx:163` **▸** "Only if it's you."  
+`zyx:165` **▸** "Only if it's you."  
 > *rapport +2 Zyx*  
-`zyx:165` **Zyx (blush):** Ah.  
-`zyx:166` **Zyx:** Then it is decided. The Oracle has spoken. This one is taking you home. Eventually. For science.  
+`zyx:167` **Zyx (blush):** Ah.  
+`zyx:168` **Zyx:** Then it is decided. The Oracle has spoken. This one is taking you home. Eventually. For science.  
 
-`zyx:168` **▸** "Depends. Is your place nice?"  
+`zyx:170` **▸** "Depends. Is your place nice?"  
 > *rapport +1 Zyx*  
-`zyx:170` **Zyx (happy):** It has a view of every star. And the lighting is very flattering. You would look excellent in it.  
+`zyx:172` **Zyx (happy):** It has a view of every star. And the lighting is very flattering. You would look excellent in it.  
 
-`zyx:172` **▸** "I don't really believe in fortunes."  
-`zyx:173` **Zyx (neutral):** The Oracle does not need your belief. It is a robot. It has a printer.  
+`zyx:174` **▸** "I don't really believe in fortunes."  
+`zyx:175` **Zyx (neutral):** The Oracle does not need your belief. Maybe this one doesn't either.  
 > *(end of choice)*
 
 ## zyx_night_2
 
 > *scene bg clinic*  
-`zyx:181` The Clinic of Unnecessary Procedures smells like rubbing alcohol and bubblegum. An eye chart on the wall is made entirely of astrological symbols.  
-`zyx:182` Two nurses in vintage uniforms are wheeling Zyx in on a gurney. Zyx is protesting in a language that sounds a lot like the noise a modem makes.  
+`zyx:183` The Clinic of Unnecessary Procedures smells like rubbing alcohol and bubblegum. An eye chart on the wall is made entirely of astrological symbols.  
+`zyx:184` Two nurses in vintage uniforms are wheeling Zyx in on a gurney. Zyx is protesting in a language that sounds a lot like the noise a modem makes.  
 > *show zyx surprised*  
-`zyx:184` **Nurse Ratchet-and-Clank:** Are you the alien's next of kin?  
+`zyx:186` **Nurse Ratchet-and-Clank:** Are you the alien's guardian?  
 
 > **Choice**
 
-`zyx:187` **▸** "Yes. I'm their emergency contact."  
+`zyx:189` **▸** "Yes. I'm their emergency contact."  
 > *rapport +2 Zyx*  
-`zyx:190` **Zyx (blush):** You are?  
-`zyx:191` **Zyx:** ...You are. Yes. Correct. This one's emergency contact. Please inform them of everything. Especially the intimate things.  
+`zyx:192` **Zyx (blush):** You are?  
+`zyx:193` **Zyx:** ...You are. Yes. This one's emergency contact. Please inform them of everything. Though maybe not the intimate things.  
 
-`zyx:193` **▸** "I'm a friend."  
+`zyx:195` **▸** "I'm a friend."  
 > *rapport +1 Zyx*  
-`zyx:195` **Nurse Ratchet-and-Clank:** A friend may stay. Friends are encouraged. It says so on the chart.  
-`zyx:196` **Zyx (neutral):** For now. A friend. For now.  
+`zyx:197` **Nurse Ratchet-and-Clank:** A friend may stay. Friends are encouraged.  
+`zyx:198` **Zyx (neutral):** For now. A friend. For now.  
 
-`zyx:198` **▸** "Never seen them before in my life."  
-`zyx:199` **Zyx (surprised):** Betrayal! This one will be noting this in the report! In red!  
-`zyx:200` The nurses let you stay anyway. They need a witness.  
+`zyx:200` **▸** "Never seen them before in my life."  
+`zyx:201` **Zyx (surprised):** Betrayal! This one will be noting this in the report! In red!  
+`zyx:202` The nurses let you stay anyway. They need a witness.  
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:203` While the nurses prepare, Zyx examines the clinic's instruments with professional interest: a tongue depressor, a reflex hammer, a rubber glove.  
-`zyx:204` **Zyx:** Primitive. Charming. Ours are... more thorough. You would find them very interesting. One day this one may show you.  
-`zyx:205` **Nurse Ratchet-and-Clank:** May I listen to your heart, Ambassador? The stethoscope is cold. I'm asking first.  
-`zyx:206` **Zyx:** ...Permission granted.  
-`zyx:207` The nurse listens for a long, long time. She frowns. She moves the stethoscope. She frowns harder.  
-`zyx:208` **Nurse Ratchet-and-Clank:** Heart: one. Normal size. Slightly lonely. And it's racing.  
-`zyx:209` **Zyx (blush):** The cause of the racing is standing right there. In the corner. Being symmetrical.  
-`zyx:210` **Nurse Ratchet-and-Clank:** It happens. Especially to travelers. Here's the prescription.  
-`zyx:211` She writes on a pad and tears off the page with great ceremony: ONE (1) DANCE. TO BE TAKEN BEFORE SUNRISE. REPEAT AS NEEDED.  
+`zyx:205` While the nurses prepare, Zyx examines the clinic's instruments with professional interest: a tongue depressor, a reflex hammer, a rubber glove.  
+`zyx:206` **Zyx:** Primitive. Charming. Ours are... more thorough. You would find them very interesting. One day this one may show you.  
+`zyx:207` **Nurse Ratchet-and-Clank:** May I listen to your heart, Ambassador? The stethoscope is cold. I'm asking first.  
+`zyx:208` **Zyx:** ...Permission granted.  
+`zyx:209` The nurse listens for a long time. She frowns. She moves the stethoscope. She frowns harder.  
+`zyx:210` **Nurse Ratchet-and-Clank:** Heart: one. Normal size. Slightly lonely. And it's racing.  
+`zyx:211` **Zyx (blush):** The cause of the racing is standing right there. In the corner. Being symmetrical.  
+`zyx:212` **Nurse Ratchet-and-Clank:** It happens. Especially to travelers. Here's the prescription.  
+`zyx:213` She writes on a pad and tears off the page with great ceremony: ONE (1) DANCE. TO BE TAKEN BEFORE SUNRISE. REPEAT AS NEEDED.  
 > *show zyx neutral*  
 
 > **Choice**
-`zyx:214` **Zyx:** The prescription requires a partner. Are you... available? For medical purposes? And other purposes?  
+`zyx:216` **Zyx:** The prescription requires a partner. Are you... available? For medical purposes? And maybe other purposes?  
 
-`zyx:216` **▸** "Doctor's orders. I'm available."  
+`zyx:218` **▸** "Doctor's orders. I'm available."  
 > *rapport +2 Zyx*  
-`zyx:218` **Zyx (blush):** Medical purposes. Yes. Strictly medical. Mostly.  
-`zyx:219` Zyx dances like an alien who's watched a lot of dancing through a telescope: very precise, very wrong. You love it.  
-`zyx:220` So, it turns out, does everyone else. By the end of the song, thirty people in the hallway are copying it. Somebody upstairs is already calling it {i}the Zyx{/i}. You are the only one still doing it wrong.  
+`zyx:220` **Zyx (blush):** Medical purposes. Yes. Strictly medical. Mostly.  
+`zyx:221` Zyx dances like an alien who's watched a lot of dancing through a telescope: very precise, very wrong. You love it.  
+`zyx:222` So, it turns out, does everyone else. By the end of the song, thirty people in the hallway are copying it. Somebody upstairs is already calling it {i}the Zyx{/i}. You are the only one still doing it wrong.  
 
-`zyx:222` **▸** "I'll have to check my schedule."  
+`zyx:224` **▸** "I'll have to check my schedule."  
 > *rapport +1 Zyx*  
-`zyx:224` **Zyx (happy):** A tease. Your species is called 'a tease.' We have the data. We find it very compelling.  
+`zyx:226` **Zyx (happy):** A tease. Your species is called 'a tease.' We have the data. For some reason we find it very compelling.  
 
-`zyx:226` **▸** "You should ask someone else. I'm a terrible dancer."  
-`zyx:227` **Zyx (neutral):** Understood. This one will dance alone. Doctor's orders.  
-`zyx:228` They do, in the hallway, very precisely. Within a minute they're not alone at all. Within five, there's a line dance. Zyx leads it with a slightly puzzled expression.  
+`zyx:228` **▸** "You should ask someone else. I'm a terrible dancer."  
+`zyx:229` **Zyx (neutral):** Understood. This one will dance alone. Regardless of the doctor's orders.  
+`zyx:230` They do, in the hallway, very precisely. Within a minute they're not alone at all. Within five, there's a line dance. Zyx leads it with a slightly puzzled expression.  
 > *(end of choice)*
 
-`zyx:230` Afterward, walking the hall with Zyx is slow, because Zyx stops at everything. The carpet. A painted sign that says {i}HYDRATE OR DIEDRATE{/i}. A man asleep in a bathtub full of balloons, which Zyx photographs with their eyes only, as per the rules.  
-`zyx:231` **Zyx:** Did you see? Did you see that one? There is a door that has been painted to look like a different door.  
-`zyx:232` You had stopped noticing the hallway hours ago. Zyx hasn't stopped once. By the elevators, you realize you're pointing things out too.  
+`zyx:232` Afterward, walking the hall with Zyx is slow, because Zyx stops at everything. The carpet. A painted sign that says {i}HYDRATE OR DIEDRATE{/i}. A man asleep in a bathtub full of empty nitrous canisters, which Zyx photographs with their eyes only, as per the rules.  
+`zyx:233` **Zyx:** Did you see? Did you see that one? There is a door that has been painted to look like a different door.  
+`zyx:234` You had stopped noticing the hallway hours ago. Zyx hasn't stopped once. By the elevators, you realize you're pointing things out too.  
 
 ## zyx_night_3
 
 > *scene bg planetarium*  
-`zyx:239` Someone has turned the ice machine alcove into a planetarium. Stars cover every surface. Constellations are drawn between them in faint blue lines. The ice machine glows in the middle like a small, cold sun.  
+`zyx:241` Someone has turned the ice machine alcove into a planetarium. Stars cover every surface. Constellations are drawn between them in faint blue lines. The ice machine glows in the middle like a small, cold sun.  
 > *show zyx neutral*  
-`zyx:241` Zyx is sitting on the floor in front of it, antennae dimmed, looking up.  
-`zyx:242` Every few minutes, someone sticks their head in. A crew member asking Zyx which way the fog should go. A regular of fifteen years asking Zyx whether he's doing the party right. Zyx answers each one with total confidence, and each one leaves looking relieved.  
-`zyx:243` **Zyx:** Ah. Earthling. Sit. There is room on this floor for exactly two. This one measured. Earlier. Before you arrived. Not because this one hoped.  
-`zyx:244` **Zyx:** This is this one's favorite room. The ice machine dreams of the cold between stars. We understand each other.  
+`zyx:243` Zyx is sitting on the floor in front of it, antennae dimmed, looking up.  
+`zyx:244` Every few minutes, someone sticks their head in. A crew member asking Zyx which way the fog should go. A regular of ten years asking Zyx whether he's doing the party right. Zyx answers each one with total confidence, and each one leaves looking relieved.  
+`zyx:245` **Zyx:** Ah. Earthling. Sit. There is room on this floor for exactly two. This one measured. Earlier. Before you arrived. For my notes, not because this one hoped.  
+`zyx:246` **Zyx:** This is this one's favorite room. The ice machine dreams of the cold between stars. We understand each other.  
 
 > **Choice**
-`zyx:246` **Zyx:** That one, there. The faint one, near the Swan. That is home. Do you see it?  
+`zyx:248` **Zyx:** That one, there. The faint one, near the Swan. That is home. Do you see it?  
 
-`zyx:248` **▸** "I can't find it. Show me?"  
+`zyx:250` **▸** "I can't find it. Show me?"  
 > *rapport +2 Zyx*  
-`zyx:250` **Zyx (neutral):** May this one take your hand to point?  
-`zyx:251` You say yes. Their gloved fingers wrap around yours and guide your arm up to a dim, blue star. They don't let go after.  
-`zyx:252` **Zyx (blush):** There. Home. Now two beings on this planet know where it is. Soon, perhaps, two beings will have been there.  
+`zyx:252` **Zyx (neutral):** May this one take your hand to point?  
+`zyx:253` You say yes. Their gloved fingers wrap around yours and guide your arm up to a dim, blue star. They don't let go after.  
+`zyx:254` **Zyx (blush):** There. Home. Now two beings on this planet know where it is. Soon, perhaps, two beings will have been there.  
 
-`zyx:254` **▸** "I see it. It's beautiful."  
+`zyx:256` **▸** "I see it. It's beautiful."  
 > *rapport +1 Zyx*  
-`zyx:256` **Zyx (happy):** It is not, actually. It is very small and quite gray. But thank you. You are more beautiful. That is a scientific finding.  
+`zyx:258` **Zyx (happy):** It is not, actually. It is very small and quite gray. But thank you. You are more beautiful. That is a scientific finding.  
 
-`zyx:258` **▸** "Is home even real?"  
-`zyx:259` **Zyx (neutral):** Is anything? Is the ice machine? It makes ice. That seems real enough.  
+`zyx:260` **▸** "Is home even real?"  
+`zyx:261` **Zyx (neutral):** Is anything? Is the ice machine? It makes ice. That seems real enough.  
 > *(end of choice)*
 
 > *show zyx neutral*  
-`zyx:262` **Zyx:** For the report. This one has described the party from the outside. Describe it from the inside. Your favorite moment. Not the biggest. The favorite.  
-`zyx:263` You think about it. It isn't any of the big rooms. It's something small: a stranger saying hi, a song in a hallway, somebody's glitter ending up on you.  
-`zyx:264` You tell Zyx. They write it down very carefully, and when you hear it back in their voice, it sounds like the best weekend you've had in years. You think it might be.  
-`zyx:265` **Zyx:** After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then...  
-`zyx:266` **Zyx:** Then this one is just Zyx. With no mission. On a strange planet, where everyone keeps asking this one for directions. That is the part this one is afraid of.  
+`zyx:264` **Zyx:** For the report. This one has described the party from the outside. Can you describe it from the inside? Your favorite moment. Not the biggest, just your favorite.  
+`zyx:265` You think about it. It isn't any of the big rooms. You realize it's seeing the party through fresh eyes, Zyx's eyes. All three of them. You had forgotten how to enjoy yourself years ago, but now you realize you're starting to remember. You tell Zyx all of the little things you noticed that made you happy.  
+`zyx:266` Zyx writes it down very carefully, and when you hear it back in their voice, it sounds like the best weekend you've had in years. You think it might be.  
+`zyx:267` **Zyx:** After the big event, the mission ends. The Ambassadors make their entrance into the ballroom at 11:11. Then the report is complete. And then...  
+`zyx:268` **Zyx:** Then this one is just Zyx. With no mission. On a strange planet, where everyone keeps asking this one for directions. That is the part this one is afraid of.  
 
 > **Choice**
-`zyx:268` **Zyx:** Most Earthlings ask what is under the suit. Would you like to know?  
+`zyx:270` **Zyx:** Most Earthlings ask what is under the suit. Would you like to know?  
 
-`zyx:270` **▸** "Only if you want to tell me. I like Zyx."  
+`zyx:272` **▸** "Only if you want to tell me. I like Zyx."  
 > *rapport +2 Zyx*  
-`zyx:272` Zyx's antennae light up, very slowly, pink.  
-`zyx:273` **Zyx (blush):** You like Zyx.  
-`zyx:274` **Zyx:** Then Zyx is what you get. Zyx is what is under the suit. All the way down. You are welcome to check. Thoroughly. Later.  
+`zyx:274` Zyx's antennae light up, very slowly, pink.  
+`zyx:275` **Zyx (blush):** You like Zyx.  
+`zyx:276` **Zyx:** Then Zyx is what you get. Zyx is what is under the suit. All the way down. You are welcome to check. Thoroughly. Later.  
 
-`zyx:276` **▸** "No. Keep the mystery. It's yours."  
+`zyx:278` **▸** "No. Keep the mystery. It's yours."  
 > *rapport +1 Zyx*  
-`zyx:278` **Zyx (happy):** A respecter of mysteries. Rare. Noted. This one has some mysteries of yours it would like to investigate, in return.  
+`zyx:280` **Zyx (happy):** A respecter of mysteries. Rare. Noted. This one has some mysteries of yours it would like to investigate, in return.  
 
-`zyx:280` **▸** "Yes! Who are you, really?"  
-`zyx:281` **Zyx (neutral):** This one is Zyx. That is the only answer this one has tonight.  
-`zyx:282` The ice machine hums. It's a cold sound.  
+`zyx:282` **▸** "Yes! Who are you, really?"  
+`zyx:283` **Zyx (neutral):** This one is Zyx. That is the only answer this one has tonight.  
+`zyx:284` The ice machine hums. It's a cold sound.  
 > *(end of choice)*
 
 > *if rapport["zyx"] >= ROMANCE_THRESHOLD:*  
-`zyx:285` **Zyx (blush):** After the big event. When the mission is complete. Come to the roof, and wear something you can be beamed in. There is one more piece of research this one wishes to do. With you. Only with you.  
+`zyx:287` **Zyx (blush):** After the big event. When the mission is complete. Come to the roof, and wear something you can be beamed up in. There's one more piece of research this one wishes to do. Only with you.  
 > *else:*  
-`zyx:287` **Zyx (happy):** Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic.  
+`zyx:289` **Zyx (happy):** Watch for us at 11:11. We will be the ones carrying the gold box. Do not panic.  
 
 ## zyx_romance
 
 > *scene bg roof_dawn*  
-`zyx:295` After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the empty ark and the confetti.  
-`zyx:296` You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink.  
-`zyx:297` They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn. They keep glancing up, at a patch of sky above the lake where there isn't anything. Yet.  
+`zyx:297` After the ark, the Ambassadors of the Outer Drift vanish. One moment they're on stage in their silver suits, the next there's only the empty ark and the confetti.  
+`zyx:298` You look for Zyx in the ballroom, in the hallways, by the ice machine. You find them on the roof, as the sky is going pink.  
+`zyx:299` They're sitting on the bench with their sash folded in their lap, antennae glowing softly against the dawn. They keep glancing up, at a patch of sky above the lake where there isn't anything. Yet.  
 > *show zyx neutral*  
-`zyx:299` **Zyx:** Earthling. You found this one. This one was hoping you would. This one did not leave a map. That was a test.  
-`zyx:300` **Zyx (happy):** You passed. Obviously. Sit. Closer. Closer than that.  
+`zyx:301` **Zyx:** Earthling. You found this one. This one was hoping you would. This one did not leave a map. That was a test.  
+`zyx:302` **Zyx (happy):** You passed. Obviously. Sit. Closer. Closer than that.  
 > *if gave_rock:*  
-`zyx:302` They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin.  
-`zyx:303` **Zyx (neutral):** The ark has landed. The ark has been opened. It was empty, and everyone filled it anyway. The report is filed.  
-`zyx:304` **Zyx:** The mission is complete.  
+`zyx:304` They're holding the nice rock from the pool. They turn it over and over in their gloved fingers, the way you'd worry a lucky coin.  
+`zyx:305` **Zyx (neutral):** The ark has landed. The ark has been opened. It was empty, and everyone filled it anyway. The report is filed.  
+`zyx:306` **Zyx:** The mission is complete.  
 
 > **Choice**
-`zyx:307` **Zyx:** Do you want to hear the conclusion? This one wrote it during the ark. While crying. Which was not in the mission plan.  
+`zyx:309` **Zyx:** Do you want to hear the conclusion? This one wrote it during the ark. While crying. Which was not in the mission plan.  
 
-`zyx:309` **▸** "Read it to me."  
-`zyx:310` **Zyx (neutral):** Ahem.  
+`zyx:311` **▸** "Read it to me."  
+`zyx:312` **Zyx (neutral):** Ahem.  
 
-`zyx:311` **▸** "Only if it says nice things about me."  
-`zyx:312` **Zyx (happy):** It says extremely specific things about you. You will be studied for generations. Starting this morning.  
+`zyx:313` **▸** "Only if it says nice things about me."  
+`zyx:314` **Zyx (happy):** It says extremely specific things about you. You will be studied for generations. Starting this morning.  
 > *(end of choice)*
 
-`zyx:314` **Zyx (neutral):** {i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}  
-`zyx:315` **Zyx:** {i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium.{/i}  
-`zyx:316` **Zyx:** {i}But one Earthling is ready. Recommend further study. Close study. Recommend this one brings the Earthling aboard.{/i}  
-`zyx:317` Hearing it read out loud, on the roof, at dawn, you realize how much of it you'd stopped seeing until Zyx pointed at it.  
+`zyx:316` **Zyx (neutral):** {i}Earth is not ready for contact. Earth is loud, and confusing, and keeps its feelings in rooms labeled LOST & FOUND.{/i}  
+`zyx:317` **Zyx:** {i}Earth closes its eyes and shouts the names of dead explorers in swimming pools. Earth puts glitter on strangers. Earth gives its ice machines a planetarium. None of this makes any sense.{/i}  
+`zyx:318` **Zyx:** {i}But one Earthling is ready. Recommend further study. Close study. Recommend this one brings the Earthling aboard.{/i}  
+`zyx:319` Hearing it read out loud, on the roof, at dawn, you realize how much of it you'd stopped seeing until Zyx pointed at it.  
 > *show zyx blush*  
-`zyx:319` **Zyx:** It was approved. By this one. This one is in charge of approvals.  
+`zyx:321` **Zyx:** It was approved. By this one. This one is in charge of approvals.  
 > *if hugged_zyx:*  
-`zyx:322` **Zyx:** When you hugged this one by the pool, this one's antennae went a color that does not have a name at home. This one has been trying to name it since Saturday.  
+`zyx:324` **Zyx:** When you hugged this one by the pool, this one's antennae went a color that does not have a name at home. This one has been trying to name it since Saturday.  
 > *if zyx_emergency_contact:*  
-`zyx:324` **Zyx:** And in the clinic, when you said you were this one's emergency contact. Nobody has ever been this one's anything.  
-`zyx:326` The patch of sky above the lake isn't empty anymore. Something is lowering itself out of the dawn, silent and enormous and shaped, unmistakably, like a giant golden box. Its underside is lined with blinking lights.  
-`zyx:327` Down in the parking lot, a raver looks up, says {i}huh{/i}, and goes back to her burrito.  
-`zyx:328` **Zyx (neutral):** That is this one's ride. It has been parked behind the moon all weekend. The ark was the landing beacon. You thought it was empty. It was a signal.  
-`zyx:329` **Zyx (blush):** This one has requested permission to bring a specimen aboard. A volunteer specimen. Consent is required, in the Earth style and in ours. Ours is forty-seven pages.  
-`zyx:330` They produce, from somewhere in the sash, a very thick consent form and a pen shaped like a tiny rocket.  
+`zyx:326` **Zyx:** And in the clinic, when you said you were this one's emergency contact. Nobody has ever been this one's anything.  
+`zyx:328` The patch of sky above the lake isn't empty anymore. Something is lowering itself out of the dawn, silent and enormous and shaped, unmistakably, like a giant golden box. Its underside is lined with blinking lights.  
+`zyx:329` Down in the parking lot, a raver looks up, says {i}huh{/i}, and goes back to her burrito.  
+`zyx:330` **Zyx (neutral):** That is this one's ride. It has been parked behind the moon all weekend. The ark was the landing beacon. You thought it was empty. It was a signal.  
+`zyx:331` **Zyx (blush):** This one has requested permission to bring a specimen aboard. A volunteer specimen. Consent is required, in the Earth style and in ours. Ours is forty-seven pages.  
+`zyx:332` They produce, from somewhere in the sash, a very thick consent form and a pen shaped like a tiny rocket.  
 
 > **Choice**
 
-`zyx:333` **▸** Initial every single page.  
-`zyx:334` **Zyx (happy):** Thorough. This one finds that very attractive. Page thirty-one is the important one.  
+`zyx:335` **▸** Initial every single page.  
+`zyx:336` **Zyx (happy):** Thorough. This one finds that very attractive. Page thirty-one is the important one.  
 
-`zyx:335` **▸** "Where do I sign?"  
-`zyx:336` **Zyx (blush):** Everywhere. And here. And here. And here, twice, because of the antennae clause.  
+`zyx:337` **▸** "Where do I sign?"  
+`zyx:338` **Zyx (blush):** Everywhere. And here. And here. And here, twice, because of the antennae clause.  
 > *(end of choice)*
 
-`zyx:338` A column of soft pink light comes down over the bench. It's warm, like standing in a sunbeam, and your feet leave the roof.  
+`zyx:340` A column of soft pink light comes down over the bench. It's warm, like standing in a sunbeam, and your feet leave the roof.  
 > *scene bg ship*  
-`zyx:341` The inside of the ship looks like the ice machine planetarium, if the planetarium had been designed by someone who'd seen a lot of 1970s science fiction and taken all of it as instructions.  
-`zyx:342` There are stars on every surface, and a padded silver table in the middle, and very good mood lighting.  
+`zyx:343` The inside of the ship looks like the ice machine planetarium, if the planetarium had been designed by someone who'd seen a lot of 1970s science fiction and taken all of it as instructions.  
+`zyx:344` There are stars on every surface, and a padded silver table in the middle, and very good mood lighting.  
 > *show zyx blush*  
-`zyx:344` **Zyx:** Welcome aboard. Please keep your arms and legs inside the ship. Unless this one asks for them.  
-`zyx:345` **Zyx:** Now. You know what happens next. Every abductee in your films asks about it. The probe.  
-`zyx:346` Zyx holds up the probe. It glows softly. It's smaller than in the films, and it's warm, and it hums, quietly, in a key you've never heard before.  
-`zyx:347` **Zyx:** This one will be extremely gentle and extremely thorough. You may say stop at any time. You may say {i}more{/i} at any time. Both are valid data.  
+`zyx:346` **Zyx:** Welcome aboard. Please keep your arms and legs inside the ship. Unless this one asks for them.  
+`zyx:347` **Zyx:** Now. You know what happens next. Every abductee in your films asks about it. The probe.  
+`zyx:348` Zyx holds up the probe. It glows softly. It's smaller than in the films, and it's warm, and it hums, quietly, in a key you've never heard before.  
+`zyx:349` **Zyx:** This one will be extremely gentle and extremely thorough. You may say stop at any time. You may say {i}more{/i} at any time. Both are valid data.  
 
 > **Choice**
 
-`zyx:350` **▸** "Proceed. For science."  
-`zyx:351` **Zyx (happy):** For science.  
+`zyx:352` **▸** "Proceed. For science."  
+`zyx:353` **Zyx (happy):** For science.  
 
-`zyx:352` **▸** "Can we do the forehead thing first?"  
-`zyx:353` **Zyx (blush):** You remembered. This one did not tell you about the forehead thing. You simply... knew. Yes.  
-`zyx:354` Zyx leans in until their forehead rests against yours, cool and smooth and smelling faintly of sunscreen. The third eye closes. For a long moment you just breathe like that.  
-`zyx:355` **Zyx:** On the Outer Drift, this is how two beings say they wish to be close. Now. The Earth part. And then the Outer Drift part.  
-`zyx:356` They kiss you. Their antennae spark. Actually spark. You're almost sure.  
+`zyx:354` **▸** "Can we do the forehead thing first?"  
+`zyx:355` **Zyx (blush):** You remembered. This one did not tell you about the forehead thing. You simply... knew. Yes.  
+`zyx:356` Zyx leans in until their forehead rests against yours, cool and smooth and smelling faintly of sunscreen. The third eye closes. For a long moment you just breathe like that.  
+`zyx:357` **Zyx:** On the Outer Drift, this is how two beings say they wish to be close. Now. The Earth part. And then the Outer Drift part.  
+`zyx:358` They kiss you. Their antennae spark. Actually spark. You're almost sure.  
 > *(end of choice)*
 
-`zyx:358` What follows is slow, and extremely thorough, and enthusiastically consensual on both sides, and at one point the whole ship changes color.  
-`zyx:359` The probe is warm, and patient, and it seems to know where you want it before you do. It lingers. It wanders. It finds places you didn't know were waiting to be found, and the hum settles somewhere deep inside you and stays.  
-`zyx:360` You stop keeping track of time, or the stars, or anything except the slow, unhurried feeling of being explored, all of you, as if you were the most interesting thing in the galaxy. For a while, you are.  
-`zyx:361` Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up.  
-`zyx:362` **Zyx (blush):** Data... very, very confirmed. Further study required. Extensive further study.  
-`zyx:363` **Zyx:** This one will need to repeat the experiment. For reproducibility. Science is very strict about this.  
+`zyx:360` What follows is slow, and extremely thorough, and enthusiastically consensual on both sides, and at one point the whole ship changes color.  
+`zyx:361` The probe is warm, and patient, and it seems to know where you want it before you do. It lingers. It wanders. It finds places you didn't know were waiting to be found, and the hum settles somewhere deep inside you and stays.  
+`zyx:362` You stop keeping track of time, or the stars, or anything except the slow, unhurried feeling of being explored, all of you, as if you were the most interesting thing in the galaxy. For a while, you are.  
+`zyx:363` Zyx takes notes the entire time. At one point they need a second clipboard. At another point they drop both clipboards, and don't pick them up.  
+`zyx:364` **Zyx (blush):** Data... yes, confirmed. Further study required. Extensive further study.  
+`zyx:365` **Zyx:** This one will need to repeat the experiment. For reproducibility. Science is very strict about this.  
 > *scene bg roof_dawn*  
-`zyx:367` When the pink light sets you back down on the roof, the sun has cleared the mountains and the lake is gold. You're holding a printout. Zyx is holding your hand.  
-`zyx:368` At some point Zyx took off one glove. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either.  
-`zyx:369` The printout says: {i}SPECIMEN: EXCELLENT. 4% BAT, AS SUSPECTED. RECOMMEND RETURN VISIT.{/i}  
+`zyx:369` When the pink light sets you back down on the roof, the sun has cleared the mountains and the lake is gold. You're holding a printout. Zyx is holding your hand.  
+`zyx:370` At some point Zyx took off one glove. Their hand is warm. It has five fingers. You don't say anything about it, and they don't either.  
+`zyx:371` The printout says: {i}SPECIMEN: EXCELLENT. 4% BAT, AS SUSPECTED. RECOMMEND RETURN VISIT.{/i}  
 > *scene black*  
-`zyx:371` {i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}  
-`zyx:372` {i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}  
-`zyx:373` **Zyx:** Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it. Afterward, the ship is parked out back.  
+`zyx:373` {i}Two weeks later, a postcard arrives. The picture on the front is a gray, ordinary star.{/i}  
+`zyx:374` {i}Return address: THE OUTER DRIFT (it's near Oakland).{/i}  
+`zyx:375` **Zyx:** Earthling. Research continues. Thursday? This one has found a restaurant where you cook your own food on a hot rock. Gerald recommended it. Afterward, the ship is parked out back.  
 > *if gave_rock:*  
-`zyx:375` **Zyx:** Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends.  
+`zyx:377` **Zyx:** Bring the nice rock. This one wants to introduce it to the hot rock. It is important that rocks have friends.  
 > *else:*  
-`zyx:377` **Zyx:** This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you.  
-`zyx:378` **Zyx:** — Z. (The report now has a section about you. It is forty pages long and still in progress. Several pages are classified. You know which ones.)  
+`zyx:379` **Zyx:** This one has found you a nice rock. It is waiting on this one's windowsill. It has been told about you.  
+`zyx:380` **Zyx:** — Z. (The report now has a section about you. It is forty pages long and still in progress. Several pages are classified. You know which ones.)  
 > *→ jump ending_card*  
 
 ## zyx_friend
 
 > *scene bg exterior*  
 > *show zyx happy*  
-`zyx:388` On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out. Every car waves back. One honks the rhythm from {i}the Zyx{/i}.  
-`zyx:389` The crew has already asked them to come back next year and run something. Zyx has agreed, without being entirely sure what they're running.  
-`zyx:390` **Zyx:** Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing. Apparently it has become very popular.  
-`zyx:391` **Zyx (neutral):** The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them.  
-`zyx:392` **Zyx:** On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver.  
-`zyx:393` Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly.  
-`zyx:394` **Zyx (happy):** This is the highest honor of our people. Do not lose it. We already lost the other one.  
-`zyx:395` **Zyx:** Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!  
-`zyx:396` On the drive home you catch yourself noticing things: a weird sign, a nice rock, two strangers waving at each other across a parking lot. You wonder how long it'll last. You hope a while.  
+`zyx:390` On Monday morning, a silver figure is standing in the hotel parking lot, waving with all three fingers at every car as it pulls out. Every car waves back. One honks the rhythm from {i}the Zyx{/i}.  
+`zyx:391` The crew has already asked them to come back next year and run something. Zyx has agreed, without being entirely sure what they're running.  
+`zyx:392` **Zyx:** Earthling! You are leaving. This one has prepared a farewell ritual. It is called 'a wave.' This one has been practicing. Apparently it has become very popular.  
+`zyx:393` **Zyx (neutral):** The report is filed. Earth is not ready for contact. But Earth has friends in it. This one checked. You are one of them.  
+`zyx:394` **Zyx:** On the Outer Drift, friendship is shown by changing to the same color as someone. This one cannot do that. This one is stuck being silver.  
+`zyx:395` Zyx reaches into the bag of EARTH ARTIFACTS and hands you a single lost flip-flop, very solemnly.  
+`zyx:396` **Zyx (happy):** This is the highest honor of our people. Do not lose it. We already lost the other one.  
+`zyx:397` **Zyx:** Goodbye, Earthling! You are in the report! Section nine: Friends. You are the whole of section nine!  
+`zyx:398` On the drive home you catch yourself noticing things: a weird sign, a nice rock, two strangers waving at each other across a parking lot. You wonder how long it'll last. You hope a while.  
 
 ---
 
