@@ -310,7 +310,10 @@ screen navigation():
 
         if main_menu:
 
+            ## The title screen only offers Start and Quit.
             textbutton _("Start") action Start()
+
+            textbutton _("Quit") action Quit(confirm=False)
 
         else:
 
@@ -318,9 +321,11 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        if not main_menu:
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+            textbutton _("Load") action ShowMenu("load")
+
+            textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -330,14 +335,16 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        if not main_menu:
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            textbutton _("About") action ShowMenu("about")
+
+        if not main_menu and (renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile"))):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+        if not main_menu and renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
