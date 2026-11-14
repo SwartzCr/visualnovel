@@ -1,0 +1,141 @@
+Late Checkout — automated playthrough report: PASS
+Cases run: 128   Failures: 0   Labels unreached: 0   Menus not fully covered: 0   Time: 121.5s
+
+FAILURES
+  none
+
+LABELS NEVER REACHED
+  none
+
+MENUS WHERE SOME OPTIONS WERE NEVER CHOSEN (informational)
+  none
+
+CASES
+  full-juni-0                              ending=Regeneration       6.0s
+  full-juni-1                              ending=Regeneration       5.5s
+  full-juni-2                              ending=Good Company       4.7s
+  full-gerald-0                            ending=Not Blurry         6.0s
+  full-gerald-1                            ending=Not Blurry         5.7s
+  full-gerald-2                            ending=Checkout           4.5s
+  full-solstice-0                          ending=The Longest Day    4.8s
+  full-solstice-1                          ending=The Longest Day    4.9s
+  full-solstice-2                          ending=Checkout           4.5s
+  full-wren-0                              ending=Off Duty           5.1s
+  full-wren-1                              ending=Good Company       4.2s
+  full-wren-2                              ending=Checkout           4.4s
+  full-zyx-0                               ending=First Contact      5.7s
+  full-zyx-1                               ending=First Contact      5.6s
+  full-zyx-2                               ending=Checkout           4.4s
+  full-juni-3                              ending=Checkout           4.2s
+  wanderer                                 ending=Checkout           3.0s
+  ending-romance-juni-0                    ending=Regeneration       0.9s
+  ending-romance-juni-1                    ending=Regeneration       0.9s
+  ending-friend-juni                       ending=Good Company       0.3s
+  ending-romance-gerald-0                  ending=Not Blurry         0.9s
+  ending-romance-gerald-1                  ending=Not Blurry         0.9s
+  ending-friend-gerald                     ending=Good Company       0.3s
+  ending-romance-solstice-0                ending=The Longest Day    0.7s
+  ending-romance-solstice-1                ending=The Longest Day    0.7s
+  ending-friend-solstice                   ending=Good Company       0.3s
+  ending-romance-wren-0                    ending=Off Duty           0.8s
+  ending-romance-wren-1                    ending=Off Duty           0.8s
+  ending-friend-wren                       ending=Good Company       0.3s
+  ending-romance-zyx-0                     ending=First Contact      0.8s
+  ending-romance-zyx-1                     ending=First Contact      0.9s
+  ending-friend-zyx                        ending=Good Company       0.3s
+  ending-several-qualify-choose-juni       ending=Regeneration       0.8s
+  ending-several-qualify-choose-gerald     ending=Not Blurry         0.8s
+  ending-several-qualify-choose-solstice   ending=The Longest Day    0.7s
+  ending-several-qualify-choose-wren       ending=Off Duty           0.8s
+  ending-several-qualify-choose-zyx        ending=First Contact      0.9s
+  ending-several-qualify-choose-alone      ending=Good Company       0.3s
+  ending-checkout                          ending=Checkout           0.2s
+  enc_wedding-met-nobody-0                 ending=-                  0.1s
+  enc_wedding-met-nobody-1                 ending=-                  0.1s
+  enc_wedding-met-nobody-2                 ending=-                  0.1s
+  enc_wedding-met-everyone-0               ending=-                  0.1s
+  enc_wedding-met-everyone-1               ending=-                  0.1s
+  enc_wedding-met-everyone-2               ending=-                  0.1s
+  enc_vampire-met-nobody-0                 ending=-                  0.1s
+  enc_vampire-met-nobody-1                 ending=-                  0.1s
+  enc_vampire-met-nobody-2                 ending=-                  0.1s
+  enc_vampire-met-everyone-0               ending=-                  0.1s
+  enc_vampire-met-everyone-1               ending=-                  0.1s
+  enc_vampire-met-everyone-2               ending=-                  0.1s
+  enc_flu_shot-met-nobody-0                ending=-                  0.1s
+  enc_flu_shot-met-nobody-1                ending=-                  0.1s
+  enc_flu_shot-met-nobody-2                ending=-                  0.1s
+  enc_flu_shot-met-everyone-0              ending=-                  0.1s
+  enc_flu_shot-met-everyone-1              ending=-                  0.1s
+  enc_flu_shot-met-everyone-2              ending=-                  0.1s
+  enc_elder-met-nobody-0                   ending=-                  0.1s
+  enc_elder-met-nobody-1                   ending=-                  0.1s
+  enc_elder-met-nobody-2                   ending=-                  0.1s
+  enc_elder-met-everyone-0                 ending=-                  0.1s
+  enc_elder-met-everyone-1                 ending=-                  0.1s
+  enc_elder-met-everyone-2                 ending=-                  0.1s
+  enc_gurus-met-nobody-0                   ending=-                  0.1s
+  enc_gurus-met-nobody-1                   ending=-                  0.1s
+  enc_gurus-met-nobody-2                   ending=-                  0.2s
+  enc_gurus-met-everyone-0                 ending=-                  0.1s
+  enc_gurus-met-everyone-1                 ending=-                  0.1s
+  enc_gurus-met-everyone-2                 ending=-                  0.1s
+  enc_heist-met-nobody-0                   ending=-                  0.1s
+  enc_heist-met-nobody-1                   ending=-                  0.1s
+  enc_heist-met-nobody-2                   ending=-                  0.1s
+  enc_heist-met-everyone-0                 ending=-                  0.1s
+  enc_heist-met-everyone-1                 ending=-                  0.1s
+  enc_heist-met-everyone-2                 ending=-                  0.1s
+  enc_alices-met-nobody-0                  ending=-                  0.1s
+  enc_alices-met-nobody-1                  ending=-                  0.1s
+  enc_alices-met-nobody-2                  ending=-                  0.1s
+  enc_alices-met-everyone-0                ending=-                  0.1s
+  enc_alices-met-everyone-1                ending=-                  0.1s
+  enc_alices-met-everyone-2                ending=-                  0.1s
+  enc_note-met-nobody-0                    ending=-                  0.1s
+  enc_note-met-nobody-1                    ending=-                  0.1s
+  enc_note-met-nobody-2                    ending=-                  0.1s
+  enc_note-met-everyone-0                  ending=-                  0.1s
+  enc_note-met-everyone-1                  ending=-                  0.1s
+  enc_note-met-everyone-2                  ending=-                  0.1s
+  enc_penguin_post-met-nobody-0            ending=-                  0.2s
+  enc_penguin_post-met-nobody-1            ending=-                  0.2s
+  enc_penguin_post-met-nobody-2            ending=-                  0.2s
+  enc_penguin_post-met-everyone-0          ending=-                  0.3s
+  enc_penguin_post-met-everyone-1          ending=-                  0.3s
+  enc_penguin_post-met-everyone-2          ending=-                  0.3s
+  enc_fanny_bar-met-nobody-0               ending=-                  0.3s
+  enc_fanny_bar-met-nobody-1               ending=-                  0.4s
+  enc_fanny_bar-met-nobody-2               ending=-                  0.3s
+  enc_fanny_bar-met-everyone-0             ending=-                  0.4s
+  enc_fanny_bar-met-everyone-1             ending=-                  0.4s
+  enc_fanny_bar-met-everyone-2             ending=-                  0.4s
+  enc_tentacletopia-met-nobody-0           ending=-                  0.2s
+  enc_tentacletopia-met-nobody-1           ending=-                  0.2s
+  enc_tentacletopia-met-nobody-2           ending=-                  0.2s
+  enc_tentacletopia-met-everyone-0         ending=-                  0.3s
+  enc_tentacletopia-met-everyone-1         ending=-                  0.3s
+  enc_tentacletopia-met-everyone-2         ending=-                  0.3s
+  enc_zany_optical-met-nobody-0            ending=-                  0.3s
+  enc_zany_optical-met-nobody-1            ending=-                  0.3s
+  enc_zany_optical-met-nobody-2            ending=-                  0.3s
+  enc_zany_optical-met-everyone-0          ending=-                  0.4s
+  enc_zany_optical-met-everyone-1          ending=-                  0.4s
+  enc_zany_optical-met-everyone-2          ending=-                  0.3s
+  enc_speed_dating-met-nobody-0            ending=-                  0.3s
+  enc_speed_dating-met-nobody-1            ending=-                  0.3s
+  enc_speed_dating-met-nobody-2            ending=-                  0.3s
+  enc_speed_dating-met-everyone-0          ending=-                  0.4s
+  enc_speed_dating-met-everyone-1          ending=-                  0.4s
+  enc_speed_dating-met-everyone-2          ending=-                  0.4s
+  enc_let_it_go-met-nobody-0               ending=-                  0.3s
+  enc_let_it_go-met-nobody-1               ending=-                  0.2s
+  enc_let_it_go-met-nobody-2               ending=-                  0.2s
+  enc_let_it_go-met-everyone-0             ending=-                  0.3s
+  enc_let_it_go-met-everyone-1             ending=-                  0.3s
+  enc_let_it_go-met-everyone-2             ending=-                  0.2s
+  enc_speed_dating-met-juni                ending=-                  0.3s
+  enc_speed_dating-met-gerald              ending=-                  0.3s
+  enc_speed_dating-met-solstice            ending=-                  0.3s
+  enc_speed_dating-met-wren                ending=-                  0.3s
+  enc_speed_dating-met-zyx                 ending=-                  0.3s
