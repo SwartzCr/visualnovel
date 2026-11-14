@@ -142,8 +142,10 @@ init python:
         name = GUEST_INFO[who][0]
         if n >= 2:
             renpy.notify("%s will remember that." % name)
+            renpy.sound.play("audio/sfx/rapport_up.ogg", channel="sound")
         elif n < 0:
             renpy.notify("%s seems a little further away." % name)
+            renpy.sound.play("audio/sfx/rapport_down.ogg", channel="sound")
 
     def hearts(who):
         v = max(0, store.rapport[who])

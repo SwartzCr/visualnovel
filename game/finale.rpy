@@ -40,6 +40,7 @@ label finale:
                 $ who = None
 
         if who is not None:
+            $ music_mood = "tender"
             jump expression "%s_romance" % who
 
     # No romance tonight.
@@ -81,6 +82,7 @@ label solo_ending:
 
 
 label ending_card:
+    $ music_mood = "tender"
     $ persistent.endings.add(ending_name)
     $ endings_found = len(persistent.endings)
     $ endings_total = len(ALL_ENDINGS)

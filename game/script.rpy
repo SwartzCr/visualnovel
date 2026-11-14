@@ -151,6 +151,7 @@ label pool_time:
 label night_time:
     $ met_tonight = []
     $ time_label = ("", "Friday", "Saturday", "Sunday")[day] + " — Night"
+    play sound whoosh
     scene bg hallway with slowfade
 
     if day == 1:
@@ -260,9 +261,13 @@ label wander:
 label ceremony:
     scene bg ballroom with slowfade
     $ time_label = "Sunday — 11:11 PM"
+    $ music_silenced = True
+    stop music fadeout 2.0
     "At 11:05 the music stops."
     "Seven hundred people in costume shuffle into the ballroom in the dark, holding their breath. Someone whispers {i}is it happening{/i} and fifty people go {i}shhhhhh{/i}."
     "At 11:11 the doors at the back of the ballroom swing open."
+    play sound ark
+    $ music_silenced = False
     scene bg ballroom_ark with flash
     "A procession of people in silver alien suits carries a golden ark through the crowd. It's covered in psychedelic patterns. On the front, in big friendly letters: DON'T PANIC."
     "Up on the stage, the leader of the covenant grabs a mic and delivers a rousing speech. You only catch bits and pieces, something about grabbing life by the cockles, and riding the bubbles pop into the sunset."

@@ -113,6 +113,8 @@ init python:
         store.candidates = []
         store.friend = None
         store.time_label = ""
+        store.music_mood = None
+        store.music_silenced = False
         for flag in STORY_FLAGS:
             setattr(store, flag, False)
         store.encounters_seen = []
